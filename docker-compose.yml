@@ -1,0 +1,82 @@
+---
+version: "3.7"
+services:
+  frontend-build:
+    build:
+      context: ./
+      dockerfile: tools/docker/frontend-build/Dockerfile
+    volumes:
+      - ./:/site
+  frontend-nginx:
+    build:
+      context: ./
+      dockerfile: tools/docker/frontend-nginx/Dockerfile
+      args:
+        FRONTEND_NGINX_PORT_HTTP: ${FRONTEND_NGINX_PORT_HTTP}
+        FRONTEND_NGINX_PORT_HTTPS: ${FRONTEND_NGINX_PORT_HTTPS}
+        BACKEND_CACHE_PORT: ${BACKEND_CACHE_PORT_HTTP}
+    ports:
+      - 80:${FRONTEND_NGINX_PORT_HTTP}
+      - 443:${FRONTEND_NGINX_PORT_HTTPS}
+    volumes:
+      - ./dist:/dist:ro
+    depends_on:
+      - backend-cache
+##      - tls
+    networks:
+      - frontend_web
+  backend-cache:
+    build:
+      context: tools/docker/backend-cache
+      dockerfile: Dockerfile
+      args:
+        BACKEND_NGINX_PORT_HTTP: ${BACKEND_NGINX_PORT_HTTP}
+    volumes:
+      - type: tmpfs
+        target: /var/lib/varnish:exec
+      - type: tmpfs
+        target: /usr/local/var/varnish:exec
+    expose:
+      - ${BACKEND_CACHE_PORT_HTTP?err}/tcp
+    networks:
+      - frontend_web
+      - backend_app
+#    depends_on:
+#      - backend-nginx
+  backend-nginx:
+    build:
+      context: ./
+      dockerfile: tools/docker/backend-nginx/Dockerfile
+      args:
+        APP_GROUP_NAME: ${APP_GROUP_NAME}
+        APP_GROUP_ID: ${APP_GROUP_ID}
+        APP_CODE_DIR: ${APP_CODE_DIR}
+        PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
+        PHP_SOCKET_FILE: ${PHP_SOCKET_FILE}
+    volumes:
+      - socket:${PHP_SOCKET_DIR}
+    networks:
+      - backend_app
+    expose:
+      - ${BACKEND_NGINX_PORT_HTTP?err}
+    depends_on:
+      - php-fpm
+  php-fpm:
+    build:
+      context: ./
+      dockerfile: tools/docker/php-fpm/Dockerfile
+      args:
+        APP_GROUP_NAME: ${APP_GROUP_NAME}
+        APP_GROUP_ID: ${APP_GROUP_ID}
+        PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
+        PHP_SOCKET_FILE: ${PHP_SOCKET_FILE}
+    volumes:
+      - ./php:${APP_CODE_DIR}:ro
+      - socket:${PHP_SOCKET_DIR}
+volumes:
+  socket:
+  certs:
+  dhparams:
+networks:
+  frontend_web:
+  backend_app:

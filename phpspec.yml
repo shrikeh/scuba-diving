@@ -1,0 +1,9 @@
+---
+formatter.name: pretty
+suites:
+  default:
+    composer_suite_detection: true
+    spec_path: "%paths.config%/tests"
+    src_path: "%paths.config%/application/src"
+    namespace: Shrikeh\Diving\
+    psr4_prefix: Shrikeh\Diving\

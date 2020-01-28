@@ -1,0 +1,14 @@
+---
+# This file contains configuration for the Vagrant file
+
+# Virtual Machine Settings
+vm:
+  php74_box: "hashicorp/bionic64"
+  ip: "192.168.15.107"
+  host_memory: 1024
+  host_cpus: 2
+  hostname: "barneys-divingkit.shrikeh.vagrant"
+  synced_folder: "/code"
+  user: "vagrant"
+symfony:
+  cache_dir: '/cache'
