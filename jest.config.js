@@ -15,7 +15,7 @@ module.exports = {
     'tests/jest/src'
   ],
   testMatch: [
-    "**/*.test.[jt]s?(x)"
+    "**/*.main.scss.[jt]s?(x)"
   ],
   transform: {
     "^.+\\.tsx?$": "ts-jest"

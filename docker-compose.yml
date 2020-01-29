@@ -15,11 +15,14 @@ services:
         FRONTEND_NGINX_PORT_HTTP: ${FRONTEND_NGINX_PORT_HTTP}
         FRONTEND_NGINX_PORT_HTTPS: ${FRONTEND_NGINX_PORT_HTTPS}
         BACKEND_CACHE_PORT: ${BACKEND_CACHE_PORT_HTTP}
+        FRONTEND_PAGESPEED_FILE_CACHE: ${FRONTEND_PAGESPEED_FILE_CACHE}
     ports:
       - 80:${FRONTEND_NGINX_PORT_HTTP}
       - 443:${FRONTEND_NGINX_PORT_HTTPS}
     volumes:
       - ./dist:/dist:ro
+      - type: tmpfs
+        target: ${FRONTEND_PAGESPEED_FILE_CACHE?err}
     depends_on:
       - backend-cache
 ##      - tls

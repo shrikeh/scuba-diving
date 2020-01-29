@@ -4,6 +4,8 @@ import * as React from "react";
 import { render } from "react-dom";
 import { Item } from "@app/components/Kit/Item";
 
+import 'scss/main.scss';
+
 const domContainer = document.querySelector('#scuba-diving');
 
 render(
