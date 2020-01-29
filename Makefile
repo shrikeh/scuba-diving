@@ -17,17 +17,20 @@ clean: down
 	docker system prune -a -f
 	docker volume rm -f $(docker volume ls -qf dangling=true)
 
-down:
+docker-down:
 	docker-compose down
 
-up:
+docker-up:
 	docker-compose up
 
 prune: down
 	docker volume prune -f
 
-build:
+docker-build:
 	docker-compose build --parallel
+
+webpack:
+	docker-compose run frontend-build
 
 build-clean:
 	docker-compose build --no-cache --parallel
