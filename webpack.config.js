@@ -2,28 +2,30 @@
 
 const path = require('path');
 
-const htmlLoader = require("./tools/webpack/rules/html-loader");
-const imageWebPackLoader = require("./tools/webpack/rules/image-webpack-loader");
+const htmlLoader = require('./tools/webpack/rules/html-loader');
+const imageWebPackLoader = require('./tools/webpack/rules/image-webpack-loader');
 
-const htmlPlugin = require("./tools/webpack/plugins/html-webpack-plugin");
+import plugins from './tools/webpack/plugins';
+
 
 module.exports = {
-  mode: "development",
-  entry: path.resolve(__dirname, "public/js/src/index.tsx"),
+  mode: 'development',
+  entry: path.resolve(__dirname, 'public/js/src/index.tsx'),
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "js/bundle.js",
-    publicPath: "/" // string
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/bundle.js',
+    publicPath: "/",
+    crossOriginLoading: 'anonymous'
   },
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",
 
   resolve: {
     alias: {
-      "@app": path.resolve(__dirname, "public/js/src")
+      '@app': path.resolve(__dirname, 'public/js/src')
     },
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
 
   module: {
@@ -50,20 +52,18 @@ module.exports = {
           options: {
             cacheDirectory: true,
             cacheCompression: false,
-            envName: "development"
+            envName: 'development'
           }
         }
       },
       imageWebPackLoader,
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "source-map-loader"
+        loader: 'source-map-loader'
       }
     ]
   },
-  plugins: [
-    htmlPlugin(__dirname),
-  ]
+  plugins: plugins(__dirname)
 };
