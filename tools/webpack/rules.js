@@ -9,15 +9,18 @@ export default () => {
     htmlLoader,
     {
       test: /\.tsx$/,
-      loader: 'babel-loader!ts-loader',
+      use: [
+        { loader: 'babel-loader' },
+        { loader: 'ts-loader' },
+        { loader: 'cache-loader' }
+      ]
     },
     {
       test: /\.ts$/,
       exclude: /node_modules/,
       use: [
-        {
-          loader: 'awesome-typescript-loader'
-        }
+        { loader: 'awesome-typescript-loader' },
+        { loader: 'cache-loader' }
       ]
     },
     {
