@@ -5,7 +5,7 @@ const path = require('path');
 
 const htmlPlugin = (baseDir) => {
   return new HtmlWebpackPlugin({
-    template: '!!handlebars-loader!' + path.resolve(baseDir, 'public/html/index.hbs'),
+    template: '!!handlebars-loader!' + path.resolve(baseDir, 'public/html/index.handlebars'),
     inject: true,
     hash: true,
     xhtml: true,

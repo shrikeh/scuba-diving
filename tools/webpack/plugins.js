@@ -10,7 +10,7 @@ export default (baseDir) => {
   return [
     htmlPlugin(baseDir),
     favicon(baseDir),
-    cspHtmlWebpackPlugin(),
+    //cspHtmlWebpackPlugin(),
     subresourceIntegrityPlugin,
     new MiniCssExtractPlugin({
       filename: "css/[name]-styles.css",

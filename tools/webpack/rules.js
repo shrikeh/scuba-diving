@@ -10,17 +10,22 @@ export default () => {
     {
       test: /\.tsx$/,
       use: [
-        { loader: 'babel-loader' },
-        { loader: 'ts-loader' },
-        { loader: 'cache-loader' }
+        { loader: 'cache-loader' },
+        {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        },
+        { loader: 'ts-loader' }
       ]
     },
     {
       test: /\.ts$/,
       exclude: /node_modules/,
       use: [
-        { loader: 'awesome-typescript-loader' },
-        { loader: 'cache-loader' }
+        { loader: 'cache-loader' },
+        { loader: 'awesome-typescript-loader' }
       ]
     },
     {
@@ -35,6 +40,7 @@ export default () => {
         }
       }
     },
+    { test: /\.handlebars$/, loader: "handlebars-loader" },
     imageWebPackLoader,
     sassLoader,
     // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.

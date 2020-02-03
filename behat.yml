@@ -1,0 +1,12 @@
+---
+default:
+  autoload:
+    '': "%paths.base%/tests/behat/src"
+  suites:
+    kit:
+      paths:
+        - "%paths.base%/features/kit"
+      contexts:
+        - Tests\Behat\Context\Kit\ServiceContext: ~
+
+

@@ -10,19 +10,25 @@
          failOnRisky="true"
          failOnWarning="true"
          verbose="true"
-         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
 >
     <php>
       <ini name="error_reporting" value="2147483647"/>
       <ini name="display_errors" value="1"/>
       <server name="APP_ENV" value="test" />
       <server name="APP_DEBUG" value="0" />
+
+        <!-- ###+ symfony/framework-bundle ### -->
+        <env name="APP_ENV" value="dev"/>
+        <env name="APP_SECRET" value="b1de2b0154f5a38c1596644a34c03a17"/>
+        <!-- env name="TRUSTED_PROXIES" value="127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16" -->
+        <!-- env name="TRUSTED_HOSTS" value="'^(localhost|example\.com)$'" -->
+        <!-- ###- symfony/framework-bundle ### -->
     </php>
     <logging>
         <log type="coverage-html" target="build/coverage/html" />
         <log type="coverage-xml" target="build/coverage/coverage-xml" />
         <log type="coverage-clover" target="build/coverage/clover.xml" />
-        <log type="junit" target="build/coverage/phpunit.junit.xml" />
+        <log type="junit" target="build/coverage/junit.xml" />
     </logging>
     <testsuites>
       <testsuite name="Diving Unit Tests">

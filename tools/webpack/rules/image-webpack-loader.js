@@ -3,6 +3,7 @@
 module.exports = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   use: [
+    { loader: 'cache-loader' },
     { loader: 'url-loader'},
     {
       loader: 'image-webpack-loader',
@@ -27,7 +28,6 @@ module.exports = {
           quality: 75
         }
       }
-    },
-    { loader: 'cache-loader' }
+    }
   ]
 };

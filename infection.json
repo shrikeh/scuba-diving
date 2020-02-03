@@ -3,6 +3,9 @@
   "source": {
     "directories": [
       "application/app/"
+    ],
+    "excludes": [
+      "Kernel"
     ]
   },
   "phpUnit": {

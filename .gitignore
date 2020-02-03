@@ -2,6 +2,7 @@ application/bin/symfony
 /vendor
 /node_modules
 /dist
+/build
 .*
 *.iml
 *.log
@@ -9,3 +10,8 @@ application/bin/symfony
 !.editorconfig
 !.phpspec
 !.env.dist
+
+
+###> friends-of-behat/symfony-extension ###
+/behat.yml
+###< friends-of-behat/symfony-extension ###
