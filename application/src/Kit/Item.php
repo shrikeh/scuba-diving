@@ -4,7 +4,15 @@ declare(strict_types=1);
 
 namespace Shrikeh\Diving\Kit;
 
-final class Item
+interface Item
 {
+    /**
+     * @return string
+     */
+    public function getName(): string;
 
+    /**
+     * @return Manufacturer
+     */
+    public function getManufacturer(): Manufacturer;
 }

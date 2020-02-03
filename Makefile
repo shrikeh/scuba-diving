@@ -1,4 +1,5 @@
 SHELL := /usr/bin/env bash
+ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 .DEFAULT: help
 .PHONY: help
@@ -37,7 +38,7 @@ build-clean:
 
 test: test-php
 
-test-php: composer-validate phplint phpcs phpspec phpunit behat
+test-php: composer-validate phplint phpcs phpstan phpspec phpunit behat phpmetrics infection
 
 lint-changed: lint-changed-php
 
@@ -52,7 +53,7 @@ composer-validate:
 lint: phplint
 
 phpunit:
-	php ./vendor/bin/phpunit
+	php ./vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
 
 infection:
 	php ./vendor/bin/infection --debug -j2 --coverage=build/coverage --filter=application/app
@@ -63,6 +64,9 @@ behat:
 phplint:
 	php ./vendor/bin/phplint
 
+phpstan:
+	php ./vendor/bin/phpstan analyse
+
 phpcs:
 	php ./vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application tests
 
@@ -71,3 +75,9 @@ phpcbf:
 
 phpspec:
 	php ./vendor/bin/phpspec run
+
+phpmetrics:
+	php ./vendor/bin/phpmetrics --report-html=build/metrics application
+
+browse-metrics:
+	open file:///${ROOT_DIR}/build/metrics/index.html

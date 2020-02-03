@@ -8,19 +8,18 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Shrikeh\Diving\Kit\Item;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
-use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBusInterface;
+use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBus;
 
 final class KitBagSpec extends ObjectBehavior
 {
-    function let(ItemQueryBusInterface $itemQueryBus): void
+    function let(ItemQueryBus $itemQueryBus): void
     {
         $this->beConstructedWith($itemQueryBus);
     }
 
-    public function it_returns_an_item(ItemQueryBusInterface $itemQueryBus): void
+    public function it_returns_an_item(ItemQueryBus $itemQueryBus, Item $item): void
     {
         $itemName = 'A titanium knife';
-        $item = new Item();
         $itemQueryBus->queryKitItem(Argument::type(KitItemQuery::class))
             ->willReturn($item);
 

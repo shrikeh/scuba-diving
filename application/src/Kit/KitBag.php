@@ -5,18 +5,18 @@ declare(strict_types=1);
 namespace Shrikeh\Diving\Kit;
 
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
-use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBusInterface;
+use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBus;
 
 final class KitBag
 {
-    /** @var ItemQueryBusInterface  */
-    private ItemQueryBusInterface $itemQueryBus;
+    /** @var ItemQueryBus  */
+    private ItemQueryBus $itemQueryBus;
 
     /**
      * KitBag constructor.
-     * @param $itemQueryBus
+     * @param ItemQueryBus $itemQueryBus
      */
-    public function __construct(ItemQueryBusInterface $itemQueryBus)
+    public function __construct(ItemQueryBus $itemQueryBus)
     {
         $this->itemQueryBus = $itemQueryBus;
     }
@@ -27,7 +27,7 @@ final class KitBag
      */
     public function getItemDetails(string $itemName): Item
     {
-        $itemQuery = new KitItemQuery();
+        $itemQuery = KitItemQuery::fromSlug($itemName);
 
         return $this->itemQueryBus->queryKitItem($itemQuery);
     }

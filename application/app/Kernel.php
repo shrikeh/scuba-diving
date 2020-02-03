@@ -10,6 +10,7 @@ use Symfony\Component\Config\Exception\LoaderLoadException;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
@@ -20,7 +21,7 @@ class Kernel extends BaseKernel
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
     /**
-     * @return iterable
+     * @return iterable<Bundle>
      */
     public function registerBundles(): iterable
     {

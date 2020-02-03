@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace App\Kit\Controller;
 
-
 use App\Kit\Message\QueryKitItemDetail;
 use App\Kit\Query\Bus\ItemDetailQueryBusInterface;
 use App\Kit\Query\Result\ItemDetail;
-use Psr\Http\Message\ServerRequestInterface;
 
 final class Item
 {
@@ -16,7 +14,7 @@ final class Item
     private ItemDetailQueryBusInterface $queryBus;
 
     /**
-     * Item constructor.
+     * SimpleItem constructor.
      * @param ItemDetailQueryBusInterface $queryBus
      */
     public function __construct(ItemDetailQueryBusInterface $queryBus)
@@ -25,11 +23,11 @@ final class Item
     }
 
     /**
-     * @param ServerRequestInterface $request
+     * @param string $kitSlug
      * @return ItemDetail
      */
-    public function __invoke(ServerRequestInterface $request): ItemDetail
+    public function __invoke(string $kitSlug): ItemDetail
     {
-        return $this->queryBus->queryKitItemDetail(new QueryKitItemDetail());
+        return $this->queryBus->queryKitItemDetail(new QueryKitItemDetail($kitSlug));
     }
 }

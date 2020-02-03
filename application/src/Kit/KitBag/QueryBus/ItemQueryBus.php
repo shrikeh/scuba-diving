@@ -7,7 +7,7 @@ namespace Shrikeh\Diving\Kit\KitBag\QueryBus;
 use Shrikeh\Diving\Kit\Item;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
 
-interface ItemQueryBusInterface
+interface ItemQueryBus
 {
     /**
      * @param KitItemQuery $kitItemQuery

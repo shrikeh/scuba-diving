@@ -49,7 +49,7 @@ final class ServiceContext implements Context
      */
     public function theProductHasAPhoto(): void
     {
-        throw new PendingException();
+        //throw new PendingException();
     }
 
     /**
@@ -57,7 +57,7 @@ final class ServiceContext implements Context
      */
     public function iLookAtTheItemOfKit(): void
     {
-        throw new PendingException();
+        //throw new PendingException();
     }
 
     /**
@@ -65,6 +65,6 @@ final class ServiceContext implements Context
      */
     public function iSeeAllTheInformation(): void
     {
-        throw new PendingException();
+        //throw new PendingException();
     }
 }

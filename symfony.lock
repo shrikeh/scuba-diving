@@ -1,4 +1,7 @@
 {
+    "brick/math": {
+        "version": "0.8.11"
+    },
     "composer/xdebug-handler": {
         "version": "1.4.0"
     },
@@ -20,6 +23,9 @@
     "infection/infection": {
         "version": "0.15.0"
     },
+    "jangregor/phpstan-prophecy": {
+        "version": "dev-master"
+    },
     "justinrainbow/json-schema": {
         "version": "5.2.9"
     },
@@ -38,8 +44,20 @@
     "ocramius/proxy-manager": {
         "version": "2.6.x-dev"
     },
+    "pdepend/pdepend": {
+        "version": "2.x-dev"
+    },
     "php": {
         "version": "7.4"
+    },
+    "phpmd/phpmd": {
+        "version": "dev-master"
+    },
+    "phpstan/extension-installer": {
+        "version": "dev-master"
+    },
+    "phpstan/phpstan-phpunit": {
+        "version": "0.12-dev"
     },
     "pimple/pimple": {
         "version": "v3.2.3"
@@ -47,8 +65,23 @@
     "psr/http-message": {
         "version": "1.0.x-dev"
     },
+    "ramsey/uuid": {
+        "version": "4.x-dev"
+    },
     "seld/jsonlint": {
         "version": "1.7.2"
+    },
+    "symfony/messenger": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "8a2675c061737658bed85102e9241c752620e575"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
+        ]
     },
     "symfony/proxy-manager-bridge": {
         "version": "5.0.x-dev"

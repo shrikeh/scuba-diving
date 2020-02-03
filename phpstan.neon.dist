@@ -1,0 +1,11 @@
+parameters:
+  paths:
+    - application
+    - tests
+  level: 6
+  fileExtensions:
+    - php
+  excludes_analyse:
+    - tests/*/bootstrap.php
+    - tests/unit/xdebug-filter.php
+    - tests/spec
