@@ -38,7 +38,7 @@ build-clean:
 
 test: test-php
 
-test-php: composer-validate phplint phpcs phpstan phpspec phpunit behat phpmetrics infection
+test-php: composer-validate phplint phpcs phpstan phpspec phpunit behat phpmetrics infection phpmd
 
 lint-changed: lint-changed-php
 
@@ -81,3 +81,6 @@ phpmetrics:
 
 browse-metrics:
 	open file:///${ROOT_DIR}/build/metrics/index.html
+
+phpmd:
+	php ./vendor/bin/phpmd application text phpmd.xml.dist --verbose
