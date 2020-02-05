@@ -38,7 +38,6 @@ final class ManufacturerSpec extends ObjectBehavior
         UriInterface $website
     ): void {
         $name = 'Northern Diver';
-
         $this->beConstructedWith($name, $logo, $website);
 
         $this->getLogo()->shouldReturn($logo);

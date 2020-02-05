@@ -1,4 +1,14 @@
 ---
+extensions:
+  FriendsOfPhpSpec\PhpSpec\CodeCoverage\CodeCoverageExtension:
+    format:
+      - php
+      - xml
+    whitelist:
+      - application/src
+    output:
+      php: build/coverage/phpspec.phpcoverage
+      xml: build/coverage/phpspec/phpspec-coverage-xml
 formatter.name: pretty
 suites:
   default:

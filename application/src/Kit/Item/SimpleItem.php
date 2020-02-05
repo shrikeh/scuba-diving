@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Shrikeh\Diving\Kit\Item;
 
+use Shrikeh\Diving\Kit\Item;
 use Shrikeh\Diving\Kit\Manufacturer;
 
-final class SimpleItem
+final class SimpleItem implements Item
 {
     /**
      * @var string

@@ -2,14 +2,15 @@
   "timeout": 10,
   "source": {
     "directories": [
-      "application/app/"
+      "application/app/",
+      "application/src/"
     ],
     "excludes": [
       "Kernel"
     ]
   },
   "phpUnit": {
-    "configDir": "./"
+    "configDir": "."
   },
   "logs": {
     "text": "build/logs/infection/general.log",

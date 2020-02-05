@@ -74,8 +74,9 @@ services:
         PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
         PHP_SOCKET_FILE: ${PHP_SOCKET_FILE}
     volumes:
-      - ./php:${APP_CODE_DIR}:ro
+      - ./application:${APP_CODE_DIR}:ro
       - socket:${PHP_SOCKET_DIR}
+
 volumes:
   socket:
   certs:

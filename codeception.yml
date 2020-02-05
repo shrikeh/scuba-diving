@@ -1,0 +1,23 @@
+---
+namespace: Tests\Integration
+suites:
+    integration:
+        path: .
+        actor: IntegrationTester
+        modules:
+            enabled:
+                # add more modules here
+                - Asserts
+                - Symfony:
+                    app_path: application/app
+                    kernel_class: App\Kernel
+                    environment: 'test'
+        step_decorators: ~ 
+settings:
+    shuffle: true
+    lint: true
+paths:
+    tests: tests/integration
+    output: tests/integration/output
+    support: tests/integration/support
+    data: tests/integration

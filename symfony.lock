@@ -2,6 +2,51 @@
     "brick/math": {
         "version": "0.8.11"
     },
+    "codeception/codeception": {
+        "version": "2.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.3",
+            "ref": "d2a29c0abee586aff913fd45fae1f59b669f4cbe"
+        },
+        "files": [
+            "codeception.yml",
+            "tests/data/.gitignore",
+            "tests/output/.gitignore",
+            "tests/support/AcceptanceTester.php",
+            "tests/support/FunctionalTester.php",
+            "tests/support/Helper/Acceptance.php",
+            "tests/support/Helper/Functional.php",
+            "tests/support/Helper/Unit.php",
+            "tests/support/UnitTester.php",
+            "tests/support/_generated/.gitignore",
+            "tests/acceptance/.gitignore",
+            "tests/functional/.gitignore",
+            "tests/unit/.gitignore",
+            "tests/acceptance.suite.yml",
+            "tests/functional.suite.yml",
+            "tests/unit.suite.yml"
+        ]
+    },
+    "codeception/lib-asserts": {
+        "version": "1.10.1"
+    },
+    "codeception/lib-innerbrowser": {
+        "version": "dev-master"
+    },
+    "codeception/module-asserts": {
+        "version": "1.1.1"
+    },
+    "codeception/module-symfony": {
+        "version": "dev-master"
+    },
+    "codeception/phpunit-wrapper": {
+        "version": "8.1.1"
+    },
+    "codeception/stub": {
+        "version": "3.6.0"
+    },
     "composer/xdebug-handler": {
         "version": "1.4.0"
     },
@@ -19,6 +64,12 @@
             "features/demo.feature",
             "tests/Behat/DemoContext.php"
         ]
+    },
+    "friends-of-phpspec/phpspec-code-coverage": {
+        "version": "4.x-dev"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.x-dev"
     },
     "infection/infection": {
         "version": "0.15.0"
@@ -59,17 +110,35 @@
     "phpstan/phpstan-phpunit": {
         "version": "0.12-dev"
     },
+    "phpunit/phpcov": {
+        "version": "6.0-dev"
+    },
     "pimple/pimple": {
         "version": "v3.2.3"
     },
     "psr/http-message": {
         "version": "1.0.x-dev"
     },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
     "ramsey/uuid": {
         "version": "4.x-dev"
     },
+    "sebastian/finder-facade": {
+        "version": "1.2.3"
+    },
     "seld/jsonlint": {
         "version": "1.7.2"
+    },
+    "symfony/browser-kit": {
+        "version": "5.0.x-dev"
+    },
+    "symfony/css-selector": {
+        "version": "5.0.x-dev"
+    },
+    "symfony/dom-crawler": {
+        "version": "5.0.x-dev"
     },
     "symfony/messenger": {
         "version": "4.3",
@@ -88,6 +157,9 @@
     },
     "thecodingmachine/safe": {
         "version": "v0.1.16"
+    },
+    "theseer/fdomdocument": {
+        "version": "1.6.6"
     },
     "webimpress/safe-writer": {
         "version": "2.1.x-dev"

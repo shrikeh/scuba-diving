@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Handler;
 
-use App\Kit\Handler\QueryKitItem;
+use App\Kit\Handler\QueryKitItemDetails;
 use App\Kit\Message\QueryKitItemDetail;
 use App\Kit\Query\Result\ItemDetail;
 use App\Kit\Transformer\ItemDetailTransformerInterface;
@@ -23,7 +23,7 @@ final class QueryKitItemTest extends TestCase
         $queryBus = $this->prophesize(ItemQueryBus::class);
         $transformer = $this->prophesize(ItemDetailTransformerInterface::class);
         $item = $this->prophesize(Item::class);
-        $itemDetail = new ItemDetail();
+        $itemDetailResult = new ItemDetail('A drysuit', 'A really nice drysuit', 'lorem');
 
         $queryBus->queryKitItem(Argument::type(KitItemQuery::class))
             ->will(function (array $args) use ($slug, $item) {
@@ -37,13 +37,13 @@ final class QueryKitItemTest extends TestCase
                 }
             });
 
-        $transformer->toItemDetail($item)->willReturn($itemDetail);
+        $transformer->toItemDetail($item)->willReturn($itemDetailResult);
 
         $kitBag = new KitBag($queryBus->reveal());
         $queryMessage = new QueryKitItemDetail($slug);
 
-        $queryHandler = new QueryKitItem($kitBag, $transformer->reveal());
+        $queryHandler = new QueryKitItemDetails($kitBag, $transformer->reveal());
 
-        $this->assertSame($itemDetail, $queryHandler($queryMessage));
+        $this->assertSame($itemDetailResult, $queryHandler($queryMessage));
     }
 }

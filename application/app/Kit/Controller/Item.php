@@ -25,6 +25,8 @@ final class Item
     /**
      * @param string $kitSlug
      * @return ItemDetail
+     * @Route("/item/{slug}")
+     * @Method({"GET", "HEAD"})
      */
     public function __invoke(string $kitSlug): ItemDetail
     {

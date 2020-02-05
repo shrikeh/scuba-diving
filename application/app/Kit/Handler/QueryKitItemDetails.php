@@ -10,7 +10,7 @@ use App\Kit\Transformer\ItemDetailTransformerInterface;
 use Shrikeh\Diving\Kit\KitBag;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-final class QueryKitItem implements MessageHandlerInterface
+final class QueryKitItemDetails implements MessageHandlerInterface
 {
     /** @var KitBag */
     private KitBag $kitBag;
@@ -20,7 +20,7 @@ final class QueryKitItem implements MessageHandlerInterface
     private ItemDetailTransformerInterface $itemDetailTransformer;
 
     /**
-     * QueryKitItem constructor.
+     * QueryKitItemDetails constructor.
      * @param KitBag $kitBag
      * @param ItemDetailTransformerInterface $itemDetailTransformer
      */

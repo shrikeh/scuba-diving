@@ -18,7 +18,7 @@ final class ItemTest extends TestCase
         $kitSlug = 'some-sort-of-drysuit-slug';
         $queryBus = $this->prophesize(ItemDetailQueryBusInterface::class);
 
-        $itemDetailResult = new ItemDetail();
+        $itemDetailResult = new ItemDetail('A drysuit', 'A really nice drysuit', 'lorem');
 
         $queryBus->queryKitItemDetail(Argument::type(QueryKitItemDetail::class))
             ->willReturn($itemDetailResult);
