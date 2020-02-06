@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Kit\Repository\Item\PromiseResolver;
+namespace App\Kit\Repository\Manufacturer\PromiseResolver;
 
-use App\Kit\Model\Item\ItemInterface;
-use App\Kit\Model\Item\PromiseDecorator;
+use App\Kit\Model\Manufacturer\PromiseDecorator;
+use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Promise\Collection;
 use App\Kit\Promise\Resolver;
 use App\Kit\ResponseParser\ResponseParserInterface;
@@ -37,7 +37,7 @@ final class PromiseResolverFactory implements PromiseResolverFactoryInterface
     /**
      * {@inheritDoc}
      */
-    public function create(PromiseInterface $promise, string $key): ItemInterface
+    public function create(PromiseInterface $promise, string $key): ManufacturerInterface
     {
         $wrapper = $this->collection->wrap($promise, $key);
 

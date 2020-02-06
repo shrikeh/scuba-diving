@@ -16,6 +16,9 @@ final class Cache implements ItemRepositoryInterface
      */
     private ItemRepositoryInterface $itemRepository;
 
+    /**
+     * @var CacheInterface
+     */
     private CacheInterface $cache;
 
     /**

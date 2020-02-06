@@ -8,8 +8,14 @@ use Psr\Http\Message\ResponseInterface;
 
 final class Wrapper
 {
+    /**
+     * @var Collection
+     */
     private Collection $collection;
 
+    /**
+     * @var string
+     */
     private string $key;
 
     /**

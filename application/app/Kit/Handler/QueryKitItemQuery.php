@@ -40,12 +40,10 @@ final class QueryKitItemQuery implements MessageHandlerInterface
         $slug = $kitItemQuery->getKitItemId();
 
         $itemData = $this->itemRepository->fetchBySlug($slug);
-        $manufacturerData = $this->manufacturerRepository->fetchBItemySlug($slug);
-
-
+        $manufacturerData = $this->manufacturerRepository->fetchItemBySlug($slug);
 
         return new SimpleItem(
-            'A drysuit',
+            $itemData->getName(),
             new Manufacturer("O'Three")
         );
     }

@@ -6,6 +6,7 @@ namespace App\Kit\Repository\Item;
 
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\PromiseResolver\PromiseResolverFactory;
+use App\Kit\Repository\Item\PromiseResolver\PromiseResolverFactoryInterface;
 use GuzzleHttp\ClientInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 
@@ -24,10 +25,12 @@ final class ItemApi implements ItemRepositoryInterface
     /**
      * ManufacturerApi constructor.
      * @param ClientInterface $client
-     * @param PromiseResolverFactory $promiseResolverFactory
+     * @param PromiseResolverFactoryInterface $promiseResolverFactory
      */
-    public function __construct(ClientInterface $client, PromiseResolverFactory $promiseResolverFactory)
-    {
+    public function __construct(
+        ClientInterface $client,
+        PromiseResolverFactoryInterface $promiseResolverFactory
+    ) {
         $this->client = $client;
         $this->promiseResolverFactory = $promiseResolverFactory;
     }
@@ -38,8 +41,20 @@ final class ItemApi implements ItemRepositoryInterface
      */
     public function fetchBySlug(ItemSlug $slug): ItemInterface
     {
-        $promise = $this->client->sendAsync('/item/');
+        $promise = $this->client->requestAsync(
+            'GET',
+            sprintf('/item/%s', $slug->toUuid())
+        );
 
-        $this->promiseResolverFactory->create($promise, 'Foo');
+        return $this->promiseResolverFactory->create($promise, $this->createPromiseKey($slug));
+    }
+
+    /**
+     * @param ItemSlug $itemSlug
+     * @return string
+     */
+    private function createPromiseKey(ItemSlug $itemSlug): string
+    {
+        return sprintf('item:%s', $itemSlug->toSlug());
     }
 }

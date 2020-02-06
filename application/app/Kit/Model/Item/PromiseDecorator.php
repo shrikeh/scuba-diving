@@ -32,11 +32,19 @@ final class PromiseDecorator implements ItemInterface
      */
     private function resolve(): ItemInterface
     {
-        if (!$this->item) {
+        if (!isset($this->item)) {
             $resolver = $this->resolver;
             $this->item = $resolver();
         }
 
         return $this->item;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function jsonSerialize()
+    {
+        return $this->resolve()->jsonSerialize();
     }
 }

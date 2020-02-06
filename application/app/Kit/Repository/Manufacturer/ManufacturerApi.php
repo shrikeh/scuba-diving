@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Kit\Repository\Manufacturer;
 
-use App\Kit\Promise\Collection;
+use App\Kit\Model\Manufacturer\ManufacturerInterface;
+use App\Kit\Repository\Manufacturer\PromiseResolver\PromiseResolverFactoryInterface;
 use GuzzleHttp\ClientInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 
@@ -15,38 +16,44 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
      */
     private ClientInterface $client;
     /**
-     * @var Collection
+     * @var PromiseResolverFactoryInterface
      */
-    private $promiseCollection;
+    private PromiseResolverFactoryInterface $promiseResolverFactory;
 
     /**
      * ManufacturerApi constructor.
      * @param ClientInterface $client
-     * @param Collection $promiseCollection
+     * @param PromiseResolverFactoryInterface $promiseResolverFactory
      */
-    public function __construct(ClientInterface $client, Collection $promiseCollection)
-    {
+    public function __construct(
+        ClientInterface $client,
+        PromiseResolverFactoryInterface $promiseResolverFactory
+    ) {
         $this->client = $client;
-        $this->promiseCollection = $promiseCollection;
+        $this->promiseResolverFactory = $promiseResolverFactory;
     }
 
     /**
      * @param ItemSlug $slug
      * @return mixed
      */
-    public function fetchBySlug(ItemSlug $slug)
+    public function fetchItemBySlug(ItemSlug $slug): ManufacturerInterface
     {
-        $promise = $this->client->sendAsync('/item/');
-        $this->promiseCollection->wrap($promise, 'FOO');
+        $promise = $this->client->requestAsync(
+            'GET',
+            sprintf('/item/%s/manufacturer', $slug->toSlug())
+        );
+
+        return $this->promiseResolverFactory->create($promise, $this->createPromiseKey($slug));
     }
 
+
     /**
-     * @param ItemSlug $slug
-     * @return mixed
+     * @param ItemSlug $itemSlug
+     * @return string
      */
-    public function fetchBItemySlug(ItemSlug $slug)
+    private function createPromiseKey(ItemSlug $itemSlug): string
     {
-        $promise = $this->client->sendAsync('/item/');
-        $this->promiseCollection->wrap($promise, 'FOO');
+        return sprintf('item:manufacturer:%s', $itemSlug->toSlug());
     }
 }
