@@ -18,5 +18,25 @@ services:
 
   App\Kit\Query\Bus\ItemDetailQueryBusInterface: '@App\Kit\Query\Bus\SymfonyQueryBus'
 
+  App\Kit\Repository\Item\ItemRepositoryInterface: '@App\Kit\Repository\Item\ItemApi'
+
+  App\Kit\Repository\Item\ItemApi:
+    arguments:
+      - '@app.kit.repository.item.client'
+
+  App\Kit\Repository\Item\Decorator\Cache:
+    decorates: App\Kit\Repository\Item\ItemRepositoryInterface
+    arguments:
+      - '@App\Kit\Repository\Item\Decorator\Cache.inner'
+      - '@app.kit.repository.item.decorator.cache'
+
+  app.kit.repository.item.decorator.cache:
+    class: Symfony\Component\Cache\Psr16Cache
+    arguments:
+      - '@kit.item.cache'
+
+  app.kit.repository.item.client:
+    class: GuzzleHttp\Client
+
   Shrikeh\Diving\Kit\:
     resource: '%kernel.project_dir%/src/Kit/*'
