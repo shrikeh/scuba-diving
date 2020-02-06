@@ -20,9 +20,14 @@ services:
 
   App\Kit\Repository\Item\ItemRepositoryInterface: '@App\Kit\Repository\Item\ItemApi'
 
+  App\Kit\Repository\Manufacturer\ManufacturerApi:
+    arguments:
+      - '@app.kit.repository.manufacturer.client'
+
   App\Kit\Repository\Item\ItemApi:
     arguments:
       - '@app.kit.repository.item.client'
+
 
   App\Kit\Repository\Item\Decorator\Cache:
     decorates: App\Kit\Repository\Item\ItemRepositoryInterface
@@ -36,6 +41,9 @@ services:
       - '@kit.item.cache'
 
   app.kit.repository.item.client:
+    class: GuzzleHttp\Client
+
+  app.kit.repository.manufacturer.client:
     class: GuzzleHttp\Client
 
   Shrikeh\Diving\Kit\:
