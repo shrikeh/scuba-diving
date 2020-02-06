@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Integration\Helper;
 
 // here you can define custom actions

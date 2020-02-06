@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Integration;
 
 use Codeception\Actor;

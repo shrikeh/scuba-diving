@@ -68,6 +68,12 @@
     "friends-of-phpspec/phpspec-code-coverage": {
         "version": "4.x-dev"
     },
+    "guzzlehttp/guzzle": {
+        "version": "7.0-dev"
+    },
+    "guzzlehttp/promises": {
+        "version": "1.4-dev"
+    },
     "guzzlehttp/psr7": {
         "version": "1.x-dev"
     },
@@ -101,6 +107,9 @@
     "php": {
         "version": "7.4"
     },
+    "php-ds/php-ds": {
+        "version": "dev-master"
+    },
     "phpmd/phpmd": {
         "version": "dev-master"
     },
@@ -116,7 +125,13 @@
     "pimple/pimple": {
         "version": "v3.2.3"
     },
+    "psr/http-client": {
+        "version": "1.0.x-dev"
+    },
     "psr/http-message": {
+        "version": "1.0.x-dev"
+    },
+    "psr/simple-cache": {
         "version": "1.0.x-dev"
     },
     "ralouphie/getallheaders": {

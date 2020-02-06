@@ -1,4 +1,6 @@
-<?php namespace Tests\Integration;
+<?php
+
+namespace Tests\Integration;
 
 use App\Kit\Message\QueryKitItemDetail;
 use App\Kit\Query\Bus\ItemDetailQueryBusInterface;

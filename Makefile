@@ -38,7 +38,7 @@ build-clean:
 
 test: test-php
 
-test-php: composer-validate phplint infection behat phpcs phpmd phpstan phpmetrics
+test-php: composer-validate phplint infection codecept-integration behat phpcs phpmd phpstan phpmetrics
 
 lint-changed: lint-changed-php
 
@@ -103,4 +103,4 @@ phpmd:
 	php ./vendor/bin/phpmd application text phpmd.xml.dist --verbose
 
 codecept-integration:
-   php vendor/bin/codecept run integration
+	php ./vendor/bin/codecept run integration
