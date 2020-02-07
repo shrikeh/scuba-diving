@@ -25,11 +25,9 @@ final class Item
     /**
      * @param string $kitSlug
      * @return ItemDetail
-     * @Route("/item/{slug}")
-     * @Method({"GET", "HEAD"})
      */
-    public function __invoke(string $kitSlug): ItemDetail
+    public function __invoke(string $slug): ItemDetail
     {
-        return $this->queryBus->queryKitItemDetail(new QueryKitItemDetail($kitSlug));
+        return $this->queryBus->queryKitItemDetail(new QueryKitItemDetail($slug));
     }
 }

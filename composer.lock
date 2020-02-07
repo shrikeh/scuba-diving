@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24156bbdf9294bae13ecdab463931ab0",
+    "content-hash": "4e83428d107c89e1d31cc36a7369628f",
     "packages": [
         {
             "name": "brick/math",
@@ -913,12 +913,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d4d34ada8e217ec68f4cce38648fe48c0b797c92"
+                "reference": "515c7eed3ee904c6d419141b56cdb3c4347089ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d4d34ada8e217ec68f4cce38648fe48c0b797c92",
-                "reference": "d4d34ada8e217ec68f4cce38648fe48c0b797c92",
+                "url": "https://api.github.com/repos/symfony/console/zipball/515c7eed3ee904c6d419141b56cdb3c4347089ba",
+                "reference": "515c7eed3ee904c6d419141b56cdb3c4347089ba",
                 "shasum": ""
             },
             "require": {
@@ -981,7 +981,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-04T09:47:34+00:00"
+            "time": "2020-02-07T08:48:51+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -1450,12 +1450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "0330ecef8994168fe4261707b242b447c475d1ca"
+                "reference": "c37e2f6a60668e00d63d165a7de73e7e5f69427a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/0330ecef8994168fe4261707b242b447c475d1ca",
-                "reference": "0330ecef8994168fe4261707b242b447c475d1ca",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/c37e2f6a60668e00d63d165a7de73e7e5f69427a",
+                "reference": "c37e2f6a60668e00d63d165a7de73e7e5f69427a",
                 "shasum": ""
             },
             "require": {
@@ -1572,7 +1572,132 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2020-02-04T19:55:45+00:00"
+            "time": "2020-02-07T08:48:51+00:00"
+        },
+        {
+            "name": "symfony/http-client",
+            "version": "5.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client.git",
+                "reference": "9fe4c3f0dd0b3a99ce461177e0ce776c485827a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/9fe4c3f0dd0b3a99ce461177e0ce776c485827a2",
+                "reference": "9fe4c3f0dd0b3a99ce461177e0ce776c485827a2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5",
+                "psr/log": "^1.0",
+                "symfony/http-client-contracts": "^1.1.8|^2",
+                "symfony/polyfill-php73": "^1.11",
+                "symfony/service-contracts": "^1.0|^2"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "*",
+                "php-http/client-implementation": "*",
+                "psr/http-client-implementation": "1.0",
+                "symfony/http-client-implementation": "1.1"
+            },
+            "require-dev": {
+                "guzzlehttp/promises": "^1.3.1",
+                "nyholm/psr7": "^1.0",
+                "php-http/httplug": "^1.0|^2.0",
+                "psr/http-client": "^1.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/http-kernel": "^4.4|^5.0",
+                "symfony/process": "^4.4|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpClient\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpClient component",
+            "homepage": "https://symfony.com",
+            "time": "2020-02-04T09:41:09+00:00"
+        },
+        {
+            "name": "symfony/http-client-contracts",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "bc289fddb5555c0ed6a582fedc780fc3b65e7bc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/bc289fddb5555c0ed6a582fedc780fc3b65e7bc2",
+                "reference": "bc289fddb5555c0ed6a582fedc780fc3b65e7bc2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5"
+            },
+            "suggest": {
+                "symfony/http-client-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\HttpClient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to HTTP clients",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2020-01-04T14:08:26+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -2376,12 +2501,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "de002f40188e74fcd442c5a6480cee76a9cfc84a"
+                "reference": "9bfe195b4745c32e068af03fa4df9558b4916d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/de002f40188e74fcd442c5a6480cee76a9cfc84a",
-                "reference": "de002f40188e74fcd442c5a6480cee76a9cfc84a",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/9bfe195b4745c32e068af03fa4df9558b4916d30",
+                "reference": "9bfe195b4745c32e068af03fa4df9558b4916d30",
                 "shasum": ""
             },
             "require": {
@@ -2448,7 +2573,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2020-02-04T16:26:31+00:00"
+            "time": "2020-02-06T09:54:48+00:00"
         },
         {
             "name": "behat/gherkin",
@@ -2886,20 +3011,20 @@
         },
         {
             "name": "codeception/stub",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Stub.git",
-                "reference": "94874f511ab1025b1f4cb927884cdda5004ece64"
+                "reference": "a3ba01414cbee76a1bced9f9b6b169cc8d203880"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Stub/zipball/94874f511ab1025b1f4cb927884cdda5004ece64",
-                "reference": "94874f511ab1025b1f4cb927884cdda5004ece64",
+                "url": "https://api.github.com/repos/Codeception/Stub/zipball/a3ba01414cbee76a1bced9f9b6b169cc8d203880",
+                "reference": "a3ba01414cbee76a1bced9f9b6b169cc8d203880",
                 "shasum": ""
             },
             "require": {
-                "phpunit/phpunit": "^8.4"
+                "phpunit/phpunit": "^8.4 | ^9.0"
             },
             "type": "library",
             "autoload": {
@@ -2912,7 +3037,7 @@
                 "MIT"
             ],
             "description": "Flexible Stub wrapper for PHPUnit's Mock Builder",
-            "time": "2019-11-23T20:11:30+00:00"
+            "time": "2020-02-07T18:42:28+00:00"
         },
         {
             "name": "composer/xdebug-handler",
@@ -3052,16 +3177,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfBehat/SymfonyExtension.git",
-                "reference": "c2afff0d15e4ad5fb2cc085baef17a051b9c3ad9"
+                "reference": "59eff939854fe809174911bd22dc0b3d77c351b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfBehat/SymfonyExtension/zipball/c2afff0d15e4ad5fb2cc085baef17a051b9c3ad9",
-                "reference": "c2afff0d15e4ad5fb2cc085baef17a051b9c3ad9",
+                "url": "https://api.github.com/repos/FriendsOfBehat/SymfonyExtension/zipball/59eff939854fe809174911bd22dc0b3d77c351b8",
+                "reference": "59eff939854fe809174911bd22dc0b3d77c351b8",
                 "shasum": ""
             },
             "require": {
-                "behat/behat": "^3.4",
+                "behat/behat": "^3.6.1",
                 "php": "^7.1",
                 "symfony/dependency-injection": "^3.4|^4.4|^5.0",
                 "symfony/http-kernel": "^3.4|^4.4|^5.0",
@@ -3111,7 +3236,7 @@
                 }
             ],
             "description": "Integrates Behat with Symfony.",
-            "time": "2020-01-15T18:02:23+00:00"
+            "time": "2020-02-07T09:28:45+00:00"
         },
         {
             "name": "friends-of-phpspec/phpspec-code-coverage",
@@ -3205,12 +3330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "1d79de53cbc1dfa902e1ea4afba6c3f0214d5224"
+                "reference": "96c6a3fc5714f96345ecfa27ade6f361adde5ddc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/1d79de53cbc1dfa902e1ea4afba6c3f0214d5224",
-                "reference": "1d79de53cbc1dfa902e1ea4afba6c3f0214d5224",
+                "url": "https://api.github.com/repos/infection/infection/zipball/96c6a3fc5714f96345ecfa27ade6f361adde5ddc",
+                "reference": "96c6a3fc5714f96345ecfa27ade6f361adde5ddc",
                 "shasum": ""
             },
             "require": {
@@ -3294,7 +3419,7 @@
                 "testing",
                 "unit testing"
             ],
-            "time": "2019-11-29T06:37:53+00:00"
+            "time": "2020-02-06T12:53:30+00:00"
         },
         {
             "name": "jangregor/phpstan-prophecy",
@@ -4132,12 +4257,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "da71602ae92163cfa94f5e5dbdd969629e060a05"
+                "reference": "6a88d1ae42db82ae8274bbf55880d0876ee24323"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/da71602ae92163cfa94f5e5dbdd969629e060a05",
-                "reference": "da71602ae92163cfa94f5e5dbdd969629e060a05",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/6a88d1ae42db82ae8274bbf55880d0876ee24323",
+                "reference": "6a88d1ae42db82ae8274bbf55880d0876ee24323",
                 "shasum": ""
             },
             "require": {
@@ -4177,7 +4302,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-02T19:24:25+00:00"
+            "time": "2020-02-05T20:17:02+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4185,12 +4310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "0708a5714a03b5b27a65786543503d9d3ee50e07"
+                "reference": "a748970492a3fc0c12a823e27c520cf9820b90fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/0708a5714a03b5b27a65786543503d9d3ee50e07",
-                "reference": "0708a5714a03b5b27a65786543503d9d3ee50e07",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a748970492a3fc0c12a823e27c520cf9820b90fb",
+                "reference": "a748970492a3fc0c12a823e27c520cf9820b90fb",
                 "shasum": ""
             },
             "require": {
@@ -4223,7 +4348,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-02-02T19:26:52+00:00"
+            "time": "2020-02-05T20:18:28+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -4594,12 +4719,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "da42b103bd9e9a43a7617154337c78782beaa1ee"
+                "reference": "8b346798eca469f8eabda7cb0c4227a158eb5a81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/da42b103bd9e9a43a7617154337c78782beaa1ee",
-                "reference": "da42b103bd9e9a43a7617154337c78782beaa1ee",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/8b346798eca469f8eabda7cb0c4227a158eb5a81",
+                "reference": "8b346798eca469f8eabda7cb0c4227a158eb5a81",
                 "shasum": ""
             },
             "require": {
@@ -4625,7 +4750,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-02-05T06:20:46+00:00"
+            "time": "2020-02-06T19:46:01+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -4993,12 +5118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2f0ab996ca57beb9598bb6429bdaf94daddb1f9e"
+                "reference": "db6a66913fe7794a2bd60b38d538b5ce744622a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2f0ab996ca57beb9598bb6429bdaf94daddb1f9e",
-                "reference": "2f0ab996ca57beb9598bb6429bdaf94daddb1f9e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/db6a66913fe7794a2bd60b38d538b5ce744622a5",
+                "reference": "db6a66913fe7794a2bd60b38d538b5ce744622a5",
                 "shasum": ""
             },
             "require": {
@@ -5068,7 +5193,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-01-23T15:44:04+00:00"
+            "time": "2020-02-07T06:53:33+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -5126,12 +5251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "af61943caaa512a4f00f1ee80e6e0cfec3fb63d1"
+                "reference": "7d271200b041d3e4be5927fdb03122508b9f8ebb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/af61943caaa512a4f00f1ee80e6e0cfec3fb63d1",
-                "reference": "af61943caaa512a4f00f1ee80e6e0cfec3fb63d1",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/7d271200b041d3e4be5927fdb03122508b9f8ebb",
+                "reference": "7d271200b041d3e4be5927fdb03122508b9f8ebb",
                 "shasum": ""
             },
             "conflict": {
@@ -5170,7 +5295,11 @@
                 "drupal/drupal": ">=7,<7.69|>=8,<8.7.11|>=8.8,<8.8.1",
                 "endroid/qr-code-bundle": "<3.4.2",
                 "erusev/parsedown": "<1.7.2",
-                "ezsystems/ezplatform-admin-ui": ">=1.3,<1.3.5|>=1.4,<1.4.4",
+                "ezsystems/ezfind-ls": ">=5.3,<5.3.6.1|>=5.4,<5.4.11.1|>=2017.12,<2017.12.0.1",
+                "ezsystems/ezplatform": ">=1.7,<1.7.9.1|>=1.13,<1.13.5.1|>=2.5,<2.5.4",
+                "ezsystems/ezplatform-admin-ui": ">=1.3,<1.3.5|>=1.4,<1.4.6",
+                "ezsystems/ezplatform-admin-ui-assets": ">=4,<4.2",
+                "ezsystems/ezplatform-user": ">=1,<1.0.1",
                 "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
@@ -5351,7 +5480,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-02-05T14:02:42+00:00"
+            "time": "2020-02-06T16:34:55+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

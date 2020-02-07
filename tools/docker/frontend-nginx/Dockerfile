@@ -20,6 +20,8 @@ ARG FRONTEND_PAGESPEED_FILE_CACHE
 
 RUN mkdir -p ${FRONTEND_PAGESPEED_FILE_CACHE}
 
+COPY tools/docker/frontend-nginx/certs /certs
+
 WORKDIR /etc/nginx
 
 COPY --from=frontend-nginx-build /etc/nginx/ .

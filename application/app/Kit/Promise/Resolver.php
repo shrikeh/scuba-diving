@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Kit\Promise;
 
+use App\Kit\Model\ModelInterface;
 use App\Kit\ResponseParser\ResponseParserInterface;
 
 final class Resolver
@@ -29,7 +30,7 @@ final class Resolver
      * @return mixed
      * @throws \Throwable
      */
-    public function __invoke()
+    public function __invoke(): ModelInterface
     {
         $wrapper = $this->wrapper;
         $response = $wrapper();

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Kit\Model\Item;
 
+use App\Kit\Model\Traits\PromiseResolveTrait;
+
 final class PromiseDecorator implements ItemInterface
 {
-    private ?ItemInterface $item;
-
-    private $resolver;
+    use PromiseResolveTrait;
 
     /**
      * PromiseDecorator constructor.
@@ -32,12 +32,7 @@ final class PromiseDecorator implements ItemInterface
      */
     private function resolve(): ItemInterface
     {
-        if (!isset($this->item)) {
-            $resolver = $this->resolver;
-            $this->item = $resolver();
-        }
-
-        return $this->item;
+        return $this->resolveModel();
     }
 
     /**

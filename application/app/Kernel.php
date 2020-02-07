@@ -14,6 +14,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
+use function dirname;
+
 class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
@@ -38,7 +40,23 @@ class Kernel extends BaseKernel
      */
     public function getProjectDir(): string
     {
-        return \dirname(__DIR__);
+        return dirname(__DIR__);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getLogDir(): string
+    {
+        return $_ENV['SYMFONY_LOG_DIR'] ?? parent::getCacheDir();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCacheDir(): string
+    {
+        return $_ENV['SYMFONY_CACHE_DIR'] ?? parent::getCacheDir();
     }
 
     /**
