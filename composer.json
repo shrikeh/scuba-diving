@@ -86,7 +86,7 @@
   },
   "extra": {
       "symfony": {
-        "allow-contrib": false,
+        "allow-contrib": true,
         "require": "5.0.*",
         "config-dir": "application/config",
         "src-dir": "application/app",
