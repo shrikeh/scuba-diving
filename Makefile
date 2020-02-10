@@ -38,7 +38,7 @@ build-clean:
 
 test: test-php
 
-test-php: composer-validate phplint infection codecept-integration behat phpcs phpmd phpstan phpmetrics
+test-php: composer-validate phplint infection behat phpcs phpmd phpstan phpmetrics #codecept-integration
 
 lint-changed: lint-changed-php
 
@@ -93,7 +93,7 @@ phpspec:
 
 phpmetrics:
 	echo 'Creating phpmetrics...'
-	phpdbg -qrr ./vendor/bin/phpmetrics --report-html=build/metrics application
+	phpdbg -qrr ./vendor/bin/phpmetrics --junit=build/coverage/phpunit/junit.xml --report-html=build/metrics application
 
 browse-metrics:
 	open file:///${ROOT_DIR}/build/metrics/index.html

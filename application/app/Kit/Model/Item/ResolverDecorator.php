@@ -43,5 +43,4 @@ final class ResolverDecorator implements ItemInterface
     {
         return $this->getModel(ItemInterface::class);
     }
-
 }

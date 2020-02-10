@@ -6,13 +6,15 @@ namespace Tests\Unit\App\Kit\Model\Item;
 
 use App\Kit\Model\Item\ResolverDecorator;
 use App\Kit\Model\ModelInterface;
+use Closure;
 use PHPUnit\Framework\TestCase;
 
 final class ResolverDecoratorTest extends TestCase
 {
     public function testItIsAModel(): void
     {
-        $closure = \Closure::fromCallable(function() {});
+        $closure = Closure::fromCallable(static function () {
+        });
 
         $item = new ResolverDecorator($closure);
 
