@@ -6,7 +6,7 @@ namespace Tests\Unit\App\Kit\Repository\Item;
 
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\ItemApi;
-use App\Kit\Repository\Item\ItemFactory\ItemFactoryInterface;
+use App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -23,7 +23,7 @@ final class ItemApiTest extends TestCase
         $item = $this->prophesize(ItemInterface::class)->reveal();
         $client = $this->prophesize(ClientInterface::class);
         $requestFactory = $this->prophesize(RequestFactoryInterface::class);
-        $itemFactory = $this->prophesize(ItemFactoryInterface::class);
+        $itemFactory = $this->prophesize(ItemModelFactoryInterface::class);
 
         /** @var RequestInterface $request */
         $request = $this->prophesize(RequestInterface::class)->reveal();
@@ -34,7 +34,7 @@ final class ItemApiTest extends TestCase
 
         $client->sendRequest($request)->willReturn($response);
 
-        $itemFactory->fromResponse($response)->willReturn($item);
+        $itemFactory->createItemFromResponse($response)->willReturn($item);
 
         $apiItemRepository = new ItemApi(
             $client->reveal(),

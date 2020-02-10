@@ -23,6 +23,11 @@ final class QueryKitItemQuery implements MessageHandlerInterface
      */
     private $manufacturerRepository;
 
+    /**
+     * QueryKitItemQuery constructor.
+     * @param ItemRepositoryInterface $itemRepository
+     * @param ManufacturerRepositoryInterface $manufacturerRepository
+     */
     public function __construct(
         ItemRepositoryInterface $itemRepository,
         ManufacturerRepositoryInterface $manufacturerRepository
@@ -40,7 +45,7 @@ final class QueryKitItemQuery implements MessageHandlerInterface
         $slug = $kitItemQuery->getKitItemId();
 
         $itemData = $this->itemRepository->fetchBySlug($slug);
-        $manufacturerData = $this->manufacturerRepository->fetchItemBySlug($slug);
+        $manufacturerData = $this->manufacturerRepository->fetchManufacturerByItemSlug($slug);
 
         return new SimpleItem(
             $itemData->getName(),

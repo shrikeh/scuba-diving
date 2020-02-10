@@ -5,55 +5,69 @@ declare(strict_types=1);
 namespace App\Kit\Repository\Manufacturer;
 
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
-use App\Kit\Repository\Manufacturer\PromiseResolver\PromiseResolverFactoryInterface;
-use GuzzleHttp\ClientInterface;
+use App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerModelFactoryInterface;
+use Psr\Http\Client\ClientExceptionInterface;
+use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 
 final class ManufacturerApi implements ManufacturerRepositoryInterface
 {
+    public const MANUFACTURER_URI = 'item/%s/manufacturer';
+
     /**
      * @var ClientInterface
      */
     private ClientInterface $client;
-    /**
-     * @var PromiseResolverFactoryInterface
-     */
-    private PromiseResolverFactoryInterface $promiseResolverFactory;
 
     /**
-     * ManufacturerApi constructor.
+     * @var RequestFactoryInterface
+     */
+    private RequestFactoryInterface $psr7RequestFactory;
+
+    /**
+     * @var ManufacturerModelFactoryInterface
+     */
+    private ManufacturerModelFactoryInterface $manufacturerModelFactory;
+
+    /**
+     * ItemApi constructor.
      * @param ClientInterface $client
-     * @param PromiseResolverFactoryInterface $promiseResolverFactory
+     * @param RequestFactoryInterface $psr7RequestFactory
+     * @param ManufacturerModelFactoryInterface $manufacturerModelFactory
      */
     public function __construct(
         ClientInterface $client,
-        PromiseResolverFactoryInterface $promiseResolverFactory
+        RequestFactoryInterface $psr7RequestFactory,
+        ManufacturerModelFactoryInterface $manufacturerModelFactory
     ) {
         $this->client = $client;
-        $this->promiseResolverFactory = $promiseResolverFactory;
+        $this->psr7RequestFactory = $psr7RequestFactory;
+        $this->manufacturerModelFactory = $manufacturerModelFactory;
     }
 
     /**
      * @param ItemSlug $slug
-     * @return mixed
+     * @return ManufacturerInterface
+     * @throws ClientExceptionInterface
      */
-    public function fetchItemBySlug(ItemSlug $slug): ManufacturerInterface
+    public function fetchManufacturerByItemSlug(ItemSlug $slug): ManufacturerInterface
     {
-        $promise = $this->client->requestAsync(
-            'GET',
-            sprintf('/item/%s/manufacturer', $slug->toSlug())
-        );
+        $response = $this->client->sendRequest($this->createRequestFromSlug($slug));
 
-        return $this->promiseResolverFactory->create($promise, $this->createPromiseKey($slug));
+        return $this->manufacturerModelFactory->createManufacturerFromResponse($response);
     }
-
 
     /**
      * @param ItemSlug $itemSlug
-     * @return string
+     * @return RequestInterface
      */
-    private function createPromiseKey(ItemSlug $itemSlug): string
+    private function createRequestFromSlug(ItemSlug $itemSlug): RequestInterface
     {
-        return sprintf('item:manufacturer:%s', $itemSlug->toSlug());
+        return $this->psr7RequestFactory->createRequest(
+            'GET',
+            sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid())
+        );
     }
 }

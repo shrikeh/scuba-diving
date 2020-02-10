@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kit\Repository\Item;
 
 use App\Kit\Model\Item\ItemInterface;
-use App\Kit\Repository\Item\ItemFactory\ItemFactoryInterface;
+use App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
@@ -24,22 +24,22 @@ final class ItemApi implements ItemRepositoryInterface
     /**
      * @var RequestFactoryInterface
      */
-    private $psr7RequestFactory;
+    private RequestFactoryInterface $psr7RequestFactory;
     /**
-     * @var ItemFactoryInterface
+     * @var ItemModelFactoryInterface
      */
-    private $itemFactory;
+    private ItemModelFactoryInterface $itemFactory;
 
     /**
-     * ManufacturerApi constructor.
+     * ItemApi constructor.
      * @param ClientInterface $client
      * @param RequestFactoryInterface $psr7RequestFactory
-     * @param ItemFactoryInterface $itemFactory
+     * @param ItemModelFactoryInterface $itemFactory
      */
     public function __construct(
         ClientInterface $client,
         RequestFactoryInterface $psr7RequestFactory,
-        ItemFactoryInterface $itemFactory
+        ItemModelFactoryInterface $itemFactory
     ) {
         $this->client = $client;
         $this->psr7RequestFactory = $psr7RequestFactory;
@@ -55,9 +55,8 @@ final class ItemApi implements ItemRepositoryInterface
     {
         $response = $this->client->sendRequest($this->createRequestFromSlug($slug));
 
-        return $this->itemFactory->fromResponse($response);
+        return $this->itemFactory->createItemFromResponse($response);
     }
-
 
     /**
      * @param ItemSlug $itemSlug

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Kit\Model\Item;
 
-use JsonSerializable;
+use App\Kit\Model\ModelInterface;
 
-interface ItemInterface extends JsonSerializable
+interface ItemInterface extends ModelInterface
 {
     /**
      * @return string

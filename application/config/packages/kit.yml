@@ -1,15 +1,21 @@
 ---
 parameters:
-  env(KIT_REPO_ITEM_API_VERSION): '1.1'
-  env(KIT_REPO_ITEM_API_HOSTNAME): https://google.co.uk
+  env(KIT_ITEM_API_VERSION): '1.1'
+  env(KIT_ITEM_API_HOSTNAME): https://google.co.uk
+
+  env(KIT_MANUFACTURER_API_HOSTNAME): https://google.co.uk
+  env(KIT_MANUFACTURER_API_VERSION): '1.1'
 
   app.kit.repository.item.oauth.access_token: '%env(string:KIT_REPO_ITEM_API_OAUTH_TOKEN)%'
   app.kit.repository.item.oauth.token_secret: '%env(string:KIT_REPO_ITEM_API_OAUTH_SECRET)%'
-  app.kit.repository.item.consumer_key: '%env(string:KIT_REPO_ITEM_API_CONSUMER_KEY)%'
-  app.kit.repository.item.consumer_secret: '%env(string:KIT_REPO_ITEM_API_CONSUMER_SECRET)%'
+  app.kit.repository.item.consumer_key: '%env(string:KIT_ITEM_API_CONSUMER_KEY)%'
+  app.kit.repository.item.consumer_secret: '%env(string:KIT_ITEM_API_CONSUMER_SECRET)%'
 
-  app.kit.repository.item.api.version: 'env(string:KIT_REPO_ITEM_API_VERSION)%'
-  app.kit.repository.item.api.host_name: '%env(string:KIT_REPO_ITEM_API_HOSTNAME)%'
+  app.kit.repository.item.api.version: 'env(string:KIT_ITEM_API_VERSION)%'
+  app.kit.repository.item.api.host_name: '%env(string:KIT_ITEM_API_HOSTNAME)%'
+
+  app.kit.repository.manufacturer.api.version: 'env(string:KIT_MANUFACTURER_API_VERSION)%'
+  app.kit.repository.manufacturer.api.host_name: '%env(string:KIT_MANUFACTURER_API_HOSTNAME)%'
 
 services:
   # default configuration for services in *this* file
@@ -30,15 +36,23 @@ services:
 
   App\Kit\Query\Bus\ItemDetailQueryBusInterface: '@App\Kit\Query\Bus\SymfonyQueryBus'
 
-  App\Kit\Repository\Item\ItemRepositoryInterface: '@App\Kit\Repository\Item\ItemApi'
+  Nyholm\Psr7\Factory\Psr17Factory: ~
 
-  App\Kit\Repository\Manufacturer\ManufacturerApi:
+  Psr\Http\Message\ResponseFactoryInterface: '@Nyholm\Psr7\Factory\Psr17Factory'
+  Psr\Http\Message\StreamFactoryInterface: '@Nyholm\Psr7\Factory\Psr17Factory'
+
+# Item Repository
+
+  App\Kit\Repository\Item\ItemRepositoryInterface: '@App\Kit\Repository\Item\ItemApi'
+  App\Kit\Repository\Item\ModelFactory\Psr7ResponseItemModel:
     arguments:
-      - '@app.kit.repository.manufacturer.client'
+      - '@app.kit.repository.item.response_parser'
 
   App\Kit\Repository\Item\ItemApi:
     arguments:
-      - '@app.kit.repository.client.psr18'
+      - '@app.kit.repository.item.client.psr18'
+      - '@app.kit.repository.item.request_factory'
+      - '@App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface'
 
   App\Kit\Repository\Item\Decorator\Cache:
     decorates: App\Kit\Repository\Item\ItemRepositoryInterface
@@ -51,20 +65,82 @@ services:
     arguments:
       - '@kit.item.cache'
 
-  app.kit.repository.client.curl:
+  app.kit.repository.item.client.curl:
     class: Symfony\Component\HttpClient\CurlHttpClient
+    arguments:
+      - base_uri: '%app.kit.repository.item.api.host_name%'
 
-  Nyholm\Psr7\Factory\Psr17Factory: ~
-
-  Psr\Http\Message\ResponseFactoryInterface: '@Nyholm\Psr7\Factory\Psr17Factory'
-  Psr\Http\Message\StreamFactoryInterface: '@Nyholm\Psr7\Factory\Psr17Factory'
-
-  app.kit.repository.client.psr18:
+  app.kit.repository.item.client.psr18:
     class: Symfony\Component\HttpClient\Psr18Client
     arguments:
-      - '@app.kit.repository.client.curl'
+      - '@app.kit.repository.item.client.curl'
       - '@Psr\Http\Message\ResponseFactoryInterface'
       - '@Psr\Http\Message\StreamFactoryInterface'
+
+  app.kit.repository.item.api.base_request:
+    class: Nyholm\Psr7\Request
+    arguments:
+      - GET
+      - '%app.kit.repository.item.api.host_name'
+
+  app.kit.repository.item.api.base_uri:
+    class: GuzzleHttp\Psr7\Uri
+    arguments:
+      - '/'
+
+  app.kit.repository.item.request_factory:
+    class: App\Kit\Repository\RequestFactory\GuzzleRequestFactory
+    arguments:
+      - '@app.kit.repository.item.api.base_request'
+      - '@app.kit.repository.item.api.base_uri'
+
+  app.kit.repository.item.response_parser:
+    class: App\Kit\ResponseParser\ItemDetail
+
+# Manufacturer Repository
+
+  App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface: '@App\Kit\Repository\Manufacturer\ManufacturerApi'
+  App\Kit\Repository\Manufacturer\ModelFactory\Psr7ResponseManufacturerModel:
+    arguments:
+      - '@app.kit.repository.manufacturer.response_parser'
+
+  App\Kit\Repository\Manufacturer\ManufacturerApi:
+    arguments:
+      - '@app.kit.repository.manufacturer.client.psr18'
+      - '@app.kit.repository.manufacturer.request_factory'
+      - '@App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerModelFactoryInterface'
+
+  app.kit.repository.manufacturer.client.psr18:
+    class: Symfony\Component\HttpClient\Psr18Client
+    arguments:
+      - '@app.kit.repository.manufacturer.client.curl'
+      - '@Psr\Http\Message\ResponseFactoryInterface'
+      - '@Psr\Http\Message\StreamFactoryInterface'
+
+  app.kit.repository.manufacturer.client.curl:
+    class: Symfony\Component\HttpClient\CurlHttpClient
+    arguments:
+      - base_uri: '%app.kit.repository.manufacturer.api.host_name%'
+
+  app.kit.repository.manufacturer.api.base_request:
+    class: Nyholm\Psr7\Request
+    arguments:
+      - GET
+      - '%app.kit.repository.manufacturer.api.host_name'
+
+  app.kit.repository.manufacturer.api.base_uri:
+    class: GuzzleHttp\Psr7\Uri
+    arguments:
+      - '/'
+
+  app.kit.repository.manufacturer.request_factory:
+    class: App\Kit\Repository\RequestFactory\GuzzleRequestFactory
+    arguments:
+      - '@app.kit.repository.manufacturer.api.base_request'
+      - '@app.kit.repository.manufacturer.api.base_uri'
+
+  app.kit.repository.manufacturer.response_parser:
+    class: App\Kit\ResponseParser\ItemDetail
 
   Shrikeh\Diving\Kit\:
     resource: '%kernel.project_dir%/src/Kit/*'

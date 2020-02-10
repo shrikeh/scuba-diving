@@ -78,7 +78,7 @@ phplint:
 
 phpstan:
 	echo 'Running phpstan...'
-	php ./vendor/bin/phpstan analyse
+	phpdbg -qrr ./vendor/bin/phpstan analyse
 
 phpcs:
 	echo 'Running codesniffer...'
@@ -93,14 +93,14 @@ phpspec:
 
 phpmetrics:
 	echo 'Creating phpmetrics...'
-	php ./vendor/bin/phpmetrics --report-html=build/metrics application
+	phpdbg -qrr ./vendor/bin/phpmetrics --report-html=build/metrics application
 
 browse-metrics:
 	open file:///${ROOT_DIR}/build/metrics/index.html
 
 phpmd:
 	echo 'Running PHP Mess Detector...'
-	php ./vendor/bin/phpmd application text phpmd.xml.dist --verbose
+	phpdbg -qrr ./vendor/bin/phpmd application text phpmd.xml.dist --verbose
 
 codecept-integration:
 	php ./vendor/bin/codecept run integration
