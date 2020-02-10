@@ -50,8 +50,7 @@
   </rule>
   <rule ref="rulesets/design.xml/DepthOfInheritance">
       <properties>
-          <property name="minimum" value="2"/>
-          <exclude-pattern>/tests/unit/app/*</exclude-pattern>
+          <property name="minimum" value="3"/>
       </properties>
   </rule>
   <rule ref="rulesets/design.xml/CouplingBetweenObjects"/>
