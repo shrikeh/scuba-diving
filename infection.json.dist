@@ -2,8 +2,8 @@
   "timeout": 10,
   "source": {
     "directories": [
-      "application/app/",
-      "application/src/"
+      "application/app",
+      "application/src"
     ],
     "excludes": [
       "Kernel"

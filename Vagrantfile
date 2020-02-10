@@ -27,30 +27,30 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
   }
 
-  config.vm.define :php74, primary: true do |php74|
+  config.vm.define :diving, primary: true do |php74|
 
-    php74.vm.hostname = config.user.vm.hostname
-    php74.vm.box = config.user.vm.php74_box
+    diving.vm.hostname = config.user.vm.hostname
+    diving.vm.box = config.user.vm.php74_box
 
-    php74.vm.network :private_network, ip: config.user.vm.ip
+    diving.vm.network :private_network, ip: config.user.vm.ip
 
     config.hostsupdater.aliases = [
-      'php74.diving.shrikeh.vagrant'
+      'diving.diving.shrikeh.vagrant'
     ]
 
     # Disable the default synced folder...
-    php74.vm.synced_folder './', '/vagrant', disabled: true
+    diving.vm.synced_folder './', '/vagrant', disabled: true
 
     # Now use the one as set in the user config. This may be the same as above but there is no documented way
     # to change the default synced folder.
-    php74.vm.synced_folder './', config.user.vm.synced_folder,
+    diving.vm.synced_folder './', config.user.vm.synced_folder,
        create: true,
        disabled: false,
        owner: config.user.vm.user,
        group: 'www-data',
        mount_options: ['dmode=775,fmode=774']
 
-    php74.vm.provider :virtualbox do |vb|
+    diving.vm.provider :virtualbox do |vb|
       config.cache.synced_folder_opts = {
         type: :nfs,
         # The nolock option can be useful for an NFSv3 client that wants to avoid the
@@ -65,15 +65,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ['guestproperty', 'set', :id, '/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold', 1000]
     end
 
-    php74.vm.provision 'ansible' do |ansible|
+    diving.vm.provision 'ansible' do |ansible|
       ansible.playbook = 'tools/ansible/playbook.yml'
       ansible.become = true
       ansible.compatibility_mode = '2.0'
       ansible.galaxy_role_file = 'tools/ansible/requirements.yml'
       ansible.galaxy_roles_path = 'tools/ansible/galaxy'
       ansible.groups = {
-          :php_test => ['php74'],
-          :vagrant => ['php74']
+          :php_test => ['diving'],
+          :vagrant => ['diving']
       }
       ansible.extra_vars = {
           docker_users: [config.user.vm.user],

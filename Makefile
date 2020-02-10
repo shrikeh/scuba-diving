@@ -58,15 +58,15 @@ phpunit:
 	echo 'Running phpunit...'
 	php ./vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
 
-infection: infection-phpunit infection-phpspec
+infection: phpunit phpspec infection-phpunit infection-phpspec
 
-infection-phpunit: phpunit
+infection-phpunit:
 	echo 'Running infection against PHPUnit...'
-	phpdbg -qrr ./vendor/bin/infection --debug -j2 --filter=application/app --coverage=build/coverage/phpunit --test-framework=phpunit
+	phpdbg -qrr ./vendor/bin/infection --debug -j2 --filter=$(ROOT_DIR)/application/app --coverage=$(ROOT_DIR)/build/coverage/phpunit/ --test-framework=phpunit
 
-infection-phpspec: phpspec
+infection-phpspec:
 	echo 'Running infection against phpspec...'
-	phpdbg -qrr ./vendor/bin/infection --debug -j2 --filter=application/src --coverage=build/coverage/phpspec --test-framework=phpspec
+	phpdbg -qrr ./vendor/bin/infection --debug -j2 --filter=$(ROOT_DIR)/application/src --coverage=$(ROOT_DIR)/build/coverage/phpspec/ --test-framework=phpspec
 
 behat:
 	echo 'Running behat test suite...'

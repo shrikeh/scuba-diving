@@ -6,11 +6,12 @@ namespace Tests\Unit\App\Kit\Repository\Item;
 
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\ItemApi;
-use App\Kit\Repository\Item\PromiseResolver\PromiseResolverFactoryInterface;
-use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Promise\PromiseInterface;
+use App\Kit\Repository\Item\ItemFactory\ItemFactoryInterface;
 use PHPUnit\Framework\TestCase;
-use Prophecy\Argument;
+use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 
 final class ItemApiTest extends TestCase
@@ -19,23 +20,26 @@ final class ItemApiTest extends TestCase
     {
         $slug = new ItemSlug('some-sort-of-slug');
 
-        $expectedUri = sprintf('/item/%s', $slug->toUuid());
-
         $item = $this->prophesize(ItemInterface::class)->reveal();
-        $promiseResolverFactory = $this->prophesize(PromiseResolverFactoryInterface::class);
         $client = $this->prophesize(ClientInterface::class);
-        $promise = $this->prophesize(PromiseInterface::class)->reveal();
+        $requestFactory = $this->prophesize(RequestFactoryInterface::class);
+        $itemFactory = $this->prophesize(ItemFactoryInterface::class);
 
-        $client->requestAsync('GET', $expectedUri)->willReturn($promise);
+        /** @var RequestInterface $request */
+        $request = $this->prophesize(RequestInterface::class)->reveal();
+        $response = $this->prophesize(ResponseInterface::class);
+        $expectedUri = sprintf(ItemApi::ITEM_URI, $slug->toUuid());
 
-        $promiseResolverFactory->create(
-            $promise,
-            Argument::containingString($slug->toSlug())
-        )->willReturn($item);
+        $requestFactory->createRequest('GET', $expectedUri)->willReturn($request);
+
+        $client->sendRequest($request)->willReturn($response);
+
+        $itemFactory->fromResponse($response)->willReturn($item);
 
         $apiItemRepository = new ItemApi(
             $client->reveal(),
-            $promiseResolverFactory->reveal()
+            $requestFactory->reveal(),
+            $itemFactory->reveal()
         );
 
         $this->assertSame($item, $apiItemRepository->fetchBySlug($slug));

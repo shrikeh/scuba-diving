@@ -73,10 +73,15 @@ services:
         APP_GROUP_ID: ${APP_GROUP_ID}
         PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
         PHP_SOCKET_FILE: ${PHP_SOCKET_FILE}
+    environment:
+      SYMFONY_CACHE_DIR:
     volumes:
-      - ./application:${APP_CODE_DIR}:ro
+      - ./:${APP_CODE_DIR}:ro
       - socket:${PHP_SOCKET_DIR}
-
+      - type: tmpfs
+        target: /cache
+      - type: tmpfs
+        target: /logs
 volumes:
   socket:
   certs:

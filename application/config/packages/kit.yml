@@ -38,7 +38,7 @@ services:
 
   App\Kit\Repository\Item\ItemApi:
     arguments:
-      - '@app.kit.repository.item.client'
+      - '@app.kit.repository.client.psr18'
 
   App\Kit\Repository\Item\Decorator\Cache:
     decorates: App\Kit\Repository\Item\ItemRepositoryInterface
@@ -51,36 +51,20 @@ services:
     arguments:
       - '@kit.item.cache'
 
-  app.kit.repository.item.client.handler_stack:
-    class: GuzzleHttp\HandlerStack
-    factory: [GuzzleHttp\HandlerStack, create]
+  app.kit.repository.client.curl:
+    class: Symfony\Component\HttpClient\CurlHttpClient
+
+  Nyholm\Psr7\Factory\Psr17Factory: ~
+
+  Psr\Http\Message\ResponseFactoryInterface: '@Nyholm\Psr7\Factory\Psr17Factory'
+  Psr\Http\Message\StreamFactoryInterface: '@Nyholm\Psr7\Factory\Psr17Factory'
+
+  app.kit.repository.client.psr18:
+    class: Symfony\Component\HttpClient\Psr18Client
     arguments:
-      - '@GuzzleHttp\Handler\CurlMultiHandler'
-    calls:
-      - method: push
-        arguments:
-          - '@app.kit.repository.item.client.oauth'
-
-  app.kit.repository.item.client.oauth:
-    class: GuzzleHttp\Subscriber\Oauth\Oauth1
-    arguments:
-      - consumer_key: '%app.kit.repository.item.consumer_key%'
-        consumer_secret: '%app.kit.repository.item.consumer_secret%'
-        token: '%app.kit.repository.item.oauth.access_token%'
-        token_secret: '%app.kit.repository.item.oauth.token_secret%'
-
-  GuzzleHttp\Handler\CurlMultiHandler: ~
-
-  app.kit.repository.item.client:
-    class: GuzzleHttp\Client
-    arguments:
-      -  timeout: '5.0'
-         base_uri: '%app.kit.repository.item.api.host_name%/%app.kit.repository.item.api.version%/'
-         handler: '@app.kit.repository.item.client.handler_stack'
-         auth: oauth
-
-  app.kit.repository.manufacturer.client:
-    class: GuzzleHttp\Client
+      - '@app.kit.repository.client.curl'
+      - '@Psr\Http\Message\ResponseFactoryInterface'
+      - '@Psr\Http\Message\StreamFactoryInterface'
 
   Shrikeh\Diving\Kit\:
     resource: '%kernel.project_dir%/src/Kit/*'
