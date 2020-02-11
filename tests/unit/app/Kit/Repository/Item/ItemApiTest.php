@@ -8,10 +8,8 @@ use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\ItemApi;
 use App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface;
 use PHPUnit\Framework\TestCase;
-use Psr\Http\Client\ClientInterface;
-use Psr\Http\Message\RequestFactoryInterface;
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 
 final class ItemApiTest extends TestCase
@@ -21,24 +19,18 @@ final class ItemApiTest extends TestCase
         $slug = new ItemSlug('some-sort-of-slug');
 
         $item = $this->prophesize(ItemInterface::class)->reveal();
-        $client = $this->prophesize(ClientInterface::class);
-        $requestFactory = $this->prophesize(RequestFactoryInterface::class);
+        $client = $this->prophesize(HttpClientInterface::class);
         $itemFactory = $this->prophesize(ItemModelFactoryInterface::class);
 
-        /** @var RequestInterface $request */
-        $request = $this->prophesize(RequestInterface::class)->reveal();
         $response = $this->prophesize(ResponseInterface::class);
         $expectedUri = sprintf(ItemApi::ITEM_URI, $slug->toUuid());
 
-        $requestFactory->createRequest('GET', $expectedUri)->willReturn($request);
-
-        $client->sendRequest($request)->willReturn($response);
+        $client->request('GET', $expectedUri)->willReturn($response);
 
         $itemFactory->createItemFromResponse($response)->willReturn($item);
 
         $apiItemRepository = new ItemApi(
             $client->reveal(),
-            $requestFactory->reveal(),
             $itemFactory->reveal()
         );
 

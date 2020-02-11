@@ -63,6 +63,7 @@
       "Tests\\Behat\\": "tests/behat/src",
       "Tests\\Codecept\\": "tests/integration/support",
       "Tests\\Unit\\App\\": "tests/unit/app",
+      "Tests\\PhpStan\\": "tests/phpstan",
       "spec\\Shrikeh\\Diving\\": "tests/spec"
     }
   },

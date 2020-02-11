@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Kit\Repository\Manufacturer\ModelFactory;
 
-use App\Kit\Model\Manufacturer\ResolverDecorator;
+use App\Api\ResponseParserInterface;
+use App\Api\ResponseResolver\ResponseResolver;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
-use App\Kit\ResponseParser\ResponseParserInterface;
-use App\Kit\ResponseResolver\ResponseResolver;
+use App\Kit\Model\Manufacturer\ResolverDecorator;
 use Closure;
-use Psr\Http\Message\ResponseInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class Psr7ResponseManufacturerModel implements ManufacturerModelFactoryInterface
 {

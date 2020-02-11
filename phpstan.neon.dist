@@ -1,11 +1,16 @@
 parameters:
   paths:
-    - application
-    - tests
-  level: 6
+    - application/app
+    - application/src
+    - tests/unit/app
+  level: 5
   fileExtensions:
     - php
   excludes_analyse:
+    - application/app/Kernel
     - tests/*/bootstrap.php
     - tests/unit/xdebug-filter.php
     - tests/spec
+
+services:
+

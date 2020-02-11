@@ -9,6 +9,8 @@ use InvalidArgumentException;
 
 final class IncorrectModelResolved extends InvalidArgumentException
 {
+    public const MSG = 'Expected model of type %s, resolved model was %s';
+
     /**
      * @param ModelInterface $model
      * @param string $expected
@@ -18,7 +20,7 @@ final class IncorrectModelResolved extends InvalidArgumentException
     {
         return new self(
             sprintf(
-                'Expected model of type %s, resolved model was %s',
+                self::MSG,
                 $expected,
                 get_class($model)
             )

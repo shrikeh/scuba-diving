@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Kit\Repository\Item\ModelFactory;
 
+use App\Api\ResponseParserInterface;
+use App\Api\ResponseResolver\ResponseResolver;
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Model\Item\ResolverDecorator;
-use App\Kit\ResponseParser\ResponseParserInterface;
-use App\Kit\ResponseResolver\ResponseResolver;
 use Closure;
-use Psr\Http\Message\ResponseInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class Psr7ResponseItemModel implements ItemModelFactoryInterface
 {

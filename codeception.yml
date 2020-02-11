@@ -9,8 +9,8 @@ suites:
                 # add more modules here
                 - Asserts
                 - Symfony:
-                    app_path: application/app
-                    kernel_class: App\Kernel
+                    app_path: application/app/Kernel
+                    kernel_class: App\Kernel\DefaultKernel
                     environment: 'test'
         step_decorators: ~ 
 settings:

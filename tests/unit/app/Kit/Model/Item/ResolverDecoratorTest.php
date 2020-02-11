@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Model\Item;
 
+use App\Kit\Model\Exception\IncorrectModelResolved;
+use App\Kit\Model\Item\Item;
+use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Model\Item\ResolverDecorator;
+use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Model\ModelInterface;
 use Closure;
 use PHPUnit\Framework\TestCase;
@@ -13,11 +17,50 @@ final class ResolverDecoratorTest extends TestCase
 {
     public function testItIsAModel(): void
     {
-        $closure = Closure::fromCallable(static function () {
-        });
+        $closure = Closure::fromCallable(fn($t) => null);
 
         $item = new ResolverDecorator($closure);
 
         $this->assertInstanceOf(ModelInterface::class, $item);
+    }
+
+    public function testItReturnsTheName(): void
+    {
+        $name = 'Some sort of piece of kit';
+        $item = new Item($name);
+
+        $closure = Closure::fromCallable(fn() => $item);
+
+        $item = new ResolverDecorator($closure);
+
+        $this->assertSame($name, $item->getName());
+    }
+
+    public function testItIsJsonSerializable(): void
+    {
+        $name = 'Some sort of piece of kit';
+        $item = new Item($name);
+
+        $closure = Closure::fromCallable(fn() => $item);
+
+        $item = new ResolverDecorator($closure);
+
+        $json = json_decode(json_encode($item), false);
+
+        $this->assertSame($name, $json->name);
+    }
+
+    public function testItThrowsAnIncorrectModelExceptionIfTheModelResolvedIsNotAnItem(): void
+    {
+        /** @var ManufacturerInterface $manufacturer */
+        $manufacturer = $this->prophesize(ManufacturerInterface::class)->reveal();
+
+        $closure = Closure::fromCallable(fn() => $manufacturer);
+
+        $item = new ResolverDecorator($closure);
+
+        $this->expectExceptionObject(IncorrectModelResolved::fromModel($manufacturer, ItemInterface::class));
+
+        $item->getName();
     }
 }

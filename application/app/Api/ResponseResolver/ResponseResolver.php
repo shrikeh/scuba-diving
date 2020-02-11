@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Kit\ResponseResolver;
+namespace App\Api\ResponseResolver;
 
 use App\Kit\Model\ModelInterface;
-use App\Kit\ResponseParser\ResponseParserInterface;
-use Psr\Http\Message\ResponseInterface;
+use App\Api\ResponseParserInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ResponseResolver
 {
@@ -32,7 +32,7 @@ final class ResponseResolver
     }
 
     /**
-     * @return mixed
+     * @return ModelInterface
      */
     public function __invoke(): ModelInterface
     {

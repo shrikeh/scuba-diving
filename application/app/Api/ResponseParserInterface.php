@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Kit\ResponseParser;
+namespace App\Api;
 
 use App\Kit\Model\ModelInterface;
-use Psr\Http\Message\ResponseInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 interface ResponseParserInterface
 {
     /**
      * @param ResponseInterface $response
-     * @return mixed
+     * @return ModelInterface
      */
     public function parse(ResponseInterface $response): ModelInterface;
 }

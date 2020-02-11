@@ -29,6 +29,7 @@
         <log type="coverage-xml" target="./build/coverage/phpunit/coverage-xml" />
         <log type="coverage-clover" target="./build/coverage/phpunit/clover.xml" />
         <log type="junit" target="./build/coverage/phpunit/junit.xml" />
+        <log type="coverage-php" target="./build/coverage/phpunit.phpcoverage" />
     </logging>
     <testsuites>
       <testsuite name="Diving Unit Tests">

@@ -34,7 +34,7 @@ final class Cache implements ItemRepositoryInterface
 
     /**
      * @param ItemSlug $slug
-     * @return mixed
+     * @return ItemInterface
      */
     public function fetchBySlug(ItemSlug $slug): ItemInterface
     {

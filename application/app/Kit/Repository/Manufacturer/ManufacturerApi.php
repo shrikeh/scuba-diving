@@ -6,25 +6,19 @@ namespace App\Kit\Repository\Manufacturer;
 
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerModelFactoryInterface;
-use Psr\Http\Client\ClientExceptionInterface;
-use Psr\Http\Client\ClientInterface;
-use Psr\Http\Message\RequestFactoryInterface;
-use Psr\Http\Message\RequestInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
+use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 final class ManufacturerApi implements ManufacturerRepositoryInterface
 {
     public const MANUFACTURER_URI = 'item/%s/manufacturer';
 
     /**
-     * @var ClientInterface
+     * @var HttpClientInterface
      */
-    private ClientInterface $client;
+    private HttpClientInterface $client;
 
-    /**
-     * @var RequestFactoryInterface
-     */
-    private RequestFactoryInterface $psr7RequestFactory;
 
     /**
      * @var ManufacturerModelFactoryInterface
@@ -33,41 +27,35 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
 
     /**
      * ItemApi constructor.
-     * @param ClientInterface $client
-     * @param RequestFactoryInterface $psr7RequestFactory
+     * @param HttpClientInterface $client
      * @param ManufacturerModelFactoryInterface $manufacturerModelFactory
      */
     public function __construct(
-        ClientInterface $client,
-        RequestFactoryInterface $psr7RequestFactory,
+        HttpClientInterface $client,
         ManufacturerModelFactoryInterface $manufacturerModelFactory
     ) {
         $this->client = $client;
-        $this->psr7RequestFactory = $psr7RequestFactory;
         $this->manufacturerModelFactory = $manufacturerModelFactory;
     }
 
     /**
      * @param ItemSlug $slug
      * @return ManufacturerInterface
-     * @throws ClientExceptionInterface
+     * @throws TransportExceptionInterface
      */
     public function fetchManufacturerByItemSlug(ItemSlug $slug): ManufacturerInterface
     {
-        $response = $this->client->sendRequest($this->createRequestFromSlug($slug));
+        $response = $this->client->request('GET', $this->createUriFromSlug($slug));
 
         return $this->manufacturerModelFactory->createManufacturerFromResponse($response);
     }
 
     /**
      * @param ItemSlug $itemSlug
-     * @return RequestInterface
+     * @return string
      */
-    private function createRequestFromSlug(ItemSlug $itemSlug): RequestInterface
+    private function createUriFromSlug(ItemSlug $itemSlug): string
     {
-        return $this->psr7RequestFactory->createRequest(
-            'GET',
-            sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid())
-        );
+        return sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid());
     }
 }

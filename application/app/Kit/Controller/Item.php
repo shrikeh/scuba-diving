@@ -23,7 +23,7 @@ final class Item
     }
 
     /**
-     * @param string $kitSlug
+     * @param string $slug
      * @return ItemDetail
      */
     public function __invoke(string $slug): ItemDetail

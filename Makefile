@@ -38,7 +38,7 @@ build-clean:
 
 test: test-php
 
-test-php: composer-validate phplint infection behat phpcs phpmd phpstan phpmetrics #codecept-integration
+test-php: composer-validate phplint infection behat phpcs phpmd phpstan phpmetrics codecept-integration
 
 lint-changed: lint-changed-php
 
@@ -78,7 +78,7 @@ phplint:
 
 phpstan:
 	echo 'Running phpstan...'
-	phpdbg -qrr ./vendor/bin/phpstan analyse
+	php -d memory-limit=128M ./vendor/bin/phpstan analyse
 
 phpcs:
 	echo 'Running codesniffer...'

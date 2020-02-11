@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kit\Repository\Manufacturer\ModelFactory;
 
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
-use Psr\Http\Message\ResponseInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 interface ManufacturerModelFactoryInterface
 {

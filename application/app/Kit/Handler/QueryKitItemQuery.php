@@ -49,7 +49,7 @@ final class QueryKitItemQuery implements MessageHandlerInterface
 
         return new SimpleItem(
             $itemData->getName(),
-            new Manufacturer("O'Three")
+            new Manufacturer($manufacturerData->getName())
         );
     }
 }

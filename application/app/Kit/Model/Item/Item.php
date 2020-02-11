@@ -9,15 +9,15 @@ final class Item implements ItemInterface
     public const KEY_NAME = 'name';
 
     /**
-     * @var
+     * @var string
      */
     private string $name;
 
     /**
      * Item constructor.
-     * @param $name
+     * @param string $name
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
