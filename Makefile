@@ -59,7 +59,7 @@ phpunit:
 	echo 'Running phpunit...'
 	php ./vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
 
-infection: phpunit phpspec infection-phpunit infection-phpspec
+infection: phpunit phpspec infection-phpunit #infection-phpspec
 
 infection-phpunit:
 	echo 'Running infection against PHPUnit...'

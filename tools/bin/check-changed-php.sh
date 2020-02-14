@@ -36,6 +36,7 @@ function codesniff_changed_php_files() {
   return ${PASS_SNIFF};
 }
 
+# Gather any changed PHP files and pass them to the linters/checkers
 function check_changed_php_files() {
   declare CHANGED_PHP_FILES;
   declare EXISTING_PHP_FILES;
@@ -49,7 +50,7 @@ function check_changed_php_files() {
   echo 'Looking for changed PHP files...';
   while IFS= read -r changed_php_file; do
     CHANGED_PHP_FILES+=( "${changed_php_file}" );
-  done < <( git diff --name-only "${TARGET_BRANCH}"  | grep -e '.php$' -e '.phtml$' -e '.inc$' )
+  done < <( git diff --name-only "${TARGET_BRANCH}" | grep -e '.php$' -e '.phtml$' -e '.inc$' )
 
   # Clean out files that have been moved or deleted
   for existing_php_file in "${CHANGED_PHP_FILES[@]}";

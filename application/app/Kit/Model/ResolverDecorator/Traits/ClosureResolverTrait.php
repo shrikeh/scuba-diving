@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the Diving Site package.
+ *
+ * (c) Barney Hanlon <barney@shrikeh.net>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 declare(strict_types=1);
 
 namespace App\Kit\Model\ResolverDecorator\Traits;
@@ -21,10 +29,23 @@ trait ClosureResolverTrait
     private Closure $resolver;
 
     /**
+     * @param callable $callable
+     * @return mixed
+     */
+    public static function create(callable $callable)
+    {
+        if (!$callable instanceof Closure) {
+            $callable = Closure::fromCallable($callable);
+        }
+
+        return new static($callable);
+    }
+
+    /**
      * ClosureResolverTrait constructor.
      * @param Closure $resolver
      */
-    public function __construct(Closure $resolver)
+    private function __construct(Closure $resolver)
     {
         $this->setResolver($resolver);
     }

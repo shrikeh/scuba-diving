@@ -1,9 +1,19 @@
 <?php
 
+/*
+ * This file is part of the Diving Site package.
+ *
+ * (c) Barney Hanlon <barney@shrikeh.net>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Model\Item;
 
+use App\Api\ResponseParserInterface;
+use App\Api\ResponseResolver\ResponseResolver;
 use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Item\Item;
 use App\Kit\Model\Item\ItemInterface;
@@ -12,14 +22,14 @@ use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Model\ModelInterface;
 use Closure;
 use PHPUnit\Framework\TestCase;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ResolverDecoratorTest extends TestCase
 {
     public function testItIsAModel(): void
     {
-        $closure = Closure::fromCallable(fn($t) => null);
-
-        $item = new ResolverDecorator($closure);
+        $closure = Closure::fromCallable(fn() => null);
+        $item = ResolverDecorator::create($closure);
 
         $this->assertInstanceOf(ModelInterface::class, $item);
     }
@@ -31,7 +41,7 @@ final class ResolverDecoratorTest extends TestCase
 
         $closure = Closure::fromCallable(fn() => $item);
 
-        $item = new ResolverDecorator($closure);
+        $item = ResolverDecorator::create($closure);
 
         $this->assertSame($name, $item->getName());
     }
@@ -43,7 +53,7 @@ final class ResolverDecoratorTest extends TestCase
 
         $closure = Closure::fromCallable(fn() => $item);
 
-        $item = new ResolverDecorator($closure);
+        $item = ResolverDecorator::create($closure);
 
         $json = json_decode(json_encode($item), false);
 
@@ -52,15 +62,37 @@ final class ResolverDecoratorTest extends TestCase
 
     public function testItThrowsAnIncorrectModelExceptionIfTheModelResolvedIsNotAnItem(): void
     {
-        /** @var ManufacturerInterface $manufacturer */
         $manufacturer = $this->prophesize(ManufacturerInterface::class)->reveal();
 
         $closure = Closure::fromCallable(fn() => $manufacturer);
 
-        $item = new ResolverDecorator($closure);
+        $item = ResolverDecorator::create($closure);
 
         $this->expectExceptionObject(IncorrectModelResolved::fromModel($manufacturer, ItemInterface::class));
 
         $item->getName();
+    }
+
+    public function testItCallsTheClosureOnlyOnce(): void
+    {
+        $item = $this->prophesize(ItemInterface::class);
+        $item->getName()->willReturn('Promate');
+        $response = $this->prophesize(ResponseInterface::class)->reveal();
+        $parser = $this->prophesize(ResponseParserInterface::class);
+
+        $parser->parse($response)->will(function () use ($parser, $response, $item) {
+            $parser->parse($response)->shouldNotBeCalled();
+
+            return $item->reveal();
+        });
+
+        $resolver = new ResponseResolver($response, $parser->reveal());
+
+        $item = ResolverDecorator::create($resolver);
+
+        $item->getName();
+        $item->getName();
+
+        $parser->parse($response)->shouldBeCalledOnce();
     }
 }
