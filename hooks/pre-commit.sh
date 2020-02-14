@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-SCRIPT_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )";
-
 #
 # An example hook script to verify what is about to be committed.
 # Called by "git commit" with no arguments.  The hook should
@@ -56,12 +54,15 @@ function test_whitespace() {
 }
 
 function pre_commit_checks() {
-  local ROOT_DIR="$(realpath $(dirname ${SCRIPT_PATH}))";
+  echo "${SCRIPT_PATH}";
+  local ROOT_DIR="$(realpath $(dirname $(dirname ${SCRIPT_PATH})))";
   local MAKEFILE="${ROOT_DIR}/Makefile";
 
   echo "Running pre-commit make targets....";
   make -f "${MAKEFILE}" pre-commit;
 }
+
+SCRIPT_PATH=$(realpath "${0}");
 
 test_whitespace;
 pre_commit_checks;
