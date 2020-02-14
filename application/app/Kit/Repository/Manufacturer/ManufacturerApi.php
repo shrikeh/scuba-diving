@@ -27,7 +27,6 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
      */
     private HttpClientInterface $client;
 
-
     /**
      * @var ManufacturerModelFactoryInterface
      */

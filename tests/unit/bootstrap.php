@@ -10,10 +10,12 @@
  */
 declare(strict_types=1);
 
-require_once dirname(__DIR__) . '/constants.php';
+use Tests\Constants;
 
-require VENDOR_DIR . '/autoload.php';
+require_once dirname(__DIR__) . '/Constants.php';
 
-if (file_exists(APP_CONFIG_DIR . '/bootstrap.php')) {
-    require APP_CONFIG_DIR . '/bootstrap.php';
+require Constants::vendorDir() . '/autoload.php';
+
+if (file_exists(Constants::appConfigDir() . '/bootstrap.php')) {
+    require Constants::appConfigDir() . '/bootstrap.php';
 }

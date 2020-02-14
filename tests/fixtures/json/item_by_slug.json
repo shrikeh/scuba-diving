@@ -1,10 +1,16 @@
 {
-  "uuid":
+  "uuid": "6c6560b3-56a6-471c-9640-fe3e403d759e",
   "name": "Ri-2-100 Flex Drysuit",
-  "manufacturer": "othree",
-  "price": {
-    "currency": "GBP",
-    "amount": 1530.00
+  "slug": "ri-2-100-flex-drysuit",
+  "gallery": "/gallery/ri-2-100-flex-drysuit",
+  "product": {
+    "uri": "https://www.othree.co.uk/drysuit-range/ri-2-100-flex-drysuit/",
+    "manufacturer": {
+      "slug": "othree"
+    },
+    "price": {
+      "currency": "GBP",
+      "amount": 1530.00
+    }
   }
-
 }
