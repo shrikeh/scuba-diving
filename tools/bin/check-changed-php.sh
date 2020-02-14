@@ -18,6 +18,7 @@ function lint_php_files() {
   return ${PASS_LINT};
 }
 
+# Codesniff changed php files
 function codesniff_changed_php_files() {
   declare ARR_CHANGED_FILES=("$@");
   declare PASS_SNIFF=0;
@@ -25,7 +26,7 @@ function codesniff_changed_php_files() {
   for changed_php_file in "${ARR_CHANGED_FILES[@]}";
   do
     echo "Running phpcs against ${changed_php_file}";
-    php $PWD/vendor/bin/phpcs -w -p -v "${changed_php_file}";
+    php ${PWD}/vendor/bin/phpcs -w -p -v "${changed_php_file}";
     FILE_PASS=$?;
     if [[ ${FILE_PASS} -ne 0 ]]; then
       PASS_SNIFF=1;
@@ -48,12 +49,13 @@ function check_changed_php_files() {
   echo 'Looking for changed PHP files...';
   while IFS= read -r changed_php_file; do
     CHANGED_PHP_FILES+=( "${changed_php_file}" );
-  done < <( git diff --name-only "${TARGET_BRANCH}" HEAD~  | grep -e '.php$' -e '.phtml$' -e '.inc$' )
+  done < <( git diff --name-only "${TARGET_BRANCH}"  | grep -e '.php$' -e '.phtml$' -e '.inc$' )
 
   # Clean out files that have been moved or deleted
   for existing_php_file in "${CHANGED_PHP_FILES[@]}";
   do
-    if [[ -f "${existing_php_file}" ]]; then
+    echo ${PWD}/${existing_php_file};
+    if [[ -f "${PWD}/${existing_php_file}" ]]; then
       EXISTING_PHP_FILES+=( "${existing_php_file}" );
     fi
   done
@@ -64,6 +66,8 @@ function check_changed_php_files() {
     lint_php_files "${EXISTING_PHP_FILES[@]}" || { echo 'Lint failed' ; return 1; }
     codesniff_changed_php_files "${EXISTING_PHP_FILES[@]}" || { echo 'Codesniffer failed' ; return 2; }
   fi
+
+  return 0;
 }
 
 check_changed_php_files;

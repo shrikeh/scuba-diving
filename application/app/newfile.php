@@ -1,3 +1,0 @@
-<?php
-
-private foo;
