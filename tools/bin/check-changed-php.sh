@@ -50,7 +50,7 @@ function check_changed_php_files() {
     CHANGED_PHP_FILES+=( "${changed_php_file}" );
   done < <( git diff --name-only "${TARGET_BRANCH}" HEAD~  | grep -e '.php$' -e '.phtml$' -e '.inc$' )
 
-  # Clean out files that have been deleted
+  # Clean out files that have been moved or deleted
   for existing_php_file in "${CHANGED_PHP_FILES[@]}";
   do
     if [[ -f "${existing_php_file}" ]]; then
