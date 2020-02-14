@@ -48,16 +48,20 @@ EOF
 	exit 1
 fi
 
-# If there are whitespace errors, print the offending file names and fail.
-exec git diff-index --check --cached $against --
+function test_whitespace() {
+  echo 'Checking whitespace errors...';
 
+  # If there are whitespace errors, print the offending file names and fail.
+  test $(git diff-index --check --cached $against --)
+}
 
 function pre_commit_checks() {
   local ROOT_DIR="$(realpath $(dirname ${SCRIPT_PATH}))";
   local MAKEFILE="${ROOT_DIR}/Makefile";
 
-  echo 'Running pre-commit make targets....';
+  echo "Running pre-commit make targets....";
   make -f "${MAKEFILE}" pre-commit;
 }
 
+test_whitespace;
 pre_commit_checks;

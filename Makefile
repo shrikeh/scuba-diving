@@ -1,11 +1,12 @@
+.ONESHELL:
 SHELL := /usr/bin/env bash
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-
 .DEFAULT: help
 .PHONY: help
 ifndef VERBOSE
 .SILENT:
 endif
+
 
 run: init build up
 
@@ -109,4 +110,4 @@ pre-commit:
 	./tools/bin/check-changed-php.sh;
 
 hook-add-pre-commit:
-	test -e ./.git/hooks/pre-commit || ln ./hooks/pre-commit.sh ./.git/hooks/pre-commit
+	cd ./.git/hooks; test -e pre-commit || ln -s ../../hooks/pre-commit.sh ./pre-commit

@@ -15,6 +15,14 @@ use App\Kit\Message\QueryKitItemDetail;
 use App\Kit\Query\Bus\ItemDetailQueryBusInterface;
 use App\Kit\Query\Result\ItemDetail;
 
+/**
+ * Show details of a specific piece of kit
+ *
+ * Makes a call to the query bus, passing along the slug, and returns an ItemDetail
+ *
+ * @author Barney Hanlon <barney@shrikeh.net>
+ */
+
 final class Item
 {
     /** @var ItemDetailQueryBusInterface */
