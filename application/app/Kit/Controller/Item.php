@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of the Diving Site package.
  *

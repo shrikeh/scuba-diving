@@ -106,7 +106,9 @@ phpmd:
 codecept-integration:
 	php ./vendor/bin/codecept run integration;
 
-pre-commit:
+pre-commit: check-changed-php
+
+check-changed-php:
 	./tools/bin/check-changed-php.sh;
 
 hook-add-pre-commit:
