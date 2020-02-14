@@ -13,7 +13,7 @@ final class ItemDetail
     private string $text;
 
     /**
-     * ItemDetail constructor.
+     * ItemManufacturer constructor.
      * @param string $name
      * @param string $description
      * @param string $text

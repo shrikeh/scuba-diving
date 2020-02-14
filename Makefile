@@ -103,4 +103,10 @@ phpmd:
 	phpdbg -qrr ./vendor/bin/phpmd application text phpmd.xml.dist --verbose
 
 codecept-integration:
-	php ./vendor/bin/codecept run integration
+	php ./vendor/bin/codecept run integration;
+
+pre-commit:
+	./tools/bin/check-changed-php.sh;
+
+hook-add-pre-commit:
+	test -e ./.git/hooks/pre-commit || ln ./hooks/pre-commit.sh ./.git/hooks/pre-commit

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "745c55aad1602981741f44ece1e37a08",
+    "content-hash": "aa911b3b818cda80f9f24f9bc3c4d7bc",
     "packages": [
         {
             "name": "brick/math",
@@ -825,12 +825,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache-contracts.git",
-                "reference": "31878bf1bf153160f08012b50bed9ddac46972da"
+                "reference": "9d0ece7c7557856a817d2d12ad407b960d6c4b61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/31878bf1bf153160f08012b50bed9ddac46972da",
-                "reference": "31878bf1bf153160f08012b50bed9ddac46972da",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/9d0ece7c7557856a817d2d12ad407b960d6c4b61",
+                "reference": "9d0ece7c7557856a817d2d12ad407b960d6c4b61",
                 "shasum": ""
             },
             "require": {
@@ -875,7 +875,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2020-02-04T09:41:09+00:00"
+            "time": "2020-02-10T10:54:33+00:00"
         },
         {
             "name": "symfony/config",
@@ -1278,12 +1278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "454f46234e2dadd9ecb0af0af613a79972787e9b"
+                "reference": "5531ac70e1eadf1a5df29e753fdeed4a67256815"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/454f46234e2dadd9ecb0af0af613a79972787e9b",
-                "reference": "454f46234e2dadd9ecb0af0af613a79972787e9b",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/5531ac70e1eadf1a5df29e753fdeed4a67256815",
+                "reference": "5531ac70e1eadf1a5df29e753fdeed4a67256815",
                 "shasum": ""
             },
             "require": {
@@ -1328,7 +1328,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-10T10:54:33+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -1614,12 +1614,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "9fe4c3f0dd0b3a99ce461177e0ce776c485827a2"
+                "reference": "c7f8a5bdb8dd982075def1e3e7ce727e8b6b2269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/9fe4c3f0dd0b3a99ce461177e0ce776c485827a2",
-                "reference": "9fe4c3f0dd0b3a99ce461177e0ce776c485827a2",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/c7f8a5bdb8dd982075def1e3e7ce727e8b6b2269",
+                "reference": "c7f8a5bdb8dd982075def1e3e7ce727e8b6b2269",
                 "shasum": ""
             },
             "require": {
@@ -1674,7 +1674,7 @@
             ],
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-04T09:41:09+00:00"
+            "time": "2020-02-11T14:26:26+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -1682,12 +1682,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "bc289fddb5555c0ed6a582fedc780fc3b65e7bc2"
+                "reference": "c7fce5959cb573179662d3da631be4ae0e1d6324"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/bc289fddb5555c0ed6a582fedc780fc3b65e7bc2",
-                "reference": "bc289fddb5555c0ed6a582fedc780fc3b65e7bc2",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/c7fce5959cb573179662d3da631be4ae0e1d6324",
+                "reference": "c7fce5959cb573179662d3da631be4ae0e1d6324",
                 "shasum": ""
             },
             "require": {
@@ -1731,7 +1731,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-11T14:27:37+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -2281,12 +2281,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "ac2466b187c8836b559155d5a041050303f309c6"
+                "reference": "f39991229db97d96d322cd5d1f6dab4c252b0314"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ac2466b187c8836b559155d5a041050303f309c6",
-                "reference": "ac2466b187c8836b559155d5a041050303f309c6",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/f39991229db97d96d322cd5d1f6dab4c252b0314",
+                "reference": "f39991229db97d96d322cd5d1f6dab4c252b0314",
                 "shasum": ""
             },
             "require": {
@@ -2331,7 +2331,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-10T10:54:33+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -2526,6 +2526,60 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2020-02-03T13:51:17+00:00"
+        },
+        {
+            "name": "webonyx/graphql-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "599b03b59bf990e289337b1b79dc6aea31ea882e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/599b03b59bf990e289337b1b79dc6aea31ea882e",
+                "reference": "599b03b59bf990e289337b1b79dc6aea31ea882e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.1||^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpbench/phpbench": "^0.14",
+                "phpstan/phpstan": "0.12.2",
+                "phpstan/phpstan-phpunit": "0.12.1",
+                "phpstan/phpstan-strict-rules": "0.12.0",
+                "phpunit/phpcov": "^5.0",
+                "phpunit/phpunit": "^7.2",
+                "psr/http-message": "^1.0",
+                "react/promise": "2.*",
+                "simpod/php-coveralls-mirror": "^3.0",
+                "squizlabs/php_codesniffer": "^3.5.2"
+            },
+            "suggest": {
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP port of GraphQL reference implementation",
+            "homepage": "https://github.com/webonyx/graphql-php",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "time": "2020-01-16T19:55:21+00:00"
         }
     ],
     "packages-dev": [
@@ -2719,12 +2773,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "cbf03428bbc26dbe455169aec1ac138f53191a54"
+                "reference": "db5db08aa675419cfbe8aacde2def8d88807adbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/cbf03428bbc26dbe455169aec1ac138f53191a54",
-                "reference": "cbf03428bbc26dbe455169aec1ac138f53191a54",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/db5db08aa675419cfbe8aacde2def8d88807adbb",
+                "reference": "db5db08aa675419cfbe8aacde2def8d88807adbb",
                 "shasum": ""
             },
             "require": {
@@ -2796,25 +2850,25 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2020-02-07T20:33:23+00:00"
+            "time": "2020-02-11T16:24:27+00:00"
         },
         {
             "name": "codeception/lib-asserts",
-            "version": "1.10.1",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-asserts.git",
-                "reference": "f052dfebad3e9bcafc66c22a7ef39cb1a30cebd2"
+                "reference": "1fdc310bf857c11d3703ae02689a2e482c71c5ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-asserts/zipball/f052dfebad3e9bcafc66c22a7ef39cb1a30cebd2",
-                "reference": "f052dfebad3e9bcafc66c22a7ef39cb1a30cebd2",
+                "url": "https://api.github.com/repos/Codeception/lib-asserts/zipball/1fdc310bf857c11d3703ae02689a2e482c71c5ab",
+                "reference": "1fdc310bf857c11d3703ae02689a2e482c71c5ab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.0 <8.0",
-                "phpunit/phpunit": "^8.4"
+                "phpunit/phpunit": "^8.4 | ^9.0"
             },
             "type": "library",
             "autoload": {
@@ -2841,7 +2895,7 @@
             "keywords": [
                 "codeception"
             ],
-            "time": "2019-11-23T20:16:40+00:00"
+            "time": "2020-02-11T10:45:21+00:00"
         },
         {
             "name": "codeception/lib-innerbrowser",
@@ -3364,12 +3418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "96c6a3fc5714f96345ecfa27ade6f361adde5ddc"
+                "reference": "91e935e02d3cc5bf764138e23f1d276683ffab78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/96c6a3fc5714f96345ecfa27ade6f361adde5ddc",
-                "reference": "96c6a3fc5714f96345ecfa27ade6f361adde5ddc",
+                "url": "https://api.github.com/repos/infection/infection/zipball/91e935e02d3cc5bf764138e23f1d276683ffab78",
+                "reference": "91e935e02d3cc5bf764138e23f1d276683ffab78",
                 "shasum": ""
             },
             "require": {
@@ -3382,7 +3436,7 @@
                 "ocramius/package-versions": "^1.2",
                 "php": "^7.2.9",
                 "pimple/pimple": "^3.2",
-                "sebastian/diff": "^3.0.2",
+                "sebastian/diff": "^3.0.2 || ^4.0",
                 "seld/jsonlint": "^1.7",
                 "symfony/console": "^3.4.29 || ^4.0 || ^5.0",
                 "symfony/filesystem": "^3.4.29 || ^4.0 || ^5.0",
@@ -3453,7 +3507,7 @@
                 "testing",
                 "unit testing"
             ],
-            "time": "2020-02-06T12:53:30+00:00"
+            "time": "2020-02-12T06:37:09+00:00"
         },
         {
             "name": "jangregor/phpstan-prophecy",
@@ -4289,12 +4343,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f"
+                "reference": "50e77ace682d81779b87e554bdbfc7fb0e6f8d53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/a48807183a4b819072f26e347bbd0b5199a9d15f",
-                "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/50e77ace682d81779b87e554bdbfc7fb0e6f8d53",
+                "reference": "50e77ace682d81779b87e554bdbfc7fb0e6f8d53",
                 "shasum": ""
             },
             "require": {
@@ -4334,7 +4388,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-09T09:16:15+00:00"
+            "time": "2020-02-12T07:18:08+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4342,12 +4396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "a748970492a3fc0c12a823e27c520cf9820b90fb"
+                "reference": "35ac7d8479b312530648b28914620120446fa0ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a748970492a3fc0c12a823e27c520cf9820b90fb",
-                "reference": "a748970492a3fc0c12a823e27c520cf9820b90fb",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/35ac7d8479b312530648b28914620120446fa0ae",
+                "reference": "35ac7d8479b312530648b28914620120446fa0ae",
                 "shasum": ""
             },
             "require": {
@@ -4380,7 +4434,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-02-05T20:18:28+00:00"
+            "time": "2020-02-10T19:49:09+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -4751,12 +4805,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "559f7e063baa001ff8f2ff213a865c7da27d73a4"
+                "reference": "a55f5e0469be66a51f1e58dbb8eea5b90b3e5540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/559f7e063baa001ff8f2ff213a865c7da27d73a4",
-                "reference": "559f7e063baa001ff8f2ff213a865c7da27d73a4",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a55f5e0469be66a51f1e58dbb8eea5b90b3e5540",
+                "reference": "a55f5e0469be66a51f1e58dbb8eea5b90b3e5540",
                 "shasum": ""
             },
             "require": {
@@ -4782,7 +4836,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-02-10T17:18:04+00:00"
+            "time": "2020-02-12T13:37:49+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -5098,12 +5152,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "073d302866d4b961e02f8f25acfeccad8fdd9227"
+                "reference": "6d6f260a2e82f57026b28db566da6e62fff3bf2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/073d302866d4b961e02f8f25acfeccad8fdd9227",
-                "reference": "073d302866d4b961e02f8f25acfeccad8fdd9227",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6d6f260a2e82f57026b28db566da6e62fff3bf2a",
+                "reference": "6d6f260a2e82f57026b28db566da6e62fff3bf2a",
                 "shasum": ""
             },
             "require": {
@@ -5173,7 +5227,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-02-09T08:02:36+00:00"
+            "time": "2020-02-11T16:13:52+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -6603,12 +6657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "50c101c6e7147d3284a945f71eb0959bd5736f1b"
+                "reference": "14ba2b69357d4f4a0ff4c7a0234d0a483bb6a8b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/50c101c6e7147d3284a945f71eb0959bd5736f1b",
-                "reference": "50c101c6e7147d3284a945f71eb0959bd5736f1b",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/14ba2b69357d4f4a0ff4c7a0234d0a483bb6a8b4",
+                "reference": "14ba2b69357d4f4a0ff4c7a0234d0a483bb6a8b4",
                 "shasum": ""
             },
             "require": {
@@ -6652,7 +6706,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-10T10:54:33+00:00"
         },
         {
             "name": "thecodingmachine/safe",
@@ -6967,60 +7021,6 @@
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
             "time": "2016-08-15T15:31:42+00:00"
-        },
-        {
-            "name": "webonyx/graphql-php",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "599b03b59bf990e289337b1b79dc6aea31ea882e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/599b03b59bf990e289337b1b79dc6aea31ea882e",
-                "reference": "599b03b59bf990e289337b1b79dc6aea31ea882e",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": "^7.1||^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpbench/phpbench": "^0.14",
-                "phpstan/phpstan": "0.12.2",
-                "phpstan/phpstan-phpunit": "0.12.1",
-                "phpstan/phpstan-strict-rules": "0.12.0",
-                "phpunit/phpcov": "^5.0",
-                "phpunit/phpunit": "^7.2",
-                "psr/http-message": "^1.0",
-                "react/promise": "2.*",
-                "simpod/php-coveralls-mirror": "^3.0",
-                "squizlabs/php_codesniffer": "^3.5.2"
-            },
-            "suggest": {
-                "psr/http-message": "To use standard GraphQL server",
-                "react/promise": "To leverage async resolving on React PHP platform"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GraphQL\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A PHP port of GraphQL reference implementation",
-            "homepage": "https://github.com/webonyx/graphql-php",
-            "keywords": [
-                "api",
-                "graphql"
-            ],
-            "time": "2020-01-16T19:55:21+00:00"
         }
     ],
     "aliases": [],
@@ -7031,6 +7031,7 @@
         "psr/http-message": 20,
         "psr/simple-cache": 20,
         "ramsey/uuid": 20,
+        "webonyx/graphql-php": 20,
         "behat/behat": 20,
         "codeception/codeception": 20,
         "codeception/module-symfony": 20,
@@ -7043,15 +7044,15 @@
         "phpstan/extension-installer": 20,
         "phpstan/phpstan": 20,
         "phpstan/phpstan-phpunit": 20,
-        "roave/security-advisories": 20,
-        "webonyx/graphql-php": 20
+        "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.2.5",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-json": "*"
     },
     "platform-dev": {
         "ext-xdebug": "*"
