@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa911b3b818cda80f9f24f9bc3c4d7bc",
+    "content-hash": "9ccdd4180399ff1764e291eafe28cd28",
     "packages": [
         {
             "name": "brick/math",
@@ -3570,6 +3570,50 @@
             "time": "2020-02-05T16:38:06+00:00"
         },
         {
+            "name": "jetbrains/phpstorm-stubs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JetBrains/phpstorm-stubs.git",
+                "reference": "3c6be3dc792af642860c00b904f6170064f27eb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-stubs/zipball/3c6be3dc792af642860c00b904f6170064f27eb1",
+                "reference": "3c6be3dc792af642860c00b904f6170064f27eb1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "nikic/php-parser": "^4",
+                "php": "^7.1",
+                "phpdocumentor/reflection-docblock": "^4.3",
+                "phpunit/phpunit": "^7"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "PhpStormStubsMap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "PHP runtime & extensions header files for PhpStorm",
+            "homepage": "https://www.jetbrains.com/phpstorm",
+            "keywords": [
+                "autocomplete",
+                "code",
+                "inference",
+                "inspection",
+                "jetbrains",
+                "phpstorm",
+                "stubs",
+                "type"
+            ],
+            "time": "2020-02-11T14:49:00+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.9",
             "source": {
@@ -7038,6 +7082,7 @@
         "friends-of-behat/symfony-extension": 20,
         "friends-of-phpspec/phpspec-code-coverage": 20,
         "jangregor/phpstan-prophecy": 20,
+        "jetbrains/phpstorm-stubs": 20,
         "php-ds/php-ds": 20,
         "phpmd/phpmd": 20,
         "phpmetrics/phpmetrics": 20,

@@ -27,5 +27,6 @@ final class NativePhpDecdoderTest extends TestCase
         $result = $nativeJsonDecoder->decode($itemBySlug->fread($itemBySlug->getSize()));
 
         $this->assertSame('6c6560b3-56a6-471c-9640-fe3e403d759e', $result->uuid);
+        $this->assertSame('othree', $result->product->manufacturer->slug);
     }
 }

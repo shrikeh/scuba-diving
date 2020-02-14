@@ -98,6 +98,9 @@
     "jangregor/phpstan-prophecy": {
         "version": "dev-master"
     },
+    "jetbrains/phpstorm-stubs": {
+        "version": "dev-master"
+    },
     "justinrainbow/json-schema": {
         "version": "5.2.9"
     },

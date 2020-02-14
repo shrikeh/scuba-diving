@@ -12,6 +12,7 @@
     "friends-of-phpspec/phpspec-code-coverage": "^4.0@dev",
     "infection/infection": "^0.15.0",
     "jangregor/phpstan-prophecy": "dev-master",
+    "jetbrains/phpstorm-stubs": "dev-master",
     "overtrue/phplint": "^1.2",
     "php-ds/php-ds": "dev-master",
     "phpmd/phpmd": "dev-master",
