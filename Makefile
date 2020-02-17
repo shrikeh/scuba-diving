@@ -94,7 +94,8 @@ phpspec:
 
 phpmetrics:
 	echo 'Creating phpmetrics...'
-	phpdbg -qrr ./vendor/bin/phpmetrics --junit=build/coverage/phpunit/junit.xml --report-html=build/metrics application
+	php -d memory-limit=256M ./vendor/bin/phpmetrics --junit="./build/coverage/phpunit/junit.xml" --report-html="./build/metrics" \
+	  --exclude="build","dist","tests","vendor","tools","public","translations","application/var","application/app/Kernel", "vendor" ./
 
 browse-metrics:
 	open file:///${ROOT_DIR}/build/metrics/index.html

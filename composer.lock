@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ccdd4180399ff1764e291eafe28cd28",
+    "content-hash": "10e42dc56fbc307cb99627931e88d87a",
     "packages": [
         {
             "name": "brick/math",
@@ -2529,16 +2529,16 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "dev-master",
+            "version": "0.13.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "599b03b59bf990e289337b1b79dc6aea31ea882e"
+                "reference": "6829ae58f4c59121df1f86915fb9917a2ec595e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/599b03b59bf990e289337b1b79dc6aea31ea882e",
-                "reference": "599b03b59bf990e289337b1b79dc6aea31ea882e",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/6829ae58f4c59121df1f86915fb9917a2ec595e8",
+                "reference": "6829ae58f4c59121df1f86915fb9917a2ec595e8",
                 "shasum": ""
             },
             "require": {
@@ -2548,16 +2548,14 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^6.0",
-                "phpbench/phpbench": "^0.14",
-                "phpstan/phpstan": "0.12.2",
-                "phpstan/phpstan-phpunit": "0.12.1",
-                "phpstan/phpstan-strict-rules": "0.12.0",
+                "phpbench/phpbench": "^0.14.0",
+                "phpstan/phpstan": "^0.11.4",
+                "phpstan/phpstan-phpunit": "^0.11.0",
+                "phpstan/phpstan-strict-rules": "^0.11.0",
                 "phpunit/phpcov": "^5.0",
                 "phpunit/phpunit": "^7.2",
                 "psr/http-message": "^1.0",
-                "react/promise": "2.*",
-                "simpod/php-coveralls-mirror": "^3.0",
-                "squizlabs/php_codesniffer": "^3.5.2"
+                "react/promise": "2.*"
             },
             "suggest": {
                 "psr/http-message": "To use standard GraphQL server",
@@ -2579,7 +2577,7 @@
                 "api",
                 "graphql"
             ],
-            "time": "2020-01-16T19:55:21+00:00"
+            "time": "2019-08-25T10:32:47+00:00"
         }
     ],
     "packages-dev": [
@@ -3202,6 +3200,72 @@
             "homepage": "https://github.com/container-interop/container-interop",
             "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "dealerdirect/phpcodesniffer-composer-installer",
+            "version": "v0.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dealerdirect/phpcodesniffer-composer-installer.git",
+                "reference": "8001af8eb107fbfcedc31a8b51e20b07d85b457a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/8001af8eb107fbfcedc31a8b51e20b07d85b457a",
+                "reference": "8001af8eb107fbfcedc31a8b51e20b07d85b457a",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": "^5.3|^7",
+                "squizlabs/php_codesniffer": "^2|^3"
+            },
+            "require-dev": {
+                "composer/composer": "*",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "sensiolabs/security-checker": "^4.1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Franck Nijhof",
+                    "email": "franck.nijhof@dealerdirect.com",
+                    "homepage": "http://www.frenck.nl",
+                    "role": "Developer / IT Manager"
+                }
+            ],
+            "description": "PHP_CodeSniffer Standards Composer Installer Plugin",
+            "homepage": "http://www.dealerdirect.com",
+            "keywords": [
+                "PHPCodeSniffer",
+                "PHP_CodeSniffer",
+                "code quality",
+                "codesniffer",
+                "composer",
+                "installer",
+                "phpcs",
+                "plugin",
+                "qa",
+                "quality",
+                "standard",
+                "standards",
+                "style guide",
+                "stylecheck",
+                "tests"
+            ],
+            "time": "2020-01-29T20:22:20+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -4330,6 +4394,64 @@
             "time": "2019-12-28T00:09:45+00:00"
         },
         {
+            "name": "phpcompatibility/php-compatibility",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPCompatibility/PHPCompatibility.git",
+                "reference": "9fb324479acf6f39452e0655d2429cc0d3914243"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibility/zipball/9fb324479acf6f39452e0655d2429cc0d3914243",
+                "reference": "9fb324479acf6f39452e0655d2429cc0d3914243",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "squizlabs/php_codesniffer": "^2.3 || ^3.0.2"
+            },
+            "conflict": {
+                "squizlabs/php_codesniffer": "2.6.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
+                "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
+            },
+            "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Wim Godden",
+                    "homepage": "https://github.com/wimg",
+                    "role": "lead"
+                },
+                {
+                    "name": "Juliette Reinders Folmer",
+                    "homepage": "https://github.com/jrfnl",
+                    "role": "lead"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/PHPCompatibility/PHPCompatibility/graphs/contributors"
+                }
+            ],
+            "description": "A set of sniffs for PHP_CodeSniffer that checks for PHP cross-version compatibility.",
+            "homepage": "http://techblog.wimgodden.be/tag/codesniffer/",
+            "keywords": [
+                "compatibility",
+                "phpcs",
+                "standards"
+            ],
+            "time": "2019-12-27T09:44:58+00:00"
+        },
+        {
             "name": "phpdocumentor/reflection-common",
             "version": "dev-master",
             "source": {
@@ -4849,12 +4971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "6d70731598e7a9c01ac04e30017c610e8386af48"
+                "reference": "4f3c0df94cac1f8a054437c954138d9f5e7d29b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6d70731598e7a9c01ac04e30017c610e8386af48",
-                "reference": "6d70731598e7a9c01ac04e30017c610e8386af48",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4f3c0df94cac1f8a054437c954138d9f5e7d29b0",
+                "reference": "4f3c0df94cac1f8a054437c954138d9f5e7d29b0",
                 "shasum": ""
             },
             "require": {
@@ -4880,7 +5002,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-02-14T14:16:13+00:00"
+            "time": "2020-02-14T14:38:34+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -7070,12 +7192,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "nyholm/psr7": 20,
-        "psr/http-factory": 20,
-        "psr/http-message": 20,
-        "psr/simple-cache": 20,
         "ramsey/uuid": 20,
-        "webonyx/graphql-php": 20,
         "behat/behat": 20,
         "codeception/codeception": 20,
         "codeception/module-symfony": 20,
@@ -7084,6 +7201,7 @@
         "jangregor/phpstan-prophecy": 20,
         "jetbrains/phpstorm-stubs": 20,
         "php-ds/php-ds": 20,
+        "phpcompatibility/php-compatibility": 20,
         "phpmd/phpmd": 20,
         "phpmetrics/phpmetrics": 20,
         "phpstan/extension-installer": 20,
@@ -7091,10 +7209,10 @@
         "phpstan/phpstan-phpunit": 20,
         "roave/security-advisories": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.5",
+        "php": "^7.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*"

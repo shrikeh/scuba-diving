@@ -19,7 +19,7 @@ use App\Kit\Model\Manufacturer\ResolverDecorator;
 use Closure;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-final class Psr7ResponseManufacturerModel implements ManufacturerModelFactoryInterface
+final class SymfonyResponseManufacturerFactory implements ManufacturerModelFactoryInterface
 {
     /**
      * @var ResponseParserInterface
@@ -27,7 +27,7 @@ final class Psr7ResponseManufacturerModel implements ManufacturerModelFactoryInt
     private ResponseParserInterface $responseParser;
 
     /**
-     * Psr7ResponseManufacturerModel constructor.
+     * SymfonyResponseManufacturerFactory constructor.
      * @param ResponseParserInterface $responseParser
      */
     public function __construct(ResponseParserInterface $responseParser)

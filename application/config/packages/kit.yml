@@ -42,7 +42,7 @@ services:
 # Item Repository
 
   App\Kit\Repository\Item\ItemRepositoryInterface: '@App\Kit\Repository\Item\ItemApi'
-  App\Kit\Repository\Item\ModelFactory\Psr7ResponseItemModel:
+  App\Kit\Repository\Item\ModelFactory\SymfonyResponseItemFactory:
     arguments:
       - '@app.kit.repository.item.response_parser'
 
@@ -73,7 +73,7 @@ services:
 # Manufacturer Repository
 
   App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface: '@App\Kit\Repository\Manufacturer\ManufacturerApi'
-  App\Kit\Repository\Manufacturer\ModelFactory\Psr7ResponseManufacturerModel:
+  App\Kit\Repository\Manufacturer\ModelFactory\SymfonyResponseManufacturerFactory:
     arguments:
       - '@app.kit.repository.manufacturer.response_parser'
 

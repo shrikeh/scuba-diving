@@ -19,7 +19,7 @@ use App\Kit\Model\Item\ResolverDecorator;
 use Closure;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-final class Psr7ResponseItemModel implements ItemModelFactoryInterface
+final class SymfonyResponseItemFactory implements ItemModelFactoryInterface
 {
     /**
      * @var ResponseParserInterface
@@ -27,7 +27,7 @@ final class Psr7ResponseItemModel implements ItemModelFactoryInterface
     private ResponseParserInterface $responseParser;
 
     /**
-     * Psr7ResponseManufacturerModel constructor.
+     * SymfonyResponseManufacturerFactory constructor.
      * @param ResponseParserInterface $responseParser
      */
     public function __construct(ResponseParserInterface $responseParser)
