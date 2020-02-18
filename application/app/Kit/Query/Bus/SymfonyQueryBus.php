@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace App\Kit\Query\Bus;
 
 use App\Kit\Message\QueryKitItemDetail;
+use App\Kit\Query\Bus\Exception\IncorrectResultType;
 use App\Kit\Query\Result\ItemDetail;
 use Shrikeh\Diving\Kit\Item;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
@@ -36,18 +37,49 @@ final class SymfonyQueryBus implements ItemDetailQueryBusInterface, ItemQueryBus
     /**
      * @param QueryKitItemDetail $queryKitItemDetail
      * @return ItemDetail
+     * @throws IncorrectResultType if the result does not match the expected type
      */
     public function queryKitItemDetail(QueryKitItemDetail $queryKitItemDetail): ItemDetail
     {
-        return $this->handle($queryKitItemDetail);
+        $result = $this->handle($queryKitItemDetail);
+        $this->assertItemDetail($result);
+
+        return $result;
     }
 
     /**
      * @param KitItemQuery $kitItemQuery
      * @return Item
+     * @throws IncorrectResultType if the result does not match the expected type
      */
     public function queryKitItem(KitItemQuery $kitItemQuery): Item
     {
-        return $this->handle($kitItemQuery);
+        $result = $this->handle($kitItemQuery);
+
+        $this->assertItem($result);
+
+        return $result;
+    }
+
+    /**
+     * @param mixed $result
+     * @psalm-assert ItemDetail $result
+     */
+    private function assertItemDetail($result): void
+    {
+        if (!$result instanceof ItemDetail) {
+            throw IncorrectResultType::fromMessage($result, ItemDetail::class);
+        }
+    }
+
+    /**
+     * @param mixed $result
+     * @psalm-assert Item $result
+     */
+    private function assertItem($result): void
+    {
+        if (!$result instanceof Item) {
+            throw IncorrectResultType::fromMessage($result, Item::class);
+        }
     }
 }

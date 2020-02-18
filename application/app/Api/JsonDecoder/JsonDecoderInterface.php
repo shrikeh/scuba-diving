@@ -12,11 +12,13 @@ declare(strict_types=1);
 
 namespace App\Api\JsonDecoder;
 
+use stdClass;
+
 interface JsonDecoderInterface
 {
     /**
      * @param string $json
-     * @return object
+     * @return stdClass
      */
-    public function decode(string $json): object;
+    public function decode(string $json): stdClass;
 }

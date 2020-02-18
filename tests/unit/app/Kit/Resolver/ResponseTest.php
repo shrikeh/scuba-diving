@@ -10,15 +10,15 @@
  */
 declare(strict_types=1);
 
-namespace Tests\Unit\App\Api\ResponseResolver;
+namespace Tests\Unit\App\Kit\Resolver;
 
 use App\Api\ResponseParserInterface;
-use App\Api\ResponseResolver\ResponseResolver;
+use App\Kit\Resolver\Response;
 use App\Kit\Model\ModelInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-final class ResponseResolverTest extends TestCase
+final class ResponseTest extends TestCase
 {
     public function testiItParsesAResponse(): void
     {
@@ -31,7 +31,7 @@ final class ResponseResolverTest extends TestCase
 
         $parser->parse($response)->willReturn($model);
 
-        $resolver = new ResponseResolver(
+        $resolver = new Response(
             $response,
             $parser->reveal()
         );

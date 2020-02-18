@@ -10,17 +10,14 @@
  */
 declare(strict_types=1);
 
-namespace App\Api\JsonDecoder;
+namespace App\Kit\Resolver;
 
-use stdClass;
+use App\Kit\Model\ModelInterface;
 
-final class NativePhpDecdoder implements JsonDecoderInterface
+interface ResolverInterface
 {
     /**
-     * {@inheritDoc}
+     * @return ModelInterface
      */
-    public function decode(string $json): stdClass
-    {
-        return json_decode($json);
-    }
+    public function __invoke(): ModelInterface;
 }

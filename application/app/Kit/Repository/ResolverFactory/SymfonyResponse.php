@@ -10,16 +10,16 @@
  */
 declare(strict_types=1);
 
-namespace App\Kit\Repository\Manufacturer\ModelFactory;
+namespace App\Kit\Repository\ResolverFactory;
 
 use App\Api\ResponseParserInterface;
-use App\Api\ResponseResolver\ResponseResolver;
-use App\Kit\Model\Manufacturer\ManufacturerInterface;
-use App\Kit\Model\Manufacturer\ResolverDecorator;
+use App\Kit\Resolver\ResolverInterface;
+use App\Kit\Resolver\Response;
 use Closure;
+use Ramsey\Uuid\UuidInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-final class SymfonyResponseManufacturerFactory implements ManufacturerModelFactoryInterface
+final class SymfonyResponse implements ResolverFactoryInterface
 {
     /**
      * @var ResponseParserInterface
@@ -37,19 +37,11 @@ final class SymfonyResponseManufacturerFactory implements ManufacturerModelFacto
 
     /**
      * @param ResponseInterface $response
-     * @return ManufacturerInterface
+     * @param UuidInterface $uuid
+     * @return ResolverInterface
      */
-    public function createManufacturerFromResponse(ResponseInterface $response): ManufacturerInterface
+    public function createResolver(ResponseInterface $response, UuidInterface $uuid): ResolverInterface
     {
-        return ResolverDecorator::create($this->createResolverClosure($response));
-    }
-
-    /**
-     * @param ResponseInterface $response
-     * @return Closure
-     */
-    private function createResolverClosure(ResponseInterface $response): Closure
-    {
-        return Closure::fromCallable(new ResponseResolver($response, $this->responseParser));
+        return new Response($response, $this->responseParser);
     }
 }

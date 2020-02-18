@@ -54,7 +54,7 @@ final class ItemApi implements ItemRepositoryInterface
     {
         $response = $this->client->request('GET', $this->createUriFromSlug($slug));
 
-        return $this->itemFactory->createItemFromResponse($response);
+        return $this->itemFactory->createItemFromResponse($response, $slug);
     }
 
     /**
@@ -63,6 +63,6 @@ final class ItemApi implements ItemRepositoryInterface
      */
     private function createUriFromSlug(ItemSlug $itemSlug): string
     {
-        return sprintf(self::ITEM_URI, $itemSlug->toUuid());
+        return sprintf(self::ITEM_URI, $itemSlug->toUuid()->toString());
     }
 }

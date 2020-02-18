@@ -10,26 +10,27 @@
  */
 declare(strict_types=1);
 
-namespace Tests\Unit\App\Kit\Model\Manufacturer;
+namespace Tests\Unit\App\Kit\Model\Manufacturer\Decorator;
 
 use App\Api\ResponseParserInterface;
-use App\Api\ResponseResolver\ResponseResolver;
+use App\Kit\Resolver\Response;
 use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Model\Manufacturer\Manufacturer;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
-use App\Kit\Model\Manufacturer\ResolverDecorator;
+use App\Kit\Model\Manufacturer\Decorator\ClosureResolver;
 use App\Kit\Model\ModelInterface;
 use Closure;
 use PHPUnit\Framework\TestCase;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-final class ResolverDecoratorTest extends TestCase
+final class ClosureResolverTest extends TestCase
 {
     public function testItIsAModel(): void
     {
-        $closure = Closure::fromCallable(fn() => null);
-        $manufacturer = ResolverDecorator::create($closure);
+        $closure = Closure::fromCallable(static function () {
+        });
+        $manufacturer = ClosureResolver::create($closure);
 
         $this->assertInstanceOf(ModelInterface::class, $manufacturer);
     }
@@ -39,9 +40,11 @@ final class ResolverDecoratorTest extends TestCase
         $name = 'Some manufacturer';
         $manufacturer = new Manufacturer($name);
 
-        $closure = Closure::fromCallable(fn() => $manufacturer);
+        $closure = Closure::fromCallable(static function () use ($manufacturer) {
+            return $manufacturer;
+        });
 
-        $manufacturer = ResolverDecorator::create($closure);
+        $manufacturer = ClosureResolver::create($closure);
 
         $this->assertSame($name, $manufacturer->getName());
     }
@@ -51,9 +54,11 @@ final class ResolverDecoratorTest extends TestCase
         $name = 'Some sort of piece of kit';
         $manufacturer = new Manufacturer($name);
 
-        $closure = Closure::fromCallable(fn() => $manufacturer);
+        $closure = Closure::fromCallable(static function () use ($manufacturer) {
+            return $manufacturer;
+        });
 
-        $manufacturer = ResolverDecorator::create($closure);
+        $manufacturer = ClosureResolver::create($closure);
 
         $json = json_decode(json_encode($manufacturer), false);
 
@@ -64,9 +69,11 @@ final class ResolverDecoratorTest extends TestCase
     {
         $item = $this->prophesize(ItemInterface::class)->reveal();
 
-        $closure = Closure::fromCallable(fn() => $item);
+        $closure = Closure::fromCallable(static function () use ($item) {
+            return $item;
+        });
 
-        $manufacturer = ResolverDecorator::create($closure);
+        $manufacturer = ClosureResolver::create($closure);
 
         $this->expectExceptionObject(IncorrectModelResolved::fromModel($item, ManufacturerInterface::class));
 
@@ -86,9 +93,9 @@ final class ResolverDecoratorTest extends TestCase
             return $manufacturer->reveal();
         });
 
-        $resolver = new ResponseResolver($response, $parser->reveal());
+        $resolver = new Response($response, $parser->reveal());
 
-        $manufacturer = ResolverDecorator::create($resolver);
+        $manufacturer = ClosureResolver::create($resolver);
 
         $manufacturer->getName();
         $manufacturer->getName();

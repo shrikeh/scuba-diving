@@ -10,21 +10,28 @@
  */
 declare(strict_types=1);
 
-namespace App\Kit\Model\Item;
+namespace App\Kit\Model\Manufacturer\Decorator;
 
 use App\Kit\Model\Exception\IncorrectModelResolved;
+use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Model\ResolverDecorator\Traits\ClosureResolverTrait;
+use Closure;
 
-final class ResolverDecorator implements ItemInterface
+final class ClosureResolver implements ManufacturerInterface
 {
     use ClosureResolverTrait;
 
     /**
-     * @return string
+     * @param callable $callable
+     * @return self
      */
-    public function getName(): string
+    public static function create(callable $callable): self
     {
-        return $this->resolve()->getName();
+        if (!$callable instanceof Closure) {
+            $callable = Closure::fromCallable($callable);
+        }
+
+        return new self($callable);
     }
 
     /**
@@ -36,17 +43,25 @@ final class ResolverDecorator implements ItemInterface
     }
 
     /**
-     * @return ItemInterface
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->resolve()->getName();
+    }
+
+    /**
+     * @return ManufacturerInterface
      * @throws IncorrectModelResolved If the resolved model doesn't match the expected type
      */
-    private function resolve(): ItemInterface
+    private function resolve(): ManufacturerInterface
     {
         if (!isset($this->model)) {
             $this->model = $this->resolveModel();
         }
 
-        if (!$this->model instanceof ItemInterface) {
-            throw IncorrectModelResolved::fromModel($this->model, ItemInterface::class);
+        if (!$this->model instanceof ManufacturerInterface) {
+            throw IncorrectModelResolved::fromModel($this->model, ManufacturerInterface::class);
         }
 
         return $this->model;

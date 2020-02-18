@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace App\Kit\Model\ResolverDecorator\Traits;
 
 use App\Kit\Model\Exception\IncorrectModelResolved;
+use App\Kit\Model\Exception\ModelNotResolved;
 use App\Kit\Model\ModelInterface;
 use Closure;
 
@@ -21,7 +22,7 @@ trait ClosureResolverTrait
     /**
      * @var ModelInterface
      */
-    private ?ModelInterface $model;
+    private ?ModelInterface $model = null;
 
     /**
      * @var Closure
@@ -29,33 +30,32 @@ trait ClosureResolverTrait
     private Closure $resolver;
 
     /**
-     * @param callable $callable
-     * @return mixed
-     */
-    public static function create(callable $callable)
-    {
-        if (!$callable instanceof Closure) {
-            $callable = Closure::fromCallable($callable);
-        }
-
-        return new static($callable);
-    }
-
-    /**
      * ClosureResolverTrait constructor.
      * @param Closure $resolver
      */
     private function __construct(Closure $resolver)
     {
-        $this->setResolver($resolver);
+        $this->resolver = $resolver;
     }
 
     /**
-     * @param Closure $closure
+     * @return Closure
      */
-    private function setResolver(Closure $closure): void
+    private function getResolver(): Closure
     {
-        $this->resolver = $closure;
+        return $this->resolver;
+    }
+
+    /**
+     * @return ModelInterface
+     */
+    private function fetchModel(): ModelInterface
+    {
+        if (!isset($this->model)) {
+            $this->model = $this->resolveModel();
+        }
+
+        return $this->model;
     }
 
     /**
@@ -63,7 +63,22 @@ trait ClosureResolverTrait
      */
     private function resolveModel(): ModelInterface
     {
-        $resolver = $this->resolver;
-        return $resolver();
+        $resolver = $this->getResolver();
+        $resolvedModel = $resolver();
+        $this->assertModel($resolvedModel);
+
+        return $resolvedModel;
+    }
+
+    /**
+     * @param mixed $model
+     * @psalm-assert ModelInterface $model
+     * @throws ModelNotResolved If the resolver does not return a ModelInterface
+     */
+    private function assertModel($model): void
+    {
+        if (!$model instanceof ModelInterface) {
+            throw ModelNotResolved::create($this->getResolver(), $model);
+        }
     }
 }

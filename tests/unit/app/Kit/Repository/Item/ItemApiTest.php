@@ -35,7 +35,7 @@ final class ItemApiTest extends TestCase
 
         $client->request('GET', $expectedUri)->willReturn($response);
 
-        $itemFactory->createItemFromResponse($response)->willReturn($item);
+        $itemFactory->createItemFromResponse($response, $slug)->willReturn($item);
 
         $apiItemRepository = new ItemApi(
             $client->reveal(),

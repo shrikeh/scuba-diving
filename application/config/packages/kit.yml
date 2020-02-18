@@ -42,9 +42,10 @@ services:
 # Item Repository
 
   App\Kit\Repository\Item\ItemRepositoryInterface: '@App\Kit\Repository\Item\ItemApi'
-  App\Kit\Repository\Item\ModelFactory\SymfonyResponseItemFactory:
+  App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface: '@App\Kit\Repository\Item\ModelFactory\ItemResolver'
+  App\Kit\Repository\Item\ModelFactory\ItemResolver:
     arguments:
-      - '@app.kit.repository.item.response_parser'
+      - '@app.kit.repository.item.resolver_factory'
 
   App\Kit\Repository\Item\ItemApi:
     arguments:
@@ -57,15 +58,23 @@ services:
       - '@App\Kit\Repository\Item\Decorator\Cache.inner'
       - '@app.kit.repository.item.decorator.cache'
 
-  app.kit.repository.item.decorator.cache:
-    class: Symfony\Component\Cache\Psr16Cache
-    arguments:
-      - '@kit.item.cache'
 
   app.kit.repository.item.client:
     class: Symfony\Component\HttpClient\CurlHttpClient
     arguments:
       - base_uri: '%app.kit.repository.item.api.base_uri%'
+
+  app.kit.repository.item.resolver_factory:
+    class: App\Kit\Repository\ResolverFactory\SymfonyResponse
+    arguments:
+      - '@app.kit.repository.item.response_parser'
+
+  app.kit.repository.item.resolver_factory.cache:
+    class: App\Kit\Resolver\Cache
+    decorates: app.kit.repository.item.resolver_factory
+    arguments:
+      - '@app.kit.repository.item.resolver_factory.inner'
+      - cache
 
   app.kit.repository.item.response_parser:
     class: App\Kit\Repository\Item\ResponseParser\ItemDetail

@@ -54,7 +54,7 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
     {
         $response = $this->client->request('GET', $this->createUriFromSlug($slug));
 
-        return $this->manufacturerModelFactory->createManufacturerFromResponse($response);
+        return $this->manufacturerModelFactory->createManufacturerFromResponse($response, $slug);
     }
 
     /**
@@ -63,6 +63,6 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
      */
     private function createUriFromSlug(ItemSlug $itemSlug): string
     {
-        return sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid());
+        return sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid()->toString());
     }
 }

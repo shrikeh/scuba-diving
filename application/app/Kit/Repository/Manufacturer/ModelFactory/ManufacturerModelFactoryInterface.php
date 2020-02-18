@@ -13,13 +13,15 @@ declare(strict_types=1);
 namespace App\Kit\Repository\Manufacturer\ModelFactory;
 
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
+use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 interface ManufacturerModelFactoryInterface
 {
     /**
      * @param ResponseInterface $response
+     * @param ItemSlug $slug
      * @return ManufacturerInterface
      */
-    public function createManufacturerFromResponse(ResponseInterface $response): ManufacturerInterface;
+    public function createManufacturerFromResponse(ResponseInterface $response, ItemSlug $slug): ManufacturerInterface;
 }

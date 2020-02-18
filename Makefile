@@ -63,7 +63,7 @@ infection: phpunit phpspec infection-phpunit #infection-phpspec
 
 infection-phpunit:
 	echo 'Running infection against PHPUnit...'
-	phpdbg -qrr ./vendor/bin/infection --debug -j2 --filter=$(ROOT_DIR)/application/app --coverage=$(ROOT_DIR)/build/coverage/phpunit/ --test-framework=phpunit
+	php ./vendor/bin/infection --debug -j2 --filter=$(ROOT_DIR)/application/app --coverage=$(ROOT_DIR)/build/coverage/phpunit/ --test-framework=phpunit
 
 infection-phpspec:
 	echo 'Running infection against phpspec...'
@@ -80,6 +80,9 @@ phplint:
 phpstan:
 	echo 'Running phpstan...'
 	php -d memory-limit=128M ./vendor/bin/phpstan analyse
+
+psalm:
+	php vendor/bin/psalm --show-info=true
 
 phpcs:
 	echo 'Running codesniffer...'
