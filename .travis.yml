@@ -16,8 +16,9 @@ script:
   --min-covered-msi=94 --min-msi=94 --test-framework=phpunit
 - php vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application
   tests
-after_script:
-  - bash <(curl -s https://codecov.io/bash)
+after_success:
+  - travis_retry bash <(curl -s https://codecov.io/bash)
+  - travis_retry php vendor/bin/php-coveralls
 env:
   global:
   - secure: sON0XTIEjpZYSZK75EED/TzcR93SbsKEsGCmFo8OFPvMcr06fZ2FKAPMwmnSLSr1fRoEu63xXnzf08YFxBax6O2kvglB/lnFwv817ZXzxdHWozRqZ5oeHcNSq9JHoAMNmjgpNq7IQmfPTByMch3RVJCidBsPCYiOw4M3ecIIrxOqBZ3AFUYRWhnYBVkhe5yKo+8Etv6gSpxGsj3+cjRChSv+2ccx30M4W4F+XlBN8/5EGkvvr1s4oQumVltcBM9PulxaiGVvt4aEoFF02pWTKQmgQf57m2wxx27VQB6YDkREPkFW26em6soWfnBXPqATLkSwnhV4YVKlYn9c3w7AjxKvYxZhxNM3Ej2h4I9BijK0CdLziJ7S634AaQzIZU7Dmk+V/1jdKw1jHEH5wpJGt1JMoMB2HjdTXe8yBWuhaoDCXGkP2CcfxEgkgI2/Vuo5BJvN/m25dh+Mw8HisaFzmcQUevp7zSu/cB3EQNAamEfotPYuHismEnDYcUnmcbycRxkMDFKE0DfXoROkY2z5ZW3wi+XVgUQ4Jow8VYZW0t57KbxlvCwgVdF5NMFxQNGXGvLFCsSizjRJChGv6eJJ3jaWhHDxnRBJWgPcpEsprhtGWkdayxnrCYhryTdrpZ0PS92ha854i8HHxY1TiPjdxJGjxAeN0llDQTKCyyQxvv8=
