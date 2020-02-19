@@ -8,6 +8,9 @@ cache:
 jobs:
   fast_finish: true
 
+before_script:
+  - composer install
+
 script:
   - php vendor/bin/phplint
   - php vendor/bin/phpspec run
