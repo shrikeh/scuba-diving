@@ -16,9 +16,9 @@ use App\Kit\Model\ModelInterface;
 use App\Kit\Resolver\Cache\Exception\InvalidCacheArgument;
 use App\Kit\Resolver\Exception\ModelNotResolved;
 use Closure;
-use Exception;
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Contracts\Cache\CacheInterface;
+use Throwable;
 
 final class Cache implements ResolverInterface
 {
@@ -58,7 +58,7 @@ final class Cache implements ResolverInterface
     {
         try {
             $model = $this->pool->get($this->modelKey->toString(), $this->callback);
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             throw InvalidCacheArgument::create($this->modelKey, $e);
         }
 
@@ -68,13 +68,13 @@ final class Cache implements ResolverInterface
     }
 
     /**
-     * @param mixed $model
+     * @param mixed $resolved
      * @psalm-assert ModelInterface $model
      */
-    private function assertModel($model): void
+    private function assertModel($resolved): void
     {
-        if (!$model instanceof ModelInterface) {
-            throw ModelNotResolved::fromResolved($model, ModelInterface::class);
+        if (!$resolved instanceof ModelInterface) {
+            throw ModelNotResolved::fromResolved($resolved, ModelInterface::class);
         }
     }
 }

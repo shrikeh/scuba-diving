@@ -25,7 +25,7 @@ final class DefaultItemDetails implements ItemDetailTransformerInterface
     {
         return new ItemDetail(
             $item->getName(),
-            $item->getManufacturer()->getName(),
+            $item->getManufacturerName(),
             $item->getName()
         );
     }

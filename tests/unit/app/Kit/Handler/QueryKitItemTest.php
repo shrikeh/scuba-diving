@@ -12,46 +12,39 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Handler;
 
-use App\Kit\Handler\QueryKitItemDetails;
-use App\Kit\Message\QueryKitItemDetail;
-use App\Kit\Query\Result\ItemDetail;
-use App\Kit\Transformer\ItemDetailTransformerInterface;
+use App\Kit\Handler\QueryKitItem;
+use App\Kit\Model\Item\ItemInterface;
+use App\Kit\Model\Manufacturer\ManufacturerInterface;
+use App\Kit\Query\Result\SimpleItem;
+use App\Kit\Repository\Item\ItemRepositoryInterface;
+use App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface;
 use PHPUnit\Framework\TestCase;
-use Prophecy\Argument;
-use Shrikeh\Diving\Kit\Item;
-use Shrikeh\Diving\Kit\KitBag;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
-use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBus;
 
 final class QueryKitItemTest extends TestCase
 {
     public function testItQueriesAKitItem(): void
     {
         $slug = 'this-piece-of-kit';
-        $queryBus = $this->prophesize(ItemQueryBus::class);
-        $transformer = $this->prophesize(ItemDetailTransformerInterface::class);
-        $item = $this->prophesize(Item::class);
-        $itemDetailResult = new ItemDetail('A drysuit', 'A really nice drysuit', 'lorem');
 
-        $queryBus->queryKitItem(Argument::type(KitItemQuery::class))
-            ->will(function (array $args) use ($slug, $item) {
-                /** @var KitItemQuery $query */
-                $query = $args[0];
+        $kitItemQuery = KitItemQuery::fromSlug($slug);
+        $itemModel = $this->prophesize(ItemInterface::class);
+        $manufacturerModel = $this->prophesize(ManufacturerInterface::class);
+        $itemRepository = $this->prophesize(ItemRepositoryInterface::class);
+        $itemRepository->fetchBySlug($kitItemQuery->getKitItemId())->willReturn($itemModel->reveal());
 
-                $itemId = $query->getKitItemId();
+        $manufacturerRepository = $this->prophesize(ManufacturerRepositoryInterface::class);
+        $manufacturerRepository->fetchManufacturerByItemSlug($kitItemQuery->getKitItemId())->willReturn(
+            $manufacturerModel->reveal()
+        );
 
-                if ($itemId->toSlug() === $slug) {
-                    return $item->reveal();
-                }
-            });
+        $itemModel->getName()->willReturn('Zis thing');
+        $manufacturerModel->getName()->willReturn('Zat manufacturer');
 
-        $transformer->toItemDetail($item)->willReturn($itemDetailResult);
+        $handler = new QueryKitItem($itemRepository->reveal(), $manufacturerRepository->reveal());
 
-        $kitBag = new KitBag($queryBus->reveal());
-        $queryMessage = new QueryKitItemDetail($slug);
+        $result = $handler($kitItemQuery);
 
-        $queryHandler = new QueryKitItemDetails($kitBag, $transformer->reveal());
-
-        $this->assertSame($itemDetailResult, $queryHandler($queryMessage));
+        $this->assertInstanceOf(SimpleItem::class, $result);
     }
 }

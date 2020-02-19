@@ -32,7 +32,7 @@ final class KitItemQuery implements JsonSerializable
     }
 
     /**
-     * QueryKitItemQuery constructor.
+     * QueryKitItem constructor.
      * @param ItemSlug $kitItemId
      */
     public function __construct(ItemSlug $kitItemId)

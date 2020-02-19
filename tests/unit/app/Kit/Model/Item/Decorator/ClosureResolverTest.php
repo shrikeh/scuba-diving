@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace Tests\Unit\App\Kit\Model\Item\Decorator;
 
 use App\Api\ResponseParserInterface;
+use App\Kit\Model\Exception\ModelNotResolved;
 use App\Kit\Resolver\Response;
 use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Item\Item;
@@ -79,6 +80,20 @@ final class ClosureResolverTest extends TestCase
         $item = ClosureResolver::create($closure);
 
         $this->expectExceptionObject(IncorrectModelResolved::fromModel($manufacturer, ItemInterface::class));
+
+        $item->getName();
+    }
+
+    public function testItThrowsAModelNotResolvedExceptionIfItDoesNotResolveAModel(): void
+    {
+        $borked = new \stdClass();
+        $closure = Closure::fromCallable(static function () use ($borked) {
+            return $borked;
+        });
+
+        $item = ClosureResolver::create($closure);
+
+        $this->expectExceptionObject(ModelNotResolved::create($closure, $borked));
 
         $item->getName();
     }

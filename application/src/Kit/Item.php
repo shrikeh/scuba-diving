@@ -20,7 +20,7 @@ interface Item
     public function getName(): string;
 
     /**
-     * @return Manufacturer
+     * @return string
      */
-    public function getManufacturer(): Manufacturer;
+    public function getManufacturerName(): string;
 }

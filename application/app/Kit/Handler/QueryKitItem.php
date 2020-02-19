@@ -15,12 +15,12 @@ namespace App\Kit\Handler;
 use App\Kit\Repository\Item\ItemRepositoryInterface;
 use App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface;
 use Shrikeh\Diving\Kit\Item;
-use Shrikeh\Diving\Kit\Item\SimpleItem;
+use App\Kit\Query\Result\SimpleItem;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
 use Shrikeh\Diving\Kit\Manufacturer;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-final class QueryKitItemQuery implements MessageHandlerInterface
+final class QueryKitItem implements MessageHandlerInterface
 {
     /**
      * @var ItemRepositoryInterface
@@ -29,10 +29,10 @@ final class QueryKitItemQuery implements MessageHandlerInterface
     /**
      * @var ManufacturerRepositoryInterface
      */
-    private $manufacturerRepository;
+    private ManufacturerRepositoryInterface $manufacturerRepository;
 
     /**
-     * QueryKitItemQuery constructor.
+     * QueryKitItem constructor.
      * @param ItemRepositoryInterface $itemRepository
      * @param ManufacturerRepositoryInterface $manufacturerRepository
      */
@@ -56,8 +56,8 @@ final class QueryKitItemQuery implements MessageHandlerInterface
         $manufacturerData = $this->manufacturerRepository->fetchManufacturerByItemSlug($slug);
 
         return new SimpleItem(
-            $itemData->getName(),
-            new Manufacturer($manufacturerData->getName())
+            $itemData,
+            $manufacturerData
         );
     }
 }
