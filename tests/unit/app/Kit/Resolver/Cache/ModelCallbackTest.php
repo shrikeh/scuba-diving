@@ -31,7 +31,7 @@ final class ModelCallbackTest extends TestCase
         $expiresAfter = new DateInterval('PT2S');
         $item->expiresAfter($expiresAfter)->shouldBeCalledOnce();
 
-        $resolver = Closure::fromCallable(function() use ($model) {
+        $resolver = Closure::fromCallable(function () use ($model) {
             return $model;
         });
 
@@ -47,7 +47,7 @@ final class ModelCallbackTest extends TestCase
         $expiresAfter = new DateInterval('PT2S');
         $item->expiresAfter(Argument::any())->shouldNotBeCalled();
 
-        $resolver = Closure::fromCallable(function() use ($notAModel) {
+        $resolver = Closure::fromCallable(function () use ($notAModel) {
             return $notAModel;
         });
 
