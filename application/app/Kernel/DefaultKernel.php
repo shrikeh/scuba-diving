@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace App\Kernel;
 
+use App\Kernel\BundleLoader\FileBundleLoader;
 use Exception;
 use Generator;
 use SplFileInfo;
@@ -39,15 +40,9 @@ class DefaultKernel extends BaseKernel
     public function registerBundles(): iterable
     {
         $bundleConfig = new SplFileInfo($this->getProjectDir() . '/config/bundles.php');
-        if ($bundleConfig->isFile() && $bundleConfig->isReadable()) {
-            /** @var array $contents */
-            $contents = require $bundleConfig->getRealPath();
-            foreach ($contents as $class => $envs) {
-                if ($bundle = $this->initEnvBundle($class, $envs)) {
-                    yield $bundle;
-                }
-            }
-        }
+        $bundleLoader = new FileBundleLoader($bundleConfig, $this->environment);
+
+        yield from $bundleLoader->getBundles();
     }
 
     /**
@@ -103,21 +98,5 @@ class DefaultKernel extends BaseKernel
         $routes->import($confDir . '/{routes}/' . $this->environment . '/*' . self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir . '/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir . '/{routes}' . self::CONFIG_EXTS, '/', 'glob');
-    }
-
-    /**
-     * @param string $class
-     * @param array $envs
-     * @return BundleInterface|null
-     */
-    private function initEnvBundle(string $class, array $envs): ?BundleInterface
-    {
-        if ($envs[$this->environment] ?? $envs['all'] ?? false) {
-            if (is_a($class, BundleInterface::class, true)) {
-                return new $class();
-            }
-        }
-
-        return null;
     }
 }
