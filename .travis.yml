@@ -1,0 +1,10 @@
+---
+language: php
+php:
+  - 7.4.1
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+script:
+  - make test-ci

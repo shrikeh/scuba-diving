@@ -60,7 +60,6 @@ final class FileBundleLoader
     private function loadBundles(array $bundles): Generator
     {
         foreach ($bundles as $class => $envs) {
-            /** @var BundleInterface|null $bundle */
             $bundle = $this->initEnvBundle($class, $envs);
             if ($bundle instanceof BundleInterface) {
                 yield $bundle;

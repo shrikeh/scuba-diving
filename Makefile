@@ -41,6 +41,8 @@ test: test-php
 
 test-php: composer-validate phplint infection behat phpcs phpmd phpstan psalm phpmetrics codecept-integration
 
+test-ci: phplint infection behat phpcs phpmd phpstan
+
 lint-changed: lint-changed-php
 
 lint-changed-php:
