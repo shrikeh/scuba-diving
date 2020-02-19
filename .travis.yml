@@ -5,6 +5,8 @@ php:
 cache:
   directories:
     - $HOME/.composer/cache
+jobs:
+  fast_finish: true
 
 script:
   - make test-ci
