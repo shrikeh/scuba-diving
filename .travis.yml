@@ -12,7 +12,7 @@ script:
 - php vendor/bin/phplint
 - php vendor/bin/phpspec run
 - php vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
-- php vendor/bin/infection --debug -j2 --filter=application/app --coverage=build/coverage/phpunit/
+- php vendor/bin/infection --debug -j2 --filter=application/app --coverage=build/coverage/phpunit/ --min-covered-msi=100 --min-msi=94
   --test-framework=phpunit
 - php vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application
   tests
