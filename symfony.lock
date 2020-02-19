@@ -176,6 +176,9 @@
     "php": {
         "version": "7.4"
     },
+    "php-coveralls/php-coveralls": {
+        "version": "2.2.x-dev"
+    },
     "php-ds/php-ds": {
         "version": "dev-master"
     },
@@ -482,6 +485,9 @@
     },
     "symfony/service-contracts": {
         "version": "v2.0.1"
+    },
+    "symfony/stopwatch": {
+        "version": "5.0.x-dev"
     },
     "symfony/thanks": {
         "version": "v1.2.5"

@@ -15,6 +15,7 @@
     "jangregor/phpstan-prophecy": "dev-master",
     "jetbrains/phpstorm-stubs": "dev-master",
     "overtrue/phplint": "^1.2",
+    "php-coveralls/php-coveralls": "2.2.x-dev",
     "php-ds/php-ds": "dev-master",
     "phpcompatibility/php-compatibility": "dev-master",
     "phpmd/phpmd": "dev-master",
