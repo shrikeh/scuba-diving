@@ -10,6 +10,7 @@ application/bin/symfony
 !.editorconfig
 !.phpspec
 !.env.dist
+!.phplint.yml
 !.styleci.yml
 !.travis.yml
 
