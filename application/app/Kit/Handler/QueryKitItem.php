@@ -12,12 +12,11 @@ declare(strict_types=1);
 
 namespace App\Kit\Handler;
 
+use App\Kit\Query\Result\SimpleItem;
 use App\Kit\Repository\Item\ItemRepositoryInterface;
 use App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface;
 use Shrikeh\Diving\Kit\Item;
-use App\Kit\Query\Result\SimpleItem;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
-use Shrikeh\Diving\Kit\Manufacturer;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 final class QueryKitItem implements MessageHandlerInterface
@@ -33,7 +32,8 @@ final class QueryKitItem implements MessageHandlerInterface
 
     /**
      * QueryKitItem constructor.
-     * @param ItemRepositoryInterface $itemRepository
+     *
+     * @param ItemRepositoryInterface         $itemRepository
      * @param ManufacturerRepositoryInterface $manufacturerRepository
      */
     public function __construct(
@@ -46,6 +46,7 @@ final class QueryKitItem implements MessageHandlerInterface
 
     /**
      * @param KitItemQuery $kitItemQuery
+     *
      * @return Item
      */
     public function __invoke(KitItemQuery $kitItemQuery): Item

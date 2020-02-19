@@ -29,6 +29,7 @@ final class ManufacturerResolver implements ManufacturerModelFactoryInterface
 
     /**
      * ItemResolver constructor.
+     *
      * @param ResolverFactoryInterface $resolverFactory
      */
     public function __construct(ResolverFactoryInterface $resolverFactory)
@@ -37,7 +38,7 @@ final class ManufacturerResolver implements ManufacturerModelFactoryInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function createManufacturerFromResponse(ResponseInterface $response, ItemSlug $slug): ManufacturerInterface
     {
@@ -46,7 +47,8 @@ final class ManufacturerResolver implements ManufacturerModelFactoryInterface
 
     /**
      * @param ResponseInterface $response
-     * @param UuidInterface $uuid
+     * @param UuidInterface     $uuid
+     *
      * @return ResolverInterface
      */
     private function createResolverClosure(ResponseInterface $response, UuidInterface $uuid): ResolverInterface

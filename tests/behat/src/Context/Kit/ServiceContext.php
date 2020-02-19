@@ -23,10 +23,11 @@ final class ServiceContext implements Context
     private string $manufacturer;
 
     /** @var string */
-    private string $uri ;
+    private string $uri;
 
     /**
      * @Given that I have a :kit
+     *
      * @param string $kit
      */
     public function thatIHaveA(string $kit): void
@@ -36,6 +37,7 @@ final class ServiceContext implements Context
 
     /**
      * @Given the manufacturer is :manufacturer
+     *
      * @param string $manufacturer
      */
     public function theManufacturerIs(string $manufacturer): void
@@ -45,6 +47,7 @@ final class ServiceContext implements Context
 
     /**
      * @Given the product URI is :uri
+     *
      * @param string $uri
      */
     public function theProductUriIs(string $uri): void

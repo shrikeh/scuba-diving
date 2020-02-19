@@ -20,7 +20,8 @@ interface ItemModelFactoryInterface
 {
     /**
      * @param ResponseInterface $response
-     * @param ItemSlug $slug
+     * @param ItemSlug          $slug
+     *
      * @return ItemInterface
      */
     public function createItemFromResponse(ResponseInterface $response, ItemSlug $slug): ItemInterface;

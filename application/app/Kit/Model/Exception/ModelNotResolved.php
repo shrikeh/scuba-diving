@@ -18,7 +18,8 @@ final class ModelNotResolved extends RuntimeException
 {
     /**
      * @param callable $resolver
-     * @param mixed $resolved
+     * @param mixed    $resolved
+     *
      * @return ModelNotResolved
      */
     public static function create(callable $resolver, $resolved): self

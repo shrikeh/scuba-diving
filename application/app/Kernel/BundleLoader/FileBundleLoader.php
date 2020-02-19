@@ -29,8 +29,9 @@ final class FileBundleLoader
 
     /**
      * FileBundleLoader constructor.
+     *
      * @param SplFileInfo $bundlePath
-     * @param string $targetEnv
+     * @param string      $targetEnv
      */
     public function __construct(SplFileInfo $bundlePath, string $targetEnv)
     {
@@ -55,6 +56,7 @@ final class FileBundleLoader
 
     /**
      * @param array<string, array<string>> $bundles
+     *
      * @return Generator
      */
     private function loadBundles(array $bundles): Generator
@@ -69,7 +71,8 @@ final class FileBundleLoader
 
     /**
      * @param string $class
-     * @param array $envs
+     * @param array  $envs
+     *
      * @return BundleInterface|null
      */
     private function initEnvBundle(string $class, array $envs): ?BundleInterface

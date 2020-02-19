@@ -22,7 +22,7 @@ final class KitItemQuerySpec extends ObjectBehavior
     public function getMatchers(): array
     {
         return [
-            'matchItemSlug' => static function(ItemSlug $actual, string $slug): bool {
+            'matchItemSlug' => static function (ItemSlug $actual, string $slug): bool {
                 $expected = new ItemSlug($slug);
 
                 return $expected->toUuid()->equals($actual->toUuid());
@@ -32,10 +32,10 @@ final class KitItemQuerySpec extends ObjectBehavior
 
     public function it_returns_the_slug(): void
     {
-       $slug = 'some-type-of-slug';
-       $this->beConstructedThroughFromSlug($slug);
+        $slug = 'some-type-of-slug';
+        $this->beConstructedThroughFromSlug($slug);
 
-       $this->getKitItemId()->shouldMatchItemSlug($slug);
+        $this->getKitItemId()->shouldMatchItemSlug($slug);
     }
 
     public function it_is_json_serializable(): void

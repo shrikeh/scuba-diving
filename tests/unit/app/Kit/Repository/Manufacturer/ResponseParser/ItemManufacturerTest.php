@@ -15,12 +15,10 @@ namespace Tests\Unit\App\Kit\Repository\Manufacturer\ResponseParser;
 use App\Api\JsonDecoder\JsonDecoderInterface;
 use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
 use App\Kit\Repository\Manufacturer\ResponseParser\ItemManufacturer;
-use Exception;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use Symfony\Component\HttpClient\Exception\TransportException;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ItemManufacturerTest extends TestCase

@@ -21,7 +21,8 @@ final class IncorrectModelResolved extends InvalidArgumentException
 
     /**
      * @param ModelInterface $model
-     * @param string $expected
+     * @param string         $expected
+     *
      * @return IncorrectModelResolved
      */
     public static function fromModel(ModelInterface $model, string $expected): self

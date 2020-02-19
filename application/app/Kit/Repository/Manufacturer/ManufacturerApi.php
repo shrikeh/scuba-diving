@@ -34,7 +34,8 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
 
     /**
      * ItemApi constructor.
-     * @param HttpClientInterface $client
+     *
+     * @param HttpClientInterface               $client
      * @param ManufacturerModelFactoryInterface $manufacturerModelFactory
      */
     public function __construct(
@@ -47,8 +48,10 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
 
     /**
      * @param ItemSlug $slug
-     * @return ManufacturerInterface
+     *
      * @throws TransportExceptionInterface
+     *
+     * @return ManufacturerInterface
      */
     public function fetchManufacturerByItemSlug(ItemSlug $slug): ManufacturerInterface
     {
@@ -59,6 +62,7 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
 
     /**
      * @param ItemSlug $itemSlug
+     *
      * @return string
      */
     private function createUriFromSlug(ItemSlug $itemSlug): string

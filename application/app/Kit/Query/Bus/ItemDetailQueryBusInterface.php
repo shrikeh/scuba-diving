@@ -19,6 +19,7 @@ interface ItemDetailQueryBusInterface
 {
     /**
      * @param QueryKitItemDetail $queryKitItemDetail
+     *
      * @return ItemDetail
      */
     public function queryKitItemDetail(QueryKitItemDetail $queryKitItemDetail): ItemDetail;

@@ -23,6 +23,7 @@ final class ClosureResolver implements ManufacturerInterface
 
     /**
      * @param callable $callable
+     *
      * @return self
      */
     public static function create(callable $callable): self
@@ -35,7 +36,7 @@ final class ClosureResolver implements ManufacturerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize()
     {
@@ -51,8 +52,9 @@ final class ClosureResolver implements ManufacturerInterface
     }
 
     /**
-     * @return ManufacturerInterface
      * @throws IncorrectModelResolved If the resolved model doesn't match the expected type
+     *
+     * @return ManufacturerInterface
      */
     private function resolve(): ManufacturerInterface
     {

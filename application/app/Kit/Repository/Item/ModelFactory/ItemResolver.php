@@ -16,7 +16,6 @@ use App\Kit\Model\Item\Decorator\ClosureResolver;
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\ResolverFactory\ResolverFactoryInterface;
 use App\Kit\Resolver\ResolverInterface;
-use Closure;
 use Ramsey\Uuid\UuidInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -30,6 +29,7 @@ final class ItemResolver implements ItemModelFactoryInterface
 
     /**
      * ItemResolver constructor.
+     *
      * @param ResolverFactoryInterface $resolverFactory
      */
     public function __construct(ResolverFactoryInterface $resolverFactory)
@@ -38,7 +38,7 @@ final class ItemResolver implements ItemModelFactoryInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function createItemFromResponse(ResponseInterface $response, ItemSlug $slug): ItemInterface
     {
@@ -47,7 +47,8 @@ final class ItemResolver implements ItemModelFactoryInterface
 
     /**
      * @param ResponseInterface $response
-     * @param UuidInterface $uuid
+     * @param UuidInterface     $uuid
+     *
      * @return ResolverInterface
      */
     private function createResolverClosure(ResponseInterface $response, UuidInterface $uuid): ResolverInterface

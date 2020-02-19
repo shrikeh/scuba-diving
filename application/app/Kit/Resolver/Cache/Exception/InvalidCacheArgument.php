@@ -20,7 +20,8 @@ final class InvalidCacheArgument extends InvalidArgumentException
 {
     /**
      * @param UuidInterface $uuid
-     * @param Throwable $previous
+     * @param Throwable     $previous
+     *
      * @return InvalidCacheArgument
      */
     public static function create(UuidInterface $uuid, Throwable $previous): self

@@ -19,6 +19,7 @@ interface ItemDetailTransformerInterface
 {
     /**
      * @param Item $item
+     *
      * @return ItemDetail
      */
     public function toItemDetail(Item $item): ItemDetail;

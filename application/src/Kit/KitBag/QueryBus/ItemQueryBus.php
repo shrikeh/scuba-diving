@@ -19,6 +19,7 @@ interface ItemQueryBus
 {
     /**
      * @param KitItemQuery $kitItemQuery
+     *
      * @return Item
      */
     public function queryKitItem(KitItemQuery $kitItemQuery): Item;

@@ -12,10 +12,10 @@ declare(strict_types=1);
 
 use Tests\Constants;
 
-require_once dirname(__DIR__) . '/Constants.php';
+require_once dirname(__DIR__).'/Constants.php';
 
-require Constants::vendorDir() . '/autoload.php';
+require Constants::vendorDir().'/autoload.php';
 
-if (file_exists(Constants::appConfigDir() . '/bootstrap.php')) {
-    require Constants::appConfigDir() . '/bootstrap.php';
+if (file_exists(Constants::appConfigDir().'/bootstrap.php')) {
+    require Constants::appConfigDir().'/bootstrap.php';
 }

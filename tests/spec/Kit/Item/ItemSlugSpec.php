@@ -22,12 +22,11 @@ final class ItemSlugSpec extends ObjectBehavior
     public function getMatchers(): array
     {
         return [
-            'beAValidUuid' => function(UuidInterface $actual, string $slug): bool
-            {
+            'beAValidUuid' => function (UuidInterface $actual, string $slug): bool {
                 $expected = Uuid::uuid5(ItemSlug::OID_ITEM_NAMESPACE, $slug);
 
                 return $expected->equals($actual);
-            }
+            },
         ];
     }
 

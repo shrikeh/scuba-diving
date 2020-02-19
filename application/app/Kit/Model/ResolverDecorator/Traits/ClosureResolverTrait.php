@@ -12,7 +12,6 @@ declare(strict_types=1);
 
 namespace App\Kit\Model\ResolverDecorator\Traits;
 
-use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Exception\ModelNotResolved;
 use App\Kit\Model\ModelInterface;
 use Closure;
@@ -31,6 +30,7 @@ trait ClosureResolverTrait
 
     /**
      * ClosureResolverTrait constructor.
+     *
      * @param Closure $resolver
      */
     private function __construct(Closure $resolver)
@@ -73,6 +73,7 @@ trait ClosureResolverTrait
     /**
      * @param mixed $model
      * @psalm-assert ModelInterface $model
+     *
      * @throws ModelNotResolved If the resolver does not return a ModelInterface
      */
     private function assertModel($model): void

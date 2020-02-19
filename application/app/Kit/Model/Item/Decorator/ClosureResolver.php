@@ -23,6 +23,7 @@ final class ClosureResolver implements ItemInterface
 
     /**
      * @param callable $callable
+     *
      * @return ClosureResolver
      */
     public static function create(callable $callable): self
@@ -43,7 +44,7 @@ final class ClosureResolver implements ItemInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize()
     {
@@ -51,8 +52,9 @@ final class ClosureResolver implements ItemInterface
     }
 
     /**
-     * @return ItemInterface
      * @throws IncorrectModelResolved If the resolved model doesn't match the expected type
+     *
+     * @return ItemInterface
      */
     private function resolve(): ItemInterface
     {

@@ -12,10 +12,8 @@ declare(strict_types=1);
 
 namespace spec\Shrikeh\Diving\Kit;
 
-use Psr\Http\Message\UriInterface;
-use Shrikeh\Diving\Kit\Manufacturer;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
+use Psr\Http\Message\UriInterface;
 
 final class ManufacturerSpec extends ObjectBehavior
 {

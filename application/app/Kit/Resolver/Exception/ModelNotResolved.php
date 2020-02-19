@@ -17,10 +17,10 @@ use RuntimeException;
 final class ModelNotResolved extends RuntimeException
 {
     /**
-     * @param mixed $resolved
+     * @param mixed  $resolved
      * @param string $expected
-     * @return ModelNotResolved
      *
+     * @return ModelNotResolved
      */
     public static function fromResolved($resolved, string $expected): self
     {

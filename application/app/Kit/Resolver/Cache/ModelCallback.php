@@ -31,8 +31,9 @@ final class ModelCallback
     private DateInterval $expiresAfter;
 
     /**
-     * @param Closure $resolver
+     * @param Closure      $resolver
      * @param DateInterval $expiresAfter
+     *
      * @return Closure
      */
     public static function asClosure(Closure $resolver, DateInterval $expiresAfter): Closure
@@ -42,7 +43,8 @@ final class ModelCallback
 
     /**
      * ModelCallback constructor.
-     * @param Closure $resolver
+     *
+     * @param Closure      $resolver
      * @param DateInterval $expiresAfter
      */
     public function __construct(Closure $resolver, DateInterval $expiresAfter)
@@ -53,8 +55,10 @@ final class ModelCallback
 
     /**
      * @param ItemInterface $item
-     * @return ModelInterface
+     *
      * @throws ModelNotResolved If the resolver does not return a ModelInterface
+     *
+     * @return ModelInterface
      */
     public function __invoke(ItemInterface $item): ModelInterface
     {
@@ -69,6 +73,7 @@ final class ModelCallback
 
     /**
      * @param mixed $model
+     *
      * @throws ModelNotResolved If the resolver does not return a ModelInterface
      */
     private function assertModel($model): void

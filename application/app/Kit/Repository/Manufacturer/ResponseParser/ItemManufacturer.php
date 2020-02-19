@@ -17,7 +17,6 @@ use App\Kit\Model\Manufacturer\Manufacturer;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ItemManufacturer implements ResponseParserInterface
@@ -29,6 +28,7 @@ final class ItemManufacturer implements ResponseParserInterface
 
     /**
      * ItemManufacturer constructor.
+     *
      * @param JsonDecoderInterface $jsonDecoder
      */
     public function __construct(JsonDecoderInterface $jsonDecoder)
@@ -38,8 +38,10 @@ final class ItemManufacturer implements ResponseParserInterface
 
     /**
      * @param ResponseInterface $response
-     * @return ManufacturerInterface
+     *
      * @throws ApiResponse
+     *
+     * @return ManufacturerInterface
      */
     public function parse(ResponseInterface $response): ManufacturerInterface
     {
@@ -49,7 +51,7 @@ final class ItemManufacturer implements ResponseParserInterface
             throw ApiResponse::wrap($e);
         }
 
-        $object  = $this->jsonDecoder->decode($content);
+        $object = $this->jsonDecoder->decode($content);
 
         return new Manufacturer(
             (string) $object->name

@@ -13,8 +13,8 @@ declare(strict_types=1);
 namespace Tests\Unit\App\Kit\Repository\Item\ResponseParser;
 
 use App\Api\JsonDecoder\JsonDecoderInterface;
-use App\Kit\Repository\Item\ResponseParser\ItemDetail;
 use App\Kit\Model\Item\ItemInterface;
+use App\Kit\Repository\Item\ResponseParser\ItemDetail;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use Symfony\Contracts\HttpClient\ResponseInterface;

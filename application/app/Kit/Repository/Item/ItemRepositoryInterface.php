@@ -19,6 +19,7 @@ interface ItemRepositoryInterface
 {
     /**
      * @param ItemSlug $slug
+     *
      * @return ItemInterface
      */
     public function fetchBySlug(ItemSlug $slug): ItemInterface;

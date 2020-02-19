@@ -19,6 +19,7 @@ interface ResponseParserInterface
 {
     /**
      * @param ResponseInterface $response
+     *
      * @return ManufacturerInterface
      */
     public function parse(ResponseInterface $response): ManufacturerInterface;

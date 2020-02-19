@@ -19,6 +19,7 @@ final class ApiResponse extends RuntimeException
 {
     /**
      * @param ExceptionInterface $exception
+     *
      * @return ApiResponse
      */
     public static function wrap(ExceptionInterface $exception): self

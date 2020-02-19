@@ -22,6 +22,7 @@ final class ItemDetail
 
     /**
      * ItemManufacturer constructor.
+     *
      * @param string $name
      * @param string $description
      * @param string $text

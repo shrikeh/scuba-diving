@@ -20,7 +20,7 @@ use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBus;
 
 final class KitBagSpec extends ObjectBehavior
 {
-    function let(ItemQueryBus $itemQueryBus): void
+    public function let(ItemQueryBus $itemQueryBus): void
     {
         $this->beConstructedWith($itemQueryBus);
     }

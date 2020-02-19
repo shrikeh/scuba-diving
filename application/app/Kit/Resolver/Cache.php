@@ -39,9 +39,10 @@ final class Cache implements ResolverInterface
 
     /**
      * Cache constructor.
+     *
      * @param CacheInterface $pool
-     * @param Closure $callback
-     * @param UuidInterface $modelKey
+     * @param Closure        $callback
+     * @param UuidInterface  $modelKey
      */
     public function __construct(CacheInterface $pool, Closure $callback, UuidInterface $modelKey)
     {
@@ -51,7 +52,8 @@ final class Cache implements ResolverInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     *
      * @throws InvalidCacheArgument
      */
     public function __invoke(): ModelInterface

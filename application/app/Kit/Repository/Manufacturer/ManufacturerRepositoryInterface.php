@@ -19,6 +19,7 @@ interface ManufacturerRepositoryInterface
 {
     /**
      * @param ItemSlug $slug
+     *
      * @return ManufacturerInterface
      */
     public function fetchManufacturerByItemSlug(ItemSlug $slug): ManufacturerInterface;

@@ -25,7 +25,8 @@ final class SimpleItem implements Item
 
     /**
      * SimpleItem constructor.
-     * @param ItemInterface $item
+     *
+     * @param ItemInterface         $item
      * @param ManufacturerInterface $manufacturer
      */
     public function __construct(ItemInterface $item, ManufacturerInterface $manufacturer)
@@ -35,7 +36,7 @@ final class SimpleItem implements Item
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName(): string
     {
@@ -43,7 +44,7 @@ final class SimpleItem implements Item
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getManufacturerName(): string
     {

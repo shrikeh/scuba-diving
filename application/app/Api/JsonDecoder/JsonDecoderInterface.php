@@ -18,6 +18,7 @@ interface JsonDecoderInterface
 {
     /**
      * @param string $json
+     *
      * @return stdClass
      */
     public function decode(string $json): stdClass;

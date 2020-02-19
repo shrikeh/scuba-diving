@@ -27,7 +27,7 @@ final class Constants
      */
     public static function vendorDir(): string
     {
-        return self::rootDir() . '/vendor';
+        return self::rootDir().'/vendor';
     }
 
     /**
@@ -35,7 +35,7 @@ final class Constants
      */
     public static function appDir(): string
     {
-        return self::rootDir() . '/application';
+        return self::rootDir().'/application';
     }
 
     /**
@@ -51,7 +51,7 @@ final class Constants
      */
     public static function fixturesDir(): string
     {
-        return self::testsDir() . '/fixtures';
+        return self::testsDir().'/fixtures';
     }
 
     /**
@@ -59,6 +59,6 @@ final class Constants
      */
     public static function appConfigDir(): string
     {
-        return self::appDir() . '/config';
+        return self::appDir().'/config';
     }
 }

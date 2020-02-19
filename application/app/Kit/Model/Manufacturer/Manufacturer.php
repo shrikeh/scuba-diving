@@ -23,6 +23,7 @@ final class Manufacturer implements ManufacturerInterface
 
     /**
      * Item constructor.
+     *
      * @param string $name
      */
     public function __construct(string $name)
@@ -39,7 +40,7 @@ final class Manufacturer implements ManufacturerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName(): string
     {
@@ -47,7 +48,7 @@ final class Manufacturer implements ManufacturerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array
     {

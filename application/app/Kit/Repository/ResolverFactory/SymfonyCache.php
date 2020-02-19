@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace App\Kit\Repository\ResolverFactory;
 
-use App\Kit\Resolver\Cache\ModelCallback;
 use App\Kit\Resolver\Cache;
+use App\Kit\Resolver\Cache\ModelCallback;
 use App\Kit\Resolver\ResolverInterface;
 use Closure;
 use DateInterval;
@@ -38,9 +38,10 @@ final class SymfonyCache implements ResolverFactoryInterface
 
     /**
      * SymfonyCache constructor.
-     * @param CacheInterface $pool
+     *
+     * @param CacheInterface           $pool
      * @param ResolverFactoryInterface $next
-     * @param DateInterval $expiry
+     * @param DateInterval             $expiry
      */
     public function __construct(CacheInterface $pool, ResolverFactoryInterface $next, DateInterval $expiry)
     {
@@ -51,7 +52,8 @@ final class SymfonyCache implements ResolverFactoryInterface
 
     /**
      * @param ResponseInterface $response
-     * @param UuidInterface $uuid
+     * @param UuidInterface     $uuid
+     *
      * @return ResolverInterface
      */
     public function createResolver(ResponseInterface $response, UuidInterface $uuid): ResolverInterface
@@ -62,8 +64,9 @@ final class SymfonyCache implements ResolverFactoryInterface
     }
 
     /**
-     * @param Closure $nextClosure
+     * @param Closure       $nextClosure
      * @param UuidInterface $uuid
+     *
      * @return Cache
      */
     private function createCacheWrapper(Closure $nextClosure, UuidInterface $uuid): Cache

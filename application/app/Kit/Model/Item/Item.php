@@ -23,6 +23,7 @@ final class Item implements ItemInterface
 
     /**
      * Item constructor.
+     *
      * @param string $name
      */
     public function __construct(string $name)
@@ -31,7 +32,7 @@ final class Item implements ItemInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName(): string
     {
@@ -39,7 +40,7 @@ final class Item implements ItemInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function jsonSerialize(): array
     {

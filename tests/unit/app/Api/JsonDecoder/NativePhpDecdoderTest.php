@@ -21,7 +21,7 @@ final class NativePhpDecdoderTest extends TestCase
 {
     public function testItDecodesJson(): void
     {
-        $itemBySlug = new SplFileObject(Constants::fixturesDir() . '/json/item_by_slug.json');
+        $itemBySlug = new SplFileObject(Constants::fixturesDir().'/json/item_by_slug.json');
         $nativeJsonDecoder = new NativePhpDecdoder();
 
         $result = $nativeJsonDecoder->decode($itemBySlug->fread($itemBySlug->getSize()));

@@ -12,8 +12,6 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Repository\Manufacturer\ModelFactory;
 
-use App\Api\ResponseParserInterface;
-use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Model\Manufacturer\Decorator\ClosureResolver;
 use App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolver;
 use App\Kit\Repository\ResolverFactory\ResolverFactoryInterface;

@@ -19,8 +19,9 @@ final class MessageBusTest extends Unit
     }
 
     /**
-     * @return ItemDetailQueryBusInterface
      * @throws \Codeception\Exception\ModuleException
+     *
+     * @return ItemDetailQueryBusInterface
      */
     private function getMessageBus(): ItemDetailQueryBusInterface
     {

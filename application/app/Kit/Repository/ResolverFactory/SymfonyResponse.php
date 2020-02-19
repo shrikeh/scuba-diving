@@ -15,7 +15,6 @@ namespace App\Kit\Repository\ResolverFactory;
 use App\Api\ResponseParserInterface;
 use App\Kit\Resolver\ResolverInterface;
 use App\Kit\Resolver\Response;
-use Closure;
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
@@ -28,6 +27,7 @@ final class SymfonyResponse implements ResolverFactoryInterface
 
     /**
      * SymfonyResponseManufacturerFactory constructor.
+     *
      * @param ResponseParserInterface $responseParser
      */
     public function __construct(ResponseParserInterface $responseParser)
@@ -37,7 +37,8 @@ final class SymfonyResponse implements ResolverFactoryInterface
 
     /**
      * @param ResponseInterface $response
-     * @param UuidInterface $uuid
+     * @param UuidInterface     $uuid
+     *
      * @return ResolverInterface
      */
     public function createResolver(ResponseInterface $response, UuidInterface $uuid): ResolverInterface

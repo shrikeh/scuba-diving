@@ -20,7 +20,8 @@ interface ManufacturerModelFactoryInterface
 {
     /**
      * @param ResponseInterface $response
-     * @param ItemSlug $slug
+     * @param ItemSlug          $slug
+     *
      * @return ManufacturerInterface
      */
     public function createManufacturerFromResponse(ResponseInterface $response, ItemSlug $slug): ManufacturerInterface;

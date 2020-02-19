@@ -24,6 +24,7 @@ final class ItemSlug
 
     /**
      * ItemSlug constructor.
+     *
      * @param string $slug
      */
     public function __construct(string $slug)

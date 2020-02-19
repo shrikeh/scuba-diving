@@ -33,7 +33,7 @@ final class SymfonyQueryBusTest extends TestCase
         $wrongResult = $this->prophesize(Item::class)->reveal();
 
         $envelope = new Envelope($queryKitItemDetailsMsg, [
-            new HandledStamp($wrongResult, 'some-wrong-handler')
+            new HandledStamp($wrongResult, 'some-wrong-handler'),
         ]);
 
         $messageBus = $this->prophesize(MessageBusInterface::class);
@@ -51,7 +51,7 @@ final class SymfonyQueryBusTest extends TestCase
         $queryKitItemDetailsMsg = new QueryKitItemDetail('some-sort-of-wetsuit');
         $itemDetailResult = new ItemDetail('A drysuit', 'A really nice drysuit', 'lorem');
         $envelope = new Envelope($queryKitItemDetailsMsg, [
-            new HandledStamp($itemDetailResult, 'some-handler')
+            new HandledStamp($itemDetailResult, 'some-handler'),
         ]);
 
         $messageBus = $this->prophesize(MessageBusInterface::class);
@@ -70,9 +70,8 @@ final class SymfonyQueryBusTest extends TestCase
         $queryKitItemMsg = KitItemQuery::fromSlug('some-sort-of-wetsuit');
         $wrongItem = new ItemDetail('A drysuit', 'A really nice drysuit', 'lorem');
 
-
         $envelope = new Envelope($queryKitItemMsg, [
-            new HandledStamp($wrongItem, 'some-wrong-handler')
+            new HandledStamp($wrongItem, 'some-wrong-handler'),
         ]);
 
         $messageBus = $this->prophesize(MessageBusInterface::class);
@@ -90,9 +89,8 @@ final class SymfonyQueryBusTest extends TestCase
         $queryKitItemMsg = KitItemQuery::fromSlug('some-sort-of-wetsuit');
         $item = $this->prophesize(Item::class)->reveal();
 
-
         $envelope = new Envelope($queryKitItemMsg, [
-            new HandledStamp($item, 'some-handler')
+            new HandledStamp($item, 'some-handler'),
         ]);
 
         $messageBus = $this->prophesize(MessageBusInterface::class);

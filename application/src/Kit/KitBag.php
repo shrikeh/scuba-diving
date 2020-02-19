@@ -17,11 +17,12 @@ use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBus;
 
 final class KitBag
 {
-    /** @var ItemQueryBus  */
+    /** @var ItemQueryBus */
     private ItemQueryBus $itemQueryBus;
 
     /**
      * KitBag constructor.
+     *
      * @param ItemQueryBus $itemQueryBus
      */
     public function __construct(ItemQueryBus $itemQueryBus)
@@ -31,6 +32,7 @@ final class KitBag
 
     /**
      * @param string $itemName
+     *
      * @return Item
      */
     public function getItemDetails(string $itemName): Item

@@ -31,7 +31,8 @@ final class Manufacturer
 
     /**
      * Manufacturer constructor.
-     * @param string $name
+     *
+     * @param string            $name
      * @param UriInterface|null $logo
      * @param UriInterface|null $website
      */

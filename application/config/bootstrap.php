@@ -12,12 +12,12 @@ declare(strict_types=1);
 
 use Symfony\Component\Dotenv\Dotenv;
 
-require dirname(__DIR__, 2) . '/vendor/autoload.php';
+require dirname(__DIR__, 2).'/vendor/autoload.php';
 
 // Load cached env vars if the .env.local.php file exists
 // Run "composer dump-env prod" to create it (requires symfony/flex >=1.2)
 if (
-    is_array($env = @include dirname(__DIR__) . '/.env.local.php') && (!isset($env['APP_ENV']) ||
+    is_array($env = @include dirname(__DIR__).'/.env.local.php') && (!isset($env['APP_ENV']) ||
         ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env['APP_ENV']) === $env['APP_ENV'])
 ) {
     foreach ($env as $k => $v) {
@@ -29,7 +29,7 @@ if (
     );
 } else {
     // load all the .env files
-    (new Dotenv(false))->loadEnv(dirname(__DIR__, 2) . '/.env');
+    (new Dotenv(false))->loadEnv(dirname(__DIR__, 2).'/.env');
 }
 
 $_SERVER += $_ENV;

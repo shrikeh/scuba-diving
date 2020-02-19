@@ -17,7 +17,7 @@ use stdClass;
 final class NativePhpDecdoder implements JsonDecoderInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function decode(string $json): stdClass
     {

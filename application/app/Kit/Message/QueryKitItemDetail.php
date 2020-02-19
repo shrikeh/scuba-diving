@@ -23,6 +23,7 @@ final class QueryKitItemDetail implements JsonSerializable
 
     /**
      * QueryKitItemDetail constructor.
+     *
      * @param string $slug
      */
     public function __construct(string $slug)
@@ -31,7 +32,8 @@ final class QueryKitItemDetail implements JsonSerializable
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     *
      * @return array<string>
      */
     public function jsonSerialize(): array

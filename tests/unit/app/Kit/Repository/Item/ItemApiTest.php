@@ -16,9 +16,9 @@ use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\ItemApi;
 use App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface;
 use PHPUnit\Framework\TestCase;
+use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
-use Shrikeh\Diving\Kit\Item\ItemSlug;
 
 final class ItemApiTest extends TestCase
 {

@@ -17,13 +17,12 @@ use App\Kit\Query\Bus\ItemDetailQueryBusInterface;
 use App\Kit\Query\Result\ItemDetail;
 
 /**
- * Show details of a specific piece of kit
+ * Show details of a specific piece of kit.
  *
  * Makes a call to the query bus, passing along the slug, and returns an ItemDetail
  *
  * @author Barney Hanlon <barney@shrikeh.net>
  */
-
 final class Item
 {
     /** @var ItemDetailQueryBusInterface */
@@ -31,6 +30,7 @@ final class Item
 
     /**
      * SimpleItem constructor.
+     *
      * @param ItemDetailQueryBusInterface $queryBus
      */
     public function __construct(ItemDetailQueryBusInterface $queryBus)
@@ -40,6 +40,7 @@ final class Item
 
     /**
      * @param string $slug
+     *
      * @return ItemDetail
      */
     public function __invoke(string $slug): ItemDetail

@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace App\Kit\Resolver;
 
-use App\Kit\Model\ModelInterface;
 use App\Api\ResponseParserInterface;
+use App\Kit\Model\ModelInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class Response implements ResolverInterface
@@ -30,7 +30,8 @@ final class Response implements ResolverInterface
 
     /**
      * Response constructor.
-     * @param ResponseInterface $response
+     *
+     * @param ResponseInterface       $response
      * @param ResponseParserInterface $responseParser
      */
     public function __construct(ResponseInterface $response, ResponseParserInterface $responseParser)

@@ -24,6 +24,7 @@ final class KitItemQuery implements JsonSerializable
 
     /**
      * @param string $itemSlug
+     *
      * @return KitItemQuery
      */
     public static function fromSlug(string $itemSlug): self
@@ -33,6 +34,7 @@ final class KitItemQuery implements JsonSerializable
 
     /**
      * QueryKitItem constructor.
+     *
      * @param ItemSlug $kitItemId
      */
     public function __construct(ItemSlug $kitItemId)
@@ -41,7 +43,8 @@ final class KitItemQuery implements JsonSerializable
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     *
      * @return array<string>
      */
     public function jsonSerialize(): array

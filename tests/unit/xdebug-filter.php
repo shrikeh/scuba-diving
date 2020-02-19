@@ -16,13 +16,13 @@ if (!function_exists('xdebug_set_filter')) {
     return;
 }
 
-require_once dirname(__DIR__) . '/Constants.php';
+require_once dirname(__DIR__).'/Constants.php';
 
 xdebug_set_filter(
     XDEBUG_FILTER_CODE_COVERAGE,
     XDEBUG_PATH_WHITELIST,
     [
-        Constants::appDir() . '/app',
-        Constants::appDir() . '/src',
+        Constants::appDir().'/app',
+        Constants::appDir().'/src',
     ]
 );

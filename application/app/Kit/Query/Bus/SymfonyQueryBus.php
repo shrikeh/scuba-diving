@@ -27,6 +27,7 @@ final class SymfonyQueryBus implements ItemDetailQueryBusInterface, ItemQueryBus
 
     /**
      * SymfonyQueryBus constructor.
+     *
      * @param MessageBusInterface $messageBus
      */
     public function __construct(MessageBusInterface $messageBus)
@@ -36,8 +37,10 @@ final class SymfonyQueryBus implements ItemDetailQueryBusInterface, ItemQueryBus
 
     /**
      * @param QueryKitItemDetail $queryKitItemDetail
-     * @return ItemDetail
+     *
      * @throws IncorrectResultType if the result does not match the expected type
+     *
+     * @return ItemDetail
      */
     public function queryKitItemDetail(QueryKitItemDetail $queryKitItemDetail): ItemDetail
     {
@@ -49,8 +52,10 @@ final class SymfonyQueryBus implements ItemDetailQueryBusInterface, ItemQueryBus
 
     /**
      * @param KitItemQuery $kitItemQuery
-     * @return Item
+     *
      * @throws IncorrectResultType if the result does not match the expected type
+     *
+     * @return Item
      */
     public function queryKitItem(KitItemQuery $kitItemQuery): Item
     {

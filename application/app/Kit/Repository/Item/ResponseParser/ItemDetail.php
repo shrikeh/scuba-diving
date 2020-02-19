@@ -16,7 +16,6 @@ use App\Api\JsonDecoder\JsonDecoderInterface;
 use App\Api\ResponseParserInterface;
 use App\Kit\Model\Item\Item;
 use App\Kit\Model\ModelInterface;
-use stdClass;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
@@ -32,6 +31,7 @@ final class ItemDetail implements ResponseParserInterface
 
     /**
      * ItemManufacturer constructor.
+     *
      * @param JsonDecoderInterface $jsonDecoder
      */
     public function __construct(JsonDecoderInterface $jsonDecoder)
@@ -41,15 +41,17 @@ final class ItemDetail implements ResponseParserInterface
 
     /**
      * @param ResponseInterface $response
-     * @return ModelInterface
+     *
      * @throws ClientExceptionInterface
      * @throws RedirectionExceptionInterface
      * @throws ServerExceptionInterface
      * @throws TransportExceptionInterface
+     *
+     * @return ModelInterface
      */
     public function parse(ResponseInterface $response): ModelInterface
     {
-        $object  = $this->jsonDecoder->decode($response->getContent());
+        $object = $this->jsonDecoder->decode($response->getContent());
 
         return new Item(
             (string) $object->name

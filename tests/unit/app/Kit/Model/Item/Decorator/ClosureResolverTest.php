@@ -13,20 +13,19 @@ declare(strict_types=1);
 namespace Tests\Unit\App\Kit\Model\Item\Decorator;
 
 use App\Api\ResponseParserInterface;
-use App\Kit\Model\Exception\ModelNotResolved;
-use App\Kit\Resolver\Response;
 use App\Kit\Model\Exception\IncorrectModelResolved;
+use App\Kit\Model\Exception\ModelNotResolved;
+use App\Kit\Model\Item\Decorator\ClosureResolver;
 use App\Kit\Model\Item\Item;
 use App\Kit\Model\Item\ItemInterface;
-use App\Kit\Model\Item\Decorator\ClosureResolver;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Model\ModelInterface;
+use App\Kit\Resolver\Response;
 use Closure;
-use PHPUnit\Framework\TestCase;
-use Symfony\Contracts\HttpClient\ResponseInterface;
-
 use function json_decode;
 use function json_encode;
+use PHPUnit\Framework\TestCase;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ClosureResolverTest extends TestCase
 {

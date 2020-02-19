@@ -29,7 +29,8 @@ final class QueryKitItemDetails implements MessageHandlerInterface
 
     /**
      * QueryKitItemDetails constructor.
-     * @param KitBag $kitBag
+     *
+     * @param KitBag                         $kitBag
      * @param ItemDetailTransformerInterface $itemDetailTransformer
      */
     public function __construct(
@@ -42,6 +43,7 @@ final class QueryKitItemDetails implements MessageHandlerInterface
 
     /**
      * @param QueryKitItemDetail $message
+     *
      * @return ItemDetail
      */
     public function __invoke(QueryKitItemDetail $message): ItemDetail

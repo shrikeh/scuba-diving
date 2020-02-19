@@ -17,8 +17,9 @@ use Symfony\Component\Messenger\Exception\RuntimeException;
 final class IncorrectResultType extends RuntimeException
 {
     /**
-     * @param mixed $result
+     * @param mixed  $result
      * @param string $expected
+     *
      * @return IncorrectResultType
      */
     public static function fromMessage($result, string $expected): self
