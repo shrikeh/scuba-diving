@@ -16,5 +16,4 @@ use JsonSerializable;
 
 interface ModelInterface extends JsonSerializable
 {
-
 }
