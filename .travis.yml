@@ -16,7 +16,7 @@ script:
   --min-covered-msi=94 --min-msi=94 --test-framework=phpunit
 - php vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application
   tests
-post_script:
+after_script:
   - bash <(curl -s https://codecov.io/bash)
 env:
   global:
