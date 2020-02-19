@@ -1,10 +1,10 @@
 build:
-  nodes:
-    app:
-      environment:
-        php:
-          version: 7.4
-      cache:
-        disabled: false
-        directories:
-          - ~/.composer/cache
+    nodes:
+        diving:
+            environment:
+                php:
+                  version: 7.4
+            cache:
+                disabled: false
+                directories:
+                    - ~/.composer/cache
