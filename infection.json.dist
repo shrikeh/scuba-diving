@@ -15,7 +15,7 @@
   "logs": {
     "text": "build/logs/infection/general.log",
     "summary": "build/logs/infection/summary.log",
-    "debug": "build/logs/infection/debug.log"
+    "debug": "build/logs/infection/debug.log",
     "badge": {
         "branch": "master"
     }
