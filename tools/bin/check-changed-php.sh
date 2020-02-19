@@ -23,15 +23,15 @@ function codesniff_changed_php_files() {
   declare ARR_CHANGED_FILES=("$@");
   declare PASS_SNIFF=0;
   declare FILE_PASS=0;
-  for changed_php_file in "${ARR_CHANGED_FILES[@]}";
-  do
-    echo "Running phpcs against ${changed_php_file}";
-    php ${PWD}/vendor/bin/phpcs -w -p -v "${changed_php_file}";
-    FILE_PASS=$?;
-    if [[ ${FILE_PASS} -ne 0 ]]; then
-      PASS_SNIFF=1;
-    fi
-  done
+
+  printf -v ZE_FILES_CHANGED "%s " "${ARR_CHANGED_FILES[@]}";
+
+  echo "Running phpcs against changed files...";
+  php ${PWD}/vendor/bin/phpcs -w -p -v ${ZE_FILES_CHANGED};
+  FILE_PASS=$?;
+  if [[ ${FILE_PASS} -ne 0 ]]; then
+    PASS_SNIFF=1;
+  fi
 
   return ${PASS_SNIFF};
 }
@@ -55,7 +55,6 @@ function check_changed_php_files() {
   # Clean out files that have been moved or deleted
   for existing_php_file in "${CHANGED_PHP_FILES[@]}";
   do
-    echo ${PWD}/${existing_php_file};
     if [[ -f "${PWD}/${existing_php_file}" ]]; then
       EXISTING_PHP_FILES+=( "${existing_php_file}" );
     fi
