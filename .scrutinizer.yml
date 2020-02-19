@@ -1,0 +1,7 @@
+---
+build:
+  nodes:
+    app:
+      environment:
+        php:
+          version: 7.4.1

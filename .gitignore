@@ -12,9 +12,9 @@ application/bin/symfony
 !.env.dist
 !.coveralls.yml
 !.phplint.yml
+!.scrutinizer.yml
 !.styleci.yml
 !.travis.yml
-
 
 ###> friends-of-behat/symfony-extension ###
 /behat.yml
