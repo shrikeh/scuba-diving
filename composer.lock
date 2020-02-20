@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09c053ec5fffa4f8736a7856908095fd",
+    "content-hash": "e3d21ba41a4e2d0f6457cb9b4dcb3513",
     "packages": [
         {
             "name": "brick/math",
@@ -8809,7 +8809,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "ramsey/uuid": 20,
-        "symfony/http-client-contracts": 20,
         "behat/behat": 20,
         "codeception/codeception": 20,
         "codeception/module-symfony": 20,
