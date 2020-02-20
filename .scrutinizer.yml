@@ -7,3 +7,21 @@ build:
     disabled: false
     directories:
       - ~/.composer/cache
+  nodes:
+    diving:
+      tests:
+        override:
+          - php-scrutinizer-run --sub-project-dir=application/src
+          - vendor/bin/phpspec run
+    app:
+      tests:
+        override:
+          - php-scrutinizer-run --sub-project-dir=application/app
+          - vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
+
+    security:
+      project_setup:
+        override: true
+      tests:
+        override:
+          - php-scrutinizer-run --enable-security-analysis
