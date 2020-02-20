@@ -49,7 +49,7 @@ final class ItemManufacturer implements ResponseParserInterface
             throw ApiResponse::wrap($e);
         }
 
-        $object  = $this->jsonDecoder->decode($content);
+        $object = $this->jsonDecoder->decode($content);
 
         return new Manufacturer(
             (string) $object->name
