@@ -63,6 +63,6 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
      */
     private function createUriFromSlug(ItemSlug $itemSlug): string
     {
-        return sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid()->toString());
+        return \Safe\sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid()->toString());
     }
 }
