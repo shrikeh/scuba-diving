@@ -8,6 +8,8 @@ build:
     directories:
       - ~/.composer/cache
   nodes:
+    tests:
+      commands:
     diving:
       tests:
         override:
@@ -18,8 +20,7 @@ build:
         override:
           - php-scrutinizer-run --sub-project-dir=application/app
           - vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
-
-    security:
+    analysis:
       project_setup:
         override: true
       tests:

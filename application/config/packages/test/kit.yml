@@ -1,2 +1,9 @@
 ---
 services:
+  _defaults:
+    public: true
+
+  app.kit.repository.item.client:
+     synthetic: true
+  app.kit.repository.manufacturer.client:
+    synthetic: true

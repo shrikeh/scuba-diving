@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
 use SplFileObject;
 use Tests\Constants;
 
-final class NativePhpDecdoderTest extends TestCase
+final class SafeJsonDecdoderTest extends TestCase
 {
     public function testItDecodesJson(): void
     {

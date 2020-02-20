@@ -12,10 +12,9 @@ declare(strict_types=1);
 
 namespace App\Kit\Repository\ResolverFactory;
 
-use App\Api\ResponseParserInterface;
+use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Resolver\ResolverInterface;
 use App\Kit\Resolver\Response;
-use Closure;
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 

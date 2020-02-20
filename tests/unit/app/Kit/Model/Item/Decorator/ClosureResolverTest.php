@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Model\Item\Decorator;
 
-use App\Api\ResponseParserInterface;
+use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Model\Exception\ModelNotResolved;
 use App\Kit\Resolver\Response;
 use App\Kit\Model\Exception\IncorrectModelResolved;

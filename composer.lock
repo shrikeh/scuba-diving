@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4512dfc54f7aa137fe557b23f3b66eb0",
+    "content-hash": "09c053ec5fffa4f8736a7856908095fd",
     "packages": [
         {
             "name": "brick/math",
@@ -6595,12 +6595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "7b597a4ca10d93ede4937286dafdfbe665ac0097"
+                "reference": "e58311d099fd5618e145eb9cbdd4f55d61d75259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7b597a4ca10d93ede4937286dafdfbe665ac0097",
-                "reference": "7b597a4ca10d93ede4937286dafdfbe665ac0097",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e58311d099fd5618e145eb9cbdd4f55d61d75259",
+                "reference": "e58311d099fd5618e145eb9cbdd4f55d61d75259",
                 "shasum": ""
             },
             "require": {
@@ -6670,7 +6670,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-02-18T06:21:10+00:00"
+            "time": "2020-02-20T09:04:28+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -8481,59 +8481,6 @@
             "time": "2019-12-09T11:18:37+00:00"
         },
         {
-            "name": "thecodingmachine/phpstan-safe-rule",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thecodingmachine/phpstan-safe-rule.git",
-                "reference": "ba333eb573167371309c8ae8fdab932991925e96"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/phpstan-safe-rule/zipball/ba333eb573167371309c8ae8fdab932991925e96",
-                "reference": "ba333eb573167371309c8ae8fdab932991925e96",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1",
-                "phpstan/phpstan": "^0.10 | ^0.11 | ^0.12",
-                "thecodingmachine/safe": "^1.0"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^7.5.2",
-                "squizlabs/php_codesniffer": "^3.4"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                },
-                "phpstan": {
-                    "includes": [
-                        "phpstan-safe-rule.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TheCodingMachine\\Safe\\PHPStan\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Négrier",
-                    "email": "d.negrier@thecodingmachine.com"
-                }
-            ],
-            "description": "A PHPStan rule to detect safety issues. Must be used in conjunction with thecodingmachine/safe",
-            "time": "2020-01-02T14:59:39+00:00"
-        },
-        {
             "name": "theseer/tokenizer",
             "version": "1.1.3",
             "source": {
@@ -8878,13 +8825,12 @@
         "phpstan/extension-installer": 20,
         "phpstan/phpstan": 20,
         "phpstan/phpstan-phpunit": 20,
-        "roave/security-advisories": 20,
-        "thecodingmachine/phpstan-safe-rule": 20
+        "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4",
+        "php": "^7.4.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*"

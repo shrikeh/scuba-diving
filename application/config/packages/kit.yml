@@ -52,11 +52,11 @@ services:
       - '@app.kit.repository.item.client'
       - '@App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface'
 
-  App\Kit\Repository\Item\Decorator\Cache:
-    decorates: App\Kit\Repository\Item\ItemRepositoryInterface
-    arguments:
-      - '@App\Kit\Repository\Item\Decorator\Cache.inner'
-      - '@app.kit.repository.item.decorator.cache'
+#  App\Kit\Repository\Item\Decorator\Cache:
+#    decorates: App\Kit\Repository\Item\ItemRepositoryInterface
+#    arguments:
+#      - '@App\Kit\Repository\Item\Decorator\Cache.inner'
+#      - '@app.kit.repository.item.decorator.cache'
 
 
   app.kit.repository.item.client:
@@ -68,13 +68,13 @@ services:
     class: App\Kit\Repository\ResolverFactory\SymfonyResponse
     arguments:
       - '@app.kit.repository.item.response_parser'
-
-  app.kit.repository.item.resolver_factory.cache:
-    class: App\Kit\Resolver\Cache
-    decorates: app.kit.repository.item.resolver_factory
-    arguments:
-      - '@app.kit.repository.item.resolver_factory.inner'
-      - cache
+#
+#  app.kit.repository.item.resolver_factory.cache:
+#    class: App\Kit\Resolver\Cache
+#    decorates: app.kit.repository.item.resolver_factory
+#    arguments:
+#      - '@app.kit.repository.item.resolver_factory.inner'
+#      - cache
 
   app.kit.repository.item.response_parser:
     class: App\Kit\Repository\Item\ResponseParser\ItemDetail
@@ -82,24 +82,25 @@ services:
 # Manufacturer Repository
 
   App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface: '@App\Kit\Repository\Manufacturer\ManufacturerApi'
-  App\Kit\Repository\Manufacturer\ModelFactory\SymfonyResponseManufacturerFactory:
-    arguments:
-      - '@app.kit.repository.manufacturer.response_parser'
 
   App\Kit\Repository\Manufacturer\ManufacturerApi:
     arguments:
-      - '@app.kit.repository.manufacturer.client.curl'
+      - '@app.kit.repository.manufacturer.client'
       - '@App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerModelFactoryInterface'
 
-  app.kit.repository.manufacturer.client.curl:
+  app.kit.repository.manufacturer.client:
     class: Symfony\Component\HttpClient\CurlHttpClient
     arguments:
       - base_uri: '%app.kit.repository.manufacturer.api.base_uri%'
 
-  app.kit.repository.manufacturer.api.base_uri:
-    class: GuzzleHttp\Psr7\Uri
+  App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolver:
     arguments:
-      - '/'
+      - '@app.kit.repository.manufacturer.resolver_factory'
+
+  app.kit.repository.manufacturer.resolver_factory:
+    class: App\Kit\Repository\ResolverFactory\SymfonyResponse
+    arguments:
+      - '@app.kit.repository.manufacturer.response_parser'
 
   app.kit.repository.manufacturer.response_parser:
     class: App\Kit\Repository\Manufacturer\ResponseParser\ItemManufacturer

@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kit\Resolver;
 
-use App\Api\ResponseParserInterface;
+use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Resolver\Response;
 use App\Kit\Model\ModelInterface;
 use PHPUnit\Framework\TestCase;

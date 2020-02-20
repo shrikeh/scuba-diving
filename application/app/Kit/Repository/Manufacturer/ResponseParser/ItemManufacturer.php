@@ -13,11 +13,11 @@ declare(strict_types=1);
 namespace App\Kit\Repository\Manufacturer\ResponseParser;
 
 use App\Api\JsonDecoder\JsonDecoderInterface;
+use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Model\Manufacturer\Manufacturer;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ItemManufacturer implements ResponseParserInterface

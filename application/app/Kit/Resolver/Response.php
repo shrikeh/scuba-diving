@@ -13,7 +13,7 @@ declare(strict_types=1);
 namespace App\Kit\Resolver;
 
 use App\Kit\Model\ModelInterface;
-use App\Api\ResponseParserInterface;
+use App\Api\ResponseParser\ResponseParserInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class Response implements ResolverInterface

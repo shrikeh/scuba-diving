@@ -10,19 +10,17 @@
  */
 declare(strict_types=1);
 
-namespace Tests\Unit\App\Kit\Repository\Manufacturer\ModelFactory;
+namespace Tests\Unit\App\Kit\Repository\Item\ModelFactory;
 
-use App\Api\ResponseParser\ResponseParserInterface;
-use App\Kit\Model\Manufacturer\ManufacturerInterface;
-use App\Kit\Model\Manufacturer\Decorator\ClosureResolver;
-use App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolver;
+use App\Kit\Model\Item\Decorator\ClosureResolver;
+use App\Kit\Repository\Item\ModelFactory\ItemResolver;
 use App\Kit\Repository\ResolverFactory\ResolverFactoryInterface;
 use App\Kit\Resolver\ResolverInterface;
 use PHPUnit\Framework\TestCase;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-final class ManufacturerResolverTest extends TestCase
+final class ItemResolverTest extends TestCase
 {
     public function testItCreatesAResolverDecorator(): void
     {
@@ -33,11 +31,11 @@ final class ManufacturerResolverTest extends TestCase
 
         $resolverFactory->createResolver($response, $itemSlug->toUuid())->willReturn($resolver);
 
-        $manufacturerResolver = new ManufacturerResolver(
+        $itemResolver = new ItemResolver(
             $resolverFactory->reveal()
         );
 
-        $decorator = $manufacturerResolver->createManufacturerFromResponse($response, $itemSlug);
+        $decorator = $itemResolver->createItemFromResponse($response, $itemSlug);
 
         $this->assertInstanceOf(ClosureResolver::class, $decorator);
     }

@@ -13,14 +13,11 @@ declare(strict_types=1);
 namespace App\Kit\Repository\Item\ResponseParser;
 
 use App\Api\JsonDecoder\JsonDecoderInterface;
-use App\Api\ResponseParserInterface;
+use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Model\Item\Item;
-use App\Kit\Model\ModelInterface;
-use stdClass;
-use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
+use App\Kit\Model\Item\ItemInterface;
+use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
+use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ItemDetail implements ResponseParserInterface
@@ -41,15 +38,17 @@ final class ItemDetail implements ResponseParserInterface
 
     /**
      * @param ResponseInterface $response
-     * @return ModelInterface
-     * @throws ClientExceptionInterface
-     * @throws RedirectionExceptionInterface
-     * @throws ServerExceptionInterface
-     * @throws TransportExceptionInterface
+     * @return ItemInterface
      */
-    public function parse(ResponseInterface $response): ModelInterface
+    public function parse(ResponseInterface $response): ItemInterface
     {
-        $object  = $this->jsonDecoder->decode($response->getContent());
+        try {
+            $content = $response->getContent();
+        } catch (ExceptionInterface $e) {
+            throw ApiResponse::wrap($e);
+        }
+
+        $object = $this->jsonDecoder->decode($content);
 
         return new Item(
             (string) $object->name

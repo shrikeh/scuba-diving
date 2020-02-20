@@ -10,16 +10,16 @@
  */
 declare(strict_types=1);
 
-namespace App\Kit\Repository\Manufacturer\ResponseParser;
+namespace App\Api\ResponseParser;
 
-use App\Kit\Model\Manufacturer\ManufacturerInterface;
+use App\Kit\Model\ModelInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 interface ResponseParserInterface
 {
     /**
      * @param ResponseInterface $response
-     * @return ManufacturerInterface
+     * @return ModelInterface
      */
-    public function parse(ResponseInterface $response): ManufacturerInterface;
+    public function parse(ResponseInterface $response): ModelInterface;
 }
