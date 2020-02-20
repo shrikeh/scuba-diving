@@ -14,10 +14,11 @@ namespace App\Kit\Repository\Item;
 
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface;
-use Psr\Http\Client\ClientExceptionInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+
+use function Safe\sprintf;
 
 final class ItemApi implements ItemRepositoryInterface
 {

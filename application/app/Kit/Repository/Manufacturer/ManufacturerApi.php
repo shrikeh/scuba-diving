@@ -14,9 +14,12 @@ namespace App\Kit\Repository\Manufacturer;
 
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerModelFactoryInterface;
+use Safe\Exceptions\StringsException;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+
+use function Safe\sprintf;
 
 final class ManufacturerApi implements ManufacturerRepositoryInterface
 {
@@ -49,6 +52,7 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
      * @param ItemSlug $slug
      * @return ManufacturerInterface
      * @throws TransportExceptionInterface
+     * @throws StringsException
      */
     public function fetchManufacturerByItemSlug(ItemSlug $slug): ManufacturerInterface
     {
@@ -60,9 +64,10 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
     /**
      * @param ItemSlug $itemSlug
      * @return string
+     * @throws StringsException
      */
     private function createUriFromSlug(ItemSlug $itemSlug): string
     {
-        return \Safe\sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid()->toString());
+        return sprintf(self::MANUFACTURER_URI, $itemSlug->toUuid()->toString());
     }
 }

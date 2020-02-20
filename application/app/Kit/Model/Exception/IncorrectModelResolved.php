@@ -15,6 +15,8 @@ namespace App\Kit\Model\Exception;
 use App\Kit\Model\ModelInterface;
 use InvalidArgumentException;
 
+use function Safe\sprintf;
+
 final class IncorrectModelResolved extends InvalidArgumentException
 {
     public const MSG = 'Expected model of type %s, resolved model was %s';

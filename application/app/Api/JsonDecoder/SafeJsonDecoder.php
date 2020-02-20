@@ -14,7 +14,9 @@ namespace App\Api\JsonDecoder;
 
 use stdClass;
 
-final class NativePhpDecdoder implements JsonDecoderInterface
+use function Safe\json_decode;
+
+final class SafeJsonDecoder implements JsonDecoderInterface
 {
     /**
      * {@inheritDoc}

@@ -25,8 +25,8 @@ use Closure;
 use PHPUnit\Framework\TestCase;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
-use function json_decode;
-use function json_encode;
+use function Safe\json_decode;
+use function Safe\json_encode;
 
 final class ClosureResolverTest extends TestCase
 {

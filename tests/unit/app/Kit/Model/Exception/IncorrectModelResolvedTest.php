@@ -17,6 +17,8 @@ use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Model\ModelInterface;
 use PHPUnit\Framework\TestCase;
 
+use function Safe\sprintf;
+
 final class IncorrectModelResolvedTest extends TestCase
 {
     public function testItIsInstantiatedFromAModel(): void

@@ -14,6 +14,8 @@ namespace App\Kit\Resolver\Exception;
 
 use RuntimeException;
 
+use function Safe\sprintf;
+
 final class ModelNotResolved extends RuntimeException
 {
     /**

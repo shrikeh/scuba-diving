@@ -11,6 +11,3 @@ parameters:
     - tests/*/bootstrap.php
     - tests/unit/xdebug-filter.php
     - tests/spec
-
-services:
-

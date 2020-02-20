@@ -16,6 +16,8 @@ use InvalidArgumentException;
 use Ramsey\Uuid\UuidInterface;
 use Throwable;
 
+use function Safe\sprintf;
+
 final class InvalidCacheArgument extends InvalidArgumentException
 {
     /**

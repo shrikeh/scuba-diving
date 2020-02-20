@@ -14,6 +14,8 @@ namespace App\Kit\Query\Bus\Exception;
 
 use Symfony\Component\Messenger\Exception\RuntimeException;
 
+use function Safe\sprintf;
+
 final class IncorrectResultType extends RuntimeException
 {
     /**

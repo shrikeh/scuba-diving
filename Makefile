@@ -93,6 +93,10 @@ phpcs:
 phpcbf:
 	php ./vendor/bin/phpcbf -p --runtime-set ignore_warnings_on_exit true
 
+rector-safe:
+	./vendor/bin/rector process ./application/src --config vendor/thecodingmachine/safe/rector-migrate-0.6.yml
+	./vendor/bin/rector process ./application/app --config vendor/thecodingmachine/safe/rector-migrate-0.6.yml
+
 phpspec:
 	echo 'Running phpspec...'
 	./vendor/bin/phpspec run

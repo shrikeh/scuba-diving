@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Api\JsonDecoder;
 
-use App\Api\JsonDecoder\NativePhpDecdoder;
+use App\Api\JsonDecoder\SafeJsonDecoder;
 use PHPUnit\Framework\TestCase;
 use SplFileObject;
 use Tests\Constants;
@@ -22,7 +22,7 @@ final class NativePhpDecdoderTest extends TestCase
     public function testItDecodesJson(): void
     {
         $itemBySlug = new SplFileObject(Constants::fixturesDir() . '/json/item_by_slug.json');
-        $nativeJsonDecoder = new NativePhpDecdoder();
+        $nativeJsonDecoder = new SafeJsonDecoder();
 
         $result = $nativeJsonDecoder->decode($itemBySlug->fread($itemBySlug->getSize()));
 

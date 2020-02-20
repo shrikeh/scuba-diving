@@ -17,6 +17,9 @@ use App\Kit\Model\ModelInterface;
 use JsonSerializable;
 use PHPUnit\Framework\TestCase;
 
+use function Safe\json_decode;
+use function Safe\json_encode;
+
 final class ItemTest extends TestCase
 {
     public function testItIsAModel(): void
