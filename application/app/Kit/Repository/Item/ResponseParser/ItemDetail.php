@@ -49,7 +49,7 @@ final class ItemDetail implements ResponseParserInterface
      */
     public function parse(ResponseInterface $response): ModelInterface
     {
-        $object  = $this->jsonDecoder->decode($response->getContent());
+        $object = $this->jsonDecoder->decode($response->getContent());
 
         return new Item(
             (string) $object->name
