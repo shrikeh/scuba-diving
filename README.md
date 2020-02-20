@@ -1,4 +1,6 @@
 # Shrikeh's Personal Diving Blog
+[![Latest release](https://img.shields.io/github/v/release/shrikeh/scuba-diving?include_prereleases)](https://github.com/shrikeh/scuba-diving/releases/)
+
 [![Build Status](https://travis-ci.com/shrikeh/scuba-diving.svg?branch=master)](https://travis-ci.com/shrikeh/scuba-diving)
 [![codecov](https://codecov.io/gh/shrikeh/scuba-diving/branch/master/graph/badge.svg)](https://codecov.io/gh/shrikeh/scuba-divinge)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/badges/quality-score.png)](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/)
