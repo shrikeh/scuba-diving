@@ -25,7 +25,7 @@ final class ApiResponse extends RuntimeException
     {
         return new self(
             $exception->getMessage(),
-            (int) $exception->getCode(),
+            $exception->getCode(),
             $exception
         );
     }

@@ -51,8 +51,15 @@ final class ItemManufacturer implements ResponseParserInterface
 
         $object = $this->jsonDecoder->decode($content);
 
-        return new Manufacturer(
-            (string) $object->name
-        );
+        return $this->buildManufacturer($object->name);
+    }
+
+    /**
+     * @param string $name
+     * @return Manufacturer
+     */
+    private function buildManufacturer(string $name): Manufacturer
+    {
+        return new Manufacturer($name);
     }
 }

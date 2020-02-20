@@ -50,8 +50,15 @@ final class ItemDetail implements ResponseParserInterface
 
         $object = $this->jsonDecoder->decode($content);
 
-        return new Item(
-            (string) $object->name
-        );
+        return $this->createItem($object->name);
+    }
+
+    /**
+     * @param string $name
+     * @return Item
+     */
+    private function createItem(string $name): Item
+    {
+        return new Item($name);
     }
 }
