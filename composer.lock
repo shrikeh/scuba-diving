@@ -667,12 +667,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "d2edbc9240ebbbf722155d4bdcb57eec61a5c89a"
+                "reference": "0ae56dbbebd0f1ff8de7b3c4878f6ca90ddcdf5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/d2edbc9240ebbbf722155d4bdcb57eec61a5c89a",
-                "reference": "d2edbc9240ebbbf722155d4bdcb57eec61a5c89a",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0ae56dbbebd0f1ff8de7b3c4878f6ca90ddcdf5e",
+                "reference": "0ae56dbbebd0f1ff8de7b3c4878f6ca90ddcdf5e",
                 "shasum": ""
             },
             "require": {
@@ -738,7 +738,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2020-02-14T21:34:13+00:00"
+            "time": "2020-02-21T05:05:38+00:00"
         },
         {
             "name": "symfony/cache",
@@ -4860,12 +4860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/robot-loader.git",
-                "reference": "bfb7bf036d16c517d2a7011e7512a6adeb0d6057"
+                "reference": "38e8a270567a4ad9fe716b40fcda5a6580afa3c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/robot-loader/zipball/bfb7bf036d16c517d2a7011e7512a6adeb0d6057",
-                "reference": "bfb7bf036d16c517d2a7011e7512a6adeb0d6057",
+                "url": "https://api.github.com/repos/nette/robot-loader/zipball/38e8a270567a4ad9fe716b40fcda5a6580afa3c0",
+                "reference": "38e8a270567a4ad9fe716b40fcda5a6580afa3c0",
                 "shasum": ""
             },
             "require": {
@@ -4915,7 +4915,7 @@
                 "nette",
                 "trait"
             ],
-            "time": "2020-02-12T21:12:00+00:00"
+            "time": "2020-02-20T22:17:50+00:00"
         },
         {
             "name": "nette/utils",
@@ -5737,12 +5737,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "011b369030b0976f51d94eba8e255a1f66461df5"
+                "reference": "5463f8d32cf0f31f3d8e6230eb80170a2602b55a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/011b369030b0976f51d94eba8e255a1f66461df5",
-                "reference": "011b369030b0976f51d94eba8e255a1f66461df5",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/5463f8d32cf0f31f3d8e6230eb80170a2602b55a",
+                "reference": "5463f8d32cf0f31f3d8e6230eb80170a2602b55a",
                 "shasum": ""
             },
             "require": {
@@ -5782,7 +5782,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-17T17:48:35+00:00"
+            "time": "2020-02-20T20:42:36+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -8526,12 +8526,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "306ed07cfc6d725aa76add9c186811580d1be5ee"
+                "reference": "a2fbfc1c9e506829c9d181b74348467c69231134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/306ed07cfc6d725aa76add9c186811580d1be5ee",
-                "reference": "306ed07cfc6d725aa76add9c186811580d1be5ee",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/a2fbfc1c9e506829c9d181b74348467c69231134",
+                "reference": "a2fbfc1c9e506829c9d181b74348467c69231134",
                 "shasum": ""
             },
             "require": {
@@ -8561,10 +8561,11 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.2",
+                "brianium/paratest": "^4.0.0",
                 "ext-curl": "*",
                 "phpmyadmin/sql-parser": "5.1.0",
                 "phpspec/prophecy": ">=1.9.0",
-                "phpunit/phpunit": "^7.5.16 || ^8.0",
+                "phpunit/phpunit": "^7.5.16 || ^8.5",
                 "psalm/plugin-phpunit": "^0.9",
                 "slevomat/coding-standard": "^5.0",
                 "squizlabs/php_codesniffer": "^3.5",
@@ -8613,7 +8614,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2020-02-19T04:50:53+00:00"
+            "time": "2020-02-21T06:32:22+00:00"
         },
         {
             "name": "webimpress/safe-writer",
