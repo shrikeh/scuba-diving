@@ -15,8 +15,10 @@ namespace Tests\Unit\App\Kit\Repository\Item\ResponseParser;
 use App\Api\JsonDecoder\JsonDecoderInterface;
 use App\Kit\Repository\Item\ResponseParser\ItemDetail;
 use App\Kit\Model\Item\ItemInterface;
+use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
 use PHPUnit\Framework\TestCase;
 use stdClass;
+use Symfony\Component\HttpClient\Exception\JsonException;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class ItemDetailTest extends TestCase
@@ -41,5 +43,20 @@ final class ItemDetailTest extends TestCase
 
         $this->assertInstanceOf(ItemInterface::class, $item);
         $this->assertSame($name, $item->getName());
+    }
+
+    public function testItThrowsAnApiResponseIfTheResponseThrowsAnException(): void
+    {
+        $response = $this->prophesize(ResponseInterface::class);
+        $jsonDecoder = $this->prophesize(JsonDecoderInterface::class);
+
+        $responseException = new JsonException('Problem');
+
+        $response->getContent()->willThrow($responseException);
+        $responseParser = new ItemDetail($jsonDecoder->reveal());
+
+        $this->expectExceptionObject(ApiResponse::wrap($responseException));
+
+        $responseParser->parse($response->reveal());
     }
 }
