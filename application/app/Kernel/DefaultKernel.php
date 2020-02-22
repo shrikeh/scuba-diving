@@ -37,10 +37,26 @@ class DefaultKernel extends BaseKernel
      */
     public function registerBundles(): iterable
     {
-        $bundleConfig = new SplFileInfo($this->getProjectDir() . '/config/bundles.php');
+        $bundleConfig = new SplFileInfo($this->getBundleFile());
         $bundleLoader = new FileBundleLoader($bundleConfig, $this->environment);
 
         yield from $bundleLoader->getBundles();
+    }
+
+    /**
+     * @return string
+     */
+    public function getBundleFile(): string
+    {
+        return (string) ($_ENV['SYMFONY_BUNDLE_FILE'] ?? $this->getConfigDir() . '/bundles.php');
+    }
+
+    /**
+     * @return string
+     */
+    public function getConfigDir(): string
+    {
+        return (string) ($_ENV['SYMFONY_CONFIG_DIR'] ?? $this->getProjectDir() . '/config');
     }
 
     /**
@@ -74,10 +90,11 @@ class DefaultKernel extends BaseKernel
      */
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
-        $container->addResource(new FileResource($this->getProjectDir() . '/config/bundles.php'));
+        $container->addResource(new FileResource($this->getBundleFile()));
         $container->setParameter('container.dumper.inline_class_loader', \PHP_VERSION_ID < 70400 || $this->debug);
         $container->setParameter('container.dumper.inline_factories', true);
-        $confDir = $this->getProjectDir() . '/config';
+
+        $confDir = $this->getConfigDir();
 
         $loader->load($confDir . '/{packages}/*' . self::CONFIG_EXTS, 'glob');
         $loader->load($confDir . '/{packages}/' . $this->environment . '/*' . self::CONFIG_EXTS, 'glob');
