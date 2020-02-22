@@ -12,6 +12,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kernel\BundleLoader;
 
+use App\Kernel\BundleLoader\Exception\BundleFileNotExists;
+use App\Kernel\BundleLoader\Exception\BundleFileNotReadable;
 use App\Kernel\BundleLoader\FileBundleLoader;
 use App\Kernel\DefaultKernel;
 use Generator;
@@ -40,5 +42,34 @@ final class FileBundleLoaderTest extends KernelTestCase
             $registeredBundles->next();
             $loadedBundles->next();
         }
+    }
+
+    public function testItThrowsABundleFileNotExistsExceptionIfTheFileDoesNotExist(): void
+    {
+        $fileBundle = $this->prophesize(SplFileInfo::class);
+        $path = 'foo';
+
+        $fileBundle->isFile()->willReturn(false);
+        $fileBundle->getPath()->willReturn($path);
+        $this->expectExceptionObject(BundleFileNotExists::fromPath($path));
+
+        $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'dev');
+
+        $fileBundleLoader->getBundles();
+    }
+
+    public function testItThrowsABundleFileNotReadableExceptionIfTheBundleFileIsNotReadable(): void
+    {
+        $fileBundle = $this->prophesize(SplFileInfo::class);
+        $path = 'foo';
+
+        $fileBundle->isFile()->willReturn(true);
+        $fileBundle->isReadable()->willReturn(false);
+        $fileBundle->getPath()->willReturn($path);
+        $this->expectExceptionObject(BundleFileNotReadable::fromPath($path));
+
+        $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'dev');
+
+        $fileBundleLoader->getBundles();
     }
 }
