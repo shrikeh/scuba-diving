@@ -33,6 +33,18 @@ final class FileBundleLoader
     private string $targetEnv;
 
     /**
+     * @param SplFileInfo|string $path
+     * @param string $env
+     * @return static
+     */
+    public static function create($path, string $env): self
+    {
+        $path = ($path instanceof SplFileInfo) ? $path : new SplFileInfo($path);
+
+        return new self($path, $env);
+    }
+
+    /**
      * FileBundleLoader constructor.
      * @param SplFileInfo $bundlePath
      * @param string $targetEnv
