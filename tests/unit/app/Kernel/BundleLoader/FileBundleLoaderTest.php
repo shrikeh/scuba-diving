@@ -14,6 +14,7 @@ namespace Tests\Unit\App\Kernel\BundleLoader;
 
 use App\Kernel\BundleLoader\FileBundleLoader;
 use App\Kernel\DefaultKernel;
+use Generator;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
@@ -28,7 +29,10 @@ final class FileBundleLoaderTest extends KernelTestCase
 
         $fileBundleLoader = new FileBundleLoader($bundleFile, $kernel->getEnvironment());
 
+        /** @var Generator $registeredBundles */
         $registeredBundles = $kernel->registerBundles();
+
+        /** @var Generator $loadedBundles */
         $loadedBundles = $fileBundleLoader->getBundles();
 
         while ($registeredBundles->valid()) {
