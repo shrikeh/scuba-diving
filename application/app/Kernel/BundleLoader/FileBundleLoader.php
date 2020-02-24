@@ -142,8 +142,8 @@ final class FileBundleLoader
                 throw BundleEnvironmentsNotIterable::fromBundle($bundle);
             }
             foreach ($envs as $env => $use) {
-                if (!is_string($env)) {
-                    throw InvalidBundleEnvironment::fromBundleEnv($bundle, $env);
+                if (!(is_string($env) && is_bool($use))) {
+                    throw InvalidBundleEnvironment::fromBundleEnv($bundle, $envs);
                 }
             }
         }
