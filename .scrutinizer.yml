@@ -35,3 +35,11 @@ build:
       tests:
         override:
           - php-scrutinizer-run --enable-security-analysis
+filter:
+  paths:
+      - "application/*"
+      - "tests/*"
+  excluded_paths:
+      - "*/mocks/*"            # Everything that has a "Tests" directory somewhere in the path
+  dependency_paths:
+      - vendor/
