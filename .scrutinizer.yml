@@ -35,11 +35,13 @@ build:
       tests:
         override:
           - php-scrutinizer-run --enable-security-analysis
+          - phpcs-run
 filter:
   paths:
       - "application/*"
       - "tests/*"
   excluded_paths:
-      - "*/mocks/*"            # Everything that has a "Tests" directory somewhere in the path
+      - "*/_generated/*"   # Codeception breaks lots of standards; ignore it
   dependency_paths:
       - vendor/
+      - tests/mocks

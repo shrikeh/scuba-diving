@@ -23,7 +23,7 @@ class IntegrationTester extends Actor
 {
     use _generated\IntegrationTesterActions;
 
-   /**
-    * Define custom actions here
-    */
+    /**
+     * Define custom actions here
+     */
 }
