@@ -23,7 +23,7 @@ final class ServiceContext implements Context
     private string $manufacturer;
 
     /** @var string */
-    private string $uri ;
+    private string $uri;
 
     /**
      * @Given that I have a :kit

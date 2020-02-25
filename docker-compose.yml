@@ -25,7 +25,7 @@ services:
         target: ${FRONTEND_PAGESPEED_FILE_CACHE?err}
     depends_on:
       - backend-cache
-##      - tls
+    ##      - tls
     networks:
       - frontend_web
   backend-cache:
@@ -44,8 +44,6 @@ services:
     networks:
       - frontend_web
       - backend_app
-#    depends_on:
-#      - backend-nginx
   backend-nginx:
     build:
       context: ./
