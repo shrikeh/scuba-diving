@@ -35,6 +35,7 @@ build:
       tests:
         override:
           - php-scrutinizer-run --enable-security-analysis
+          - phpcs-run
 filter:
   paths:
       - "application/*"
