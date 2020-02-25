@@ -12,6 +12,11 @@ declare(strict_types=1);
 
 namespace App\Kernel\BundleLoader;
 
+use App\Kernel\BundleLoader\Exception\BundleEnvironmentsNotIterable;
+use App\Kernel\BundleLoader\Exception\BundleFileNotExists;
+use App\Kernel\BundleLoader\Exception\BundleFileNotReadable;
+use App\Kernel\BundleLoader\Exception\BundlesNotIterable;
+use App\Kernel\BundleLoader\Exception\InvalidBundleEnvironment;
 use Generator;
 use SplFileInfo;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
@@ -28,6 +33,18 @@ final class FileBundleLoader
     private string $targetEnv;
 
     /**
+     * @param SplFileInfo|string $path
+     * @param string $env
+     * @return static
+     */
+    public static function create($path, string $env): self
+    {
+        $path = ($path instanceof SplFileInfo) ? $path : new SplFileInfo($path);
+
+        return new self($path, $env);
+    }
+
+    /**
      * FileBundleLoader constructor.
      * @param SplFileInfo $bundlePath
      * @param string $targetEnv
@@ -40,17 +57,16 @@ final class FileBundleLoader
 
     /**
      * @return iterable
+     * @throws \Safe\Exceptions\StringsException
      */
     public function getBundles(): iterable
     {
-        if (!$this->isValidPath()) {
-            // throw something here
-        }
+        $this->assertValidFile();
 
         $bundles = $this->requireBundles();
         $this->assertValidBundles($bundles);
 
-        yield from $this->loadBundles($bundles);
+        return $this->loadBundles($bundles);
     }
 
     /**
@@ -84,11 +100,21 @@ final class FileBundleLoader
     }
 
     /**
-     * @return bool
+     * Assert that the file is valid
+     *
+     * @throws BundleFileNotExists
+     * @throws BundleFileNotReadable
+     * @throws \Safe\Exceptions\StringsException
      */
-    private function isValidPath(): bool
+    private function assertValidFile(): void
     {
-        return $this->bundlePath->isFile() && $this->bundlePath->isReadable();
+        if (!$this->bundlePath->isFile()) {
+            throw BundleFileNotExists::fromPath($this->bundlePath->getPath());
+        }
+
+        if (!$this->bundlePath->isReadable()) {
+            throw BundleFileNotReadable::fromPath($this->bundlePath->getPath());
+        }
     }
 
     /**
@@ -104,19 +130,20 @@ final class FileBundleLoader
      * @param mixed $bundles
      * @psalm-assert array<string, array<string>> $bundles
      * @psalm-suppress MixedAssignment
+     * @throws \Safe\Exceptions\StringsException
      */
     private function assertValidBundles($bundles): void
     {
-        if (is_array($bundles)) {
-            // some exception
+        if (!is_iterable($bundles)) {
+            throw BundlesNotIterable::create((string) $this->bundlePath);
         }
-        foreach ($bundles as $envs) {
-            if (!is_array($envs)) {
-                // some other exception
+        foreach ($bundles as $bundle => $envs) {
+            if (!is_iterable($envs)) {
+                throw BundleEnvironmentsNotIterable::fromBundle($bundle);
             }
-            foreach ($envs as $env) {
-                if (!is_string($env)) {
-                    // another one here
+            foreach ($envs as $env => $use) {
+                if (!(is_string($env) && is_bool($use))) {
+                    throw InvalidBundleEnvironment::fromBundleEnv($bundle, $envs);
                 }
             }
         }
