@@ -133,9 +133,29 @@ final class FileBundleLoaderTest extends TestCase
         $fileBundleLoader->getBundles();
     }
 
-    public function testItThrowsAnExceptionIfTheBundleEnvIsInvalids(): void
+    public function testItThrowsAnExceptionIfTheBundleEnvIsNotAString(): void
     {
-        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundleEnvValue.php';
+        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundleEnvValueString.php';
+        $expectedInvalidBundles = require $invalidBundles;
+
+
+        $fileBundleLoader = FileBundleLoader::create($invalidBundles, 'foo');
+
+        foreach ($expectedInvalidBundles as $bundleClass => $envs) {
+            foreach ($envs as $env => $use) {
+                if (!(is_string($env) && is_bool($use))) {
+                    $this->expectExceptionObject(InvalidBundleEnvironment::fromBundleEnv($bundleClass, $envs));
+                    break;
+                }
+            }
+        }
+
+        $fileBundleLoader->getBundles();
+    }
+
+    public function testItThrowsAnExceptionIfTheBundleEnvIsNotABoolean(): void
+    {
+        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundleEnvValueBoolean.php';
         $expectedInvalidBundles = require $invalidBundles;
 
 
