@@ -18,6 +18,7 @@ FROM php:${PHP_TAG} as php-fpm
 ARG APP_GROUP_ID=2001
 ARG APP_GROUP_NAME=app
 ARG SYMFONY_CACHE_DIR=/cache
+ARG SYMFONY_LOG_DIR=/logs
 ARG APP_ROOT_DIR=/diving
 
 RUN addgroup -g ${APP_GROUP_ID} -S "${APP_GROUP_NAME}"
@@ -34,6 +35,9 @@ COPY --from=php-fpm-build /usr/local/etc/php-fpm.d /usr/local/etc/php-fpm.d
 
 RUN mkdir -p ${SYMFONY_CACHE_DIR}
 RUN chown www-data:www-data ${SYMFONY_CACHE_DIR}
+
+RUN mkdir -p ${SYMFONY_LOG_DIR}
+RUN chown www-data:www-data ${SYMFONY_LOG_DIR}
 
 WORKDIR ${APP_ROOT_DIR}
 

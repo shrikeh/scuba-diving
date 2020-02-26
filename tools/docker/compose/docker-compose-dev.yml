@@ -3,5 +3,8 @@ version: "3.7"
 services:
   tls:
     build:
-      context: ../
-      dockerfile: services/tls/Dockerfile
+      context: tools/docker/services/tls
+      dockerfile: Dockerfile
+    volumes:
+      - letsencrypt:/tls
+

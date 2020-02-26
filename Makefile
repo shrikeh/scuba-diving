@@ -7,10 +7,9 @@ ifndef VERBOSE
 .SILENT:
 endif
 
-run: init build up
+-include .env
 
-init:
-	test -e ./.env || cp -p ./.env.dist ./.env
+run: build up
 
 rebuild: prune build-clean docker-up
 
@@ -19,14 +18,14 @@ clean: docker-down
 	docker volume rm -f $(docker volume ls -qf dangling=true)
 
 docker-down:
-	docker-compose down -v
+	docker-compose -f docker-compose.yml -f ${ROOT_DIR}/tools/docker/compose/docker-compose-dev.yml down -v
 
 docker-php-base:
 	echo 'Building php base image for tagging...'
 	docker-compose -f ${ROOT_DIR}/tools/docker/compose/docker-compose-base.yml build --quiet php-base
 
-docker-up:
-	docker-compose up --remove-orphans
+docker-up: docker-down
+	docker-compose -f docker-compose.yml -f ${ROOT_DIR}/tools/docker/compose/docker-compose-dev.yml up --remove-orphans
 
 prune: docker-down
 	docker volume prune -f

@@ -21,11 +21,12 @@ services:
       - 443:${FRONTEND_NGINX_PORT_HTTPS}
     volumes:
       - ./dist:/dist:ro
+      - letsencrypt:/tls
+      - certbot:/certbot
       - type: tmpfs
         target: ${FRONTEND_PAGESPEED_FILE_CACHE?err}
     depends_on:
       - backend-cache
-    ##      - tls
     networks:
       - frontend_web
   backend-cache:
@@ -74,12 +75,11 @@ services:
     environment:
       APP_ROOT_DIR: ${APP_ROOT_DIR}
       SYMFONY_CACHE_DIR:
+      SYMFONY_LOG_DIR:
     volumes:
       - app:${APP_ROOT_DIR}/application:ro
       - vendor:${APP_ROOT_DIR}/vendor:ro
       - socket:${PHP_SOCKET_DIR}
-      - type: tmpfs
-        target: /logs
   php-app:
     build:
       context: ./
@@ -110,7 +110,8 @@ services:
       - ./composer.lock:/build/composer.lock
 volumes:
   socket:
-  certs:
+  letsencrypt:
+  certbot:
   dhparams:
   app:
   tests:
