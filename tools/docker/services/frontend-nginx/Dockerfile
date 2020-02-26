@@ -8,7 +8,7 @@ ARG FRONTEND_PAGESPEED_FILE_CACHE
 
 WORKDIR /build
 # Copy the templates to the /build dir
-COPY tools/docker/frontend-nginx/conf ./
+COPY tools/docker/services/frontend-nginx/conf ./
 
 # Get gomplate (https://docs.gomplate.ca/)
 COPY --from=hairyhenderson/gomplate:v2.5.0-slim /gomplate /bin/gomplate
@@ -20,7 +20,7 @@ ARG FRONTEND_PAGESPEED_FILE_CACHE
 
 RUN mkdir -p ${FRONTEND_PAGESPEED_FILE_CACHE}
 
-COPY tools/docker/frontend-nginx/certs /certs
+COPY tools/docker/services/frontend-nginx/certs /certs
 
 WORKDIR /etc/nginx
 

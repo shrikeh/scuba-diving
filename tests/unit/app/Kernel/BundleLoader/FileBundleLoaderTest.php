@@ -84,7 +84,7 @@ final class FileBundleLoaderTest extends TestCase
         $fileBundle->getPath()->willReturn($path);
         $this->expectExceptionObject(BundleFileNotExists::fromPath($path));
 
-        $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'dev');
+        $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'php-dev');
 
         $fileBundleLoader->getBundles();
     }
@@ -99,7 +99,7 @@ final class FileBundleLoaderTest extends TestCase
         $fileBundle->getPath()->willReturn($path);
         $this->expectExceptionObject(BundleFileNotReadable::fromPath($path));
 
-        $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'dev');
+        $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'php-dev');
 
         $fileBundleLoader->getBundles();
     }

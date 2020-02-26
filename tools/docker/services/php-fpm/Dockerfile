@@ -1,4 +1,4 @@
-ARG PHP_TAG="7.4.1-fpm-alpine3.11"
+ARG PHP_TAG="7.4.3-fpm-alpine3.10"
 
 FROM php:${PHP_TAG} as php-fpm-build
 
@@ -9,7 +9,7 @@ ARG PHP_SOCKET_FILE=app.sock
 # Get gomplate (https://docs.gomplate.ca/)
 
 COPY --from=hairyhenderson/gomplate:v2.5.0-slim /gomplate /bin/gomplate
-COPY tools/docker/php-fpm/php-fpm.d ./php-fpm.d
+COPY tools/docker/services/php-fpm/php-fpm.d ./php-fpm.d
 
 RUN /bin/gomplate --input-dir=./php-fpm.d --output-dir=/usr/local/etc/php-fpm.d
 
@@ -17,6 +17,8 @@ FROM php:${PHP_TAG} as php-fpm
 
 ARG APP_GROUP_ID=2001
 ARG APP_GROUP_NAME=app
+ARG SYMFONY_CACHE_DIR=/cache
+ARG APP_ROOT_DIR=/diving
 
 RUN addgroup -g ${APP_GROUP_ID} -S "${APP_GROUP_NAME}"
 
@@ -29,3 +31,10 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
     && rm -rf /tmp/blackfire /tmp/blackfire-probe.tar.gz
 
 COPY --from=php-fpm-build /usr/local/etc/php-fpm.d /usr/local/etc/php-fpm.d
+
+RUN mkdir -p ${SYMFONY_CACHE_DIR}
+RUN chown www-data:www-data ${SYMFONY_CACHE_DIR}
+
+WORKDIR ${APP_ROOT_DIR}
+
+COPY ./.env ./

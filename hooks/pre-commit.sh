@@ -8,12 +8,12 @@
 #
 # To enable this hook, rename this file to "pre-commit".
 
-if git rev-parse --verify HEAD >/dev/null 2>&1
+if git rev-parse --verify HEAD >/php-dev/null 2>&1
 then
 	against=HEAD
 else
 	# Initial commit: diff against an empty tree object
-	against=$(git hash-object -t tree /dev/null)
+	against=$(git hash-object -t tree /php-dev/null)
 fi
 
 # If you want to allow non-ASCII filenames set this variable to true.

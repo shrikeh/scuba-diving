@@ -4,13 +4,13 @@ services:
   frontend-build:
     build:
       context: ./
-      dockerfile: tools/docker/frontend-build/Dockerfile
+      dockerfile: tools/docker/services/frontend-build/Dockerfile
     volumes:
       - ./:/site
   frontend-nginx:
     build:
       context: ./
-      dockerfile: tools/docker/frontend-nginx/Dockerfile
+      dockerfile: tools/docker/services/frontend-nginx/Dockerfile
       args:
         FRONTEND_NGINX_PORT_HTTP: ${FRONTEND_NGINX_PORT_HTTP}
         FRONTEND_NGINX_PORT_HTTPS: ${FRONTEND_NGINX_PORT_HTTPS}
@@ -30,7 +30,7 @@ services:
       - frontend_web
   backend-cache:
     build:
-      context: tools/docker/backend-cache
+      context: tools/docker/services/backend-cache
       dockerfile: Dockerfile
       args:
         BACKEND_NGINX_PORT_HTTP: ${BACKEND_NGINX_PORT_HTTP}
@@ -47,11 +47,11 @@ services:
   backend-nginx:
     build:
       context: ./
-      dockerfile: tools/docker/backend-nginx/Dockerfile
+      dockerfile: tools/docker/services/backend-nginx/Dockerfile
       args:
         APP_GROUP_NAME: ${APP_GROUP_NAME}
         APP_GROUP_ID: ${APP_GROUP_ID}
-        APP_CODE_DIR: ${APP_CODE_DIR}
+        APP_CODE_DIR: ${APP_ROOT_DIR}/application
         PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
         PHP_SOCKET_FILE: ${PHP_SOCKET_FILE}
     volumes:
@@ -65,25 +65,56 @@ services:
   php-fpm:
     build:
       context: ./
-      dockerfile: tools/docker/php-fpm/Dockerfile
+      dockerfile: tools/docker/services/php-fpm/Dockerfile
       args:
         APP_GROUP_NAME: ${APP_GROUP_NAME}
         APP_GROUP_ID: ${APP_GROUP_ID}
         PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
         PHP_SOCKET_FILE: ${PHP_SOCKET_FILE}
     environment:
+      APP_ROOT_DIR: ${APP_ROOT_DIR}
       SYMFONY_CACHE_DIR:
     volumes:
-      - ./:${APP_CODE_DIR}:ro
+      - app:${APP_ROOT_DIR}/application:ro
+      - vendor:${APP_ROOT_DIR}/vendor:ro
       - socket:${PHP_SOCKET_DIR}
       - type: tmpfs
-        target: /cache
-      - type: tmpfs
         target: /logs
+  php-app:
+    build:
+      context: ./
+      dockerfile: tools/docker/services/php-app/Dockerfile
+      args:
+        APP_CODE_DIR: ${APP_ROOT_DIR}/application
+    volumes:
+      - app:${APP_ROOT_DIR}/application
+  php-composer:
+    build:
+      context: ./
+      dockerfile: tools/docker/services/php-composer/Dockerfile
+    volumes:
+      - app:/build/application:ro
+      - tests:/build/tests:ro
+      - vendor:/build/vendor
+      - ./composer.json:/build/composer.json
+      - ./composer.lock:/build/composer.lock
+  php-dev:
+    build:
+      context: ./
+      dockerfile: tools/docker/services/php-dev/Dockerfile
+    volumes:
+      - app:/build/application:ro
+      - tests:/build/tests:ro
+      - vendor:/build/vendor:ro
+      - ./composer.json:/build/composer.json
+      - ./composer.lock:/build/composer.lock
 volumes:
   socket:
   certs:
   dhparams:
+  app:
+  tests:
+  vendor:
 networks:
   frontend_web:
   backend_app:
