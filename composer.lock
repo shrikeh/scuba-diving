@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e0f5b3fc4fde160623c756030c23d25",
+    "content-hash": "78c276761d3f80ea5ac607e160467e68",
     "packages": [
         {
             "name": "brick/math",
@@ -662,23 +662,85 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "ramsey/collection",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/collection.git",
+                "reference": "925ad8cf55ba7a3fc92e332c58fd0478ace3e1ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/925ad8cf55ba7a3fc92e332c58fd0478ace3e1ca",
+                "reference": "925ad8cf55ba7a3fc92e332c58fd0478ace3e1ca",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "fzaninotto/faker": "^1.5",
+                "jakub-onderka/php-parallel-lint": "^1",
+                "jangregor/phpstan-prophecy": "^0.6",
+                "mockery/mockery": "^1.3",
+                "phpstan/extension-installer": "^1",
+                "phpstan/phpdoc-parser": "0.4.1",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-mockery": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "slevomat/coding-standard": "^6.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ramsey\\Collection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                }
+            ],
+            "description": "A PHP 7.2+ library for representing and manipulating collections.",
+            "homepage": "https://github.com/ramsey/collection",
+            "keywords": [
+                "array",
+                "collection",
+                "hash",
+                "map",
+                "queue",
+                "set"
+            ],
+            "time": "2020-01-05T00:22:59+00:00"
+        },
+        {
             "name": "ramsey/uuid",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "0ae56dbbebd0f1ff8de7b3c4878f6ca90ddcdf5e"
+                "reference": "901b065e0b1827c57d547f54ac78c0a3e867bb5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0ae56dbbebd0f1ff8de7b3c4878f6ca90ddcdf5e",
-                "reference": "0ae56dbbebd0f1ff8de7b3c4878f6ca90ddcdf5e",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/901b065e0b1827c57d547f54ac78c0a3e867bb5e",
+                "reference": "901b065e0b1827c57d547f54ac78c0a3e867bb5e",
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8",
                 "ext-json": "*",
                 "php": "^7.2 | ^8",
+                "ramsey/collection": "^1.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "replace": {
@@ -738,7 +800,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2020-02-21T05:05:38+00:00"
+            "time": "2020-02-27T04:35:07+00:00"
         },
         {
             "name": "symfony/cache",
@@ -746,12 +808,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "80af388add80f4441e2eb8da740c202afb8e9bd9"
+                "reference": "c6255e419e8592dab7de6e29b014ae9e8926989a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/80af388add80f4441e2eb8da740c202afb8e9bd9",
-                "reference": "80af388add80f4441e2eb8da740c202afb8e9bd9",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/c6255e419e8592dab7de6e29b014ae9e8926989a",
+                "reference": "c6255e419e8592dab7de6e29b014ae9e8926989a",
                 "shasum": ""
             },
             "require": {
@@ -817,7 +879,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2020-02-04T09:47:34+00:00"
+            "time": "2020-02-24T15:05:31+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -947,12 +1009,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "9c05b51d52aab82debbbd746a08f428d99526bfb"
+                "reference": "d29e2d36941de13600c399e393a60b8cfe59ac49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/9c05b51d52aab82debbbd746a08f428d99526bfb",
-                "reference": "9c05b51d52aab82debbbd746a08f428d99526bfb",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d29e2d36941de13600c399e393a60b8cfe59ac49",
+                "reference": "d29e2d36941de13600c399e393a60b8cfe59ac49",
                 "shasum": ""
             },
             "require": {
@@ -1015,7 +1077,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-14T07:43:07+00:00"
+            "time": "2020-02-24T15:05:31+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -1023,12 +1085,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "515fd07bfb019129dff011304e28bda579291b6a"
+                "reference": "3575004a9b0d51ead83473ec90121045b3a0b56f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/515fd07bfb019129dff011304e28bda579291b6a",
-                "reference": "515fd07bfb019129dff011304e28bda579291b6a",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/3575004a9b0d51ead83473ec90121045b3a0b56f",
+                "reference": "3575004a9b0d51ead83473ec90121045b3a0b56f",
                 "shasum": ""
             },
             "require": {
@@ -1088,7 +1150,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-04T19:55:45+00:00"
+            "time": "2020-02-24T15:05:31+00:00"
         },
         {
             "name": "symfony/dotenv",
@@ -1153,12 +1215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "28d3640b8ba37c757ed6b5c533d62d9b4771aab5"
+                "reference": "533c832520bc96a28bb87a3ae5cfe009747a6f38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/28d3640b8ba37c757ed6b5c533d62d9b4771aab5",
-                "reference": "28d3640b8ba37c757ed6b5c533d62d9b4771aab5",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/533c832520bc96a28bb87a3ae5cfe009747a6f38",
+                "reference": "533c832520bc96a28bb87a3ae5cfe009747a6f38",
                 "shasum": ""
             },
             "require": {
@@ -1200,7 +1262,7 @@
             ],
             "description": "Symfony ErrorHandler Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-14T07:43:07+00:00"
+            "time": "2020-02-24T15:05:31+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1208,12 +1270,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "5cfb816f969ac2c58e9f61df1dc1bdd1ab7b0fae"
+                "reference": "b45ad88b253c5a9702ce218e201d89c85d148cea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/5cfb816f969ac2c58e9f61df1dc1bdd1ab7b0fae",
-                "reference": "5cfb816f969ac2c58e9f61df1dc1bdd1ab7b0fae",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b45ad88b253c5a9702ce218e201d89c85d148cea",
+                "reference": "b45ad88b253c5a9702ce218e201d89c85d148cea",
                 "shasum": ""
             },
             "require": {
@@ -1270,7 +1332,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-04T09:41:09+00:00"
+            "time": "2020-02-22T20:09:08+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -1484,12 +1546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "c37e2f6a60668e00d63d165a7de73e7e5f69427a"
+                "reference": "ffdc28814e15a54a65e9eeb0eb8b5ceb5fb4e4a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/c37e2f6a60668e00d63d165a7de73e7e5f69427a",
-                "reference": "c37e2f6a60668e00d63d165a7de73e7e5f69427a",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/ffdc28814e15a54a65e9eeb0eb8b5ceb5fb4e4a4",
+                "reference": "ffdc28814e15a54a65e9eeb0eb8b5ceb5fb4e4a4",
                 "shasum": ""
             },
             "require": {
@@ -1606,7 +1668,7 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2020-02-07T08:48:51+00:00"
+            "time": "2020-02-25T14:39:06+00:00"
         },
         {
             "name": "symfony/http-client",
@@ -1614,12 +1676,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "c7f8a5bdb8dd982075def1e3e7ce727e8b6b2269"
+                "reference": "2edd40250649944775aad5d6b4cc8e164c1e9d72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/c7f8a5bdb8dd982075def1e3e7ce727e8b6b2269",
-                "reference": "c7f8a5bdb8dd982075def1e3e7ce727e8b6b2269",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/2edd40250649944775aad5d6b4cc8e164c1e9d72",
+                "reference": "2edd40250649944775aad5d6b4cc8e164c1e9d72",
                 "shasum": ""
             },
             "require": {
@@ -1674,7 +1736,7 @@
             ],
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-11T14:26:26+00:00"
+            "time": "2020-02-26T22:30:10+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -1794,12 +1856,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "27bd16694a86a962a73833b605d153efa6dc489a"
+                "reference": "cdc910ee043adfe8e24cc69beadf80cfb1912e3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/27bd16694a86a962a73833b605d153efa6dc489a",
-                "reference": "27bd16694a86a962a73833b605d153efa6dc489a",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/cdc910ee043adfe8e24cc69beadf80cfb1912e3d",
+                "reference": "cdc910ee043adfe8e24cc69beadf80cfb1912e3d",
                 "shasum": ""
             },
             "require": {
@@ -1882,7 +1944,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-12T14:34:24+00:00"
+            "time": "2020-02-24T15:05:31+00:00"
         },
         {
             "name": "symfony/messenger",
@@ -1890,12 +1952,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/messenger.git",
-                "reference": "290b5899717d1ed14aa6bdf0635f2fce2618b9ed"
+                "reference": "8c812c88d92979a21cdb3990ae572bedb6632c31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/messenger/zipball/290b5899717d1ed14aa6bdf0635f2fce2618b9ed",
-                "reference": "290b5899717d1ed14aa6bdf0635f2fce2618b9ed",
+                "url": "https://api.github.com/repos/symfony/messenger/zipball/8c812c88d92979a21cdb3990ae572bedb6632c31",
+                "reference": "8c812c88d92979a21cdb3990ae572bedb6632c31",
                 "shasum": ""
             },
             "require": {
@@ -1956,7 +2018,7 @@
             ],
             "description": "Symfony Messenger Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-04T09:41:09+00:00"
+            "time": "2020-02-25T14:24:11+00:00"
         },
         {
             "name": "symfony/mime",
@@ -2205,12 +2267,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "9d187e75de9f69ab4307fc07917cb8e8f47af4ff"
+                "reference": "d6ca39fd05c1902bf34d724ba06fb8044a0b46de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/9d187e75de9f69ab4307fc07917cb8e8f47af4ff",
-                "reference": "9d187e75de9f69ab4307fc07917cb8e8f47af4ff",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/d6ca39fd05c1902bf34d724ba06fb8044a0b46de",
+                "reference": "d6ca39fd05c1902bf34d724ba06fb8044a0b46de",
                 "shasum": ""
             },
             "require": {
@@ -2273,7 +2335,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2020-02-04T09:41:09+00:00"
+            "time": "2020-02-25T14:24:11+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -2473,12 +2535,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "b8600e195e6080f3a406a1a1413c70aaf3c9a482"
+                "reference": "3a37aeb1132d1035536d3d6aa9cb06c2ff9355e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/b8600e195e6080f3a406a1a1413c70aaf3c9a482",
-                "reference": "b8600e195e6080f3a406a1a1413c70aaf3c9a482",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/3a37aeb1132d1035536d3d6aa9cb06c2ff9355e9",
+                "reference": "3a37aeb1132d1035536d3d6aa9cb06c2ff9355e9",
                 "shasum": ""
             },
             "require": {
@@ -2540,7 +2602,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2020-02-04T09:47:34+00:00"
+            "time": "2020-02-26T22:30:10+00:00"
         },
         {
             "name": "symfony/var-exporter",
@@ -4445,12 +4507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jan0707/phpstan-prophecy.git",
-                "reference": "9f3422fa720d3dbd28ffba40f06aeba1edfecef9"
+                "reference": "3152af48688bac939c0bee6ceb42370bd4cbeeae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/9f3422fa720d3dbd28ffba40f06aeba1edfecef9",
-                "reference": "9f3422fa720d3dbd28ffba40f06aeba1edfecef9",
+                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/3152af48688bac939c0bee6ceb42370bd4cbeeae",
+                "reference": "3152af48688bac939c0bee6ceb42370bd4cbeeae",
                 "shasum": ""
             },
             "require": {
@@ -4497,7 +4559,7 @@
                 }
             ],
             "description": "Provides a phpstan/phpstan extension for phpspec/prophecy",
-            "time": "2020-02-17T16:55:34+00:00"
+            "time": "2020-02-26T18:18:37+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
@@ -4785,12 +4847,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "1f387c43f161fc99a533b8fcb25d55dc0544859a"
+                "reference": "177d6653b1f495fa011459e298fa5046d61a0333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/1f387c43f161fc99a533b8fcb25d55dc0544859a",
-                "reference": "1f387c43f161fc99a533b8fcb25d55dc0544859a",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/177d6653b1f495fa011459e298fa5046d61a0333",
+                "reference": "177d6653b1f495fa011459e298fa5046d61a0333",
                 "shasum": ""
             },
             "require": {
@@ -4829,7 +4891,7 @@
                 "laminas",
                 "zf"
             ],
-            "time": "2020-01-08T11:44:49+00:00"
+            "time": "2020-02-27T08:39:45+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4994,12 +5056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/robot-loader.git",
-                "reference": "38e8a270567a4ad9fe716b40fcda5a6580afa3c0"
+                "reference": "e2295cce305549eff08b1ffd424b1e2b0b1b81cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/robot-loader/zipball/38e8a270567a4ad9fe716b40fcda5a6580afa3c0",
-                "reference": "38e8a270567a4ad9fe716b40fcda5a6580afa3c0",
+                "url": "https://api.github.com/repos/nette/robot-loader/zipball/e2295cce305549eff08b1ffd424b1e2b0b1b81cb",
+                "reference": "e2295cce305549eff08b1ffd424b1e2b0b1b81cb",
                 "shasum": ""
             },
             "require": {
@@ -5049,7 +5111,7 @@
                 "nette",
                 "trait"
             ],
-            "time": "2020-02-20T22:17:50+00:00"
+            "time": "2020-02-26T11:54:04+00:00"
         },
         {
             "name": "nette/utils",
@@ -5135,12 +5197,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "568236a3051c990c4e54cba710195b9eeefc52e3"
+                "reference": "d86ca0f745b47efcf8d7cc1cfc69c55e78fd0b90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/568236a3051c990c4e54cba710195b9eeefc52e3",
-                "reference": "568236a3051c990c4e54cba710195b9eeefc52e3",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/d86ca0f745b47efcf8d7cc1cfc69c55e78fd0b90",
+                "reference": "d86ca0f745b47efcf8d7cc1cfc69c55e78fd0b90",
                 "shasum": ""
             },
             "require": {
@@ -5179,7 +5241,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-02-19T20:29:17+00:00"
+            "time": "2020-02-22T20:09:03+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -5871,12 +5933,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "5463f8d32cf0f31f3d8e6230eb80170a2602b55a"
+                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/5463f8d32cf0f31f3d8e6230eb80170a2602b55a",
-                "reference": "5463f8d32cf0f31f3d8e6230eb80170a2602b55a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
                 "shasum": ""
             },
             "require": {
@@ -5916,7 +5978,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-02-20T20:42:36+00:00"
+            "time": "2020-02-22T12:28:44+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -5970,12 +6032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmd/phpmd.git",
-                "reference": "714629ed782537f638fe23c4346637659b779a77"
+                "reference": "c7618e4b104a982ce350f4148f20d256337db154"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/714629ed782537f638fe23c4346637659b779a77",
-                "reference": "714629ed782537f638fe23c4346637659b779a77",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/c7618e4b104a982ce350f4148f20d256337db154",
+                "reference": "c7618e4b104a982ce350f4148f20d256337db154",
                 "shasum": ""
             },
             "require": {
@@ -6032,7 +6094,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2020-02-16T20:15:50+00:00"
+            "time": "2020-02-25T06:35:29+00:00"
         },
         {
             "name": "phpmetrics/phpmetrics",
@@ -6040,12 +6102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmetrics/PhpMetrics.git",
-                "reference": "93ad8cf65cfbee4e300ac17bd2f1127d574d7878"
+                "reference": "2a91301f6dac596dd410bfd502af50cffacf6490"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmetrics/PhpMetrics/zipball/93ad8cf65cfbee4e300ac17bd2f1127d574d7878",
-                "reference": "93ad8cf65cfbee4e300ac17bd2f1127d574d7878",
+                "url": "https://api.github.com/repos/phpmetrics/PhpMetrics/zipball/2a91301f6dac596dd410bfd502af50cffacf6490",
+                "reference": "2a91301f6dac596dd410bfd502af50cffacf6490",
                 "shasum": ""
             },
             "require": {
@@ -6095,7 +6157,7 @@
                 "quality",
                 "testing"
             ],
-            "time": "2020-01-05T16:29:12+00:00"
+            "time": "2020-02-26T18:59:46+00:00"
         },
         {
             "name": "phpspec/php-diff",
@@ -6333,12 +6395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "928179efc5368145a8b03cb20d58cb3f3136afae"
+                "reference": "48f94ddb9b3df5a93f7e5f32e4926c06b048219a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/928179efc5368145a8b03cb20d58cb3f3136afae",
-                "reference": "928179efc5368145a8b03cb20d58cb3f3136afae",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/48f94ddb9b3df5a93f7e5f32e4926c06b048219a",
+                "reference": "48f94ddb9b3df5a93f7e5f32e4926c06b048219a",
                 "shasum": ""
             },
             "require": {
@@ -6374,7 +6436,7 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2020-01-25T20:42:48+00:00"
+            "time": "2020-02-27T02:29:44+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -6382,12 +6444,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "34153c30cf04cee3a1f60f9d0802b96f4aa78282"
+                "reference": "f58bf8f8c109e6617dfc1ffc3d60e1f84a5ea5fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/34153c30cf04cee3a1f60f9d0802b96f4aa78282",
-                "reference": "34153c30cf04cee3a1f60f9d0802b96f4aa78282",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f58bf8f8c109e6617dfc1ffc3d60e1f84a5ea5fc",
+                "reference": "f58bf8f8c109e6617dfc1ffc3d60e1f84a5ea5fc",
                 "shasum": ""
             },
             "require": {
@@ -6413,7 +6475,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-02-18T22:38:55+00:00"
+            "time": "2020-02-27T02:50:02+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -6729,12 +6791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e58311d099fd5618e145eb9cbdd4f55d61d75259"
+                "reference": "a8275a2fbc5cc069b0c8fe40c1b0cc7b4d551b8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e58311d099fd5618e145eb9cbdd4f55d61d75259",
-                "reference": "e58311d099fd5618e145eb9cbdd4f55d61d75259",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a8275a2fbc5cc069b0c8fe40c1b0cc7b4d551b8a",
+                "reference": "a8275a2fbc5cc069b0c8fe40c1b0cc7b4d551b8a",
                 "shasum": ""
             },
             "require": {
@@ -6804,7 +6866,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-02-20T09:04:28+00:00"
+            "time": "2020-02-22T07:04:45+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -6855,67 +6917,6 @@
                 "dependency injection"
             ],
             "time": "2018-04-20T06:17:25+00:00"
-        },
-        {
-            "name": "ramsey/collection",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ramsey/collection.git",
-                "reference": "925ad8cf55ba7a3fc92e332c58fd0478ace3e1ca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/925ad8cf55ba7a3fc92e332c58fd0478ace3e1ca",
-                "reference": "925ad8cf55ba7a3fc92e332c58fd0478ace3e1ca",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-                "fzaninotto/faker": "^1.5",
-                "jakub-onderka/php-parallel-lint": "^1",
-                "jangregor/phpstan-prophecy": "^0.6",
-                "mockery/mockery": "^1.3",
-                "phpstan/extension-installer": "^1",
-                "phpstan/phpdoc-parser": "0.4.1",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-mockery": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpunit/phpunit": "^8.5",
-                "slevomat/coding-standard": "^6.0",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ramsey\\Collection\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ben Ramsey",
-                    "email": "ben@benramsey.com",
-                    "homepage": "https://benramsey.com"
-                }
-            ],
-            "description": "A PHP 7.2+ library for representing and manipulating collections.",
-            "homepage": "https://github.com/ramsey/collection",
-            "keywords": [
-                "array",
-                "collection",
-                "hash",
-                "map",
-                "queue",
-                "set"
-            ],
-            "time": "2020-01-05T00:22:59+00:00"
         },
         {
             "name": "rector/rector",
@@ -7994,12 +7995,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "db617f16fd942d51a8bc70af8786deecb8b8c896"
+                "reference": "daa440f9150bba17353c2ddfbdb7d04b37ae1ed5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/db617f16fd942d51a8bc70af8786deecb8b8c896",
-                "reference": "db617f16fd942d51a8bc70af8786deecb8b8c896",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/daa440f9150bba17353c2ddfbdb7d04b37ae1ed5",
+                "reference": "daa440f9150bba17353c2ddfbdb7d04b37ae1ed5",
                 "shasum": ""
             },
             "require": {
@@ -8037,7 +8038,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-02-18T23:11:28+00:00"
+            "time": "2020-02-26T04:58:49+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -8045,12 +8046,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "b0294489a7fbb4f3f39c39efe6f0328cb09731b9"
+                "reference": "6b2a9590a5868f0ce5cbf7af6abe563d1a3930a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/b0294489a7fbb4f3f39c39efe6f0328cb09731b9",
-                "reference": "b0294489a7fbb4f3f39c39efe6f0328cb09731b9",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/6b2a9590a5868f0ce5cbf7af6abe563d1a3930a3",
+                "reference": "6b2a9590a5868f0ce5cbf7af6abe563d1a3930a3",
                 "shasum": ""
             },
             "require": {
@@ -8096,7 +8097,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-04T14:08:26+00:00"
+            "time": "2020-02-24T15:05:31+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -8587,12 +8588,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "a2fbfc1c9e506829c9d181b74348467c69231134"
+                "reference": "ea0a670230c7e492962e4ed06d8cb923f4ea7387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/a2fbfc1c9e506829c9d181b74348467c69231134",
-                "reference": "a2fbfc1c9e506829c9d181b74348467c69231134",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/ea0a670230c7e492962e4ed06d8cb923f4ea7387",
+                "reference": "ea0a670230c7e492962e4ed06d8cb923f4ea7387",
                 "shasum": ""
             },
             "require": {
@@ -8675,7 +8676,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2020-02-21T06:32:22+00:00"
+            "time": "2020-02-26T22:28:44+00:00"
         },
         {
             "name": "webimpress/safe-writer",

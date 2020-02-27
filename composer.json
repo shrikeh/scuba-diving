@@ -100,13 +100,14 @@
       "symfony/symfony": "*"
   },
   "extra": {
-      "symfony": {
-        "allow-contrib": true,
-        "require": "5.0.*",
-        "config-dir": "application/config",
-        "src-dir": "application/app",
-        "public-dir": "application/public"
-      }
+    "symfony": {
+      "allow-contrib": true,
+      "require": "5.0.*",
+      "root-dir": "application"
+    },
+    "config-dir": "application/config",
+    "src-dir": "application/app",
+    "public-dir": "application/public"
   },
   "minimum-stability": "dev"
 }
