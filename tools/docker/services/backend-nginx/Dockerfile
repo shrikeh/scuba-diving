@@ -11,7 +11,7 @@ ARG APP_CODE_DIR=/site/app
 WORKDIR /build
 # Copy the templates to the /build dir
 
-COPY tools/docker/backend-nginx/ ./
+COPY tools/docker/services/backend-nginx/ ./
 
 # Get gomplate (https://docs.gomplate.ca/)
 COPY --from=hairyhenderson/gomplate:v2.5.0-slim /gomplate /bin/gomplate

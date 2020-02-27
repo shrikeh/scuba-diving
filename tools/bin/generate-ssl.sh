@@ -64,11 +64,11 @@ function sign_site_certificate() {
 function generate_tls_keys() {
   local ROOT_KEY_PATH="${1:-./root-ca.key}";
 
-  local ROOT_CA_CSR="${2:-./root-ca.csr}";
-  local ROOT_CA_KEY="${3:-./root-ca.key}";
-  local ROOT_CA_CERT="${4:-./root-ca.crt}";
+  local ROOT_CA_CSR="${2:-../certs/root-ca.csr}";
+  local ROOT_CA_KEY="${3:-../certs/root-ca.key}";
+  local ROOT_CA_CERT="${4:-../certs/root-ca.crt}";
 
-  local ROOT_CA_CONF="${5:-/Users/barney.hanlon/Workspace/barneys-diving-kit.shrikeh.net/tools/certs/root-ca.cnf}";
+  local ROOT_CA_CONF="${5:-../certs/root-ca.cnf}";
 
   local SITE_KEY_PATH="${6:-./site.key}";
   local SITE_CERT_PATH="${7:-./site.crt}";

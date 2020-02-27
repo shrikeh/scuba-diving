@@ -23,6 +23,7 @@ final class ApiResponse extends RuntimeException
      */
     public static function wrap(ExceptionInterface $exception): self
     {
+        /** @psalm-suppress PossiblyInvalidArgument */
         return new self(
             $exception->getMessage(),
             $exception->getCode(),

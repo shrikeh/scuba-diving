@@ -52,6 +52,7 @@
     "symfony/http-client": "^5.0",
     "symfony/http-client-contracts": "^2.0",
     "symfony/messenger": "^5.0",
+    "symfony/translation": "5.0.*",
     "symfony/yaml": "^5.0",
     "thecodingmachine/safe": "^1.0",
     "webonyx/graphql-php": "^0.13"
@@ -91,21 +92,22 @@
   },
   "scripts": {
       "auto-scripts": {
-          "cache:clear": "symfony-cmd",
-          "assets:install %PUBLIC_DIR%": "symfony-cmd"
-      }
+      "cache:clear": "symfony-cmd",
+      "assets:install %PUBLIC_DIR%": "symfony-cmd"
+    }
   },
   "conflict": {
       "symfony/symfony": "*"
   },
   "extra": {
-      "symfony": {
-        "allow-contrib": true,
-        "require": "5.0.*",
-        "config-dir": "application/config",
-        "src-dir": "application/app",
-        "public-dir": "application/public"
-      }
+    "symfony": {
+      "allow-contrib": true,
+      "require": "5.0.*",
+      "root-dir": "application"
+    },
+    "config-dir": "application/config",
+    "src-dir": "application/app",
+    "public-dir": "application/public"
   },
   "minimum-stability": "dev"
 }
