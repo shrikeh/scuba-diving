@@ -15,7 +15,7 @@
     state: present
     update_cache: yes
 
-- name: Install php 7.4 and dev tools
+- name: Install php 7.4 and php-dev tools
   apt:
     pkg:
       - php7.4-cli
@@ -23,7 +23,7 @@
       - php7.4-zip
       - php7.4-json
       - pkg-php-tools
-      - php7.4-dev
+      - php7.4-php-dev
       - php7.4-mbstring
       - php-amqp
     state: latest

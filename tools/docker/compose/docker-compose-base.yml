@@ -1,0 +1,8 @@
+---
+version: "3.7"
+services:
+  php-base:
+    build:
+      context: ../
+      dockerfile: services/php-base/Dockerfile
+    image: shrikeh/scuba-diving-base:latest
