@@ -38,11 +38,11 @@ build:
           - phpcs-run
 filter:
   paths:
-      - "application/*"
-      - "tests/*"
+    - "application/*"
+    - "tests/*"
   excluded_paths:
-      - "*/_generated/*"   # Codeception breaks lots of standards; ignore it
-      - "*/fixtures/*"
+    - "*/_generated/*"   # Codeception breaks lots of standards; ignore it
+    - "*/fixtures/*"
   dependency_paths:
-      - vendor/
-      - tests/mocks
+    - vendor
+    - tests/mocks
