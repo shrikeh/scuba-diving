@@ -10,26 +10,25 @@
  */
 declare(strict_types=1);
 
-namespace App\Kernel\BundleLoader\Exception;
+namespace App\Kernel\BundleLoader\BundleIterator\Exception;
 
-use InvalidArgumentException;
+use RuntimeException;
 
 use function Safe\sprintf;
 
-final class InvalidBundleEnvironment extends InvalidArgumentException
+final class BundlesNotIterable extends RuntimeException implements BundleIteratorExceptionInterface
 {
     /**
-     * @param string $bundle
-     * @param mixed $environment
+     * @param mixed $bundles
      * @return static
      * @throws \Safe\Exceptions\StringsException
+     * @throws \Safe\Exceptions\JsonException
      */
-    public static function fromBundleEnv(string $bundle, $environment): self
+    public static function create($bundles): self
     {
         return new self(sprintf(
-            'The bundle "%s" included the invalid environment %s',
-            $bundle,
-            serialize($environment)
+            'The bundles were not iterable: received this: "%s"',
+            serialize($bundles)
         ));
     }
 }

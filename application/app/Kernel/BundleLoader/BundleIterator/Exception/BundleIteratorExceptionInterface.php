@@ -10,6 +10,11 @@
  */
 declare(strict_types=1);
 
-return [
-    Tests\Mock\Bundle\BundleStub::class => false,
-];
+namespace App\Kernel\BundleLoader\BundleIterator\Exception;
+
+use Throwable;
+
+interface BundleIteratorExceptionInterface extends Throwable
+{
+
+}
