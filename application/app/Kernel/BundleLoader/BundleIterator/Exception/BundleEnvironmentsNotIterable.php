@@ -10,13 +10,13 @@
  */
 declare(strict_types=1);
 
-namespace App\Kernel\BundleLoader\Exception;
+namespace App\Kernel\BundleLoader\BundleIterator\Exception;
 
 use InvalidArgumentException;
 
 use function Safe\sprintf;
 
-final class BundleEnvironmentsNotIterable extends InvalidArgumentException
+final class BundleEnvironmentsNotIterable extends InvalidArgumentException implements BundleIteratorExceptionInterface
 {
     /**
      * @param string $bundle

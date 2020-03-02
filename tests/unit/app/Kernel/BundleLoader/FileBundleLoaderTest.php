@@ -12,11 +12,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\App\Kernel\BundleLoader;
 
-use App\Kernel\BundleLoader\Exception\BundleEnvironmentsNotIterable;
+use App\Kernel\BundleLoader\BundleIterator\Exception\BundleEnvironmentsNotIterable;
+use App\Kernel\BundleLoader\BundleIterator\Exception\BundlesNotIterable;
+use App\Kernel\BundleLoader\BundleIterator\Exception\InvalidBundleEnvironment;
 use App\Kernel\BundleLoader\Exception\BundleFileNotExists;
 use App\Kernel\BundleLoader\Exception\BundleFileNotReadable;
-use App\Kernel\BundleLoader\Exception\BundlesNotIterable;
-use App\Kernel\BundleLoader\Exception\InvalidBundleEnvironment;
+use App\Kernel\BundleLoader\Exception\BundlesNotLoadable;
 use App\Kernel\BundleLoader\FileBundleLoader;
 use Generator;
 use PHPUnit\Framework\TestCase;
@@ -110,65 +111,8 @@ final class FileBundleLoaderTest extends TestCase
 
         $fileBundleLoader = FileBundleLoader::create($invalidBundles, 'foo');
 
-        $this->expectExceptionObject(BundlesNotIterable::create($invalidBundles));
-
-        $fileBundleLoader->getBundles();
-    }
-
-    public function testItThrowsAnExceptionIfTheBundleFileContainsInvalidBundlesEnvs(): void
-    {
-        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundleEnvs.php';
-        $expectedInvalidBundles = require $invalidBundles;
-
-
-        $fileBundleLoader = FileBundleLoader::create($invalidBundles, 'foo');
-
-        foreach ($expectedInvalidBundles as $bundleClass => $env) {
-            if (!is_array($env)) {
-                $this->expectExceptionObject(BundleEnvironmentsNotIterable::fromBundle($bundleClass));
-                break;
-            }
-        }
-
-        $fileBundleLoader->getBundles();
-    }
-
-    public function testItThrowsAnExceptionIfTheBundleEnvIsNotAString(): void
-    {
-        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundleEnvValueString.php';
-        $expectedInvalidBundles = require $invalidBundles;
-
-
-        $fileBundleLoader = FileBundleLoader::create($invalidBundles, 'foo');
-
-        foreach ($expectedInvalidBundles as $bundleClass => $envs) {
-            foreach ($envs as $env => $use) {
-                if (!(is_string($env) && is_bool($use))) {
-                    $this->expectExceptionObject(InvalidBundleEnvironment::fromBundleEnv($bundleClass, $envs));
-                    break;
-                }
-            }
-        }
-
-        $fileBundleLoader->getBundles();
-    }
-
-    public function testItThrowsAnExceptionIfTheBundleEnvIsNotABoolean(): void
-    {
-        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundleEnvValueBoolean.php';
-        $expectedInvalidBundles = require $invalidBundles;
-
-
-        $fileBundleLoader = FileBundleLoader::create($invalidBundles, 'foo');
-
-        foreach ($expectedInvalidBundles as $bundleClass => $envs) {
-            foreach ($envs as $env => $use) {
-                if (!(is_string($env) && is_bool($use))) {
-                    $this->expectExceptionObject(InvalidBundleEnvironment::fromBundleEnv($bundleClass, $envs));
-                    break;
-                }
-            }
-        }
+        $this->expectException(BundlesNotLoadable::class);
+        $this->expectExceptionCode(0);
 
         $fileBundleLoader->getBundles();
     }
