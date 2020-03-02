@@ -12,14 +12,13 @@ declare(strict_types=1);
 
 namespace App\Kernel\BundleLoader;
 
-use App\Kernel\BundleLoader\Exception\BundleEnvironmentsNotIterable;
+use App\Kernel\BundleLoader\BundleIterator\BundleIterator;
+use App\Kernel\BundleLoader\BundleIterator\Exception\BundleIteratorExceptionInterface;
 use App\Kernel\BundleLoader\Exception\BundleFileNotExists;
 use App\Kernel\BundleLoader\Exception\BundleFileNotReadable;
-use App\Kernel\BundleLoader\Exception\BundlesNotIterable;
-use App\Kernel\BundleLoader\Exception\InvalidBundleEnvironment;
-use Generator;
+use App\Kernel\BundleLoader\Exception\BundlesNotLoadable;
+use Safe\Exceptions\StringsException;
 use SplFileInfo;
-use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 
 final class FileBundleLoader
 {
@@ -31,6 +30,11 @@ final class FileBundleLoader
      * @var string
      */
     private string $targetEnv;
+
+    /**
+     * @var BundleIterator
+     */
+    private BundleIterator $bundles;
 
     /**
      * @param SplFileInfo|string $path
@@ -57,46 +61,11 @@ final class FileBundleLoader
 
     /**
      * @return iterable
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
      */
     public function getBundles(): iterable
     {
-        $this->assertValidFile();
-
-        $bundles = $this->requireBundles();
-        $this->assertValidBundles($bundles);
-
-        return $this->loadBundles($bundles);
-    }
-
-    /**
-     * @param array<string, array<string>> $bundles
-     * @return Generator
-     */
-    private function loadBundles(array $bundles): Generator
-    {
-        foreach ($bundles as $class => $envs) {
-            $bundle = $this->initEnvBundle($class, $envs);
-            if ($bundle instanceof BundleInterface) {
-                yield $bundle;
-            }
-        }
-    }
-
-    /**
-     * @param string $class
-     * @param array $envs
-     * @return BundleInterface|null
-     */
-    private function initEnvBundle(string $class, array $envs): ?BundleInterface
-    {
-        if ($envs[$this->targetEnv] ?? $envs['all'] ?? false) {
-            if (is_a($class, BundleInterface::class, true)) {
-                return new $class();
-            }
-        }
-
-        return null;
+        return $this->getBundleIterator()->getEnvBundles($this->targetEnv);
     }
 
     /**
@@ -104,7 +73,7 @@ final class FileBundleLoader
      *
      * @throws BundleFileNotExists
      * @throws BundleFileNotReadable
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
      */
     private function assertValidFile(): void
     {
@@ -127,25 +96,22 @@ final class FileBundleLoader
     }
 
     /**
-     * @param mixed $bundles
-     * @psalm-assert array<string, array<string>> $bundles
-     * @psalm-suppress MixedAssignment
-     * @throws \Safe\Exceptions\StringsException
+     * @return BundleIterator
+     * @throws StringsException
      */
-    private function assertValidBundles($bundles): void
+    private function getBundleIterator(): BundleIterator
     {
-        if (!is_iterable($bundles)) {
-            throw BundlesNotIterable::create((string) $this->bundlePath);
-        }
-        foreach ($bundles as $bundle => $envs) {
-            if (!is_iterable($envs)) {
-                throw BundleEnvironmentsNotIterable::fromBundle($bundle);
-            }
-            foreach ($envs as $env => $use) {
-                if (!(is_string($env) && is_bool($use))) {
-                    throw InvalidBundleEnvironment::fromBundleEnv($bundle, $envs);
-                }
+        if (!isset($this->bundles)) {
+            $this->assertValidFile();
+            $bundles = $this->requireBundles();
+
+            try {
+                $this->bundles = BundleIterator::create($bundles);
+            } catch (BundleIteratorExceptionInterface $e) {
+                throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getRealPath());
             }
         }
+
+        return $this->bundles;
     }
 }
