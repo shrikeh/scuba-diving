@@ -7,7 +7,7 @@ services:
       dockerfile: tools/docker/services/frontend-build/Dockerfile
     volumes:
       - ./:/site
-      - dist:/dist
+      - dist:/site/dist
   frontend-nginx:
     build:
       context: ./

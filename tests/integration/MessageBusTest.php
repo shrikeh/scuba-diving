@@ -7,6 +7,7 @@ use App\Kit\Query\Bus\ItemDetailQueryBusInterface;
 use App\Kit\Query\Result\ItemDetail;
 use Codeception\Test\Unit;
 use Prophecy\Argument;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -43,7 +44,7 @@ final class MessageBusTest extends Unit
      * @return ContainerInterface
      * @throws \Codeception\Exception\ModuleException
      */
-    private function getContainer(): Container
+    private function getContainer(): ContainerInterface
     {
         return $this->getModule('Symfony')->_getContainer();
     }

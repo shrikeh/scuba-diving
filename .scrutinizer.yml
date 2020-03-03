@@ -39,8 +39,9 @@ filter:
     - "application/*"
     - "tests/*"
   excluded_paths:
-    - "*/_generated/*"   # Codeception breaks lots of standards; ignore it
     - "*/fixtures/*"
+    - "*/spec/*"
+    - "*/integration/*" # Codeception breaks lots of standards; ignore it
   dependency_paths:
     - "vendor/"
     - "tests/mocks/"
