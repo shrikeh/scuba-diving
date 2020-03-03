@@ -57,15 +57,11 @@ final class ClosureResolver implements ManufacturerInterface
      */
     private function resolve(): ManufacturerInterface
     {
-        if (!isset($this->model)) {
-            /** @var ManufacturerInterface model */
-            $model = $this->resolveModel();
-            $this->assertModel($model);
+        /** @var ManufacturerInterface $model */
+        $model = $this->fetchModel();
+        $this->assertManufacturerModel($model);
 
-            $this->model = $model;
-        }
-
-        return $this->model;
+        return $model;
     }
 
     /**
