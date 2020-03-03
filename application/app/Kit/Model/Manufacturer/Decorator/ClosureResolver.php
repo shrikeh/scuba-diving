@@ -14,6 +14,7 @@ namespace App\Kit\Model\Manufacturer\Decorator;
 
 use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
+use App\Kit\Model\ModelInterface;
 use App\Kit\Model\ResolverDecorator\Traits\ClosureResolverTrait;
 use Closure;
 
@@ -57,13 +58,24 @@ final class ClosureResolver implements ManufacturerInterface
     private function resolve(): ManufacturerInterface
     {
         if (!isset($this->model)) {
-            $this->model = $this->resolveModel();
-        }
+            /** @var ManufacturerInterface model */
+            $model = $this->resolveModel();
+            $this->assertModel($model);
 
-        if (!$this->model instanceof ManufacturerInterface) {
-            throw IncorrectModelResolved::fromModel($this->model, ManufacturerInterface::class);
+            $this->model = $model;
         }
 
         return $this->model;
+    }
+
+    /**
+     * @param ModelInterface $model
+     * @psalm-assert ManufacturerInterface
+     */
+    private function assertManufacturerModel(ModelInterface $model): void
+    {
+        if (!$model instanceof ManufacturerInterface) {
+            throw IncorrectModelResolved::fromModel($model, ManufacturerInterface::class);
+        }
     }
 }
