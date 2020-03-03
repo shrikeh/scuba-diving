@@ -53,12 +53,14 @@ final class ClosureResolver implements ManufacturerInterface
 
     /**
      * @return ManufacturerInterface
+     * @psalm-suppress RedundantConditionGivenDocblockType We need this for phpstan
      * @throws IncorrectModelResolved If the resolved model doesn't match the expected type
      */
     private function resolve(): ManufacturerInterface
     {
         /** @var ManufacturerInterface $model */
         $model = $this->fetchModel();
+
         $this->assertManufacturerModel($model);
 
         return $model;
@@ -66,7 +68,7 @@ final class ClosureResolver implements ManufacturerInterface
 
     /**
      * @param ModelInterface $model
-     * @psalm-assert ManufacturerInterface
+     * @assert ManufacturerInterface $model
      */
     private function assertManufacturerModel(ModelInterface $model): void
     {
