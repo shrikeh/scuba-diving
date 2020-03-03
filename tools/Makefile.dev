@@ -72,11 +72,11 @@ phpspec:
 
 phpmetrics:
 	echo 'Creating phpmetrics...'
-	php -d memory-limit=256M ${ROOT_DIR}/vendor/bin/phpmetrics --junit="${ROOT_DIR}/build/coverage/phpunit/junit.xml" --report-html="${ROOT_DIR}/build/metrics" \
+	php -d memory-limit=256M ${ROOT_DIR}/vendor/bin/phpmetrics --junit="${ROOT_DIR}/build/coverage/phpunit/junit.xml" --report-html="${ROOT_DIR}/docs/metrics" \
 	  --exclude="build","dist","tests","vendor","tools","public","translations","application/var","application/app/Kernel", "vendor" ${ROOT_DIR}
 
 browse-metrics:
-	open file:///${ROOT_DIR}/build/metrics/index.html
+	open file:///${ROOT_DIR}/docs/metrics/index.html
 
 phpmd:
 	echo 'Running PHP Mess Detector...'

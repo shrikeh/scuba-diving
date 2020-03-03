@@ -14,6 +14,7 @@ WORKDIR /build
 # Copy the templates to the /build dir
 COPY tools/docker/services/frontend-nginx/conf ./
 
+
 # Get gomplate (https://docs.gomplate.ca/)
 COPY --from=hairyhenderson/gomplate:v2.5.0-slim /gomplate /bin/gomplate
 
@@ -24,6 +25,8 @@ ARG FRONTEND_PAGESPEED_FILE_CACHE
 
 RUN mkdir -p ${FRONTEND_PAGESPEED_FILE_CACHE}
 
+
+COPY docs/metrics /metrics
 
 WORKDIR /etc/nginx
 
