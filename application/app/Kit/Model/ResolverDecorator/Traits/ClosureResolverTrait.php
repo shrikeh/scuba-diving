@@ -16,6 +16,7 @@ use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Exception\ModelNotResolved;
 use App\Kit\Model\ModelInterface;
 use Closure;
+use Safe\Exceptions\StringsException;
 
 trait ClosureResolverTrait
 {
@@ -48,10 +49,12 @@ trait ClosureResolverTrait
 
     /**
      * @return ModelInterface
+     * @throws StringsException
      */
     private function fetchModel(): ModelInterface
     {
         if (!isset($this->model)) {
+            /** @var ModelInterface $model */
             $this->model = $this->resolveModel();
         }
 
@@ -60,6 +63,7 @@ trait ClosureResolverTrait
 
     /**
      * @return ModelInterface
+     * @throws StringsException
      */
     private function resolveModel(): ModelInterface
     {
@@ -72,8 +76,9 @@ trait ClosureResolverTrait
 
     /**
      * @param mixed $model
-     * @psalm-assert ModelInterface $model
+     * @assert ModelInterface $model
      * @throws ModelNotResolved If the resolver does not return a ModelInterface
+     * @throws StringsException
      */
     private function assertModel($model): void
     {
