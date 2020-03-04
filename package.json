@@ -70,7 +70,7 @@
     "webpack-subresource-integrity": "^1.4.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "snyk test && NODE_ENV=test jest",
     "build": "webpack --config-register @babel/register --mode production"
   },
   "repository": {
