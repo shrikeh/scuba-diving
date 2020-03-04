@@ -37,9 +37,8 @@ final class ItemManufacturer implements ResponseParserInterface
     }
 
     /**
-     * @param ResponseInterface $response
+     * {@inheritDoc}
      * @return ManufacturerInterface
-     * @throws ApiResponse
      */
     public function parse(ResponseInterface $response): ManufacturerInterface
     {

@@ -20,13 +20,16 @@ final class Manufacturer
      * @var string
      */
     private string $name;
+
     /**
      * @var UriInterface|null
      */
+
     private ?UriInterface $website;
     /**
-     * @var UriInterface
+     * @var UriInterface|null
      */
+
     private ?UriInterface $logo;
 
     /**
@@ -59,7 +62,7 @@ final class Manufacturer
     }
 
     /**
-     * @return UriInterface
+     * @return UriInterface|null
      */
     public function getLogo(): ?UriInterface
     {

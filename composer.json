@@ -14,8 +14,10 @@
     "infection/infection": "^0.15.0",
     "jangregor/phpstan-prophecy": "dev-master",
     "jetbrains/phpstorm-stubs": "dev-master",
+    "microsoft/tolerant-php-parser": "0.0.20",
     "nikic/php-parser": "^4.3",
     "overtrue/phplint": "^1.2",
+    "phan/phan": "dev-master",
     "php-coveralls/php-coveralls": "2.2.x-dev",
     "php-ds/php-ds": "dev-master",
     "phpcompatibility/php-compatibility": "dev-master",
@@ -30,6 +32,7 @@
     "roave/security-advisories": "dev-master",
     "squizlabs/php_codesniffer": "^3.5",
     "symfony/thanks": "^1.2",
+    "thecodingmachine/phpstan-safe-rule": "^1.0@dev",
     "vimeo/psalm": "^3.9"
   },
   "require": {
@@ -56,6 +59,9 @@
     "symfony/yaml": "^5.0",
     "thecodingmachine/safe": "^1.0",
     "webonyx/graphql-php": "^0.13"
+  },
+  "suggest": {
+    "ext-ast": "*"
   },
   "config": {
     "preferred-install": {

@@ -10,6 +10,7 @@ application/bin/symfony
 !.git*
 !.editorconfig
 !.phpspec
+!.phan
 !.env.dist
 !.coveralls.yml
 !.phplint.yml
