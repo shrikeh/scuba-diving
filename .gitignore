@@ -6,6 +6,7 @@ application/bin/symfony
 .*
 *.iml
 *.log
+!.codeclimate.yml
 !.env
 !.git*
 !.editorconfig

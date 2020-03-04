@@ -1,0 +1,8 @@
+---
+exclude_patterns:
+  - "docs/"
+  - "tests/spec/"
+  - "vendor/"
+plugins:
+  phan:
+    enabled: true
