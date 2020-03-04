@@ -17,7 +17,7 @@
     "summary": "build/logs/infection/summary.log",
     "debug": "build/logs/infection/debug.log",
     "badge": {
-        "branch": "master"
+        "branch": "develop"
     }
   },
   "tmpDir": "build/cache",
