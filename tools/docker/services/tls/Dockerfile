@@ -1,4 +1,4 @@
-FROM certbot/certbot
+FROM certbot/certbot:v1.3.0
 
 WORKDIR /tls
 

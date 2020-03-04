@@ -1,10 +1,10 @@
 ARG VARNISH_TAG="6.3"
-
+FROM hairyhenderson/gomplate:v2.5.0-slim as gomplate
 FROM varnish:${VARNISH_TAG} as varnish-build
 
 ARG BACKEND_NGINX_PORT_HTTP=8081
 
-COPY --from=hairyhenderson/gomplate:v2.5.0-slim /gomplate /bin/gomplate
+COPY --from=gomplate /gomplate /bin/gomplate
 
 WORKDIR /build
 COPY default.vcl ./

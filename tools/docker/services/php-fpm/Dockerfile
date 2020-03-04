@@ -1,4 +1,6 @@
 ARG PHP_TAG="7.4.3-fpm-alpine3.10"
+# Get gomplate (https://docs.gomplate.ca/)
+FROM hairyhenderson/gomplate:v2.5.0-slim as gomplate
 
 FROM php:${PHP_TAG} as php-fpm-build
 
@@ -6,9 +8,7 @@ ARG APP_GROUP_NAME="app"
 ARG PHP_SOCKET_DIR=/socket
 ARG PHP_SOCKET_FILE=app.sock
 
-# Get gomplate (https://docs.gomplate.ca/)
-
-COPY --from=hairyhenderson/gomplate:v2.5.0-slim /gomplate /bin/gomplate
+COPY --from=gomplate /gomplate /bin/gomplate
 COPY tools/docker/services/php-fpm/php-fpm.d ./php-fpm.d
 
 RUN /bin/gomplate --input-dir=./php-fpm.d --output-dir=/usr/local/etc/php-fpm.d
@@ -33,12 +33,12 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 
 COPY --from=php-fpm-build /usr/local/etc/php-fpm.d /usr/local/etc/php-fpm.d
 
-RUN mkdir -p ${SYMFONY_CACHE_DIR}
-RUN chown www-data:www-data ${SYMFONY_CACHE_DIR}
+RUN mkdir -p "${SYMFONY_CACHE_DIR}"
+RUN chown www-data:www-data "${SYMFONY_CACHE_DIR}"
 
-RUN mkdir -p ${SYMFONY_LOG_DIR}
-RUN chown www-data:www-data ${SYMFONY_LOG_DIR}
+RUN mkdir -p "${SYMFONY_LOG_DIR}"
+RUN chown www-data:www-data "${SYMFONY_LOG_DIR}"
 
-WORKDIR ${APP_ROOT_DIR}
+WORKDIR "${APP_ROOT_DIR}"
 
 COPY ./.env ./
