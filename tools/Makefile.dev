@@ -55,6 +55,9 @@ phpstan:
 psalm:
 	php ${ROOT_DIR}/vendor/bin/psalm --show-info=true
 
+phan:
+	php ${ROOT_DIR}/vendor/bin/phan --analyze-twice --allow-polyfill-parser --strict-type-checking --color --load-baseline=${ROOT_DIR}/.phan/baseline.php
+
 phpcs:
 	echo 'Running codesniffer...'
 	php ${ROOT_DIR}/vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application tests

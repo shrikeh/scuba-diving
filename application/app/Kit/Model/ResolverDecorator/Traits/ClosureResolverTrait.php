@@ -12,7 +12,6 @@ declare(strict_types=1);
 
 namespace App\Kit\Model\ResolverDecorator\Traits;
 
-use App\Kit\Model\Exception\IncorrectModelResolved;
 use App\Kit\Model\Exception\ModelNotResolved;
 use App\Kit\Model\ModelInterface;
 use Closure;
@@ -22,13 +21,19 @@ trait ClosureResolverTrait
 {
     /**
      * @var ModelInterface
+     * @psalm-suppress PropertyNotSetInConstructor We need $model to be lazily set, as we get it from a promise.
      */
-    private ?ModelInterface $model = null;
+    private ModelInterface $model;
 
     /**
      * @var Closure
      */
     private Closure $resolver;
+
+    /**
+     * @var bool
+     */
+    private bool $resolved = false;
 
     /**
      * ClosureResolverTrait constructor.
@@ -53,9 +58,10 @@ trait ClosureResolverTrait
      */
     private function fetchModel(): ModelInterface
     {
-        if (!isset($this->model)) {
+        if (!$this->resolved) {
             /** @var ModelInterface $model */
             $this->model = $this->resolveModel();
+            $this->resolved = true;
         }
 
         return $this->model;

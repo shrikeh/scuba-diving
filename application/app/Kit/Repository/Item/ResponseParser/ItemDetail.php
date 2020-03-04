@@ -16,6 +16,7 @@ use App\Api\JsonDecoder\JsonDecoderInterface;
 use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Model\Item\Item;
 use App\Kit\Model\Item\ItemInterface;
+use App\Kit\Model\ModelInterface;
 use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -37,7 +38,7 @@ final class ItemDetail implements ResponseParserInterface
     }
 
     /**
-     * @param ResponseInterface $response
+     * {@inheritDoc}
      * @return ItemInterface
      */
     public function parse(ResponseInterface $response): ItemInterface
