@@ -7,24 +7,24 @@ cache:
 jobs:
   fast_finish: true
 before_script:
-- composer install
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
-  > ./cc-test-reporter
-- chmod +x ./cc-test-reporter
-- "./cc-test-reporter before-build"
+  - composer install
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
 script:
-- php vendor/bin/phplint
-- php vendor/bin/phpspec run
-- php vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
-- php vendor/bin/infection --debug -j2 --filter=application/app --coverage=build/coverage/phpunit/
-  --min-covered-msi=${MIN_COVERED_MSI:-95} --min-msi=${MIN_MSI:-94} --test-framework=phpunit
-- php vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application
-  tests
+  - php vendor/bin/phplint
+  - php vendor/bin/phpspec run
+  - php vendor/bin/phpunit --prepend "./tests/unit/xdebug-filter.php"
+  - php vendor/bin/infection --debug -j2 --filter=application/app --coverage=build/coverage/phpunit/ --min-covered-msi=${MIN_COVERED_MSI:-95} --min-msi=${MIN_MSI:-94} --test-framework=phpunit
+  - php vendor/bin/phpcs --runtime-set ignore_warnings_on_exit true --cache -p application tests
 after_script:
-- "./cc-test-reporter after-build --exit-code ${TRAVIS_TEST_RESULT}"
+  - ./cc-test-reporter format-coverage -t clover -o build/coverage/phpunit.codeclimate.json build/coverage/phpunit/clover.xml
+  - ./cc-test-reporter format-coverage -t clover -o build/coverage/phpspec.codeclimate.json build/coverage/phpspec/clover.xml
+  - ./cc-test-reporter sum-coverage build/coverage/*.codeclimate.json -p 2 --output build/coverage/codeclimate.json               # Sum both coverage parts into coverage/codeclimate.json
+  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json; fi
+  - ./cc-test-reporter after-build --exit-code "${TRAVIS_TEST_RESULT}"
 after_success:
-- travis_retry bash <(curl -s https://codecov.io/bash) -s build/coverage/phpunit -s
-  build/coverage/phpspec/phpspec-coverage-xml
+- travis_retry bash <(curl -s https://codecov.io/bash) -s build/coverage/phpunit -s build/coverage/phpspec/phpspec-coverage-xml
 - travis_retry php vendor/bin/php-coveralls
 env:
   global:

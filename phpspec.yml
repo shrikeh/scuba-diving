@@ -4,11 +4,13 @@ extensions:
     format:
       - php
       - xml
+      - clover
     whitelist:
       - application/src
     output:
-      php: build/coverage/phpspec.phpcoverage
-      xml: build/coverage/phpspec/phpspec-coverage-xml
+      php:    build/coverage/phpspec.phpcoverage
+      xml:    build/coverage/phpspec/phpspec-coverage-xml
+      clover: build/coverage/phpspec/clover.xml
 formatter.name: pretty
 suites:
   default:
