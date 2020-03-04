@@ -5,6 +5,6 @@
 [![codecov](https://codecov.io/gh/shrikeh/scuba-diving/branch/develop/graph/badge.svg)](https://codecov.io/gh/shrikeh/scuba-divinge)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/badges/quality-score.png)](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/)
 [![Infection MSI](https://badge.stryker-mutator.io/github.com/shrikeh/scuba-diving/develop?style=flat)](https://infection.github.io)
-[![Known Vulnerabilities](https://snyk.io/test/github/shrikeh/scuba-diving/badge.svg?targetFile=composer.lock)](https://snyk.io/test/github/shrikeh/scuba-diving?targetFile=composer.lock)
+[![Known Vulnerabilities](https://snyk.io/test/github/shrikeh/scuba-diving/develop/badge.svg)](https://snyk.io/test/github/shrikeh/scuba-diving)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c13dd7fbb2f178b0d8d3/maintainability)](https://codeclimate.com/github/shrikeh/scuba-diving/maintainability)
 [![StyleCI](https://github.styleci.io/repos/236858731/shield?style=flat)](https://styleci.io/repos/236858731)
