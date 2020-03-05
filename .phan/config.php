@@ -9,7 +9,7 @@
  */
 declare(strict_types=1);
 
-die(var_dump($_ENV));
+require_once dirname(__DIR__) . '/application/config/bootstrap.php';
 
 /**
  * Workaround so that phan plugins work in all environments
@@ -41,12 +41,6 @@ function fetch_plugin_paths(): Generator
     }
 }
 
-function fetch_plugins(): Generator
-{
-    foreach (fetch_plugin_paths() as $pluginPath) {
-
-    }
-}
 
 return [
     'backward_compatibility_checks' => false,
@@ -64,7 +58,7 @@ return [
         'tests/',
     ],
     'exclude_file_regex' => '@^vendor/.*/(tests|Tests)/@',
-    'plugins' => iterator_to_array(fetch_plugins()),
+    'plugins' => iterator_to_array(fetch_plugin_paths()),
     'plugin_config' => [
         'php_native_syntax_check_max_processes' => 4,
     ],

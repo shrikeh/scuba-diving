@@ -16,8 +16,14 @@ require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 // Load cached env vars if the .env.local.php file exists
 // Run "composer dump-env prod" to create it (requires symfony/flex >=1.2)
+$env = null;
+$localEnvPath = dirname(__DIR__) . '/.env.local.php';
+$fileInfo = new SplFileInfo($localEnvPath);
+if ($fileInfo->isFile() && $fileInfo->isReadable()) {
+    $env = include $fileInfo->getRealPath();
+}
 if (
-    is_array($env = @include dirname(__DIR__) . '/.env.local.php') && (!isset($env['APP_ENV']) ||
+    is_array($env) && (!isset($env['APP_ENV']) ||
         ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? $env['APP_ENV']) === $env['APP_ENV'])
 ) {
     foreach ($env as $k => $v) {
