@@ -32,9 +32,10 @@ final class FileBundleLoader
     private string $targetEnv;
 
     /**
-     * @var BundleIterator|null
+     * @var BundleIterator
+     * @psalm-suppress PropertyNotSetInConstructor We need $bundles to be lazily set, as we get it on demand.
      */
-    private ?BundleIterator $bundles;
+    private BundleIterator $bundles;
 
     /**
      * @var bool
@@ -112,7 +113,7 @@ final class FileBundleLoader
             try {
                 $this->bundles = BundleIterator::create($bundles);
             } catch (BundleIteratorExceptionInterface $e) {
-                throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getRealPath());
+                throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getPath());
             }
             $this->loaded = true;
         }
