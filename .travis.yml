@@ -26,12 +26,13 @@ after_script:
   - "./cc-test-reporter format-coverage -t clover -o build/coverage/phpunit.codeclimate.json build/coverage/phpunit/clover.xml"
   - "./cc-test-reporter format-coverage -t clover -o build/coverage/phpspec.codeclimate.json build/coverage/phpspec/clover.xml"
   - "./cc-test-reporter sum-coverage build/coverage/*.codeclimate.json -p 2 --output build/coverage/codeclimate.json"
+  - ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json; fi
   - ./cc-test-reporter after-build --exit-code "${TRAVIS_TEST_RESULT}"
 after_success:
   - travis_retry bash <(curl -s https://codecov.io/bash) -s build/coverage/phpunit -s build/coverage/phpspec/phpspec-coverage-xml
   - travis_retry php vendor/bin/php-coveralls
   - travis_retry bash bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l PHP -r build/coverage/phpunit/clover.xml --partial
-  - ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json; fi
+
 env:
   global:
   - secure: Xzjs1hgUsef/sOKXNhbb7oq4xQAj+TOgl95uE+KjBXvj9VZ71bpFR6j/wOsbFtb71Imj3i1LQnPy5RXigvcRd2uFMnn4ybI+PRygjZr4mRmBg3W0r1P0DNvEjw9f/xbiBg2v4ivdtZYL58zUa75jOMvfAb3OGPclYggdy+GVN5E+tytLni6xZR4HJFILKY8t1ayMJ0ZQk0JQXO0Jh/GS3fvN7p5QCu26PLsp6YZytGE5HILKiOrNcCzri/ebmK4pJMkzZRP93ywf8755+C3HJscyUAHF4IR8W9oq5VbbBGqfH0/52IxmjNxly8t2IZAYMTUB6NKMpFf/kYW2q7rhY8BluFBTegJQsc8s1SILfEwgx6BitMG/o9FI++b2s44VqKPVNrLY2gDPAwXqCSUD4zfv3xPSVCl5r/q9FxrEh7QqtlYZEQdyGasJVPbF/mBOOi4NirtiRBI1rCG+OEwGbhv2oycJ7OMbKy8sVEKz4iDdsbthytMRt+X8VXmRL8G5IhJt2llKqbLSGebds0YsW4vZLwOWNns4OykXiUXBT8aXodJ2IObTPSwd8bKPwFYQiAik60SSJOZnJGwe8XKs752BQGUZdcCABJzIwrzgtZ6UXwg6VVnbjeDMnUg5gSs2O1WE/r74oTNYpfultWKt4y6jUouzBHaUtWh7V5UK388=
