@@ -15,7 +15,6 @@ before_script:
   - travis_retry curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - "./cc-test-reporter before-build"
-  - bash <(curl -Ls https://coverage.codacy.com/get.sh)
 script:
   - php vendor/bin/phplint
   - php vendor/bin/phpspec run
