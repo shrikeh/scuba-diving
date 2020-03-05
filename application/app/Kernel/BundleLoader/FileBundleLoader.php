@@ -48,6 +48,7 @@ final class FileBundleLoader
      * @param SplFileInfo|string $path
      * @param string $env
      * @return static
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create($path, string $env): self
     {

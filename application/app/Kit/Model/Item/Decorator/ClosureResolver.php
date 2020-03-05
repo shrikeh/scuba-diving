@@ -24,6 +24,7 @@ final class ClosureResolver implements ItemInterface
     /**
      * @param callable $callable
      * @return ClosureResolver
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create(callable $callable): self
     {

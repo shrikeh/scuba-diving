@@ -26,6 +26,7 @@ final class ClosureResolver implements ManufacturerInterface
     /**
      * @param callable $callable
      * @return self
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create(callable $callable): self
     {

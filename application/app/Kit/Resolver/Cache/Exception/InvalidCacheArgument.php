@@ -14,6 +14,7 @@ namespace App\Kit\Resolver\Cache\Exception;
 
 use InvalidArgumentException;
 use Ramsey\Uuid\UuidInterface;
+use Safe\Exceptions\StringsException;
 use Throwable;
 
 use function Safe\sprintf;
@@ -24,6 +25,8 @@ final class InvalidCacheArgument extends InvalidArgumentException
      * @param UuidInterface $uuid
      * @param Throwable $previous
      * @return InvalidCacheArgument
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create(UuidInterface $uuid, Throwable $previous): self
     {

@@ -13,6 +13,8 @@ declare(strict_types=1);
 namespace App\Kernel\BundleLoader\BundleIterator\Exception;
 
 use RuntimeException;
+use Safe\Exceptions\JsonException;
+use Safe\Exceptions\StringsException;
 
 use function Safe\sprintf;
 
@@ -21,8 +23,8 @@ final class BundlesNotIterable extends RuntimeException implements BundleIterato
     /**
      * @param mixed $bundles
      * @return static
-     * @throws \Safe\Exceptions\StringsException
-     * @throws \Safe\Exceptions\JsonException
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create($bundles): self
     {

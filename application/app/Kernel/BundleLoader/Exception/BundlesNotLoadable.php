@@ -25,6 +25,7 @@ final class BundlesNotLoadable extends RuntimeException
      * @param string $path
      * @return static
      * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function fromBundleIteratorException(BundleIteratorExceptionInterface $e, string $path): self
     {

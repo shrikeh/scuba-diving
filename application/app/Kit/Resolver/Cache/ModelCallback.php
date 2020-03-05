@@ -34,6 +34,7 @@ final class ModelCallback
      * @param Closure $resolver
      * @param DateInterval $expiresAfter
      * @return Closure
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function asClosure(Closure $resolver, DateInterval $expiresAfter): Closure
     {

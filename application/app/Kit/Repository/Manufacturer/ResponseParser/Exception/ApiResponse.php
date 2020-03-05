@@ -22,6 +22,7 @@ final class ApiResponse extends RuntimeException
     /**
      * @param ExceptionInterface $exception
      * @return ApiResponse
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function wrap(ExceptionInterface $exception): self
     {

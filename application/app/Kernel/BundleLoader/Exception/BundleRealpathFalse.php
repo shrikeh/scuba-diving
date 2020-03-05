@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace App\Kernel\BundleLoader\Exception;
 
+use Safe\Exceptions\StringsException;
 use SplFileInfo;
 use RuntimeException;
 
@@ -22,7 +23,8 @@ final class BundleRealpathFalse extends RuntimeException
     /**
      * @param SplFileInfo $bundlePath
      * @return static
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create(SplFileInfo $bundlePath): self
     {

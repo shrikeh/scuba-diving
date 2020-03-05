@@ -14,6 +14,7 @@ namespace App\Kit\Model\Exception;
 
 use App\Kit\Model\ModelInterface;
 use InvalidArgumentException;
+use Safe\Exceptions\StringsException;
 
 use function Safe\sprintf;
 
@@ -25,6 +26,8 @@ final class IncorrectModelResolved extends InvalidArgumentException
      * @param ModelInterface $model
      * @param string $expected
      * @return IncorrectModelResolved
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function fromModel(ModelInterface $model, string $expected): self
     {
