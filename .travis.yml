@@ -26,8 +26,8 @@ after_script:
   - "./cc-test-reporter format-coverage -t clover -o build/coverage/phpunit.codeclimate.json build/coverage/phpunit/clover.xml"
   - "./cc-test-reporter format-coverage -t clover -o build/coverage/phpspec.codeclimate.json build/coverage/phpspec/clover.xml"
   - "./cc-test-reporter sum-coverage build/coverage/*.codeclimate.json -p 2 --output build/coverage/codeclimate.json"
-  - ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json; fi
-#  - ./cc-test-reporter after-build --exit-code "${TRAVIS_TEST_RESULT}"
+  - ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json;
+  - ./cc-test-reporter after-build --exit-code "${TRAVIS_TEST_RESULT}"
 after_success:
   - travis_retry bash <(curl -s https://codecov.io/bash) -s build/coverage/phpunit -s build/coverage/phpspec/phpspec-coverage-xml
   - travis_retry php vendor/bin/php-coveralls
