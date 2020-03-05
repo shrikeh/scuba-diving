@@ -8,7 +8,6 @@ jobs:
   fast_finish: true
 before_install:
   - sudo apt-get install jq
-  - curl -LSs "$(curl -LSs https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r '.assets | map({name, browser_download_url} | select(.name | endswith(".jar"))) | .[0].browser_download_url')" -o codacy-coverage-reporter-assembly.jar
 
 before_script:
   - composer install
@@ -31,9 +30,6 @@ after_script:
 after_success:
   - travis_retry bash <(curl -s https://codecov.io/bash) -s build/coverage/phpunit -s build/coverage/phpspec/phpspec-coverage-xml
   - travis_retry php vendor/bin/php-coveralls
-  - java -jar codacy-coverage-reporter-assembly.jar report -l PHP -r build/coverage/phpunit/clover.xml --partial
-  - java -jar codacy-coverage-reporter-assembly.jar report -l PHP -r build/coverage/phpspec/clover.xml --partial
-  - java -jar codacy-coverage-reporter-assembly.jar final
   - ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json; fi
 env:
   global:

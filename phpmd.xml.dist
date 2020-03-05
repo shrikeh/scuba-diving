@@ -68,5 +68,4 @@
   <exclude-pattern>application/app/Kernel/*</exclude-pattern>
   <exclude-pattern>application/config/*</exclude-pattern>
   <exclude-pattern>application/var/*</exclude-pattern>
-
 </ruleset>
