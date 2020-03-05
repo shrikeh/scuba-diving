@@ -1,4 +1,4 @@
-FROM node:latest as build
+FROM node:stretch as build
 
 WORKDIR /site
 

@@ -10,6 +10,6 @@ export class Item extends React.Component<ItemInterface> {
       <div className="kit-item">
         Ohai, I am an item
       </div>
-    )
+    );
   }
 }

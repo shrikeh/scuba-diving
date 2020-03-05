@@ -9,6 +9,6 @@ export class App extends React.Component {
       <Box>
         <Button variant="outlined">Kit</Button>
       </Box>
-    )
+    );
   }
 }
