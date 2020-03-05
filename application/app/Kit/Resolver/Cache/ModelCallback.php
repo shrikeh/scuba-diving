@@ -38,6 +38,7 @@ final class ModelCallback
      */
     public static function asClosure(Closure $resolver, DateInterval $expiresAfter): Closure
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return Closure::fromCallable(new self($resolver, $expiresAfter));
     }
 

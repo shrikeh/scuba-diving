@@ -56,6 +56,7 @@ final class SymfonyCache implements ResolverFactoryInterface
      */
     public function createResolver(ResponseInterface $response, UuidInterface $uuid): ResolverInterface
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         $nextClosure = Closure::fromCallable($this->next->createResolver($response, $uuid));
 
         return $this->createCacheWrapper($nextClosure, $uuid);
@@ -70,6 +71,7 @@ final class SymfonyCache implements ResolverFactoryInterface
     {
         return new Cache(
             $this->pool,
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             ModelCallback::asClosure($nextClosure, $this->expiry),
             $uuid
         );

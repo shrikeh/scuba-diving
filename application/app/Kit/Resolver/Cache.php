@@ -59,6 +59,7 @@ final class Cache implements ResolverInterface
         try {
             $model = $this->pool->get($this->modelKey->toString(), $this->callback);
         } catch (Throwable $e) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw InvalidCacheArgument::create($this->modelKey, $e);
         }
 

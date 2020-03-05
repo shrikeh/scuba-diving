@@ -41,6 +41,7 @@ final class ManufacturerResolver implements ManufacturerModelFactoryInterface
      */
     public function createManufacturerFromResponse(ResponseInterface $response, ItemSlug $slug): ManufacturerInterface
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return ClosureResolver::create($this->createResolverClosure($response, $slug->toUuid()));
     }
 

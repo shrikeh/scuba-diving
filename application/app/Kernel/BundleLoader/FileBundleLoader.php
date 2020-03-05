@@ -88,14 +88,17 @@ final class FileBundleLoader
     private function getBundlePath(): string
     {
         if (!$this->bundlePath->isFile()) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw BundleFileNotExists::fromPath($this->bundlePath->getPathname());
         }
 
         if (!$this->bundlePath->isReadable()) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw BundleFileNotReadable::fromPath($this->bundlePath->getPathname());
         }
 
         if (!$path = $this->bundlePath->getRealPath()) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw BundleRealpathFalse::create($this->bundlePath);
         }
 
@@ -108,6 +111,7 @@ final class FileBundleLoader
      */
     private function requireBundles()
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return File::require($this->getBundlePath());
     }
 
@@ -120,8 +124,10 @@ final class FileBundleLoader
         if (!$this->loaded) {
             $bundles = $this->requireBundles();
             try {
+                /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                 $this->bundles = BundleIterator::create($bundles);
             } catch (BundleIteratorExceptionInterface $e) {
+                /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                 throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getPath());
             }
             $this->loaded = true;

@@ -46,6 +46,7 @@ final class ItemDetail implements ResponseParserInterface
         try {
             $content = $response->getContent();
         } catch (ExceptionInterface $e) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw ApiResponse::wrap($e);
         }
 

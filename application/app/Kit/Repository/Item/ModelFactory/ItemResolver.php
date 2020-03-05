@@ -42,6 +42,7 @@ final class ItemResolver implements ItemModelFactoryInterface
      */
     public function createItemFromResponse(ResponseInterface $response, ItemSlug $slug): ItemInterface
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return ClosureResolver::create($this->createResolverClosure($response, $slug->toUuid()));
     }
 

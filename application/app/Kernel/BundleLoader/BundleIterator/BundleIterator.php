@@ -33,6 +33,7 @@ final class BundleIterator
     public static function create($bundles): self
     {
         if (!is_iterable($bundles)) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw BundlesNotIterable::create($bundles);
         }
 
@@ -99,10 +100,12 @@ final class BundleIterator
     {
         foreach ($bundles as $bundle => $envs) {
             if (!is_iterable($envs)) {
+                /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                 throw BundleEnvironmentsNotIterable::fromBundle($bundle);
             }
             foreach ($envs as $env => $use) {
                 if (!(is_string($env) && is_bool($use))) {
+                    /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                     throw InvalidBundleEnvironment::fromBundleEnv($bundle, $envs);
                 }
             }
