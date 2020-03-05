@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const autoprefixer = require('autoprefixer');
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
   test: /\.(scss|css)$/,
   use: [
-    { loader: 'cache-loader' },
+    { loader: "cache-loader" },
     MiniCssExtractPlugin.loader,
     {
       loader: "css-loader",

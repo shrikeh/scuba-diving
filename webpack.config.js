@@ -1,34 +1,34 @@
-'use strict';
+"use strict";
 
-const path = require('path');
+const path = require("path");
 
-import rules from './tools/webpack/rules';
-import plugins from './tools/webpack/plugins';
+import rules from "./tools/webpack/rules";
+import plugins from "./tools/webpack/plugins";
 
 module.exports = {
-  mode: 'development',
-  entry: path.resolve(__dirname, 'public/js/src/index.tsx'),
+  mode: "development",
+  entry: path.resolve(__dirname, "public/js/src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].[contenthash].js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "js/[name].[contenthash].js",
     publicPath: "/",
-    crossOriginLoading: 'anonymous'
+    crossOriginLoading: "anonymous"
   },
   optimization: {
-    moduleIds: 'hashed',
-    runtimeChunk: 'single',
+    moduleIds: "hashed",
+    runtimeChunk: "single",
     splitChunks: {
       cacheGroups: {
         styles: {
-          name: 'styles',
+          name: "styles",
           test: /\.css$/,
-          chunks: 'all',
+          chunks: "all",
           enforce: true,
         },
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+          name: "vendors",
+          chunks: "all",
         },
       },
     },
@@ -37,11 +37,11 @@ module.exports = {
   //devtool: "source-map",
   resolve: {
     alias: {
-      'scss/main.scss': path.resolve(__dirname, 'public/scss/main.scss'),
-      '@app': path.resolve(__dirname, 'public/js/src')
+      "scss/main.scss': path.resolve(__dirname, 'public/scss/main.scss"),
+      "@app': path.resolve(__dirname, 'public/js/src")
     },
-    // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    // Add ".ts' and '.tsx" as resolvable extensions.
+    extensions: [".ts', '.tsx', '.js', '.jsx"]
   },
 
   module: {
