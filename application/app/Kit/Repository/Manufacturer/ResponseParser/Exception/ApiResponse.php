@@ -17,6 +17,8 @@ use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 
 final class ApiResponse extends RuntimeException
 {
+    public const DEFAULT_CODE = 0;
+
     /**
      * @param ExceptionInterface $exception
      * @return ApiResponse
@@ -26,8 +28,19 @@ final class ApiResponse extends RuntimeException
         /** @psalm-suppress PossiblyInvalidArgument */
         return new self(
             $exception->getMessage(),
-            $exception->getCode(),
+            self::getExceptionCode($exception),
             $exception
         );
+    }
+
+    /**
+     * @param ExceptionInterface $exception
+     * @return int
+     */
+    private static function getExceptionCode(ExceptionInterface $exception): int
+    {
+        $code = $exception->getCode();
+
+        return is_int($code) ? $code : self::DEFAULT_CODE;
     }
 }

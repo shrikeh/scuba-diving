@@ -29,12 +29,17 @@ final class FileBundleLoaderTest extends TestCase
     public function testItLoadsBundles(): void
     {
         $bundlesPath = Constants::fixturesDir() . '/bundles/GoodBundles.php';
-        $bundleFile = new SplFileInfo($bundlesPath);
+        $bundles = require $bundlesPath;
+
+        $bundleFile = $this->prophesize(SplFileInfo::class);
+        $bundleFile->isFile()->willReturn(true);
+        $bundleFile->isReadable()->willReturn(true);
+        $bundleFile->getRealPath()->willReturn($bundlesPath);
+        $bundleFile->getRealPath()->shouldBeCalledOnce();
+
         $targetEnv = 'foo';
 
-        $fileBundleLoader = new FileBundleLoader($bundleFile, $targetEnv);
-
-        $bundles = require $bundleFile;
+        $fileBundleLoader = new FileBundleLoader($bundleFile->reveal(), $targetEnv);
 
         /** @var Generator $loadedBundles */
         $loadedBundles = $fileBundleLoader->getBundles();
@@ -46,6 +51,8 @@ final class FileBundleLoaderTest extends TestCase
                 $loadedBundles->next();
             }
         }
+        // force a second call to ensure that the file is not reloaded
+        $fileBundleLoader->getBundles();
     }
 
     public function testItLoadsBundlesByEnvironment(): void

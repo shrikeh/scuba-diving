@@ -49,13 +49,14 @@ final class ItemDetailTest extends TestCase
     {
         $response = $this->prophesize(ResponseInterface::class);
         $jsonDecoder = $this->prophesize(JsonDecoderInterface::class);
-
-        $responseException = new JsonException('Problem');
+        $code = 23;
+        $responseException = new JsonException('Problem', $code);
 
         $response->getContent()->willThrow($responseException);
         $responseParser = new ItemDetail($jsonDecoder->reveal());
 
-        $this->expectExceptionObject(ApiResponse::wrap($responseException));
+        $this->expectException(ApiResponse::class);
+        $this->expectExceptionCode($code);
 
         $responseParser->parse($response->reveal());
     }

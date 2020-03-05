@@ -32,9 +32,14 @@ final class FileBundleLoader
     private string $targetEnv;
 
     /**
-     * @var BundleIterator
+     * @var BundleIterator|null
      */
-    private BundleIterator $bundles;
+    private ?BundleIterator $bundles;
+
+    /**
+     * @var bool
+     */
+    private bool $loaded = false;
 
     /**
      * @param SplFileInfo|string $path
@@ -101,15 +106,15 @@ final class FileBundleLoader
      */
     private function getBundleIterator(): BundleIterator
     {
-        if (!isset($this->bundles)) {
+        if (!$this->loaded) {
             $this->assertValidFile();
             $bundles = $this->requireBundles();
-
             try {
                 $this->bundles = BundleIterator::create($bundles);
             } catch (BundleIteratorExceptionInterface $e) {
                 throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getRealPath());
             }
+            $this->loaded = true;
         }
 
         return $this->bundles;

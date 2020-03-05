@@ -16,7 +16,6 @@ use App\Api\JsonDecoder\JsonDecoderInterface;
 use App\Api\ResponseParser\ResponseParserInterface;
 use App\Kit\Model\Item\Item;
 use App\Kit\Model\Item\ItemInterface;
-use App\Kit\Model\ModelInterface;
 use App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -40,6 +39,7 @@ final class ItemDetail implements ResponseParserInterface
     /**
      * {@inheritDoc}
      * @return ItemInterface
+     * @phan-suppress PhanParamSignatureRealMismatchReturnType Allowable in PHP 7.4
      */
     public function parse(ResponseInterface $response): ItemInterface
     {
