@@ -9,4 +9,3 @@ An experiment in doing things the *right* way. Overtested, overmonitoried, overe
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5a42f7674b7e43a78b95103445a18a20)](https://www.codacy.com/manual/barney/scuba-diving)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c13dd7fbb2f178b0d8d3/maintainability)](https://codeclimate.com/github/shrikeh/scuba-diving/maintainability)
 [![StyleCI](https://github.styleci.io/repos/236858731/shield?style=flat)](https://styleci.io/repos/236858731)
-

@@ -10,7 +10,8 @@ before_script:
   - composer install
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
-  - "./cc-test-reporter before-build"
+  - ./cc-test-reporter before-build
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh)
 script:
   - php vendor/bin/phplint
   - php vendor/bin/phpspec run
@@ -23,6 +24,9 @@ after_script:
   - ./cc-test-reporter sum-coverage build/coverage/*.codeclimate.json -p 2 --output build/coverage/codeclimate.json               # Sum both coverage parts into coverage/codeclimate.json
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage -i build/coverage/codeclimate.json; fi
   - ./cc-test-reporter after-build --exit-code "${TRAVIS_TEST_RESULT}"
+  - ./codacy-coverage-reporter report -l PHP -r build/coverage/phpunit/clover.xml --partial
+  - ./codacy-coverage-reporter report -l PHP -r build/coverage/phpspec/clover.xml --partial
+  - ./codacy-coverage-reporter final
 after_success:
 - travis_retry bash <(curl -s https://codecov.io/bash) -s build/coverage/phpunit -s build/coverage/phpspec/phpspec-coverage-xml
 - travis_retry php vendor/bin/php-coveralls
