@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of the Diving Site package.
  *
@@ -9,6 +8,37 @@
  * file that was distributed with this source code.
  */
 declare(strict_types=1);
+
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+/**
+ * Workaround so that phan plugins work in all environments
+ * @return Generator
+ * @throws \Safe\Exceptions\StringsException
+ */
+function fetch_plugins(): Generator
+{
+    $path = dirname(__DIR__) . '/vendor/phan/phan/.phan/plugins/';
+    $plugins = [
+        'AlwaysReturnPlugin',
+        'DollarDollarPlugin',
+        'DuplicateArrayKeyPlugin',
+        'DuplicateExpressionPlugin',
+        'UnreachableCodePlugin',
+        'UseReturnValuePlugin',
+        'EmptyStatementListPlugin',
+        'LoopVariableReusePlugin',
+        'InvokePHPNativeSyntaxCheckPlugin',
+        'WhitespacePlugin',
+    ];
+
+    foreach ($plugins as $plugin) {
+        yield \Safe\sprintf(
+            '%s/%s.php',
+            $path,
+            $plugin
+        );
+    }
+}
 
 return [
     'backward_compatibility_checks' => false,
@@ -26,18 +56,7 @@ return [
         'tests/',
     ],
     'exclude_file_regex' => '@^vendor/.*/(tests|Tests)/@',
-    'plugins' => [
-        'AlwaysReturnPlugin',
-        'DollarDollarPlugin',
-        'DuplicateArrayKeyPlugin',
-        'DuplicateExpressionPlugin',
-        'UnreachableCodePlugin',
-        'UseReturnValuePlugin',
-        'EmptyStatementListPlugin',
-        'LoopVariableReusePlugin',
-        'InvokePHPNativeSyntaxCheckPlugin',
-        'WhitespacePlugin',
-    ],
+    'plugins' => iterator_to_array(fetch_plugins()),
     'plugin_config' => [
         'php_native_syntax_check_max_processes' => 4,
     ],
