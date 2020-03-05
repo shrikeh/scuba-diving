@@ -9,13 +9,14 @@
  */
 declare(strict_types=1);
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+die(var_dump($_ENV));
+
 /**
  * Workaround so that phan plugins work in all environments
  * @return Generator
  * @throws \Safe\Exceptions\StringsException
  */
-function fetch_plugins(): Generator
+function fetch_plugin_paths(): Generator
 {
     $path = dirname(__DIR__) . '/vendor/phan/phan/.phan/plugins/';
     $plugins = [
@@ -37,6 +38,13 @@ function fetch_plugins(): Generator
             $path,
             $plugin
         );
+    }
+}
+
+function fetch_plugins(): Generator
+{
+    foreach (fetch_plugin_paths() as $pluginPath) {
+
     }
 }
 
