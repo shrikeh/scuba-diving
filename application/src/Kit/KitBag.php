@@ -35,6 +35,7 @@ final class KitBag
      */
     public function getItemDetails(string $itemName): Item
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) */
         $itemQuery = KitItemQuery::fromSlug($itemName);
 
         return $this->itemQueryBus->queryKitItem($itemQuery);
