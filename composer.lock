@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "674d39c1f348613d9eb185c8f9f8e680",
+    "content-hash": "e6e8f7d5894f622a88b4504a3f1a48ed",
     "packages": [
         {
             "name": "brick/math",
@@ -728,12 +728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "1f1329433f2c1fb575878232fa392f9d53bf9f7d"
+                "reference": "b31703e7c9752260ddc773c95110294fa9abc5ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/1f1329433f2c1fb575878232fa392f9d53bf9f7d",
-                "reference": "1f1329433f2c1fb575878232fa392f9d53bf9f7d",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/b31703e7c9752260ddc773c95110294fa9abc5ff",
+                "reference": "b31703e7c9752260ddc773c95110294fa9abc5ff",
                 "shasum": ""
             },
             "require": {
@@ -800,7 +800,57 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2020-03-03T04:56:56+00:00"
+            "time": "2020-03-05T04:50:39+00:00"
+        },
+        {
+            "name": "shrikeh/file",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shrikeh/file.git",
+                "reference": "5a7d1988df5d725e4411183329b73806246d348d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shrikeh/file/zipball/5a7d1988df5d725e4411183329b73806246d348d",
+                "reference": "5a7d1988df5d725e4411183329b73806246d348d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+                "infection/infection": "^0.15.3",
+                "overtrue/phplint": "^1.2",
+                "phpcompatibility/php-compatibility": "dev-master",
+                "phpmd/phpmd": "^2.8",
+                "phpmetrics/phpmetrics": "^2.5",
+                "phpstan/phpstan": "^0.12.11",
+                "phpstan/phpstan-phpunit": "^0.12.6",
+                "phpunit/phpunit": "^9.0",
+                "roave/security-advisories": "dev-master",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "^3.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shrikeh\\File\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barney Hanlon",
+                    "email": "barney@shrikeh.net"
+                }
+            ],
+            "description": "Simple OO wrapper around many standard PHP file operations (e.g. include, require, etc)",
+            "time": "2020-03-05T17:48:13+00:00"
         },
         {
             "name": "symfony/cache",
@@ -3235,12 +3285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "be584da4859baf34e05afd26fe4c587be4787ff0"
+                "reference": "09cb6230c643286fb45d5906f58891c855d8160e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/be584da4859baf34e05afd26fe4c587be4787ff0",
-                "reference": "be584da4859baf34e05afd26fe4c587be4787ff0",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/09cb6230c643286fb45d5906f58891c855d8160e",
+                "reference": "09cb6230c643286fb45d5906f58891c855d8160e",
                 "shasum": ""
             },
             "require": {
@@ -3312,7 +3362,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2020-02-19T16:56:20+00:00"
+            "time": "2020-03-04T16:58:03+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -3693,38 +3743,6 @@
                 "performance"
             ],
             "time": "2020-03-01T12:26:26+00:00"
-        },
-        {
-            "name": "container-interop/container-interop",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/container-interop/container-interop.git",
-                "reference": "79cbf1341c22ec75643d841642dd5d6acd83bdb8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/container-interop/container-interop/zipball/79cbf1341c22ec75643d841642dd5d6acd83bdb8",
-                "reference": "79cbf1341c22ec75643d841642dd5d6acd83bdb8",
-                "shasum": ""
-            },
-            "require": {
-                "psr/container": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Interop\\Container\\": "src/Interop/Container/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
-            "homepage": "https://github.com/container-interop/container-interop",
-            "abandoned": "psr/container",
-            "time": "2017-02-14T19:40:03+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -5160,12 +5178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "b530c118f324b1d274cfed1fdcd74e15c206cf9a"
+                "reference": "354fb50b20d58896bc0f3c9841da85405d278192"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/b530c118f324b1d274cfed1fdcd74e15c206cf9a",
-                "reference": "b530c118f324b1d274cfed1fdcd74e15c206cf9a",
+                "url": "https://api.github.com/repos/nette/utils/zipball/354fb50b20d58896bc0f3c9841da85405d278192",
+                "reference": "354fb50b20d58896bc0f3c9841da85405d278192",
                 "shasum": ""
             },
             "require": {
@@ -5230,7 +5248,7 @@
                 "utility",
                 "validation"
             ],
-            "time": "2020-02-28T13:32:17+00:00"
+            "time": "2020-03-05T16:20:13+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -5290,31 +5308,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/PackageVersions.git",
-                "reference": "c4b240dfe1106a1306e321e9c9c691e1baadaae0"
+                "reference": "e511a3fd8a8796c92ea78dd7c447423463966298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/c4b240dfe1106a1306e321e9c9c691e1baadaae0",
-                "reference": "c4b240dfe1106a1306e321e9c9c691e1baadaae0",
+                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/e511a3fd8a8796c92ea78dd7c447423463966298",
+                "reference": "e511a3fd8a8796c92ea78dd7c447423463966298",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0.0",
-                "php": "^7.3.0"
+                "composer-plugin-api": "^1.1.0",
+                "php": "^7.4.0"
             },
             "require-dev": {
-                "composer/composer": "^1.8.6",
-                "doctrine/coding-standard": "^6.0.0",
-                "ext-zip": "*",
-                "infection/infection": "^0.13.4",
-                "phpunit/phpunit": "^8.2.5",
-                "vimeo/psalm": "^3.4.9"
+                "composer/composer": "^1.9.3",
+                "doctrine/coding-standard": "^7.0.2",
+                "ext-zip": "^1.15.0",
+                "infection/infection": "^0.15.3",
+                "phpunit/phpunit": "^9.0.1",
+                "vimeo/psalm": "^3.9.3"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "PackageVersions\\Installer",
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.99.x-dev"
                 }
             },
             "autoload": {
@@ -5333,7 +5351,7 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-            "time": "2020-01-15T09:36:03+00:00"
+            "time": "2020-03-05T11:23:05+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -5628,12 +5646,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phan/phan.git",
-                "reference": "303474f952c954468b59ea4b93199acbb74b495b"
+                "reference": "606c863858d2cee222718f731a320915d5cf005f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phan/phan/zipball/303474f952c954468b59ea4b93199acbb74b495b",
-                "reference": "303474f952c954468b59ea4b93199acbb74b495b",
+                "url": "https://api.github.com/repos/phan/phan/zipball/606c863858d2cee222718f731a320915d5cf005f",
+                "reference": "606c863858d2cee222718f731a320915d5cf005f",
                 "shasum": ""
             },
             "require": {
@@ -5693,7 +5711,7 @@
                 "php",
                 "static"
             ],
-            "time": "2020-03-03T01:31:16+00:00"
+            "time": "2020-03-05T16:19:02+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -6100,12 +6118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "aa06ba38ed9e5133feb70ea95b42a2e5354f52b8"
+                "reference": "5b92e1c931401bfc617ea99977761c7e679c17ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/aa06ba38ed9e5133feb70ea95b42a2e5354f52b8",
-                "reference": "aa06ba38ed9e5133feb70ea95b42a2e5354f52b8",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/5b92e1c931401bfc617ea99977761c7e679c17ac",
+                "reference": "5b92e1c931401bfc617ea99977761c7e679c17ac",
                 "shasum": ""
             },
             "require": {
@@ -6138,7 +6156,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-03-01T10:45:06+00:00"
+            "time": "2020-03-04T18:52:39+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -6401,12 +6419,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9"
+                "reference": "451c3cd1418cf640de218914901e51b064abb093"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
-                "reference": "b4400efc9d206e83138e2bb97ed7f5b14b831cd9",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/451c3cd1418cf640de218914901e51b064abb093",
+                "reference": "451c3cd1418cf640de218914901e51b064abb093",
                 "shasum": ""
             },
             "require": {
@@ -6456,7 +6474,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2020-01-20T15:57:02+00:00"
+            "time": "2020-03-05T15:02:03+00:00"
         },
         {
             "name": "phpstan/extension-installer",
@@ -6558,12 +6576,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "37bdd26a80235d0f9045b49f4151102b7831cbe2"
+                "reference": "f212a54c443b22288477ad23f7042412de6784ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/37bdd26a80235d0f9045b49f4151102b7831cbe2",
-                "reference": "37bdd26a80235d0f9045b49f4151102b7831cbe2",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f212a54c443b22288477ad23f7042412de6784ab",
+                "reference": "f212a54c443b22288477ad23f7042412de6784ab",
                 "shasum": ""
             },
             "require": {
@@ -6589,7 +6607,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-03-02T22:29:43+00:00"
+            "time": "2020-03-04T20:43:48+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -6988,12 +7006,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930"
+                "reference": "e5a1a5b45965ec84f12db8aa87a4b82932459e33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e55d12f9d6a0e7f9c85992b73df1267f46279930",
-                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e5a1a5b45965ec84f12db8aa87a4b82932459e33",
+                "reference": "e5a1a5b45965ec84f12db8aa87a4b82932459e33",
                 "shasum": ""
             },
             "require": {
@@ -7001,7 +7019,7 @@
                 "psr/container": "^1.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.4|^4.4|^5.0"
+                "symfony/phpunit-bridge": "^5.0"
             },
             "type": "library",
             "extra": {
@@ -7030,7 +7048,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2020-03-03T09:12:48+00:00"
+            "time": "2020-03-03T10:25:02+00:00"
         },
         {
             "name": "rector/rector",
@@ -7186,12 +7204,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "5f81a65d531dc88975b8fe32331cfb8a79c34fe3"
+                "reference": "f0eca1ac3194cc94726f0bb366672f38629272b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5f81a65d531dc88975b8fe32331cfb8a79c34fe3",
-                "reference": "5f81a65d531dc88975b8fe32331cfb8a79c34fe3",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f0eca1ac3194cc94726f0bb366672f38629272b4",
+                "reference": "f0eca1ac3194cc94726f0bb366672f38629272b4",
                 "shasum": ""
             },
             "conflict": {
@@ -7242,8 +7260,8 @@
                 "ezsystems/ezplatform-admin-ui": ">=1.3,<1.3.5|>=1.4,<1.4.6",
                 "ezsystems/ezplatform-admin-ui-assets": ">=4,<4.2",
                 "ezsystems/ezplatform-user": ">=1,<1.0.1",
-                "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
-                "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
+                "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.14.1|>=6,<6.7.9.1|>=6.8,<6.13.6.2|>=7,<7.2.4.1|>=7.3,<7.3.2.1|>=7.5,<7.5.6.2",
+                "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.14.1|>=2011,<2017.12.7.2|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3|>=2019.3,<2019.3.4.2",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
                 "ezyang/htmlpurifier": "<4.1.1",
                 "firebase/php-jwt": "<2",
@@ -7438,7 +7456,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-03-02T07:11:48+00:00"
+            "time": "2020-03-03T17:52:54+00:00"
         },
         {
             "name": "sabre/event",
@@ -8816,12 +8834,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "0f5b0fd65d834898066635b968c09a2fc6d387c8"
+                "reference": "8a1067e4e6312e7fd7bcd74cf99965fa34a5f045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/0f5b0fd65d834898066635b968c09a2fc6d387c8",
-                "reference": "0f5b0fd65d834898066635b968c09a2fc6d387c8",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/8a1067e4e6312e7fd7bcd74cf99965fa34a5f045",
+                "reference": "8a1067e4e6312e7fd7bcd74cf99965fa34a5f045",
                 "shasum": ""
             },
             "require": {
@@ -8904,7 +8922,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2020-03-03T04:07:21+00:00"
+            "time": "2020-03-05T05:58:51+00:00"
         },
         {
             "name": "webimpress/safe-writer",
@@ -9100,6 +9118,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "ramsey/uuid": 20,
+        "shrikeh/file": 20,
         "behat/behat": 20,
         "codeception/codeception": 20,
         "codeception/module-symfony": 20,

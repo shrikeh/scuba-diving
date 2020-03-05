@@ -17,6 +17,7 @@ return [
         'application/src/',
         'vendor/psr',
         'vendor/ramsey/uuid',
+        'vendor/shrikeh/file',
         'vendor/symfony',
         'vendor/thecodingmachine/safe',
     ],

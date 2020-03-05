@@ -17,6 +17,7 @@ use App\Kernel\BundleLoader\BundleIterator\Exception\BundlesNotIterable;
 use App\Kernel\BundleLoader\BundleIterator\Exception\InvalidBundleEnvironment;
 use App\Kernel\BundleLoader\Exception\BundleFileNotExists;
 use App\Kernel\BundleLoader\Exception\BundleFileNotReadable;
+use App\Kernel\BundleLoader\Exception\BundleRealpathFalse;
 use App\Kernel\BundleLoader\Exception\BundlesNotLoadable;
 use App\Kernel\BundleLoader\FileBundleLoader;
 use Generator;
@@ -83,13 +84,32 @@ final class FileBundleLoaderTest extends TestCase
         }
     }
 
+    public function testItThrowsABundleRealpathFalseException(): void
+    {
+        $fileBundle = $this->prophesize(SplFileInfo::class);
+        $path = 'foo';
+
+        $fileBundle->isFile()->willReturn(true);
+        $fileBundle->isReadable()->willReturn(true);
+        $fileBundle->getPathname()->willReturn($path);
+        $fileBundle->getRealPath()->willReturn(false);
+
+        $splFileBundle = $fileBundle->reveal();
+
+        $this->expectExceptionObject(BundleRealpathFalse::create($splFileBundle));
+
+        $fileBundleLoader = new FileBundleLoader($splFileBundle, 'php-dev');
+
+        $fileBundleLoader->getBundles();
+    }
+
     public function testItThrowsABundleFileNotExistsExceptionIfTheFileDoesNotExist(): void
     {
         $fileBundle = $this->prophesize(SplFileInfo::class);
         $path = 'foo';
 
         $fileBundle->isFile()->willReturn(false);
-        $fileBundle->getPath()->willReturn($path);
+        $fileBundle->getPathname()->willReturn($path);
         $this->expectExceptionObject(BundleFileNotExists::fromPath($path));
 
         $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'php-dev');
@@ -104,7 +124,7 @@ final class FileBundleLoaderTest extends TestCase
 
         $fileBundle->isFile()->willReturn(true);
         $fileBundle->isReadable()->willReturn(false);
-        $fileBundle->getPath()->willReturn($path);
+        $fileBundle->getPathname()->willReturn($path);
         $this->expectExceptionObject(BundleFileNotReadable::fromPath($path));
 
         $fileBundleLoader = new FileBundleLoader($fileBundle->reveal(), 'php-dev');

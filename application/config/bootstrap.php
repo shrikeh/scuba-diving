@@ -11,6 +11,7 @@
 declare(strict_types=1);
 
 use Symfony\Component\Dotenv\Dotenv;
+use Shrikeh\File\File;
 
 require dirname(__DIR__, 2) . '/vendor/autoload.php';
 
@@ -19,8 +20,9 @@ require dirname(__DIR__, 2) . '/vendor/autoload.php';
 $env = null;
 $localEnvPath = dirname(__DIR__) . '/.env.local.php';
 $fileInfo = new SplFileInfo($localEnvPath);
+
 if ($fileInfo->isFile() && $fileInfo->isReadable()) {
-    $env = include $fileInfo->getRealPath();
+    $env = File::include($fileInfo->getRealPath());
 }
 if (
     is_array($env) && (!isset($env['APP_ENV']) ||

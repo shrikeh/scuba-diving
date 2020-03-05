@@ -68,9 +68,6 @@
     "composer/xdebug-handler": {
         "version": "1.4.0"
     },
-    "container-interop/container-interop": {
-        "version": "1.2.0"
-    },
     "dealerdirect/phpcodesniffer-composer-installer": {
         "version": "v0.6.2"
     },
@@ -378,6 +375,9 @@
     },
     "seld/jsonlint": {
         "version": "1.7.2"
+    },
+    "shrikeh/file": {
+        "version": "dev-master"
     },
     "squizlabs/php_codesniffer": {
         "version": "3.0",
