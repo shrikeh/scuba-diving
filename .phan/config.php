@@ -9,39 +9,6 @@
  */
 declare(strict_types=1);
 
-require_once dirname(__DIR__) . '/application/config/bootstrap.php';
-
-/**
- * Workaround so that phan plugins work in all environments
- * @return Generator
- * @throws \Safe\Exceptions\StringsException
- */
-function fetch_plugin_paths(): Generator
-{
-    $path = dirname(__DIR__) . '/vendor/phan/phan/.phan/plugins/';
-    $plugins = [
-        'AlwaysReturnPlugin',
-        'DollarDollarPlugin',
-        'DuplicateArrayKeyPlugin',
-        'DuplicateExpressionPlugin',
-        'UnreachableCodePlugin',
-        'UseReturnValuePlugin',
-        'EmptyStatementListPlugin',
-        'LoopVariableReusePlugin',
-        'InvokePHPNativeSyntaxCheckPlugin',
-        'WhitespacePlugin',
-    ];
-
-    foreach ($plugins as $plugin) {
-        yield \Safe\sprintf(
-            '%s/%s.php',
-            $path,
-            $plugin
-        );
-    }
-}
-
-
 return [
     'backward_compatibility_checks' => false,
     'target_php_version' => null,
@@ -58,7 +25,16 @@ return [
         'tests/',
     ],
     'exclude_file_regex' => '@^vendor/.*/(tests|Tests)/@',
-    'plugins' => iterator_to_array(fetch_plugin_paths()),
+    'plugins' => [
+        'AlwaysReturnPlugin',
+        'DollarDollarPlugin',
+        'DuplicateArrayKeyPlugin',
+        'DuplicateExpressionPlugin',
+        'UnreachableCodePlugin',
+        'UseReturnValuePlugin',
+        'InvokePHPNativeSyntaxCheckPlugin',
+        'WhitespacePlugin',
+    ],
     'plugin_config' => [
         'php_native_syntax_check_max_processes' => 4,
     ],
