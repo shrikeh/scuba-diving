@@ -37,13 +37,12 @@ module.exports = {
   //devtool: "source-map",
   resolve: {
     alias: {
-      "scss/main.scss': path.resolve(__dirname, 'public/scss/main.scss"),
-      "@app': path.resolve(__dirname, 'public/js/src")
+      "scss/main.scss": path.resolve(__dirname, "public/scss/main.scss"),
+      "@app": path.resolve(__dirname, "public/js/src")
     },
     // Add ".ts' and '.tsx" as resolvable extensions.
     extensions: [".ts', '.tsx', '.js', '.jsx"]
   },
-
   module: {
     rules: rules(__dirname)
   },

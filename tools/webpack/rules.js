@@ -49,5 +49,5 @@ export default () => {
       test: /\.js$/,
       loader: "source-map-loader"
     }
-  ]
+  ];
 };

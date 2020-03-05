@@ -4,10 +4,10 @@ const cspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 
 module.exports = () => {
   return new cspHtmlWebpackPlugin({
-    "base-uri': "'self"",
-    "object-src': "'none"",
-    "script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval""],
-    "style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval""]
+    "base-uri": "self",
+    "object-src": "none",
+    "script-src": ["unsafe-inline", "self", "unsafe-eval"],
+    "style-src": ["unsafe-inline", "self", "unsafe-eval"]
   }, {
     enabled: true,
     hashingMethod: "sha256",
@@ -19,5 +19,5 @@ module.exports = () => {
       "script-src": true,
       "style-src": true
     }
-  })
+  });
 };
