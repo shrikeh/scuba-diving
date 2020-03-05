@@ -1,6 +1,6 @@
 ARG PAGESPEED_TAG="1.13.35.2-alpine3.8"
 # Get gomplate (https://docs.gomplate.ca/)
-FROM hairyhenderson/gomplate:v2.5.0-slim as gomplate
+FROM hairyhenderson/gomplate:v2.8.0-slim as gomplate
 FROM pagespeed/nginx-pagespeed:${PAGESPEED_TAG} as frontend-nginx-build
 
 ARG BACKEND_CACHE_PORT_HTTP=80
