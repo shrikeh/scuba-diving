@@ -75,6 +75,7 @@ final class ModelCallback
     private function assertModel($model): void
     {
         if (!$model instanceof ModelInterface) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw ModelNotResolved::fromResolved($model, ModelInterface::class);
         }
     }

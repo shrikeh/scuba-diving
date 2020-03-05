@@ -74,6 +74,7 @@ final class Cache implements ResolverInterface
     private function assertModel($resolved): void
     {
         if (!$resolved instanceof ModelInterface) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw ModelNotResolved::fromResolved($resolved, ModelInterface::class);
         }
     }
