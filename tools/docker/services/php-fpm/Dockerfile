@@ -1,6 +1,6 @@
 ARG PHP_TAG="7.4.3-fpm-alpine3.10"
 # Get gomplate (https://docs.gomplate.ca/)
-FROM hairyhenderson/gomplate:v2.5.0-slim as gomplate
+FROM hairyhenderson/gomplate:v2.8.0-slim as gomplate
 
 FROM php:${PHP_TAG} as php-fpm-build
 
