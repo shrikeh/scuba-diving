@@ -49,7 +49,7 @@ function test_whitespace() {
   echo 'Checking whitespace errors...';
 
   # If there are whitespace errors, print the offending file names and fail.
-  test $(git diff-index --check --cached $against --)
+  test $(git diff-index --check --cached "$against" --)
 }
 
 function pre_commit_checks() {
