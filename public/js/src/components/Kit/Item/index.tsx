@@ -2,14 +2,12 @@
 
 import * as React from "react";
 
-import { Item as ItemInterface } from "@app/types/Kit/Item";
-
-export class Item extends React.Component<ItemInterface> {
+export class Item extends React.Component{
   public render() {
     return (
-        <div className="kit-item">
+      <div className="kit-item">
             Ohai, I am an item
-        </div>
+      </div>
     );
   }
 }

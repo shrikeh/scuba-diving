@@ -6,9 +6,9 @@ import { Button } from "@material-ui/core";
 export class App extends React.Component {
   public render() {
     return (
-        <Box>
-            <Button variant="outlined">Kit</Button>
-        </Box>
+      <Box>
+        <Button variant="outlined">Kit</Button>
+      </Box>
     );
   }
 }

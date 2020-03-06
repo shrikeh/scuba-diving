@@ -10,10 +10,10 @@ import "scss/main.scss";
 import { App } from "@app/components/App";
 
 render(
-    <ThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
     <App />
-    </ThemeProvider>,
-    document.querySelector("#scuba-diving")
+  </ThemeProvider>,
+  document.querySelector("#scuba-diving")
 );
