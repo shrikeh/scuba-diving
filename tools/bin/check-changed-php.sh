@@ -27,7 +27,7 @@ function codesniff_changed_php_files() {
   printf -v ZE_FILES_CHANGED "%s " "${ARR_CHANGED_FILES[@]}";
 
   echo "Running phpcs against changed files...";
-  php ${PWD}/vendor/bin/phpcs -w -p -v ${ZE_FILES_CHANGED};
+  php "${PWD}/vendor/bin/phpcs" -w -p -v ${ZE_FILES_CHANGED};
   FILE_PASS=$?;
   if [[ ${FILE_PASS} -ne 0 ]]; then
     PASS_SNIFF=1;
