@@ -1,4 +1,5 @@
-# Shrikeh's Personal Diving Blog [![Latest release](https://img.shields.io/github/v/release/shrikeh/scuba-diving?include_prereleases)](https://github.com/shrikeh/scuba-diving/releases/) [![Code Intelligence Status](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+# Shrikeh's Personal Diving Blog [![Latest release](https://img.shields.io/github/v/release/shrikeh/scuba-diving?include_prereleases)](https://github.com/shrikeh/scuba-diving/releases/) [![Code Intelligence Status](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+
 An experiment in doing things the *right* way. Overtested, overmonitoried, overengineered.
 ## Current status
 [![Build Status](https://travis-ci.com/shrikeh/scuba-diving.svg?branch=develop)](https://travis-ci.com/shrikeh/scuba-diving)
