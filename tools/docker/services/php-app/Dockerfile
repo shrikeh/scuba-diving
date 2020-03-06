@@ -1,4 +1,5 @@
-FROM shrikeh/scuba-diving-base:latest
+ARG PHP_BASE_IMAGE_TAG
+FROM shrikeh/scuba-diving-base:${PHP_BASE_IMAGE_TAG}
 ARG APP_CODE_DIR
 VOLUME /${APP_CODE_DIR}
 COPY ./application /${APP_CODE_DIR}

@@ -5,4 +5,4 @@ services:
     build:
       context: ../
       dockerfile: services/php-base/Dockerfile
-    image: shrikeh/scuba-diving-base:latest
+    image: shrikeh/scuba-diving-base:${PHP_BASE_IMAGE_TAG}

@@ -69,6 +69,7 @@ services:
       context: ./
       dockerfile: tools/docker/services/php-fpm/Dockerfile
       args:
+        PHP_BASE_IMAGE_TAG: ${PHP_BASE_IMAGE_TAG}
         APP_GROUP_NAME: ${APP_GROUP_NAME}
         APP_GROUP_ID: ${APP_GROUP_ID}
         PHP_SOCKET_DIR: ${PHP_SOCKET_DIR}
@@ -86,6 +87,7 @@ services:
       context: ./
       dockerfile: tools/docker/services/php-app/Dockerfile
       args:
+        PHP_BASE_IMAGE_TAG: ${PHP_BASE_IMAGE_TAG}
         APP_CODE_DIR: ${APP_ROOT_DIR}/application
     volumes:
       - app:${APP_ROOT_DIR}/application
@@ -93,6 +95,8 @@ services:
     build:
       context: ./
       dockerfile: tools/docker/services/php-composer/Dockerfile
+      args:
+        PHP_BASE_IMAGE_TAG: ${PHP_BASE_IMAGE_TAG}
     volumes:
       - app:/build/application:ro
       - tests:/build/tests:ro
@@ -103,6 +107,8 @@ services:
     build:
       context: ./
       dockerfile: tools/docker/services/php-dev/Dockerfile
+      args:
+        PHP_BASE_IMAGE_TAG: ${PHP_BASE_IMAGE_TAG}
     volumes:
       - app:/build/application:ro
       - tests:/build/tests:ro

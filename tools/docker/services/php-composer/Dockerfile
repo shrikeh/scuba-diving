@@ -1,11 +1,13 @@
-FROM shrikeh/scuba-diving-base:latest as build-composer
+ARG PHP_BASE_IMAGE_TAG
+
+FROM shrikeh/scuba-diving-base:${PHP_BASE_IMAGE_TAG} as build-composer
 
 WORKDIR /composer
 COPY ./tools/bin/install-composer.sh .
 
 RUN sh ./install-composer.sh
 
-FROM shrikeh/scuba-diving-base:latest as run-composer
+FROM shrikeh/scuba-diving-base:${PHP_BASE_IMAGE_TAG} as run-composer
 
 RUN apk add --no-cache git
 COPY --from=build-composer /composer /bin
