@@ -6,7 +6,7 @@ function lint_php_files() {
   declare FILE_PASS=0;
   for changed_php_file in "${ARR_CHANGED_FILES[@]}";
   do
-    echo "Linting ${changed_php_file}";
+    printf "Linting %s\n" "${changed_php_file}";
     php -l -n "${changed_php_file}";
     FILE_PASS=$?;
     if [[ ${FILE_PASS} -ne 0 ]]; then
