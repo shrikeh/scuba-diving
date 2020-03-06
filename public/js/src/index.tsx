@@ -7,13 +7,13 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme";
 
 import "scss/main.scss";
-import {App} from "@app/components/App";
+import { App } from "@app/components/App";
 
 render(
-  <ThemeProvider theme={theme}>
-  {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-  <CssBaseline />
-  <App />
-  </ThemeProvider>,
-  document.querySelector("#scuba-diving")
+    <ThemeProvider theme={theme}>
+    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+    <CssBaseline />
+    <App />
+    </ThemeProvider>,
+    document.querySelector("#scuba-diving")
 );
