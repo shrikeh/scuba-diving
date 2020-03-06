@@ -8,3 +8,4 @@ exclude_paths:
   - 'docs/**'
   - 'application/app/Kernel/DefaultKernel.php'
   - 'application/config/bootstrap.php'
+  - 'application/public/api.php'
