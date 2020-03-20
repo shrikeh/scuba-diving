@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea085327449daf9b1ef2dab9ea5fafea",
+    "content-hash": "c2f672fa04d6c7c8cebf52402da34aa0",
     "packages": [
         {
             "name": "brick/math",
@@ -728,12 +728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "b31703e7c9752260ddc773c95110294fa9abc5ff"
+                "reference": "07e3254913ac22aa5b5f4f864832bebac4fde6a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/b31703e7c9752260ddc773c95110294fa9abc5ff",
-                "reference": "b31703e7c9752260ddc773c95110294fa9abc5ff",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/07e3254913ac22aa5b5f4f864832bebac4fde6a1",
+                "reference": "07e3254913ac22aa5b5f4f864832bebac4fde6a1",
                 "shasum": ""
             },
             "require": {
@@ -793,27 +793,27 @@
             "license": [
                 "MIT"
             ],
-            "description": "A PHP library for generating RFC 4122 version 1, 2, 3, 4, and 5 universally unique identifiers (UUID).",
+            "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
             "homepage": "https://github.com/ramsey/uuid",
             "keywords": [
                 "guid",
                 "identifier",
                 "uuid"
             ],
-            "time": "2020-03-05T04:50:39+00:00"
+            "time": "2020-03-09T22:08:49+00:00"
         },
         {
             "name": "shrikeh/file",
-            "version": "dev-master",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shrikeh/file.git",
-                "reference": "5a7d1988df5d725e4411183329b73806246d348d"
+                "reference": "b40fb78cab9be6ee525436771197341aa8210578"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shrikeh/file/zipball/5a7d1988df5d725e4411183329b73806246d348d",
-                "reference": "5a7d1988df5d725e4411183329b73806246d348d",
+                "url": "https://api.github.com/repos/shrikeh/file/zipball/b40fb78cab9be6ee525436771197341aa8210578",
+                "reference": "b40fb78cab9be6ee525436771197341aa8210578",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +850,7 @@
                 }
             ],
             "description": "Simple OO wrapper around many standard PHP file operations (e.g. include, require, etc)",
-            "time": "2020-03-05T17:48:13+00:00"
+            "time": "2020-03-10T10:11:38+00:00"
         },
         {
             "name": "symfony/cache",
@@ -4856,12 +4856,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/PackageVersions.git",
-                "reference": "e511a3fd8a8796c92ea78dd7c447423463966298"
+                "reference": "651c372efc914aea8223e049f85afaf65e09ba23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/e511a3fd8a8796c92ea78dd7c447423463966298",
-                "reference": "e511a3fd8a8796c92ea78dd7c447423463966298",
+                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/651c372efc914aea8223e049f85afaf65e09ba23",
+                "reference": "651c372efc914aea8223e049f85afaf65e09ba23",
                 "shasum": ""
             },
             "require": {
@@ -4899,7 +4899,7 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-            "time": "2020-03-05T11:23:05+00:00"
+            "time": "2020-03-06T11:34:16+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -5131,12 +5131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phan/phan.git",
-                "reference": "482d030471e13c9374bfcd4ae2942974fe04c19a"
+                "reference": "81bf90734568e77e6172f6e98bcf6283a73f20e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phan/phan/zipball/482d030471e13c9374bfcd4ae2942974fe04c19a",
-                "reference": "482d030471e13c9374bfcd4ae2942974fe04c19a",
+                "url": "https://api.github.com/repos/phan/phan/zipball/81bf90734568e77e6172f6e98bcf6283a73f20e0",
+                "reference": "81bf90734568e77e6172f6e98bcf6283a73f20e0",
                 "shasum": ""
             },
             "require": {
@@ -5158,11 +5158,11 @@
                 "phpunit/phpunit": "^7.5.0"
             },
             "suggest": {
-                "ext-ast": "Needed for parsing ASTs (unless --use-fallback-parser is used). 1.0.1+ is needed, 1.0.5+ is recommended.",
+                "ext-ast": "Needed for parsing ASTs (unless --use-fallback-parser is used). 1.0.1+ is needed, 1.0.6+ is recommended.",
                 "ext-iconv": "Either iconv or mbstring is needed to ensure issue messages are valid utf-8",
                 "ext-igbinary": "Improves performance of polyfill when ext-ast is unavailable",
                 "ext-mbstring": "Either iconv or mbstring is needed to ensure issue messages are valid utf-8",
-                "ext-tokenizer": "Needed for non-AST support and file/line-based suppressions."
+                "ext-tokenizer": "Needed for fallback/polyfill parser support and file/line-based suppressions."
             },
             "bin": [
                 "phan",
@@ -5196,7 +5196,7 @@
                 "php",
                 "static"
             ],
-            "time": "2020-03-05T22:08:21+00:00"
+            "time": "2020-03-09T22:55:31+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -5603,12 +5603,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "5b92e1c931401bfc617ea99977761c7e679c17ac"
+                "reference": "d6b5291650d058fe1162a54fee9d923de19bcda2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/5b92e1c931401bfc617ea99977761c7e679c17ac",
-                "reference": "5b92e1c931401bfc617ea99977761c7e679c17ac",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/d6b5291650d058fe1162a54fee9d923de19bcda2",
+                "reference": "d6b5291650d058fe1162a54fee9d923de19bcda2",
                 "shasum": ""
             },
             "require": {
@@ -5641,7 +5641,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-03-04T18:52:39+00:00"
+            "time": "2020-03-06T17:11:40+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -6012,12 +6012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "f212a54c443b22288477ad23f7042412de6784ab"
+                "reference": "e87360244ee2c643f15e20d15671020fa1bc39be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f212a54c443b22288477ad23f7042412de6784ab",
-                "reference": "f212a54c443b22288477ad23f7042412de6784ab",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e87360244ee2c643f15e20d15671020fa1bc39be",
+                "reference": "e87360244ee2c643f15e20d15671020fa1bc39be",
                 "shasum": ""
             },
             "require": {
@@ -6043,7 +6043,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-03-04T20:43:48+00:00"
+            "time": "2020-03-09T21:39:52+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -8275,7 +8275,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "ramsey/uuid": 20,
-        "shrikeh/file": 20,
         "behat/behat": 20,
         "codeception/module-symfony": 20,
         "friends-of-behat/symfony-extension": 20,

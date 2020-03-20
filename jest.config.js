@@ -1,21 +1,20 @@
 "use strict";
-const moduleNameModule = require("jest-module-name-mapper");
+
 const { resolve } = require("path");
 const { defaults } = require("jest-config");
+
 const jestTestPath = resolve(__dirname, "tests/jest");
 
 module.exports = {
   verbose: true,
   bail: true,
-  moduleFileExtensions: [...defaults.moduleFileExtensions, "ts', 'tsx"],
-  moduleNameMapper: moduleNameModule("tsconfig.json"),
+  moduleFileExtensions: [...defaults.moduleFileExtensions, "ts", "tsx"],
   rootDir: __dirname,
   roots: [
     "public/js/src",
-    "tests/jest/src"
   ],
   testMatch: [
-    "**/*.main.scss.[jt]s?(x)"
+    "**/*.test.[jt]s?(x)"
   ],
   transform: {
     "^.+\\.tsx?$": "ts-jest"

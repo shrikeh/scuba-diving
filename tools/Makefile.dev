@@ -24,7 +24,9 @@ composer-validate:
 	echo 'Validating composer...'
 	composer validate
 
-lint: phplint
+lint: eslint phplint
+
+eslint:
 
 phpunit:
 	echo 'Running phpunit...'

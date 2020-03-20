@@ -4,16 +4,24 @@ import * as React from "react";
 import { render } from "react-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "./theme";
+
+import { Provider } from 'react-redux';
+
+import theme from "@app/theme";
+import { store } from '@app/store';
 
 import "scss/main.scss";
 import { App } from "@app/components/App";
 
+const store = ;
+
 render(
-  <ThemeProvider theme={theme}>
-    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-    <CssBaseline />
-    <App />
-  </ThemeProvider>,
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
+  </Provider>,
   document.querySelector("#scuba-diving")
 );

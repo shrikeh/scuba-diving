@@ -10,7 +10,7 @@
     "@material-ui/core": "^4.9.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
-    "@types/jest": "^25.0.0",
+    "@types/jest": "^25.1.4",
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
@@ -26,8 +26,12 @@
     "module-alias": "^2.2.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "source-map-loader": "^0.2.4",
-    "ts-jest": "^25.0.0",
+    "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1"
   },
   "devDependencies": {
@@ -43,7 +47,7 @@
     "cache-loader": "4.1.0",
     "csp-html-webpack-plugin": "3.0.4",
     "css-loader": "3.4.2",
-    "enzyme": "3.11.0",
+    "enzyme": "^3.11.0",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.18.3",
     "favicons-webpack-plugin": "2.1.0",
@@ -59,9 +63,11 @@
     "imagemin-optipng": "7.1.0",
     "imagemin-svgo": "7.1.0",
     "imagemin-webpack": "5.1.1",
-    "jest": "24.9.0",
+    "jest": "^25.1.0",
+    "jest-config": "^25.1.0",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "4.13.1",
+    "npm-run-all": "^4.1.5",
     "postcss-loader": "3.0.0",
     "react-test-renderer": "16.13.0",
     "resource-hints-webpack-plugin": "0.0.2",
@@ -75,7 +81,9 @@
     "webpack-subresource-integrity": "1.4.0"
   },
   "scripts": {
-    "test": "snyk test && NODE_ENV=test jest",
+    "test": "run-p test:snyk test:jest",
+    "test:snyk": "snyk test",
+    "test:jest": "NODE_ENV=test jest --passWithNoTests",
     "build": "webpack --config-register @babel/register --mode production"
   },
   "repository": {
