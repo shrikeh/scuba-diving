@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "580502402fee17bdf43ea6d269fbceb6",
+    "content-hash": "659db2403ea5c9437ec25ecc21b087fb",
     "packages": [
         {
             "name": "brick/math",
@@ -532,12 +532,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "e1cb6eca27ccfd46567a2837eeba62bc5fecdee2"
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/e1cb6eca27ccfd46567a2837eeba62bc5fecdee2",
-                "reference": "e1cb6eca27ccfd46567a2837eeba62bc5fecdee2",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
                 "shasum": ""
             },
             "require": {
@@ -571,7 +571,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2020-02-28T08:38:25+00:00"
+            "time": "2020-03-23T09:12:05+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -728,12 +728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "19a3ccb39c47d3a524a54cbf889ba81f33bd2003"
+                "reference": "2c9644b1d0c2bc58732413252bcbb6dce2eb0e0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/19a3ccb39c47d3a524a54cbf889ba81f33bd2003",
-                "reference": "19a3ccb39c47d3a524a54cbf889ba81f33bd2003",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/2c9644b1d0c2bc58732413252bcbb6dce2eb0e0e",
+                "reference": "2c9644b1d0c2bc58732413252bcbb6dce2eb0e0e",
                 "shasum": ""
             },
             "require": {
@@ -807,7 +807,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-03-17T17:22:37+00:00"
+            "time": "2020-03-22T02:34:13+00:00"
         },
         {
             "name": "shrikeh/file",
@@ -1402,12 +1402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "7948bba63162d720e6b643d18c603f728bbfb7b5"
+                "reference": "56afd2a05865dfc894f0ec30209d09e868b45ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/7948bba63162d720e6b643d18c603f728bbfb7b5",
-                "reference": "7948bba63162d720e6b643d18c603f728bbfb7b5",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/56afd2a05865dfc894f0ec30209d09e868b45ef5",
+                "reference": "56afd2a05865dfc894f0ec30209d09e868b45ef5",
                 "shasum": ""
             },
             "require": {
@@ -1463,7 +1463,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-18T08:00:37+00:00"
+            "time": "2020-03-23T12:42:46+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1777,12 +1777,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "d062b526a3efb238cd878b2ee5d585f58547551e"
+                "reference": "f639fc1dac57442f91f87b54b610666b76ebaa81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/d062b526a3efb238cd878b2ee5d585f58547551e",
-                "reference": "d062b526a3efb238cd878b2ee5d585f58547551e",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/f639fc1dac57442f91f87b54b610666b76ebaa81",
+                "reference": "f639fc1dac57442f91f87b54b610666b76ebaa81",
                 "shasum": ""
             },
             "require": {
@@ -1913,7 +1913,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-18T08:00:37+00:00"
+            "time": "2020-03-23T12:42:46+00:00"
         },
         {
             "name": "symfony/http-client",
@@ -2074,12 +2074,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "6748a309e9ec1766c931cf67e2c0ff6d712d2930"
+                "reference": "2da08283c33cfa34d6e332a01436931e318f5f80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6748a309e9ec1766c931cf67e2c0ff6d712d2930",
-                "reference": "6748a309e9ec1766c931cf67e2c0ff6d712d2930",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2da08283c33cfa34d6e332a01436931e318f5f80",
+                "reference": "2da08283c33cfa34d6e332a01436931e318f5f80",
                 "shasum": ""
             },
             "require": {
@@ -2135,7 +2135,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-18T08:00:37+00:00"
+            "time": "2020-03-23T12:42:46+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -2143,12 +2143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "ea9d2815765e7539238ad9d4e06455f7ca909c46"
+                "reference": "c9a91e8c01d0ad30d4560a653dbc116b932a2170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/ea9d2815765e7539238ad9d4e06455f7ca909c46",
-                "reference": "ea9d2815765e7539238ad9d4e06455f7ca909c46",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/c9a91e8c01d0ad30d4560a653dbc116b932a2170",
+                "reference": "c9a91e8c01d0ad30d4560a653dbc116b932a2170",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2245,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-18T08:00:37+00:00"
+            "time": "2020-03-23T12:42:46+00:00"
         },
         {
             "name": "symfony/messenger",
@@ -3748,16 +3748,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "4.1.3",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "c30e2abe4af327d8be4fb23446ff740fec76fd60"
+                "reference": "55d8d1d882fa0777e47de17b04c29b3c50fe29e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/c30e2abe4af327d8be4fb23446ff740fec76fd60",
-                "reference": "c30e2abe4af327d8be4fb23446ff740fec76fd60",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/55d8d1d882fa0777e47de17b04c29b3c50fe29e7",
+                "reference": "55d8d1d882fa0777e47de17b04c29b3c50fe29e7",
                 "shasum": ""
             },
             "require": {
@@ -3835,7 +3835,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-03-17T16:48:30+00:00"
+            "time": "2020-03-23T17:07:20+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -4817,12 +4817,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Jan0707/phpstan-prophecy.git",
-                "reference": "392dfd369809fb06ed406f7cec5df3d74e438b17"
+                "reference": "a5576e654b64c328d8974a14e7a0d77de679394a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/392dfd369809fb06ed406f7cec5df3d74e438b17",
-                "reference": "392dfd369809fb06ed406f7cec5df3d74e438b17",
+                "url": "https://api.github.com/repos/Jan0707/phpstan-prophecy/zipball/a5576e654b64c328d8974a14e7a0d77de679394a",
+                "reference": "a5576e654b64c328d8974a14e7a0d77de679394a",
                 "shasum": ""
             },
             "require": {
@@ -4879,7 +4879,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-03-13T21:17:36+00:00"
+            "time": "2020-03-22T21:43:49+00:00"
         },
         {
             "name": "jetbrains/phpstorm-stubs",
@@ -5599,12 +5599,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdepend/pdepend.git",
-                "reference": "09ff59ff7d7052b6b5a7ae822abf31d53c5ecab9"
+                "reference": "eea2aadd44f31e3f746ecac8fe382708103f14ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/09ff59ff7d7052b6b5a7ae822abf31d53c5ecab9",
-                "reference": "09ff59ff7d7052b6b5a7ae822abf31d53c5ecab9",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/eea2aadd44f31e3f746ecac8fe382708103f14ef",
+                "reference": "eea2aadd44f31e3f746ecac8fe382708103f14ef",
                 "shasum": ""
             },
             "require": {
@@ -5644,7 +5644,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-11T08:43:15+00:00"
+            "time": "2020-03-23T10:13:03+00:00"
         },
         {
             "name": "phan/phan",
@@ -5652,12 +5652,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phan/phan.git",
-                "reference": "5199668dc2e077eb1a1087f709e65eac47ebdf7b"
+                "reference": "3b7b392db5defcf9ba1f9f9b55f681f16da20789"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phan/phan/zipball/5199668dc2e077eb1a1087f709e65eac47ebdf7b",
-                "reference": "5199668dc2e077eb1a1087f709e65eac47ebdf7b",
+                "url": "https://api.github.com/repos/phan/phan/zipball/3b7b392db5defcf9ba1f9f9b55f681f16da20789",
+                "reference": "3b7b392db5defcf9ba1f9f9b55f681f16da20789",
                 "shasum": ""
             },
             "require": {
@@ -5717,7 +5717,7 @@
                 "php",
                 "static"
             ],
-            "time": "2020-03-17T00:31:08+00:00"
+            "time": "2020-03-23T14:37:29+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -6539,12 +6539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "9aba869ddf57217402cc30c9bc24b861079e7140"
+                "reference": "1dba2f0ffcf3967205db1895c0b94819b5758a73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9aba869ddf57217402cc30c9bc24b861079e7140",
-                "reference": "9aba869ddf57217402cc30c9bc24b861079e7140",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1dba2f0ffcf3967205db1895c0b94819b5758a73",
+                "reference": "1dba2f0ffcf3967205db1895c0b94819b5758a73",
                 "shasum": ""
             },
             "require": {
@@ -6584,7 +6584,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-17T15:42:48+00:00"
+            "time": "2020-03-23T15:50:23+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -8296,12 +8296,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "37ddf984acf8699c5627dc54dc9ec03ec68dbbbe"
+                "reference": "67abad0d1f1340424418f94cedadc367599ecb61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/37ddf984acf8699c5627dc54dc9ec03ec68dbbbe",
-                "reference": "37ddf984acf8699c5627dc54dc9ec03ec68dbbbe",
+                "url": "https://api.github.com/repos/symfony/process/zipball/67abad0d1f1340424418f94cedadc367599ecb61",
+                "reference": "67abad0d1f1340424418f94cedadc367599ecb61",
                 "shasum": ""
             },
             "require": {
@@ -8351,7 +8351,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-16T16:38:48+00:00"
+            "time": "2020-03-23T12:42:46+00:00"
         },
         {
             "name": "symfony/proxy-manager-bridge",
@@ -8726,20 +8726,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webimpress/safe-writer.git",
-                "reference": "02ba4a13e34b6705bc1488ecdb9e5dacae81b29d"
+                "reference": "af360c80e178d6293549c31ea329b0db0997734e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webimpress/safe-writer/zipball/02ba4a13e34b6705bc1488ecdb9e5dacae81b29d",
-                "reference": "02ba4a13e34b6705bc1488ecdb9e5dacae81b29d",
+                "url": "https://api.github.com/repos/webimpress/safe-writer/zipball/af360c80e178d6293549c31ea329b0db0997734e",
+                "reference": "af360c80e178d6293549c31ea329b0db0997734e",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.4.3",
-                "webimpress/coding-standard": "dev-develop"
+                "phpunit/phpunit": "^8.5.2 || ^9.0.1",
+                "webimpress/coding-standard": "^1.1.4"
             },
             "type": "library",
             "extra": {
@@ -8766,7 +8766,13 @@
                 "safe writer",
                 "webimpress"
             ],
-            "time": "2019-11-27T20:36:50+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/michalbundyra",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-03-21T15:53:51+00:00"
         },
         {
             "name": "webmozart/assert",
