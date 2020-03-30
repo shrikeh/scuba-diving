@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "659db2403ea5c9437ec25ecc21b087fb",
+    "content-hash": "6f318e32d4462e9e6b448f9e2ed69603",
     "packages": [
         {
             "name": "brick/math",
@@ -3428,16 +3428,16 @@
     "packages-dev": [
         {
             "name": "amphp/amp",
-            "version": "v2.4.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/amp.git",
-                "reference": "2ac3b550c4997f2ec304faa63c8b2885079a2dc4"
+                "reference": "a87c6305316833b3b98cd9b1299c1df5c2173a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/amp/zipball/2ac3b550c4997f2ec304faa63c8b2885079a2dc4",
-                "reference": "2ac3b550c4997f2ec304faa63c8b2885079a2dc4",
+                "url": "https://api.github.com/repos/amphp/amp/zipball/a87c6305316833b3b98cd9b1299c1df5c2173a23",
+                "reference": "a87c6305316833b3b98cd9b1299c1df5c2173a23",
                 "shasum": ""
             },
             "require": {
@@ -3454,7 +3454,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -3501,7 +3501,7 @@
                 "non-blocking",
                 "promise"
             ],
-            "time": "2020-02-10T18:10:57+00:00"
+            "time": "2020-03-22T07:13:28+00:00"
         },
         {
             "name": "amphp/byte-stream",
@@ -5116,12 +5116,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "177d6653b1f495fa011459e298fa5046d61a0333"
+                "reference": "16c740e8ea30698694262f3fe5e740fb02160120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/177d6653b1f495fa011459e298fa5046d61a0333",
-                "reference": "177d6653b1f495fa011459e298fa5046d61a0333",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/16c740e8ea30698694262f3fe5e740fb02160120",
+                "reference": "16c740e8ea30698694262f3fe5e740fb02160120",
                 "shasum": ""
             },
             "require": {
@@ -5160,7 +5160,7 @@
                 "laminas",
                 "zf"
             ],
-            "time": "2020-02-27T08:39:45+00:00"
+            "time": "2020-03-26T16:09:17+00:00"
         },
         {
             "name": "microsoft/tolerant-php-parser",
@@ -5652,12 +5652,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phan/phan.git",
-                "reference": "3b7b392db5defcf9ba1f9f9b55f681f16da20789"
+                "reference": "77700560761813d49606732c2c6bc1b50062b0ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phan/phan/zipball/3b7b392db5defcf9ba1f9f9b55f681f16da20789",
-                "reference": "3b7b392db5defcf9ba1f9f9b55f681f16da20789",
+                "url": "https://api.github.com/repos/phan/phan/zipball/77700560761813d49606732c2c6bc1b50062b0ad",
+                "reference": "77700560761813d49606732c2c6bc1b50062b0ad",
                 "shasum": ""
             },
             "require": {
@@ -5717,7 +5717,7 @@
                 "php",
                 "static"
             ],
-            "time": "2020-03-23T14:37:29+00:00"
+            "time": "2020-03-27T02:17:36+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -6539,12 +6539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "1dba2f0ffcf3967205db1895c0b94819b5758a73"
+                "reference": "dbfc26a94ba21d460dd0f277656f7a0b20af2993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1dba2f0ffcf3967205db1895c0b94819b5758a73",
-                "reference": "1dba2f0ffcf3967205db1895c0b94819b5758a73",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dbfc26a94ba21d460dd0f277656f7a0b20af2993",
+                "reference": "dbfc26a94ba21d460dd0f277656f7a0b20af2993",
                 "shasum": ""
             },
             "require": {
@@ -6584,7 +6584,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-23T15:50:23+00:00"
+            "time": "2020-03-27T08:29:26+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -8626,16 +8626,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "3.9.5",
+            "version": "3.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "0cfe565d0afbcd31eadcc281b9017b5692911661"
+                "reference": "eeed5ecccc10131397f0eb7ee6da810c0be3a7fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/0cfe565d0afbcd31eadcc281b9017b5692911661",
-                "reference": "0cfe565d0afbcd31eadcc281b9017b5692911661",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/eeed5ecccc10131397f0eb7ee6da810c0be3a7fc",
+                "reference": "eeed5ecccc10131397f0eb7ee6da810c0be3a7fc",
                 "shasum": ""
             },
             "require": {
@@ -8718,7 +8718,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2020-03-09T22:59:56+00:00"
+            "time": "2020-03-23T11:40:30+00:00"
         },
         {
             "name": "webimpress/safe-writer",
