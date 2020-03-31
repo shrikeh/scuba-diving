@@ -6,7 +6,7 @@
       "application/src"
     ],
     "excludes": [
-      "Kernel/DefaultKernel.php"
+      "Kernel/DefaultKernel"
     ]
   },
   "phpUnit": {
