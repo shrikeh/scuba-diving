@@ -87,4 +87,24 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
         $routes->import($confDir . '/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir . '/{routes}' . self::CONFIG_EXTS, '/', 'glob');
     }
+
+    /**
+     * Workaround for traits not using parent::()
+     *
+     * @return string
+     */
+    private function getDefaultCacheDir(): string
+    {
+        return parent::getCacheDir();
+    }
+
+    /**
+     * Workaround for traits not using parent::()
+     *
+     * @return string
+     */
+    private function getDefaultLogDir(): string
+    {
+        return parent::getLogDir();
+    }
 }

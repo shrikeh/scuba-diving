@@ -22,7 +22,7 @@ trait EnvironmentConfigurationTrait
      */
     public function getLogDir(): string
     {
-        return ($_ENV[EnvironmentConfigurableKernel::ENV_LOG_DIR_KEY] ?? parent::getCacheDir());
+        return ($_ENV[EnvironmentConfigurableKernel::ENV_LOG_DIR_KEY] ?? parent::getLogDir());
     }
 
     /**
@@ -30,7 +30,7 @@ trait EnvironmentConfigurationTrait
      */
     public function getCacheDir(): string
     {
-        return ($_ENV[EnvironmentConfigurableKernel::ENV_CACHE_DIR_KEY] ?? parent::getCacheDir());
+        return ($_ENV[EnvironmentConfigurableKernel::ENV_CACHE_DIR_KEY] ?? $this->getDefaultCacheDir());
     }
 
     /**
@@ -48,4 +48,14 @@ trait EnvironmentConfigurationTrait
     {
         return $_ENV[EnvironmentConfigurableKernel::ENV_CONFIG_DIR_KEY] ?? $this->getProjectDir() . '/config';
     }
+
+    /**
+     * @return string
+     */
+    abstract protected function getDefaultCacheDir(): string;
+
+    /**
+     * @return string
+     */
+    abstract protected function getDefaultLogDir(): string;
 }
