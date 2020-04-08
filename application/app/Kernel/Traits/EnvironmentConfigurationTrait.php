@@ -22,7 +22,7 @@ trait EnvironmentConfigurationTrait
      */
     public function getLogDir(): string
     {
-        return ($_ENV[EnvironmentConfigurableKernel::ENV_LOG_DIR_KEY] ?? parent::getLogDir());
+        return ($_ENV[EnvironmentConfigurableKernel::ENV_LOG_DIR_KEY] ?? $this->getDefaultLogDir());
     }
 
     /**
