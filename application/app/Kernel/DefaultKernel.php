@@ -13,8 +13,9 @@ declare(strict_types=1);
 namespace App\Kernel;
 
 use App\Kernel\BundleLoader\FileBundleLoader;
+use App\Kernel\Traits\EnvironmentConfigurationTrait;
 use Exception;
-use Generator;
+use Safe\Exceptions\StringsException;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Exception\LoaderLoadException;
@@ -26,14 +27,16 @@ use Symfony\Component\Routing\RouteCollectionBuilder;
 
 use function dirname;
 
-class DefaultKernel extends BaseKernel
+class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelInterface, ScubaDivingKernelInterface
 {
     use MicroKernelTrait;
+    use EnvironmentConfigurationTrait;
 
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
     /**
-     * @return Generator
+     * @return iterable
+     * @throws StringsException
      */
     public function registerBundles(): iterable
     {
@@ -46,47 +49,16 @@ class DefaultKernel extends BaseKernel
     /**
      * @return string
      */
-    public function getBundleFile(): string
-    {
-        return (string) ($_ENV['SYMFONY_BUNDLE_FILE'] ?? $this->getConfigDir() . '/bundles.php');
-    }
-
-    /**
-     * @return string
-     */
-    public function getConfigDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_CONFIG_DIR'] ?? $this->getProjectDir() . '/config');
-    }
-
-    /**
-     * @return string
-     */
     public function getProjectDir(): string
     {
         return dirname(__DIR__, 2);
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function getLogDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_LOG_DIR'] ?? parent::getCacheDir());
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getCacheDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_CACHE_DIR'] ?? parent::getCacheDir());
-    }
-
-    /**
      * @param ContainerBuilder $container
      * @param LoaderInterface $loader
      * @throws Exception
+     * @codeCoverageIgnore
      */
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
@@ -103,12 +75,13 @@ class DefaultKernel extends BaseKernel
     }
 
     /**
-     * @param RouteCollectionBuilder $routes
+     * {@inheritDoc}
      * @throws LoaderLoadException
+     * @codeCoverageIgnore
      */
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
-        $confDir = $this->getProjectDir() . '/config';
+        $confDir = $this->getConfigDir();
 
         $routes->import($confDir . '/{routes}/' . $this->environment . '/*' . self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir . '/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');

@@ -107,6 +107,15 @@
     "guzzlehttp/psr7": {
         "version": "1.x-dev"
     },
+    "infection/abstract-testframework-adapter": {
+        "version": "0.3.0"
+    },
+    "infection/extension-installer": {
+        "version": "0.1.0"
+    },
+    "infection/include-interceptor": {
+        "version": "0.2.3"
+    },
     "infection/infection": {
         "version": "0.15.0"
     },
@@ -157,6 +166,9 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.6.x-dev"
+    },
+    "ondram/ci-detector": {
+        "version": "3.3.0"
     },
     "openlss/lib-array2xml": {
         "version": "1.0.0"
@@ -256,9 +268,6 @@
             "tests/bootstrap.php"
         ]
     },
-    "pimple/pimple": {
-        "version": "v3.2.3"
-    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -286,6 +295,9 @@
     "ralouphie/getallheaders": {
         "version": "3.0.3"
     },
+    "ramsey/collection": {
+        "version": "1.0.1"
+    },
     "ramsey/uuid": {
         "version": "4.x-dev"
     },
@@ -294,6 +306,9 @@
     },
     "sabre/event": {
         "version": "5.1.0"
+    },
+    "sanmai/pipeline": {
+        "version": "v3.x-dev"
     },
     "sebastian/code-unit-reverse-lookup": {
         "version": "1.0.1"
@@ -383,6 +398,9 @@
     "symfony/dependency-injection": {
         "version": "v5.0.4"
     },
+    "symfony/deprecation-contracts": {
+        "version": "2.1-dev"
+    },
     "symfony/dom-crawler": {
         "version": "5.0.x-dev"
     },
@@ -463,6 +481,21 @@
     "symfony/mime": {
         "version": "v5.0.4"
     },
+    "symfony/phpunit-bridge": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "6d0e35f749d5f4bfe1f011762875275cd3f9874f"
+        },
+        "files": [
+            ".env.test",
+            "bin/phpunit",
+            "phpunit.xml.dist",
+            "tests/bootstrap.php"
+        ]
+    },
     "symfony/polyfill-intl-idn": {
         "version": "v1.13.1"
     },
@@ -471,6 +504,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.13.1"
+    },
+    "symfony/polyfill-php80": {
+        "version": "1.15-dev"
     },
     "symfony/process": {
         "version": "v5.0.4"

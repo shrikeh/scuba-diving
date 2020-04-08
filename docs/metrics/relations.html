@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/roboto.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/graph-carousel.css">
 </head>
 <body>
 
@@ -49,7 +50,7 @@
 <div class="page">
     <div class="content">
         <div class="report-details">
-            Created at 2020-03-05 23:03:07        , with PHPMetrics v2.5.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2020-04-08 11:58:34        , with PHPMetrics v2.6.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
 
@@ -228,6 +229,7 @@
 <script type="text/javascript" src="js/d3.hexbin.v0.js"></script>
 <script type="text/javascript" src="js/sort-table.min.js"></script>
 <script type="text/javascript" src="js/graph-maintainability.js"></script>
+<script type="text/javascript" src="js/graph-carousel.js"></script>
 <script type="text/javascript" src="js/graph-licenses.js"></script>
 <script type="text/javascript" src="js/FileSaver.min.js"></script>
 
@@ -249,6 +251,46 @@
 
     var relations = [
     {
+        "name": "\\App\\Kit\\Handler\\QueryKitItemDetails",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
+            "\\Shrikeh\\Diving\\Kit\\KitBag",
+            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\App\\Kit\\Message\\QueryKitItemDetail"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Shrikeh\\Diving\\Kit\\KitBag",
+        "size": 3000,
+        "relations": [
+            "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
+            "\\Shrikeh\\Diving\\Kit\\Item",
+            "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Query\\Result\\ItemDetail",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Message\\QueryKitItemDetail",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\App\\Kit\\Handler\\QueryKitItem",
         "size": 3000,
         "relations": [
@@ -259,11 +301,6 @@
             "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery",
             "\\App\\Kit\\Query\\Result\\SimpleItem"
         ]
-    },
-    {
-        "name": "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
-        "size": 3000,
-        "relations": []
     },
     {
         "name": "\\App\\Kit\\Repository\\Item\\ItemRepositoryInterface",
@@ -295,39 +332,105 @@
         ]
     },
     {
-        "name": "\\App\\Kit\\Handler\\QueryKitItemDetails",
+        "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyCache",
         "size": 3000,
         "relations": [
-            "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
-            "\\Shrikeh\\Diving\\Kit\\KitBag",
-            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\App\\Kit\\Message\\QueryKitItemDetail"
+            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+            "\\Symfony\\Contracts\\Cache\\CacheInterface",
+            "\\DateInterval",
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\Ramsey\\Uuid\\UuidInterface",
+            "\\Closure",
+            "\\App\\Kit\\Resolver\\Cache",
+            "\\App\\Kit\\Resolver\\Cache\\ModelCallback"
         ]
     },
     {
-        "name": "\\Shrikeh\\Diving\\Kit\\KitBag",
+        "name": "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Contracts\\Cache\\CacheInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\DateInterval",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Resolver\\ResolverInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Ramsey\\Uuid\\UuidInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Closure",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Resolver\\Cache",
         "size": 3000,
         "relations": [
-            "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
-            "\\Shrikeh\\Diving\\Kit\\Item",
-            "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery"
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Symfony\\Contracts\\Cache\\CacheInterface",
+            "\\Closure",
+            "\\Ramsey\\Uuid\\UuidInterface",
+            "\\App\\Kit\\Model\\ModelInterface",
+            "\\App\\Kit\\Resolver\\Cache\\Exception\\InvalidCacheArgument",
+            "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved"
         ]
     },
     {
-        "name": "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+        "name": "\\App\\Kit\\Resolver\\Cache\\ModelCallback",
+        "size": 3000,
+        "relations": [
+            "\\Closure",
+            "\\DateInterval",
+            "\\App\\Kit\\Model\\ModelInterface",
+            "\\Symfony\\Contracts\\Cache\\ItemInterface",
+            "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\Ramsey\\Uuid\\UuidInterface",
+            "\\App\\Kit\\Resolver\\Response"
+        ]
+    },
+    {
+        "name": "\\App\\Api\\ResponseParser\\ResponseParserInterface",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Query\\Result\\ItemDetail",
+        "name": "\\App\\Kit\\Resolver\\Response",
         "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Message\\QueryKitItemDetail",
-        "size": 3000,
-        "relations": []
+        "relations": [
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+            "\\App\\Kit\\Model\\ModelInterface"
+        ]
     },
     {
         "name": "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
@@ -349,24 +452,17 @@
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
         "name": "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
         "size": 3000,
         "relations": []
     },
     {
         "name": "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
         "size": 3000,
-        "relations": []
+        "relations": [
+            "\\Ramsey\\Uuid\\UuidInterface",
+            "\\Ramsey\\Uuid\\Uuid"
+        ]
     },
     {
         "name": "\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolver",
@@ -378,16 +474,6 @@
             "\\App\\Kit\\Model\\ModelInterface",
             "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved"
         ]
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\ResolverInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Ramsey\\Uuid\\UuidInterface",
-        "size": 3000,
-        "relations": []
     },
     {
         "name": "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
@@ -433,11 +519,6 @@
         ]
     },
     {
-        "name": "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
         "name": "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
         "size": 3000,
         "relations": []
@@ -448,6 +529,27 @@
         "relations": [
             "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface"
         ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Item\\ItemApi",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\Item\\ItemRepositoryInterface",
+            "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
+            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
+            "\\App\\Kit\\Model\\Item\\ItemInterface",
+            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Item\\ItemInterface",
+        "size": 3000,
+        "relations": []
     },
     {
         "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
@@ -464,33 +566,12 @@
         ]
     },
     {
-        "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Item\\ItemInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
         "name": "\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolver",
         "size": 3000,
         "relations": [
             "\\App\\Kit\\Model\\Item\\ItemInterface",
             "\\Closure",
             "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Item\\ItemApi",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\Item\\ItemRepositoryInterface",
-            "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
-            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
-            "\\App\\Kit\\Model\\Item\\ItemInterface",
-            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug"
         ]
     },
     {
@@ -513,145 +594,19 @@
         ]
     },
     {
-        "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\Ramsey\\Uuid\\UuidInterface",
-            "\\App\\Kit\\Resolver\\Response"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\Response",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-            "\\App\\Kit\\Model\\ModelInterface"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyCache",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-            "\\Symfony\\Contracts\\Cache\\CacheInterface",
-            "\\DateInterval",
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\Ramsey\\Uuid\\UuidInterface",
-            "\\Closure",
-            "\\App\\Kit\\Resolver\\Cache",
-            "\\App\\Kit\\Resolver\\Cache\\ModelCallback"
-        ]
-    },
-    {
-        "name": "\\Symfony\\Contracts\\Cache\\CacheInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\DateInterval",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Closure",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\Cache",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Symfony\\Contracts\\Cache\\CacheInterface",
-            "\\Closure",
-            "\\Ramsey\\Uuid\\UuidInterface",
-            "\\App\\Kit\\Model\\ModelInterface",
-            "\\App\\Kit\\Resolver\\Cache\\Exception\\InvalidCacheArgument",
-            "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\Cache\\ModelCallback",
-        "size": 3000,
-        "relations": [
-            "\\Closure",
-            "\\DateInterval",
-            "\\App\\Kit\\Model\\ModelInterface",
-            "\\Symfony\\Contracts\\Cache\\ItemInterface",
-            "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Transformer\\DefaultItemDetails",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\Shrikeh\\Diving\\Kit\\Item"
-        ]
-    },
-    {
         "name": "\\JsonSerializable",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Controller\\Item",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\App\\Kit\\Message\\QueryKitItemDetail"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
+        "name": "\\App\\Kit\\Query\\Bus\\Exception\\IncorrectResultType",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\static",
+        "name": "\\Symfony\\Component\\Messenger\\Exception\\RuntimeException",
         "size": 3000,
         "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\ModelInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved",
-        "size": 3000,
-        "relations": [
-            "\\InvalidArgumentException",
-            "\\App\\Kit\\Model\\ModelInterface"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Exception\\ModelNotResolved",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\InvalidArgumentException",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\ResolverDecorator\\Traits\\ClosureResolverTrait",
-        "size": 3000,
-        "relations": [
-            "\\Closure",
-            "\\App\\Kit\\Model\\ModelInterface",
-            "\\App\\Kit\\Model\\Exception\\ModelNotResolved"
-        ]
     },
     {
         "name": "\\App\\Kit\\Query\\Bus\\SymfonyQueryBus",
@@ -668,6 +623,11 @@
         ]
     },
     {
+        "name": "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
         "size": 3000,
         "relations": []
@@ -678,14 +638,27 @@
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Query\\Bus\\Exception\\IncorrectResultType",
+        "name": "\\App\\Kit\\Model\\ModelInterface",
         "size": 3000,
-        "relations": [
-            "\\Symfony\\Component\\Messenger\\Exception\\RuntimeException"
-        ]
+        "relations": []
     },
     {
-        "name": "\\Symfony\\Component\\Messenger\\Exception\\RuntimeException",
+        "name": "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Resolver\\Cache\\Exception\\InvalidCacheArgument",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\InvalidArgumentException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Throwable",
         "size": 3000,
         "relations": []
     },
@@ -695,19 +668,44 @@
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved",
+        "name": "\\App\\Kit\\Transformer\\DefaultItemDetails",
         "size": 3000,
         "relations": [
-            "\\RuntimeException"
+            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\Shrikeh\\Diving\\Kit\\Item"
         ]
     },
     {
-        "name": "\\App\\Kit\\Resolver\\Cache\\Exception\\InvalidCacheArgument",
+        "name": "\\App\\Kit\\Controller\\Item",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\App\\Kit\\Message\\QueryKitItemDetail"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Exception\\ModelNotResolved",
         "size": 3000,
         "relations": []
     },
     {
-        "name": "\\Throwable",
+        "name": "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Model\\ResolverDecorator\\Traits\\ClosureResolverTrait",
+        "size": 3000,
+        "relations": [
+            "\\Closure",
+            "\\App\\Kit\\Model\\ModelInterface",
+            "\\App\\Kit\\Model\\Exception\\ModelNotResolved"
+        ]
+    },
+    {
+        "name": "\\static",
         "size": 3000,
         "relations": []
     },
