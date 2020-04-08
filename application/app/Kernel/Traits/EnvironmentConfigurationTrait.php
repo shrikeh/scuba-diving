@@ -52,6 +52,11 @@ trait EnvironmentConfigurationTrait
     /**
      * @return string
      */
+    abstract public function getProjectDir(): string;
+
+    /**
+     * @return string
+     */
     abstract protected function getDefaultCacheDir(): string;
 
     /**
