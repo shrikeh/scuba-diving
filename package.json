@@ -50,7 +50,7 @@
     "handlebars": "4.7.3",
     "handlebars-loader": "1.7.1",
     "html-loader": "1.0.0",
-    "html-webpack-plugin": "4.0.3",
+    "html-webpack-plugin": "4.2.0",
     "htmllint-loader": "2.1.4",
     "husky": "4.2.3",
     "image-webpack-loader": "6.0.0",
