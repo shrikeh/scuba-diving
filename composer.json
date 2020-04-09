@@ -80,7 +80,7 @@
     "psr-4": {
       "Tests\\Behat\\": "tests/behat/src",
       "Tests\\Codecept\\": "tests/integration/support",
-      "Tests\\Unit\\App\\": "tests/unit/app",
+      "Tests\\Unit\\": "tests/unit/",
       "Tests\\Mock\\": "tests/mocks",
       "spec\\Shrikeh\\Diving\\": "tests/spec"
     },

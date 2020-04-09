@@ -38,7 +38,7 @@
     </logging>
     <testsuites>
       <testsuite name="Diving Unit Tests">
-        <directory>./tests/unit/app</directory>
+        <directory>./tests/unit/App</directory>
       </testsuite>
     </testsuites>
     <filter>

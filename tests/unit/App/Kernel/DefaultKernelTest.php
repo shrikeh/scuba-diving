@@ -16,10 +16,14 @@ use App\Kernel\DefaultKernel;
 use App\Kernel\ScubaDivingKernelInterface;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\ParameterBag;
 use Tests\Constants;
+use Tests\Unit\Traits\CreateDefaultKernelTrait;
 
 final class DefaultKernelTest extends KernelTestCase
 {
+    use CreateDefaultKernelTrait;
+
     /**
      * @var array
      */
@@ -31,18 +35,45 @@ final class DefaultKernelTest extends KernelTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->originalEnv = $_ENV;
+        $this->originalEnv = $_SERVER;
     }
 
     protected function tearDown(): void
     {
         parent::tearDown();
-        $_ENV = $this->originalEnv;
+        $_SERVER = $this->originalEnv;
+    }
+
+    public function testItUsesTheDebugModeFromTheServerVar(): void
+    {
+        $server['APP_DEBUG'] = false;
+
+        $kernel = static::createKernel($server);
+        $this->assertFalse($kernel->isDebug());
+
+        $server['APP_DEBUG'] = true;
+
+        $kernel = static::createKernel($server);
+        $this->assertTrue($kernel->isDebug());
+    }
+
+    public function testItAllowsExcplicitlySettingTheDebugMode(): void
+    {
+        $parameterBag = $this->prophesize(ParameterBag::class);
+        $parameterBag->get('APP_ENV')->willReturn($_SERVER['APP_ENV']);
+
+        $debug = false;
+        $kernel = new DefaultKernel($parameterBag->reveal(), $debug);
+        $this->assertFalse($kernel->isDebug());
+
+        $debug = true;
+        $kernel = new DefaultKernel($parameterBag->reveal(), $debug);
+        $this->assertTrue($kernel->isDebug());
     }
 
     public function testItReturnsTheProjectDir(): void
     {
-        $kernel = self::createKernel();
+        $kernel = static::createKernel();
 
         $this->assertSame(Constants::appDir(), $kernel->getProjectDir());
     }
@@ -50,8 +81,8 @@ final class DefaultKernelTest extends KernelTestCase
     public function testItUsesTheLogDirEnvVar(): void
     {
         $logDir = '/foo';
-        $_ENV[DefaultKernel::ENV_LOG_DIR_KEY] = $logDir;
-        $kernel = new DefaultKernel('test', false);
+        $_SERVER[DefaultKernel::ENV_LOG_DIR_KEY] = $logDir;
+        $kernel = static::createKernel();
 
         $this->assertSame($logDir, $kernel->getLogDir());
     }
@@ -59,8 +90,8 @@ final class DefaultKernelTest extends KernelTestCase
     public function testItUsesTheCacheDirEnvVar(): void
     {
         $caheDir = '/bar';
-        $_ENV[DefaultKernel::ENV_CACHE_DIR_KEY] = $caheDir;
-        $kernel = new DefaultKernel('test', false);
+        $_SERVER[DefaultKernel::ENV_CACHE_DIR_KEY] = $caheDir;
+        $kernel = static::createKernel();
 
         $this->assertSame($caheDir, $kernel->getCacheDir());
     }
@@ -78,7 +109,7 @@ final class DefaultKernelTest extends KernelTestCase
     public function testItUsesTheConfigDirEnvVar(): void
     {
         $bundlePath = Constants::fixturesDir() . '/config/GoodMixedBundles.php';
-        $_ENV[DefaultKernel::ENV_BUNDLE_FILE_KEY] = $bundlePath;
+        $_SERVER[DefaultKernel::ENV_BUNDLE_FILE_KEY] = $bundlePath;
 
         $kernel = self::bootKernel();
         $bundles = require $bundlePath;
@@ -96,9 +127,9 @@ final class DefaultKernelTest extends KernelTestCase
     public function testItReturnsTheConfigDir(): void
     {
         $configDir = '/baz';
-        $_ENV[DefaultKernel::ENV_CONFIG_DIR_KEY] = $configDir;
+        $_SERVER[DefaultKernel::ENV_CONFIG_DIR_KEY] = $configDir;
         /** @var ScubaDivingKernelInterface $kernel */
-        $kernel = self::createKernel();
+        $kernel = static::createKernel();
 
         $this->assertSame($configDir, $kernel->getConfigDir());
     }

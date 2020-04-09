@@ -22,6 +22,7 @@ use Symfony\Component\Config\Exception\LoaderLoadException;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
@@ -32,7 +33,35 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
     use MicroKernelTrait;
     use EnvironmentConfigurationTrait;
 
+    public const DEFAULT_CONFIG_DIR_NAME = 'config';
+    public const DEFAULT_BUNDLE_FILE = 'bundles.php';
+
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
+
+    /**
+     * @param array $server
+     * @return static
+     */
+    public static function fromArray(array $server): self
+    {
+        return new self(
+            new ParameterBag($server)
+        );
+    }
+
+    /**
+     * DefaultKernel constructor.
+     * @param ParameterBag $serverBag
+     * @param bool $debug
+     */
+    public function __construct(ParameterBag $serverBag, bool $debug = null)
+    {
+        $debug = $debug ?? $serverBag->getBoolean('APP_DEBUG');
+        $this->serverBag = $serverBag;
+
+        parent::__construct($serverBag->get('APP_ENV'), $debug);
+    }
+
 
     /**
      * @return iterable
@@ -90,8 +119,7 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
 
     /**
      * Workaround for traits not using parent::()
-     *
-     * @return string
+     * {@inheritDoc}
      */
     private function getDefaultCacheDir(): string
     {
@@ -100,11 +128,26 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
 
     /**
      * Workaround for traits not using parent::()
-     *
-     * @return string
+     * {@inheritDoc}
      */
     private function getDefaultLogDir(): string
     {
         return parent::getLogDir();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private function getDefaultConfigDir(): string
+    {
+        return sprintf('%s/%s', $this->getProjectDir(), self::DEFAULT_CONFIG_DIR_NAME);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private function getDefaultBundleFile(): string
+    {
+        return sprintf('%s/%s', $this->getConfigDir(), self::DEFAULT_BUNDLE_FILE);
     }
 }

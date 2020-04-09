@@ -2,7 +2,7 @@ parameters:
   paths:
     - application/app
     - application/src
-    - tests/unit/app
+    - tests/unit/App
   level: 5
   fileExtensions:
     - php

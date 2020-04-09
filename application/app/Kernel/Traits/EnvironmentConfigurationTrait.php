@@ -12,17 +12,22 @@ declare(strict_types=1);
 
 namespace App\Kernel\Traits;
 
-use App\Kernel\EnvironmentConfigurableKernelInterface;
 use App\Kernel\EnvironmentConfigurableKernelInterface as EnvironmentConfigurableKernel;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 trait EnvironmentConfigurationTrait
 {
+    /**
+     * @var ParameterBag
+     */
+    private ParameterBag $serverBag;
+
     /**
      * {@inheritdoc}
      */
     public function getLogDir(): string
     {
-        return ($_ENV[EnvironmentConfigurableKernel::ENV_LOG_DIR_KEY] ?? $this->getDefaultLogDir());
+        return $this->getEnvVar(EnvironmentConfigurableKernel::ENV_LOG_DIR_KEY) ?? $this->getDefaultLogDir();
     }
 
     /**
@@ -30,7 +35,7 @@ trait EnvironmentConfigurationTrait
      */
     public function getCacheDir(): string
     {
-        return ($_ENV[EnvironmentConfigurableKernel::ENV_CACHE_DIR_KEY] ?? $this->getDefaultCacheDir());
+        return $this->getEnvVar(EnvironmentConfigurableKernel::ENV_CACHE_DIR_KEY) ?? $this->getDefaultCacheDir();
     }
 
     /**
@@ -38,7 +43,8 @@ trait EnvironmentConfigurationTrait
      */
     public function getBundleFile(): string
     {
-        return $_ENV[EnvironmentConfigurableKernel::ENV_BUNDLE_FILE_KEY] ?? $this->getConfigDir() . '/bundles.php';
+        return $this->getEnvVar(EnvironmentConfigurableKernel::ENV_BUNDLE_FILE_KEY)
+            ?? $this->getDefaultBundleFile() ;
     }
 
     /**
@@ -46,7 +52,8 @@ trait EnvironmentConfigurationTrait
      */
     public function getConfigDir(): string
     {
-        return $_ENV[EnvironmentConfigurableKernel::ENV_CONFIG_DIR_KEY] ?? $this->getProjectDir() . '/config';
+        return $this->getEnvVar(EnvironmentConfigurableKernel::ENV_CONFIG_DIR_KEY) ??
+            $this->getDefaultConfigDir();
     }
 
     /**
@@ -63,4 +70,23 @@ trait EnvironmentConfigurationTrait
      * @return string
      */
     abstract protected function getDefaultLogDir(): string;
+
+    /**
+     * @return string
+     */
+    abstract protected function getDefaultConfigDir(): string;
+
+    /**
+     * @return string
+     */
+    abstract protected function getDefaultBundleFile(): string;
+
+    /**
+     * @param string $key
+     * @return string|null
+     */
+    private function getEnvVar(string $key): ?string
+    {
+        return $this->serverBag->get($key);
+    }
 }
