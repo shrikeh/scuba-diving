@@ -52,7 +52,7 @@
     "html-loader": "1.0.0",
     "html-webpack-plugin": "4.0.3",
     "htmllint-loader": "2.1.4",
-    "husky": "4.2.3",
+    "husky": "4.2.5",
     "image-webpack-loader": "6.0.0",
     "imagemin-gifsicle": "7.0.0",
     "imagemin-jpegtran": "6.0.0",
