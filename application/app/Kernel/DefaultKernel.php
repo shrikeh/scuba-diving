@@ -28,10 +28,22 @@ use Symfony\Component\Routing\RouteCollectionBuilder;
 
 use function dirname;
 
-class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelInterface, ScubaDivingKernelInterface
+final class DefaultKernel extends BaseKernel implements
+    EnvironmentConfigurableKernelInterface,
+    ScubaDivingKernelInterface
 {
     use MicroKernelTrait;
-    use EnvironmentConfigurationTrait;
+
+    /**
+     * Change the visibility on these inherited methods, the only reason they are protected is because a trait cannot
+     * define an abstract private method.
+     */
+    use EnvironmentConfigurationTrait {
+        getDefaultBundleFile as private;
+        getDefaultCacheDir as private;
+        getDefaultConfigDir as private;
+        getDefaultLogDir as private;
+    }
 
     public const DEFAULT_CONFIG_DIR_NAME = 'config';
     public const DEFAULT_BUNDLE_FILE = 'bundles.php';
@@ -120,6 +132,7 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
     /**
      * Workaround for traits not using parent::()
      * {@inheritDoc}
+     * @psalm-suppress TraitMethodSignatureMismatch
      */
     private function getDefaultCacheDir(): string
     {
@@ -129,6 +142,7 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
     /**
      * Workaround for traits not using parent::()
      * {@inheritDoc}
+     * @psalm-suppress TraitMethodSignatureMismatch
      */
     private function getDefaultLogDir(): string
     {
@@ -137,6 +151,7 @@ class DefaultKernel extends BaseKernel implements EnvironmentConfigurableKernelI
 
     /**
      * {@inheritDoc}
+     * @psalm-suppress TraitMethodSignatureMismatch
      */
     private function getDefaultConfigDir(): string
     {

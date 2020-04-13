@@ -46,6 +46,6 @@ final class MessageBusTest extends Unit
      */
     private function getContainer(): ContainerInterface
     {
-        return $this->getModule('Symfony')->_getContainer();
+        return $this->getModule(Tests\Codecept\Module\Symfony::class)->_getContainer();
     }
 }
