@@ -9,3 +9,4 @@ exclude_patterns:
 plugins:
   phan:
     enabled: true
+    ignore-undeclared: true
