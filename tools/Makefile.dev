@@ -8,7 +8,7 @@ endif
 
 test: test-php
 
-test-php: phpmetrics composer-validate phplint infection behat phpcs phpmd phpstan psalm  codecept-integration
+test-php: phpmetrics composer-validate phplint infection behat phpcs phpmd phpstan psalm
 
 test-ci: phplint infection behat phpcs phpmd phpstan
 
