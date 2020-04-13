@@ -38,7 +38,7 @@
     "@babel/register": "7.9.0",
     "@typescript-eslint/eslint-plugin": "2.27.0",
     "@typescript-eslint/parser": "2.27.0",
-    "autoprefixer": "9.7.5",
+    "autoprefixer": "9.7.6",
     "babel-jest": "25.3.0",
     "cache-loader": "4.1.0",
     "csp-html-webpack-plugin": "4.0.0",
