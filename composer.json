@@ -11,7 +11,7 @@
     "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
     "friends-of-behat/symfony-extension": "^2.1@dev",
     "friends-of-phpspec/phpspec-code-coverage": "^4.0@dev",
-    "infection/infection": "0.16.1",
+    "infection/infection": "0.16.2",
     "jangregor/phpstan-prophecy": "dev-master",
     "jetbrains/phpstorm-stubs": "dev-master",
     "microsoft/tolerant-php-parser": "0.0.20",

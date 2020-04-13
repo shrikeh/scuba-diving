@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e02e2c981fc65a476f86846a954e3ab",
+    "content-hash": "faf7140d237a88d25bb579385f90aa3c",
     "packages": [
         {
             "name": "brick/math",
@@ -4700,16 +4700,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.16.1",
+            "version": "0.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "1928f71f526a3078ae2a2e83ca8f250cb2407346"
+                "reference": "9a3bca95fa873fba4a4a37a5fd35c6d572c0f23b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/1928f71f526a3078ae2a2e83ca8f250cb2407346",
-                "reference": "1928f71f526a3078ae2a2e83ca8f250cb2407346",
+                "url": "https://api.github.com/repos/infection/infection/zipball/9a3bca95fa873fba4a4a37a5fd35c6d572c0f23b",
+                "reference": "9a3bca95fa873fba4a4a37a5fd35c6d572c0f23b",
                 "shasum": ""
             },
             "require": {
@@ -4803,7 +4803,7 @@
                 "testing",
                 "unit testing"
             ],
-            "time": "2020-03-28T21:50:48+00:00"
+            "time": "2020-04-08T18:56:58+00:00"
         },
         {
             "name": "jangregor/phpstan-prophecy",
@@ -5418,23 +5418,23 @@
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "2.7.0",
+            "version": "2.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "e77928e8f11ea36b388f87e75c993d05f5da6bf1"
+                "reference": "ac1dd414fd114cfc0da9930e0ab46063c2f5e62a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/e77928e8f11ea36b388f87e75c993d05f5da6bf1",
-                "reference": "e77928e8f11ea36b388f87e75c993d05f5da6bf1",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/ac1dd414fd114cfc0da9930e0ab46063c2f5e62a",
+                "reference": "ac1dd414fd114cfc0da9930e0ab46063c2f5e62a",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-code": "^3.4.1",
-                "ocramius/package-versions": "^1.5.1",
-                "php": "7.4.*",
-                "webimpress/safe-writer": "^2.0"
+                "ocramius/package-versions": "^1.8.0",
+                "php": "~7.4.1",
+                "webimpress/safe-writer": "^2.0.1"
             },
             "conflict": {
                 "doctrine/annotations": "<1.6.1",
@@ -5444,13 +5444,13 @@
             "require-dev": {
                 "doctrine/coding-standard": "^6.0.0",
                 "ext-phar": "*",
-                "infection/infection": "^0.15.0",
-                "nikic/php-parser": "^4.3.0",
+                "infection/infection": "^0.16.2",
+                "nikic/php-parser": "^4.4.0",
                 "phpbench/phpbench": "^0.17.0",
-                "phpunit/phpunit": "^8.5.2",
+                "phpunit/phpunit": "^9.1.1",
                 "slevomat/coding-standard": "^5.0.4",
                 "squizlabs/php_codesniffer": "^3.5.4",
-                "vimeo/psalm": "^3.8.5"
+                "vimeo/psalm": "^3.11.1"
             },
             "suggest": {
                 "laminas/laminas-json": "To have the JsonRpc adapter (Remote Object feature)",
@@ -5489,7 +5489,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "time": "2020-02-08T19:22:03+00:00"
+            "time": "2020-04-13T14:42:16+00:00"
         },
         {
             "name": "ondram/ci-detector",
@@ -5715,12 +5715,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phan/phan.git",
-                "reference": "9fceeb2d6c64fc6ec0680deebe71b5134009f891"
+                "reference": "ee2a02a828a871d1fdae6fa53dd41e1de334af3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phan/phan/zipball/9fceeb2d6c64fc6ec0680deebe71b5134009f891",
-                "reference": "9fceeb2d6c64fc6ec0680deebe71b5134009f891",
+                "url": "https://api.github.com/repos/phan/phan/zipball/ee2a02a828a871d1fdae6fa53dd41e1de334af3f",
+                "reference": "ee2a02a828a871d1fdae6fa53dd41e1de334af3f",
                 "shasum": ""
             },
             "require": {
@@ -5781,7 +5781,7 @@
                 "php",
                 "static"
             ],
-            "time": "2020-04-12T22:20:09+00:00"
+            "time": "2020-04-13T18:20:20+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -6603,12 +6603,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "a4a97fe3a175ea3d5015409a8841739eecb416b9"
+                "reference": "defe772b3df5ee543faa5733b30e19f7521e254b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a4a97fe3a175ea3d5015409a8841739eecb416b9",
-                "reference": "a4a97fe3a175ea3d5015409a8841739eecb416b9",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/defe772b3df5ee543faa5733b30e19f7521e254b",
+                "reference": "defe772b3df5ee543faa5733b30e19f7521e254b",
                 "shasum": ""
             },
             "require": {
@@ -6637,7 +6637,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-04-13T12:31:34+00:00"
+            "time": "2020-04-13T16:30:08+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
@@ -6645,12 +6645,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-phpunit.git",
-                "reference": "e4552cea422ce683ce6ccb5f511b83323727b106"
+                "reference": "a6ff54e1f776fa9489a94855bb488c3ae78df6f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/e4552cea422ce683ce6ccb5f511b83323727b106",
-                "reference": "e4552cea422ce683ce6ccb5f511b83323727b106",
+                "url": "https://api.github.com/repos/phpstan/phpstan-phpunit/zipball/a6ff54e1f776fa9489a94855bb488c3ae78df6f2",
+                "reference": "a6ff54e1f776fa9489a94855bb488c3ae78df6f2",
                 "shasum": ""
             },
             "require": {
@@ -6693,7 +6693,7 @@
                 "MIT"
             ],
             "description": "PHPUnit extensions and rules for PHPStan",
-            "time": "2020-04-02T14:11:05+00:00"
+            "time": "2020-04-13T14:29:39+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
