@@ -10,3 +10,6 @@ plugins:
   phan:
     enabled: true
     ignore-undeclared: true
+    checks:
+      PhanUndeclaredClassMethod:
+        enabled: false
