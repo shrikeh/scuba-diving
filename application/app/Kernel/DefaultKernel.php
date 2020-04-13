@@ -23,12 +23,12 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpFoundation\ParameterBag;
-use Symfony\Component\HttpKernel\Kernel as BaseKernel;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
 use function dirname;
 
-final class DefaultKernel extends BaseKernel implements
+final class DefaultKernel extends Kernel implements
     EnvironmentConfigurableKernelInterface,
     ScubaDivingKernelInterface
 {
