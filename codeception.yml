@@ -1,5 +1,6 @@
 ---
 namespace: Tests\Integration
+bootstrap: bootstrap.php
 suites:
     integration:
         path: .
@@ -16,7 +17,6 @@ suites:
 settings:
     shuffle: true
     lint: true
-    bootstrap: bootstrap.php
 paths:
     tests: tests/integration
     output: tests/integration/output
