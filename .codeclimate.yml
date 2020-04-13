@@ -1,7 +1,7 @@
 ---
 version: "2"
 exclude_patterns:
-  - "docs/"
+  - "docs/*"
   - "tests/spec/"
   - "tests/integration/"
   - "vendor/"

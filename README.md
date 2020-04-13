@@ -1,4 +1,5 @@
-# Shrikeh's Personal Diving Blog [![Latest release](https://img.shields.io/github/v/release/shrikeh/scuba-diving?include_prereleases)](https://github.com/shrikeh/scuba-diving/releases/) [![Code Intelligence Status](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+# Shrikeh's Personal Diving Blog [![Latest release](https://img.shields.io/github/v/release/shrikeh/scuba-diving?include_prereleases)](https://github.com/shrikeh/scuba-diving/releases/)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/shrikeh/scuba-diving/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 An experiment in doing things the *right* way. Overtested, overmonitored, overengineered.
 ## Current status
