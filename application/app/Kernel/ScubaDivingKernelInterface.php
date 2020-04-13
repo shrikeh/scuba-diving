@@ -12,8 +12,6 @@ declare(strict_types=1);
 
 namespace App\Kernel;
 
-use App\Kernel\EnvironmentConfigurableKernelInterface as EnvironmentConfigurableKernel;
-
 interface ScubaDivingKernelInterface
 {
     /**

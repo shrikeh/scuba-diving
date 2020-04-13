@@ -16,7 +16,6 @@ use App\Kit\Model\Item\Decorator\ClosureResolver;
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\ResolverFactory\ResolverFactoryInterface;
 use App\Kit\Resolver\ResolverInterface;
-use Closure;
 use Ramsey\Uuid\UuidInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\ResponseInterface;

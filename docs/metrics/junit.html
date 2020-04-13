@@ -50,7 +50,7 @@
 <div class="page">
     <div class="content">
         <div class="report-details">
-            Created at 2020-04-13 19:05:05        , with PHPMetrics v2.6.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2020-04-13 19:47:36        , with PHPMetrics v2.6.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
 
@@ -74,10 +74,10 @@
         <div class="bloc bloc-number">
             <div class="label">
                 classes never called by tests
-                <small>(36 %)</small>
+                <small>(37.5 %)</small>
             </div>
             <div class="number">
-                18            </div>
+                24            </div>
         </div>
     </div>
 </div>
@@ -103,6 +103,39 @@
                         </thead>
                         <tbody id="contentAreaJunitNeverCalled" class="clusterize-content">
                                                     <tr>
+                                <td><span class="path">App\Kernel\BundleLoader\Exception\BundlesNotLoadable</span></td>
+                                                                    <td>
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);");">
+                                        1                                        </span>
+                                    </td>
+                                                                    <td>
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.01);");">
+                                        0.01                                        </span>
+                                    </td>
+                                                            </tr>
+                                                        <tr>
+                                <td><span class="path">App\Kernel\BundleLoader\BundleIterator\Exception\BundlesNotIterable</span></td>
+                                                                    <td>
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);");">
+                                        1                                        </span>
+                                    </td>
+                                                                    <td>
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);");">
+                                        0                                        </span>
+                                    </td>
+                                                            </tr>
+                                                        <tr>
+                                <td><span class="path">App\Kernel\Traits\EnvironmentConfigurationTrait</span></td>
+                                                                    <td>
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.33);");">
+                                        5                                        </span>
+                                    </td>
+                                                                    <td>
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.01);");">
+                                        0.01                                        </span>
+                                    </td>
+                                                            </tr>
+                                                        <tr>
                                 <td><span class="path">App\Kit\Transformer\DefaultItemDetails</span></td>
                                                                     <td>
                                         <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);");">
@@ -116,7 +149,7 @@
                                                         <tr>
                                 <td><span class="path">App\Kit\Model\ResolverDecorator\Traits\ClosureResolverTrait</span></td>
                                                                     <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 1);");">
+                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.17);");">
                                         3                                        </span>
                                     </td>
                                                                     <td>
@@ -170,83 +203,18 @@
                         </thead>
                         <tbody id="contentAreaJunitCalled" class="clusterize-content">
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Message\QueryKitItemDetailTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Model\Manufacturer\ManufacturerTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
                                         <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">App\Kit\Message\QueryKitItemDetail</span>
+                                        <span class="path">App\Kit\Model\Manufacturer\Manufacturer</span>
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Query\Result\SimpleItemTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Query\Result\SimpleItem</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponseTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Symfony\Component\HttpClient\Exception\JsonException</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            2                                        </span>
-                                        <span class="path">App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kernel\BundleLoader\FileBundleLoaderTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Tests\Constants</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\FileBundleLoader</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">SplFileInfo</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\Exception\BundleRealpathFalse</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\Exception\BundleFileNotExists</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\Exception\BundleFileNotReadable</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolverTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolver</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Item\ResponseParser\ItemDetailTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ResponseParser\ItemManufacturerTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
@@ -256,38 +224,93 @@
                                         <span class="path">stdClass</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             2                                        </span>
-                                        <span class="path">App\Kit\Repository\Item\ResponseParser\ItemDetail</span>
+                                        <span class="path">App\Kit\Repository\Manufacturer\ResponseParser\ItemManufacturer</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
-                                        <span class="path">Symfony\Component\HttpClient\Exception\JsonException</span>
+                                        <span class="path">Symfony\Component\HttpClient\Exception\TransportException</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            2                                        </span>
+                                        <span class="path">App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse</span>
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Item\ModelFactory\ItemResolverTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Handler\QueryKitItemDetailsTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
                                         <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                        <span class="path">App\Kit\Query\Result\ItemDetail</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Prophecy\Argument</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">App\Kit\Repository\Item\ModelFactory\ItemResolver</span>
+                                        <span class="path">Shrikeh\Diving\Kit\KitBag</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Message\QueryKitItemDetail</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Handler\QueryKitItemDetails</span>
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ManufacturerApiTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kernel\BundleLoader\BundleIterator\BundleIteratorTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
                                         <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                        <span class="path">App\Kernel\BundleLoader\BundleIterator\Exception\BundleEnvironmentsNotIterable</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            13                                        </span>
+                                        <span class="path">App\Kernel\BundleLoader\BundleIterator\BundleIterator</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">App\Kit\Repository\Manufacturer\ManufacturerApi</span>
+                                        <span class="path">App\Kernel\BundleLoader\BundleIterator\Exception\InvalidBundleEnvironment</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Query\Bus\SymfonyQueryBusTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Message\QueryKitItemDetail</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Symfony\Component\Messenger\Stamp\HandledStamp</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Symfony\Component\Messenger\Envelope</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            3                                        </span>
+                                        <span class="path">App\Kit\Query\Bus\SymfonyQueryBus</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            2                                        </span>
+                                        <span class="path">App\Kit\Query\Bus\Exception\IncorrectResultType</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Query\Result\ItemDetail</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Model\Item\ItemTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Model\Item\Item</span>
                                                                     </td>
                             </tr>
                                                     <tr>
@@ -323,14 +346,31 @@
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Query\Result\ItemDetailTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Item\ResponseParser\ItemDetailTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">stdClass</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            2                                        </span>
+                                        <span class="path">App\Kit\Repository\Item\ResponseParser\ItemDetail</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Symfony\Component\HttpClient\Exception\JsonException</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Resolver\ResponseTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
                                         <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">App\Kit\Query\Result\ItemDetail</span>
+                                        <span class="path">App\Kit\Resolver\Response</span>
                                                                     </td>
                             </tr>
                                                     <tr>
@@ -345,6 +385,43 @@
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
                                         <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Message\QueryKitItemDetailTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Message\QueryKitItemDetail</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kernel\BundleLoader\FileBundleLoaderTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Tests\Constants</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            7                                        </span>
+                                        <span class="path">App\Kernel\BundleLoader\FileBundleLoader</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">SplFileInfo</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kernel\BundleLoader\Exception\BundleRealpathFalse</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kernel\BundleLoader\Exception\BundleFileNotExists</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kernel\BundleLoader\Exception\BundleFileNotReadable</span>
                                                                     </td>
                             </tr>
                                                     <tr>
@@ -374,20 +451,152 @@
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Api\JsonDecoder\SafeJsonDecdoderTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponseTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
                                         <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
-                                        <span class="path">Tests\Constants</span>
+                                        <span class="path">Symfony\Component\HttpClient\Exception\JsonException</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            2                                        </span>
+                                        <span class="path">App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Item\ItemApiTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
-                                        <span class="path">SplFileObject</span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
-                                        <span class="path">App\Api\JsonDecoder\SafeJsonDecoder</span>
+                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Repository\Item\ItemApi</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\ResolverFactory\SymfonyCacheTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">DateInterval</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Repository\ResolverFactory\SymfonyCache</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Handler\QueryKitItemTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Handler\QueryKitItem</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ManufacturerApiTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Repository\Manufacturer\ManufacturerApi</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolverTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Repository\Manufacturer\ModelFactory\ManufacturerResolver</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Model\Manufacturer\Decorator\ClosureResolverTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Closure</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            3                                        </span>
+                                        <span class="path">App\Kit\Model\Manufacturer\Decorator\ClosureResolver</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Model\Manufacturer\Manufacturer</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Model\Exception\IncorrectModelResolved</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Resolver\Response</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kernel\DefaultKernelTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Symfony\Bundle\FrameworkBundle\Test\KernelTestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">static</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            3                                        </span>
+                                        <span class="path">App\Kernel\DefaultKernel</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">Tests\Constants</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Item\ModelFactory\ItemResolverTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Repository\Item\ModelFactory\ItemResolver</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Query\Result\SimpleItemTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Query\Result\SimpleItem</span>
                                                                     </td>
                             </tr>
                                                     <tr>
@@ -399,29 +608,6 @@
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
                                         <span class="path">App\Kit\Model\Exception\IncorrectModelResolved</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Handler\QueryKitItemDetailsTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Query\Result\ItemDetail</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Prophecy\Argument</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\KitBag</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Message\QueryKitItemDetail</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Handler\QueryKitItemDetails</span>
                                                                     </td>
                             </tr>
                                                     <tr>
@@ -454,167 +640,6 @@
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Resolver\ResponseTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Resolver\Response</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\ResolverFactory\SymfonyCacheTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">DateInterval</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Repository\ResolverFactory\SymfonyCache</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Handler\QueryKitItemTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Handler\QueryKitItem</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kernel\BundleLoader\BundleIterator\BundleIteratorTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\BundleIterator\Exception\BundleEnvironmentsNotIterable</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\BundleIterator\BundleIterator</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\BundleLoader\BundleIterator\Exception\InvalidBundleEnvironment</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Query\Bus\SymfonyQueryBusTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Message\QueryKitItemDetail</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Symfony\Component\Messenger\Stamp\HandledStamp</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Symfony\Component\Messenger\Envelope</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            3                                        </span>
-                                        <span class="path">App\Kit\Query\Bus\SymfonyQueryBus</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            2                                        </span>
-                                        <span class="path">App\Kit\Query\Bus\Exception\IncorrectResultType</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Query\Result\ItemDetail</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Item\ItemApiTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">Shrikeh\Diving\Kit\Item\ItemSlug</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Repository\Item\ItemApi</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Model\Manufacturer\Decorator\ClosureResolverTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Closure</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            3                                        </span>
-                                        <span class="path">App\Kit\Model\Manufacturer\Decorator\ClosureResolver</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Model\Manufacturer\Manufacturer</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Model\Exception\IncorrectModelResolved</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Resolver\Response</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Model\Item\ItemTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Model\Item\Item</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kernel\DefaultKernelTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Symfony\Bundle\FrameworkBundle\Test\KernelTestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">static</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">App\Kernel\DefaultKernel</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">Tests\Constants</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Model\Manufacturer\ManufacturerTest</span></td>
-                                <td style="padding-bottom: 1em;">
-                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
-                                            -                                        </span>
-                                        <span class="path">PHPUnit\Framework\TestCase</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            1                                        </span>
-                                        <span class="path">App\Kit\Model\Manufacturer\Manufacturer</span>
-                                                                    </td>
-                            </tr>
-                                                    <tr>
                                 <td valign="top"><span class="path">Tests\Unit\App\Kit\Controller\ItemTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
@@ -632,23 +657,31 @@
                                                                     </td>
                             </tr>
                                                     <tr>
-                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Repository\Manufacturer\ResponseParser\ItemManufacturerTest</span></td>
+                                <td valign="top"><span class="path">Tests\Unit\App\Kit\Query\Result\ItemDetailTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Kit\Query\Result\ItemDetail</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">Tests\Unit\App\Api\JsonDecoder\SafeJsonDecdoderTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
                                         <span class="path">PHPUnit\Framework\TestCase</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
-                                        <span class="path">stdClass</span>
-                                                                            <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            2                                        </span>
-                                        <span class="path">App\Kit\Repository\Manufacturer\ResponseParser\ItemManufacturer</span>
+                                        <span class="path">Tests\Constants</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
                                             -                                        </span>
-                                        <span class="path">Symfony\Component\HttpClient\Exception\TransportException</span>
+                                        <span class="path">SplFileObject</span>
                                                                             <br />                                        <span class="badge" title="Cyclomatic complexity of class">
-                                            2                                        </span>
-                                        <span class="path">App\Kit\Repository\Manufacturer\ResponseParser\Exception\ApiResponse</span>
+                                            1                                        </span>
+                                        <span class="path">App\Api\JsonDecoder\SafeJsonDecoder</span>
                                                                     </td>
                             </tr>
                                             </table>
@@ -686,7 +719,7 @@
                             <path d="M0 0h24v24H0z" fill="none"/>
                             <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/>
                         </svg>
-                        Violations (12)
+                        Violations (13)
                     </a>
                 </li>
                                     <li>
@@ -884,7 +917,7 @@
 
 
             
-            var json = {"name":"Execution time","children":[{"name":"Tests\\Unit\\App\\Kit\\Message\\QueryKitItemDetailTest","time":0.002325},{"name":"Tests\\Unit\\App\\Kit\\Query\\Result\\SimpleItemTest","time":0.011666},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponseTest","time":0.000686},{"name":"Tests\\Unit\\App\\Kernel\\BundleLoader\\FileBundleLoaderTest","time":0.019113},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolverTest","time":0.020802},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetailTest","time":0.004409},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolverTest","time":0.002337},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApiTest","time":0.007288},{"name":"Tests\\Unit\\App\\Kit\\Resolver\\CacheResolverTest","time":0.005094},{"name":"Tests\\Unit\\App\\Kit\\Query\\Result\\ItemDetailTest","time":0.001076},{"name":"Tests\\Unit\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponseTest","time":0.003571},{"name":"Tests\\Unit\\App\\Kit\\Resolver\\Cache\\ModelCallbackTest","time":0.004455},{"name":"Tests\\Unit\\App\\Api\\JsonDecoder\\SafeJsonDecdoderTest","time":0.000358},{"name":"Tests\\Unit\\App\\Kit\\Model\\Exception\\IncorrectModelResolvedTest","time":0.000687},{"name":"Tests\\Unit\\App\\Kit\\Handler\\QueryKitItemDetailsTest","time":0.005985},{"name":"Tests\\Unit\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolverTest","time":0.005225},{"name":"Tests\\Unit\\App\\Kit\\Resolver\\ResponseTest","time":0.001103},{"name":"Tests\\Unit\\App\\Kit\\Repository\\ResolverFactory\\SymfonyCacheTest","time":0.007485},{"name":"Tests\\Unit\\App\\Kit\\Handler\\QueryKitItemTest","time":0.003786},{"name":"Tests\\Unit\\App\\Kernel\\BundleLoader\\BundleIterator\\BundleIteratorTest","time":0.001282},{"name":"Tests\\Unit\\App\\Kit\\Query\\Bus\\SymfonyQueryBusTest","time":0.007087},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Item\\ItemApiTest","time":0.003391},{"name":"Tests\\Unit\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolverTest","time":0.004481},{"name":"Tests\\Unit\\App\\Kit\\Model\\Item\\ItemTest","time":0.000943},{"name":"Tests\\Unit\\App\\Kernel\\DefaultKernelTest","time":0.021642},{"name":"Tests\\Unit\\App\\Kit\\Model\\Manufacturer\\ManufacturerTest","time":0.000493},{"name":"Tests\\Unit\\App\\Kit\\Controller\\ItemTest","time":0.002183},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturerTest","time":0.003526}]};
+            var json = {"name":"Execution time","children":[{"name":"Tests\\Unit\\App\\Kit\\Model\\Manufacturer\\ManufacturerTest","time":0.0023},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturerTest","time":0.014423},{"name":"Tests\\Unit\\App\\Kit\\Handler\\QueryKitItemDetailsTest","time":0.003687},{"name":"Tests\\Unit\\App\\Kernel\\BundleLoader\\BundleIterator\\BundleIteratorTest","time":0.000893},{"name":"Tests\\Unit\\App\\Kit\\Query\\Bus\\SymfonyQueryBusTest","time":0.004},{"name":"Tests\\Unit\\App\\Kit\\Model\\Item\\ItemTest","time":0.000352},{"name":"Tests\\Unit\\App\\Kit\\Resolver\\CacheResolverTest","time":0.011107},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetailTest","time":0.002261},{"name":"Tests\\Unit\\App\\Kit\\Resolver\\ResponseTest","time":0.002173},{"name":"Tests\\Unit\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponseTest","time":0.001149},{"name":"Tests\\Unit\\App\\Kit\\Message\\QueryKitItemDetailTest","time":0.00035},{"name":"Tests\\Unit\\App\\Kernel\\BundleLoader\\FileBundleLoaderTest","time":0.01878},{"name":"Tests\\Unit\\App\\Kit\\Resolver\\Cache\\ModelCallbackTest","time":0.004624},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponseTest","time":0.000563},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Item\\ItemApiTest","time":0.008206},{"name":"Tests\\Unit\\App\\Kit\\Repository\\ResolverFactory\\SymfonyCacheTest","time":0.009547},{"name":"Tests\\Unit\\App\\Kit\\Handler\\QueryKitItemTest","time":0.004883},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApiTest","time":0.003541},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolverTest","time":0.001997},{"name":"Tests\\Unit\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolverTest","time":0.004687},{"name":"Tests\\Unit\\App\\Kernel\\DefaultKernelTest","time":0.020883},{"name":"Tests\\Unit\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolverTest","time":0.002125},{"name":"Tests\\Unit\\App\\Kit\\Query\\Result\\SimpleItemTest","time":0.001866},{"name":"Tests\\Unit\\App\\Kit\\Model\\Exception\\IncorrectModelResolvedTest","time":0.000691},{"name":"Tests\\Unit\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolverTest","time":0.004755},{"name":"Tests\\Unit\\App\\Kit\\Controller\\ItemTest","time":0.002703},{"name":"Tests\\Unit\\App\\Kit\\Query\\Result\\ItemDetailTest","time":0.00091},{"name":"Tests\\Unit\\App\\Api\\JsonDecoder\\SafeJsonDecdoderTest","time":0.000411}]};
             root = json;
             var nodes = treemap.nodes(json)
                 .filter(function (d) {

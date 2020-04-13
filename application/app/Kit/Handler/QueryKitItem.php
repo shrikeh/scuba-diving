@@ -17,7 +17,6 @@ use App\Kit\Repository\Manufacturer\ManufacturerRepositoryInterface;
 use Shrikeh\Diving\Kit\Item;
 use App\Kit\Query\Result\SimpleItem;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
-use Shrikeh\Diving\Kit\Manufacturer;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 final class QueryKitItem implements MessageHandlerInterface

@@ -64,7 +64,7 @@ final class DefaultKernel extends BaseKernel implements
     /**
      * DefaultKernel constructor.
      * @param ParameterBag $serverBag
-     * @param bool $debug
+     * @param bool|null $debug
      */
     public function __construct(ParameterBag $serverBag, bool $debug = null)
     {
@@ -132,7 +132,6 @@ final class DefaultKernel extends BaseKernel implements
     /**
      * Workaround for traits not using parent::()
      * {@inheritDoc}
-     * @psalm-suppress TraitMethodSignatureMismatch
      */
     private function getDefaultCacheDir(): string
     {

@@ -39,6 +39,7 @@ final class ItemManufacturer implements ResponseParserInterface
     /**
      * {@inheritDoc}
      * @return ManufacturerInterface
+     * @phan-suppress PhanParamSignatureRealMismatchReturnType Allowable in PHP 7.4
      */
     public function parse(ResponseInterface $response): ManufacturerInterface
     {

@@ -78,6 +78,7 @@ trait EnvironmentConfigurationTrait
 
     /**
      * @return string
+     * @psalm-suppress TraitMethodSignatureMismatch
      */
     abstract protected function getDefaultBundleFile(): string;
 

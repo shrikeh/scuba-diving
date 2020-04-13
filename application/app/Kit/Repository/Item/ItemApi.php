@@ -14,6 +14,7 @@ namespace App\Kit\Repository\Item;
 
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\Item\ModelFactory\ItemModelFactoryInterface;
+use Safe\Exceptions\StringsException;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -50,6 +51,8 @@ final class ItemApi implements ItemRepositoryInterface
     /**
      * {@inheritDoc}
      * @throws TransportExceptionInterface
+     * @throws StringsException
+     * @phan-suppress PhanTypeInvalidThrowsIsInterface
      */
     public function fetchBySlug(ItemSlug $slug): ItemInterface
     {
@@ -61,6 +64,7 @@ final class ItemApi implements ItemRepositoryInterface
     /**
      * @param ItemSlug $itemSlug
      * @return string
+     * @throws StringsException
      */
     private function createUriFromSlug(ItemSlug $itemSlug): string
     {

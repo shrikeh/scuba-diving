@@ -4,6 +4,7 @@
   "license": "proprietary",
   "require-dev": {
     "ext-xdebug": "*",
+    "ext-ast":  "*",
     "behat/behat": "^3.5@dev",
     "codeception/codeception": "4.1.4",
     "codeception/module-asserts": "1.1.1",
