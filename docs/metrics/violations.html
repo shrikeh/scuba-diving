@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/roboto.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/graph-carousel.css">
 </head>
 <body>
 
@@ -49,7 +50,7 @@
 <div class="page">
     <div class="content">
         <div class="report-details">
-            Created at 2020-03-05 23:03:07        , with PHPMetrics v2.5.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2020-04-13 20:58:19        , with PHPMetrics v2.6.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
 
@@ -57,25 +58,25 @@
         <div class="column">
             <div class="bloc bloc-number">
                 <div class="label">Violations</div>
-                <div class="number">12</div>
+                <div class="number">27</div>
             </div>
         </div>
         <div class="column">
             <div class="bloc bloc-number">
                 <div class="label">Information</div>
-                <div class="number">0</div>
+                <div class="number">4</div>
             </div>
         </div>
         <div class="column">
             <div class="bloc bloc-number">
                 <div class="label">Warnings</div>
-                <div class="number">12</div>
+                <div class="number">17</div>
             </div>
         </div>
         <div class="column">
             <div class="bloc bloc-number">
                 <div class="label">Errors</div>
-                <div class="number">0</div>
+                <div class="number">6</div>
             </div>
         </div>
         <div class="column">
@@ -98,7 +99,237 @@
                     </tr>
                     </thead>
                     <tbody>
-                                        </tbody>
+                    
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee2d09.10596988');">
+                                        <span class="path">ContainerCeXHqdY\App_Kernel_DefaultKernelTestDebugContainer</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee2d09.10596988">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Blob / God object                                                    <span
+                                                        class="badge level level-error">error</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">A blob object (or "god class") does not follow the Single responsibility principle.<br />
+<br />
+* object has lot of public methods  (8, excluding getters and setters)<br />
+* object has a high Lack of cohesion of methods (LCOM=6)<br />
+* object knows everything (and use lot of external classes)<br />
+<br />
+Maybe you should reducing the number of methods splitting this object in many sub objects.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too complex class code                                                    <span
+                                                        class="badge level level-error">error</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks really complex.<br />
+<br />
+* Algorithms are complex (Total cyclomatic complexity of class is 276)<br />
+* Component uses 1430 operators<br />
+<br />
+Maybe you should delegate some code to other objects.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too complex method code                                                    <span
+                                                        class="badge level level-error">error</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks really complex.<br />
+<br />
+* Algorithms are complex (Max cyclomatic complexity of class methods is 35)<br />
+<br />
+Maybe you should delegate some code to other objects or split complex method.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Probably bugged                                                    <span
+                                                        class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This component contains in theory 23.16 bugs.<br />
+<br />
+* Calculation is based on number of operators, operands, cyclomatic complexity<br />
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures<br />
+* 0 testsuites has dependency to this class.<br />
+<br />
+Maybe you should check your unit tests for this class.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too long                                                    <span
+                                                        class="badge level level-information">information</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks really long.<br />
+<br />
+* Class has 1635 logical lines of code<br />
+* Class has 2531 lines of code<br />
+<br />
+Maybe your class should not exceed 200 lines of logical code</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too dependent                                                    <span
+                                                        class="badge level level-information">information</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks use really high number of components.<br />
+<br />
+* Efferent coupling is 169, so this class uses 169 different external components.<br />
+<br />
+Maybe you should check why this class has lot of dependencies.</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                            class="badge level level-error"> Blob / God object</span>
+                                                                            <span
+                                            class="badge level level-error"> Too complex class code</span>
+                                                                            <span
+                                            class="badge level level-error"> Too complex method code</span>
+                                                                            <span
+                                            class="badge level level-warning"> Probably bugged</span>
+                                                                            <span
+                                            class="badge level level-information"> Too long</span>
+                                                                            <span
+                                            class="badge level level-information"> Too dependent</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee3522.34536891');">
+                                        <span class="path">ContainerMwq2KeZ\App_Kernel_DefaultKernelDevDebugContainer</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee3522.34536891">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Blob / God object                                                    <span
+                                                        class="badge level level-error">error</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">A blob object (or "god class") does not follow the Single responsibility principle.<br />
+<br />
+* object has lot of public methods  (8, excluding getters and setters)<br />
+* object has a high Lack of cohesion of methods (LCOM=4)<br />
+* object knows everything (and use lot of external classes)<br />
+<br />
+Maybe you should reducing the number of methods splitting this object in many sub objects.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too complex class code                                                    <span
+                                                        class="badge level level-error">error</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks really complex.<br />
+<br />
+* Algorithms are complex (Total cyclomatic complexity of class is 211)<br />
+* Component uses 1065 operators<br />
+<br />
+Maybe you should delegate some code to other objects.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too complex method code                                                    <span
+                                                        class="badge level level-error">error</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks really complex.<br />
+<br />
+* Algorithms are complex (Max cyclomatic complexity of class methods is 32)<br />
+<br />
+Maybe you should delegate some code to other objects or split complex method.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Probably bugged                                                    <span
+                                                        class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This component contains in theory 14.66 bugs.<br />
+<br />
+* Calculation is based on number of operators, operands, cyclomatic complexity<br />
+* See more details at https://en.wikipedia.org/wiki/Halstead_complexity_measures<br />
+* 0 testsuites has dependency to this class.<br />
+<br />
+Maybe you should check your unit tests for this class.</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too long                                                    <span
+                                                        class="badge level level-information">information</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks really long.<br />
+<br />
+* Class has 1200 logical lines of code<br />
+* Class has 1691 lines of code<br />
+<br />
+Maybe your class should not exceed 200 lines of logical code</div>
+
+                                            </div>
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Too dependent                                                    <span
+                                                        class="badge level level-information">information</span>
+
+                                                </div>
+                                                <div
+                                                    class="description">This class looks use really high number of components.<br />
+<br />
+* Efferent coupling is 165, so this class uses 165 different external components.<br />
+<br />
+Maybe you should check why this class has lot of dependencies.</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                            class="badge level level-error"> Blob / God object</span>
+                                                                            <span
+                                            class="badge level level-error"> Too complex class code</span>
+                                                                            <span
+                                            class="badge level level-error"> Too complex method code</span>
+                                                                            <span
+                                            class="badge level level-warning"> Probably bugged</span>
+                                                                            <span
+                                            class="badge level level-information"> Too long</span>
+                                                                            <span
+                                            class="badge level level-information"> Too dependent</span>
+                                                                    </td>
+                            </tr>
+                                            </tbody>
                 </table>
             </div>
         </div>
@@ -118,21 +349,20 @@
                     
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8eda2');">App\Kit\Repository\Manufacturer</a>
-                                    <div class="violation-list" id="bloc-5e61852b8eda2">
+                                    <a onclick="return toggle('bloc-5e94d26bee416');">
+                                        <span class="path">App\Kernel</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee416">
                                                                                     <div class="violation">
                                                 <div class="name">
-                                                    Stable Dependencies Principle                                                    <span
+                                                    Stable Abstractions Principle                                                    <span
                                                             class="badge level level-warning">warning</span>
 
                                                 </div>
                                                 <div
-                                                        class="description">Packages should depend in the direction of stability.<br />
+                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
 <br />
-This package is more stable (0.8) than 1 package(s) that it depends on.<br />
-The packages that are more stable are<br />
-<br />
-* App\Kit\Repository\Manufacturer\ModelFactory (0.875)</div>
+This package is instable and abstract.</div>
 
                                             </div>
                                                                             </div>
@@ -140,14 +370,16 @@ The packages that are more stable are<br />
 
                                 <td valign="top">
                                                                             <span
-                                                class="badge level level-warning"> Stable Dependencies Principle</span>
+                                                class="badge level level-warning"> Stable Abstractions Principle</span>
                                                                     </td>
                             </tr>
                         
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8edf7');">App\Kit\Repository\Item</a>
-                                    <div class="violation-list" id="bloc-5e61852b8edf7">
+                                    <a onclick="return toggle('bloc-5e94d26bee440');">
+                                        <span class="path">App\Kit\Repository\ResolverFactory</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee440">
                                                                                     <div class="violation">
                                                 <div class="name">
                                                     Stable Dependencies Principle                                                    <span
@@ -157,35 +389,7 @@ The packages that are more stable are<br />
                                                 <div
                                                         class="description">Packages should depend in the direction of stability.<br />
 <br />
-This package is more stable (0.8) than 1 package(s) that it depends on.<br />
-The packages that are more stable are<br />
-<br />
-* App\Kit\Repository\Item\ModelFactory (0.875)</div>
-
-                                            </div>
-                                                                            </div>
-                                </td>
-
-                                <td valign="top">
-                                                                            <span
-                                                class="badge level level-warning"> Stable Dependencies Principle</span>
-                                                                    </td>
-                            </tr>
-                        
-                            <tr>
-                                <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ee28');">App\Kit\Repository\ResolverFactory</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ee28">
-                                                                                    <div class="violation">
-                                                <div class="name">
-                                                    Stable Dependencies Principle                                                    <span
-                                                            class="badge level level-warning">warning</span>
-
-                                                </div>
-                                                <div
-                                                        class="description">Packages should depend in the direction of stability.<br />
-<br />
-This package is more stable (0.833) than 1 package(s) that it depends on.<br />
+This package is more stable (0.714) than 1 package(s) that it depends on.<br />
 The packages that are more stable are<br />
 <br />
 * App\Kit\Resolver\Cache (0.833)</div>
@@ -202,70 +406,10 @@ The packages that are more stable are<br />
                         
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ee52');">App\Kit\Message</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ee52">
-                                                                                    <div class="violation">
-                                                <div class="name">
-                                                    Stable Abstractions Principle                                                    <span
-                                                            class="badge level level-warning">warning</span>
-
-                                                </div>
-                                                <div
-                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
-<br />
-This package is instable and abstract.</div>
-
-                                            </div>
-                                                                            </div>
-                                </td>
-
-                                <td valign="top">
-                                                                            <span
-                                                class="badge level level-warning"> Stable Abstractions Principle</span>
-                                                                    </td>
-                            </tr>
-                        
-                            <tr>
-                                <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ee81');">App\Kit\Model\ResolverDecorator\Traits</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ee81">
-                                                                                    <div class="violation">
-                                                <div class="name">
-                                                    Stable Abstractions Principle                                                    <span
-                                                            class="badge level level-warning">warning</span>
-
-                                                </div>
-                                                <div
-                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
-<br />
-This package is instable and abstract.</div>
-
-                                            </div>
-                                                                            </div>
-                                </td>
-
-                                <td valign="top">
-                                                                            <span
-                                                class="badge level level-warning"> Stable Abstractions Principle</span>
-                                                                    </td>
-                            </tr>
-                        
-                            <tr>
-                                <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ee9b');">App\Kit\Query\Result</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ee9b">
-                                                                                    <div class="violation">
-                                                <div class="name">
-                                                    Stable Abstractions Principle                                                    <span
-                                                            class="badge level level-warning">warning</span>
-
-                                                </div>
-                                                <div
-                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
-<br />
-This package is instable and abstract.</div>
-
-                                            </div>
+                                    <a onclick="return toggle('bloc-5e94d26bee46e');">
+                                        <span class="path">App\Kit\Repository\Manufacturer\ModelFactory</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee46e">
                                                                                     <div class="violation">
                                                 <div class="name">
                                                     Stable Dependencies Principle                                                    <span
@@ -275,10 +419,129 @@ This package is instable and abstract.</div>
                                                 <div
                                                         class="description">Packages should depend in the direction of stability.<br />
 <br />
-This package is more stable (0.3) than 1 package(s) that it depends on.<br />
+This package is more stable (0.7) than 2 package(s) that it depends on.<br />
 The packages that are more stable are<br />
 <br />
-* Shrikeh\Diving\Kit (0.3)</div>
+* App\Kit\Repository\ResolverFactory (0.714)<br />
+* App\Kit\Model\Manufacturer\Decorator (0.833)</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Dependencies Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee496');">
+                                        <span class="path">App\Kit\Repository\Manufacturer</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee496">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Dependencies Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should depend in the direction of stability.<br />
+<br />
+This package is more stable (0.571) than 1 package(s) that it depends on.<br />
+The packages that are more stable are<br />
+<br />
+* App\Kit\Repository\Manufacturer\ModelFactory (0.7)</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Dependencies Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee4bd');">
+                                        <span class="path">App\Kit\Repository\Item</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee4bd">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Dependencies Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should depend in the direction of stability.<br />
+<br />
+This package is more stable (0.571) than 1 package(s) that it depends on.<br />
+The packages that are more stable are<br />
+<br />
+* App\Kit\Repository\Item\ModelFactory (0.7)</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Dependencies Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee4dd');">
+                                        <span class="path">App\Kit\Repository\Item\ModelFactory</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee4dd">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Dependencies Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should depend in the direction of stability.<br />
+<br />
+This package is more stable (0.7) than 2 package(s) that it depends on.<br />
+The packages that are more stable are<br />
+<br />
+* App\Kit\Repository\ResolverFactory (0.714)<br />
+* App\Kit\Model\Item\Decorator (0.75)</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Dependencies Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee505');">
+                                        <span class="path">App\Kit\Message</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee505">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Abstractions Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
+<br />
+This package is instable and abstract.</div>
 
                                             </div>
                                                                             </div>
@@ -287,15 +550,42 @@ The packages that are more stable are<br />
                                 <td valign="top">
                                                                             <span
                                                 class="badge level level-warning"> Stable Abstractions Principle</span>
-                                                                            <span
-                                                class="badge level level-warning"> Stable Dependencies Principle</span>
                                                                     </td>
                             </tr>
                         
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8eed9');">App\Kit\Resolver</a>
-                                    <div class="violation-list" id="bloc-5e61852b8eed9">
+                                    <a onclick="return toggle('bloc-5e94d26bee520');">
+                                        <span class="path">App\Kit\Query\Result</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee520">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Abstractions Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
+<br />
+This package is instable and abstract.</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Abstractions Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee537');">
+                                        <span class="path">App\Kit\Resolver</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee537">
                                                                                     <div class="violation">
                                                 <div class="name">
                                                     Stable Dependencies Principle                                                    <span
@@ -322,8 +612,10 @@ The packages that are more stable are<br />
                         
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ef02');">App\Kit\Resolver\Exception</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ef02">
+                                    <a onclick="return toggle('bloc-5e94d26bee558');">
+                                        <span class="path">App\Kit\Resolver\Exception</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee558">
                                                                                     <div class="violation">
                                                 <div class="name">
                                                     Stable Abstractions Principle                                                    <span
@@ -347,33 +639,10 @@ This package is instable and abstract.</div>
                         
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ef22');">Shrikeh\Diving\Kit\Item</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ef22">
-                                                                                    <div class="violation">
-                                                <div class="name">
-                                                    Stable Abstractions Principle                                                    <span
-                                                            class="badge level level-warning">warning</span>
-
-                                                </div>
-                                                <div
-                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
-<br />
-This package is instable and abstract.</div>
-
-                                            </div>
-                                                                            </div>
-                                </td>
-
-                                <td valign="top">
-                                                                            <span
-                                                class="badge level level-warning"> Stable Abstractions Principle</span>
-                                                                    </td>
-                            </tr>
-                        
-                            <tr>
-                                <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ef3c');">Shrikeh\Diving\Kit</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ef3c">
+                                    <a onclick="return toggle('bloc-5e94d26bee575');">
+                                        <span class="path">App\Kit\Controller</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee575">
                                                                                     <div class="violation">
                                                 <div class="name">
                                                     Stable Dependencies Principle                                                    <span
@@ -383,11 +652,10 @@ This package is instable and abstract.</div>
                                                 <div
                                                         class="description">Packages should depend in the direction of stability.<br />
 <br />
-This package is more stable (0.3) than 2 package(s) that it depends on.<br />
+This package is more stable (0.6) than 1 package(s) that it depends on.<br />
 The packages that are more stable are<br />
 <br />
-* Shrikeh\Diving\Kit\KitBag\QueryBus (0.5)<br />
-* Shrikeh\Diving\Kit\KitBag\Message (0.333)</div>
+* App\Kit\Query\Bus (0.7)</div>
 
                                             </div>
                                                                             </div>
@@ -401,8 +669,10 @@ The packages that are more stable are<br />
                         
                             <tr>
                                 <td>
-                                    <a onclick="return toggle('bloc-5e61852b8ef6b');">Shrikeh\Diving\Kit\KitBag\Message</a>
-                                    <div class="violation-list" id="bloc-5e61852b8ef6b">
+                                    <a onclick="return toggle('bloc-5e94d26bee598');">
+                                        <span class="path">App\Kit\Model\ResolverDecorator\Traits</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee598">
                                                                                     <div class="violation">
                                                 <div class="name">
                                                     Stable Abstractions Principle                                                    <span
@@ -421,6 +691,91 @@ This package is instable and abstract.</div>
                                 <td valign="top">
                                                                             <span
                                                 class="badge level level-warning"> Stable Abstractions Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee5c0');">
+                                        <span class="path">Shrikeh\Diving\Kit\KitBag\Message</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee5c0">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Abstractions Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
+<br />
+This package is instable and abstract.</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Abstractions Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee5d7');">
+                                        <span class="path">Shrikeh\Diving\Kit\Item</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee5d7">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Abstractions Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should be either abstract and stable or concrete and instable.<br />
+<br />
+This package is instable and abstract.</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Abstractions Principle</span>
+                                                                    </td>
+                            </tr>
+                        
+                            <tr>
+                                <td>
+                                    <a onclick="return toggle('bloc-5e94d26bee5ed');">
+                                        <span class="path">Shrikeh\Diving\Kit</span>
+                                    </a>
+                                    <div class="violation-list" id="bloc-5e94d26bee5ed">
+                                                                                    <div class="violation">
+                                                <div class="name">
+                                                    Stable Dependencies Principle                                                    <span
+                                                            class="badge level level-warning">warning</span>
+
+                                                </div>
+                                                <div
+                                                        class="description">Packages should depend in the direction of stability.<br />
+<br />
+This package is more stable (0.25) than 2 package(s) that it depends on.<br />
+The packages that are more stable are<br />
+<br />
+* Shrikeh\Diving\Kit\KitBag\QueryBus (0.5)<br />
+* Shrikeh\Diving\Kit\KitBag\Message (0.333)</div>
+
+                                            </div>
+                                                                            </div>
+                                </td>
+
+                                <td valign="top">
+                                                                            <span
+                                                class="badge level level-warning"> Stable Dependencies Principle</span>
                                                                     </td>
                             </tr>
                                             </tbody>
@@ -469,7 +824,7 @@ This package is instable and abstract.</div>
                             <path d="M0 0h24v24H0z" fill="none"/>
                             <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/>
                         </svg>
-                        Violations (12)
+                        Violations (27)
                     </a>
                 </li>
                                     <li>
@@ -605,6 +960,7 @@ This package is instable and abstract.</div>
 <script type="text/javascript" src="js/d3.hexbin.v0.js"></script>
 <script type="text/javascript" src="js/sort-table.min.js"></script>
 <script type="text/javascript" src="js/graph-maintainability.js"></script>
+<script type="text/javascript" src="js/graph-carousel.js"></script>
 <script type="text/javascript" src="js/graph-licenses.js"></script>
 <script type="text/javascript" src="js/FileSaver.min.js"></script>
 

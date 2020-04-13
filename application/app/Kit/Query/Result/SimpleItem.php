@@ -15,7 +15,6 @@ namespace App\Kit\Query\Result;
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use Shrikeh\Diving\Kit\Item;
-use Shrikeh\Diving\Kit\Manufacturer;
 
 final class SimpleItem implements Item
 {

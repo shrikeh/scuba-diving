@@ -13,27 +13,71 @@ declare(strict_types=1);
 namespace App\Kernel;
 
 use App\Kernel\BundleLoader\FileBundleLoader;
+use App\Kernel\Traits\EnvironmentConfigurationTrait;
 use Exception;
-use Generator;
+use Safe\Exceptions\StringsException;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Exception\LoaderLoadException;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Kernel as BaseKernel;
+use Symfony\Component\HttpFoundation\ParameterBag;
+use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
 use function dirname;
 
-class DefaultKernel extends BaseKernel
+final class DefaultKernel extends Kernel implements
+    EnvironmentConfigurableKernelInterface,
+    ScubaDivingKernelInterface
 {
     use MicroKernelTrait;
+
+    /**
+     * Change the visibility on these inherited methods, the only reason they are protected is because a trait cannot
+     * define an abstract private method.
+     */
+    use EnvironmentConfigurationTrait {
+        getDefaultBundleFile as private;
+        getDefaultCacheDir as private;
+        getDefaultConfigDir as private;
+        getDefaultLogDir as private;
+    }
+
+    public const DEFAULT_CONFIG_DIR_NAME = 'config';
+    public const DEFAULT_BUNDLE_FILE = 'bundles.php';
 
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
     /**
-     * @return Generator
+     * @param array $server
+     * @return static
+     */
+    public static function fromArray(array $server): self
+    {
+        return new self(
+            new ParameterBag($server)
+        );
+    }
+
+    /**
+     * DefaultKernel constructor.
+     * @param ParameterBag $serverBag
+     * @param bool|null $debug
+     */
+    public function __construct(ParameterBag $serverBag, bool $debug = null)
+    {
+        $debug = $debug ?? $serverBag->getBoolean('APP_DEBUG');
+        $this->serverBag = $serverBag;
+
+        parent::__construct($serverBag->get('APP_ENV'), $debug);
+    }
+
+
+    /**
+     * @return iterable
+     * @throws StringsException
      */
     public function registerBundles(): iterable
     {
@@ -46,47 +90,16 @@ class DefaultKernel extends BaseKernel
     /**
      * @return string
      */
-    public function getBundleFile(): string
-    {
-        return (string) ($_ENV['SYMFONY_BUNDLE_FILE'] ?? $this->getConfigDir() . '/bundles.php');
-    }
-
-    /**
-     * @return string
-     */
-    public function getConfigDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_CONFIG_DIR'] ?? $this->getProjectDir() . '/config');
-    }
-
-    /**
-     * @return string
-     */
     public function getProjectDir(): string
     {
         return dirname(__DIR__, 2);
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function getLogDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_LOG_DIR'] ?? parent::getCacheDir());
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getCacheDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_CACHE_DIR'] ?? parent::getCacheDir());
-    }
-
-    /**
      * @param ContainerBuilder $container
      * @param LoaderInterface $loader
      * @throws Exception
+     * @codeCoverageIgnore
      */
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
     {
@@ -103,15 +116,52 @@ class DefaultKernel extends BaseKernel
     }
 
     /**
-     * @param RouteCollectionBuilder $routes
+     * {@inheritDoc}
      * @throws LoaderLoadException
+     * @codeCoverageIgnore
      */
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
-        $confDir = $this->getProjectDir() . '/config';
+        $confDir = $this->getConfigDir();
 
         $routes->import($confDir . '/{routes}/' . $this->environment . '/*' . self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir . '/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');
         $routes->import($confDir . '/{routes}' . self::CONFIG_EXTS, '/', 'glob');
+    }
+
+    /**
+     * Workaround for traits not using parent::()
+     * {@inheritDoc}
+     */
+    private function getDefaultCacheDir(): string
+    {
+        return parent::getCacheDir();
+    }
+
+    /**
+     * Workaround for traits not using parent::()
+     * {@inheritDoc}
+     * @psalm-suppress TraitMethodSignatureMismatch
+     */
+    private function getDefaultLogDir(): string
+    {
+        return parent::getLogDir();
+    }
+
+    /**
+     * {@inheritDoc}
+     * @psalm-suppress TraitMethodSignatureMismatch
+     */
+    private function getDefaultConfigDir(): string
+    {
+        return sprintf('%s/%s', $this->getProjectDir(), self::DEFAULT_CONFIG_DIR_NAME);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    private function getDefaultBundleFile(): string
+    {
+        return sprintf('%s/%s', $this->getConfigDir(), self::DEFAULT_BUNDLE_FILE);
     }
 }

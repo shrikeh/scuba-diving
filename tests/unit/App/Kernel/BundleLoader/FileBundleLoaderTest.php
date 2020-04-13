@@ -29,7 +29,7 @@ final class FileBundleLoaderTest extends TestCase
 {
     public function testItLoadsBundles(): void
     {
-        $bundlesPath = Constants::fixturesDir() . '/bundles/GoodBundles.php';
+        $bundlesPath = Constants::fixturesDir() . '/config/bundles.php';
         $bundles = require $bundlesPath;
 
         $bundleFile = $this->prophesize(SplFileInfo::class);
@@ -58,7 +58,7 @@ final class FileBundleLoaderTest extends TestCase
 
     public function testItLoadsBundlesByEnvironment(): void
     {
-        $bundlesPath = Constants::fixturesDir() . '/bundles/GoodMixedBundles.php';
+        $bundlesPath = Constants::fixturesDir() . '/config/GoodMixedBundles.php';
         $bundleFile = new SplFileInfo($bundlesPath);
         $targetEnv = 'bar';
 
@@ -134,7 +134,7 @@ final class FileBundleLoaderTest extends TestCase
 
     public function testItThrowsAnExceptionIfTheBundleFileContainsInvalidBundles(): void
     {
-        $invalidBundles = Constants::fixturesDir() . '/bundles/InvalidBundles.php';
+        $invalidBundles = Constants::fixturesDir() . '/config/InvalidBundles.php';
 
         $fileBundleLoader = FileBundleLoader::create($invalidBundles, 'foo');
 

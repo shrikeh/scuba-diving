@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/roboto.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/graph-carousel.css">
 </head>
 <body>
 
@@ -49,7 +50,7 @@
 <div class="page">
     <div class="content">
         <div class="report-details">
-            Created at 2020-03-05 23:03:07        , with PHPMetrics v2.5.0 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2020-04-13 20:58:19        , with PHPMetrics v2.6.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
 
@@ -92,7 +93,7 @@
                             <path d="M0 0h24v24H0z" fill="none"/>
                             <path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5c-.49 0-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/>
                         </svg>
-                        Violations (12)
+                        Violations (27)
                     </a>
                 </li>
                                     <li>
@@ -228,6 +229,7 @@
 <script type="text/javascript" src="js/d3.hexbin.v0.js"></script>
 <script type="text/javascript" src="js/sort-table.min.js"></script>
 <script type="text/javascript" src="js/graph-maintainability.js"></script>
+<script type="text/javascript" src="js/graph-carousel.js"></script>
 <script type="text/javascript" src="js/graph-licenses.js"></script>
 <script type="text/javascript" src="js/FileSaver.min.js"></script>
 
@@ -249,6 +251,423 @@
 
     var relations = [
     {
+        "name": "\\ContainerCeXHqdY\\App_Kernel_DefaultKernelTestDebugContainer",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Component\\DependencyInjection\\Container",
+            "\\Closure",
+            "\\Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
+            "\\App\\Kit\\Controller\\Item",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
+            "\\Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
+            "\\Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
+            "\\Symfony\\Component\\HttpKernel\\Log\\Logger",
+            "\\Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
+            "\\Symfony\\Component\\Cache\\Adapter\\AbstractAdapter",
+            "\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
+            "\\Symfony\\Component\\HttpKernel\\CacheClearer\\ChainCacheClearer",
+            "\\Symfony\\Component\\HttpKernel\\CacheWarmer\\CacheWarmerAggregate",
+            "\\Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
+            "\\Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ErrorController",
+            "\\Symfony\\Component\\EventDispatcher\\EventDispatcher",
+            "\\Symfony\\Component\\Stopwatch\\Stopwatch",
+            "\\Symfony\\Component\\HttpFoundation\\RequestStack",
+            "\\Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\ValidateRequestListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\DisallowRobotsIndexingListener",
+            "\\Symfony\\Bundle\\FrameworkBundle\\EventListener\\SuggestMissingPackageSubscriber",
+            "\\Symfony\\Component\\Messenger\\EventListener\\DispatchPcntlSignalListener",
+            "\\Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnSigtermSignalListener",
+            "\\Symfony\\Component\\Filesystem\\Filesystem",
+            "\\Symfony\\Component\\HttpKernel\\HttpKernel",
+            "\\Symfony\\Component\\Messenger\\Middleware\\AddBusNameStampMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\RejectRedeliveredMessageMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\DispatchAfterCurrentBusMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\FailedMessageProcessingMiddleware",
+            "\\Symfony\\Component\\Messenger\\MessageBus",
+            "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBag",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Routing\\Router",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Routing\\DelegatingLoader",
+            "\\Symfony\\Component\\HttpKernel\\DependencyInjection\\ServicesResetter",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\Session",
+            "\\Symfony\\Component\\BrowserKit\\History",
+            "\\Symfony\\Component\\BrowserKit\\CookieJar",
+            "\\Symfony\\Bundle\\FrameworkBundle\\KernelBrowser",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Test\\TestContainer",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Translation\\Translator",
+            "\\Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
+            "\\App\\Api\\JsonDecoder\\SafeJsonDecoder",
+            "\\App\\Kit\\Handler\\QueryKitItem",
+            "\\App\\Kit\\Transformer\\DefaultItemDetails",
+            "\\App\\Kit\\Handler\\QueryKitItemDetails",
+            "\\App\\Kit\\Query\\Bus\\SymfonyQueryBus",
+            "\\App\\Kit\\Repository\\Item\\ItemApi",
+            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
+            "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
+            "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
+            "\\Shrikeh\\Diving\\Kit\\KitBag",
+            "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
+            "\\App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetail",
+            "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturer",
+            "\\Symfony\\Component\\HttpKernel\\ControllerMetadata\\ArgumentMetadataFactory",
+            "\\Symfony\\Component\\Config\\Resource\\SelfCheckingResourceChecker",
+            "\\Symfony\\Component\\DependencyInjection\\Config\\ContainerParametersResourceChecker",
+            "\\Symfony\\Component\\Config\\ResourceCheckerConfigCacheFactory",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\AboutCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\AssetsInstallCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CacheClearCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolClearCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolDeleteCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolListCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolPruneCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CacheWarmupCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerLintCommand",
+            "\\Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\DebugAutowiringCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\EventDispatcherDebugCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\ConsumeMessagesCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\DebugCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\SetupTransportsCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\StopWorkersCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\RouterDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\RouterMatchCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsDecryptToLocalCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsEncryptFromLocalCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsGenerateKeysCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsListCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsRemoveCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsSetCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationUpdateCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\XliffLintCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\YamlLintCommand",
+            "\\Symfony\\Component\\Console\\EventListener\\ErrorListener",
+            "\\Symfony\\Component\\DependencyInjection\\EnvVarProcessor",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\ServiceValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\SessionValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\VariadicValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\DebugHandlersListener",
+            "\\Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\ErrorListener",
+            "\\Symfony\\Component\\HttpKernel\\Config\\FileLocator",
+            "\\Symfony\\Component\\Translation\\IdentityTranslator",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\LocaleAwareListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener",
+            "\\Symfony\\Component\\Messenger\\Handler\\HandlersLocator",
+            "\\Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\TraceableMiddleware",
+            "\\Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnRestartSignalListener",
+            "\\Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware",
+            "\\Symfony\\Component\\Messenger\\EventListener\\SendFailedMessageForRetryListener",
+            "\\Symfony\\Component\\Messenger\\RoutableMessageBus",
+            "\\Symfony\\Component\\Messenger\\Transport\\Sender\\SendersLocator",
+            "\\Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer",
+            "\\Symfony\\Component\\Routing\\RequestContext",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\RouterListener",
+            "\\Symfony\\Component\\Routing\\Loader\\ContainerLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\DirectoryLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\GlobFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\PhpFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\XmlFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\YamlFileLoader",
+            "\\Symfony\\Component\\Config\\Loader\\LoaderResolver",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\MetadataBag",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\MockFileSessionStorage",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\SessionListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\TestSessionListener",
+            "\\Symfony\\Component\\Translation\\Dumper\\CsvFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\IniFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\JsonFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\MoFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\PhpFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\PoFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\QtFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\IcuResFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\XliffFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
+            "\\Symfony\\Component\\Translation\\Extractor\\ChainExtractor",
+            "\\Symfony\\Component\\Translation\\Extractor\\PhpExtractor",
+            "\\Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\IniFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\MoFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\PoFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\QtFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
+            "\\Symfony\\Component\\Translation\\Reader\\TranslationReader",
+            "\\Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\TranslationsCacheWarmer",
+            "\\Symfony\\Component\\Translation\\Writer\\TranslationWriter",
+            "\\Symfony\\Component\\Translation\\Formatter\\MessageFormatter",
+            "\\Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException",
+            "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface",
+            "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\Container",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Closure",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Controller\\Item",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\App\\Kit\\Message\\QueryKitItemDetail"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Log\\Logger",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Cache\\Adapter\\AbstractAdapter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\CacheClearer\\ChainCacheClearer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\CacheWarmer\\CacheWarmerAggregate",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ErrorController",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\EventDispatcher\\EventDispatcher",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Stopwatch\\Stopwatch",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\RequestStack",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\ValidateRequestListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\DisallowRobotsIndexingListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\EventListener\\SuggestMissingPackageSubscriber",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\EventListener\\DispatchPcntlSignalListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnSigtermSignalListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Filesystem\\Filesystem",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\HttpKernel",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\AddBusNameStampMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\RejectRedeliveredMessageMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\DispatchAfterCurrentBusMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\FailedMessageProcessingMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\MessageBus",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBag",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Routing\\Router",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Routing\\DelegatingLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\DependencyInjection\\ServicesResetter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Session\\Session",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\BrowserKit\\History",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\BrowserKit\\CookieJar",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\KernelBrowser",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Test\\TestContainer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Translation\\Translator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Api\\JsonDecoder\\SafeJsonDecoder",
+        "size": 3000,
+        "relations": [
+            "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
+            "\\stdClass"
+        ]
+    },
+    {
         "name": "\\App\\Kit\\Handler\\QueryKitItem",
         "size": 3000,
         "relations": [
@@ -261,7 +680,1031 @@
         ]
     },
     {
+        "name": "\\App\\Kit\\Transformer\\DefaultItemDetails",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\Shrikeh\\Diving\\Kit\\Item"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Handler\\QueryKitItemDetails",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
+            "\\Shrikeh\\Diving\\Kit\\KitBag",
+            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\App\\Kit\\Message\\QueryKitItemDetail"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Query\\Bus\\SymfonyQueryBus",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
+            "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
+            "\\Symfony\\Component\\Messenger\\MessageBusInterface",
+            "\\App\\Kit\\Query\\Result\\ItemDetail",
+            "\\App\\Kit\\Message\\QueryKitItemDetail",
+            "\\Shrikeh\\Diving\\Kit\\Item",
+            "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery",
+            "\\App\\Kit\\Query\\Bus\\Exception\\IncorrectResultType"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Item\\ItemApi",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\Item\\ItemRepositoryInterface",
+            "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
+            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
+            "\\App\\Kit\\Model\\Item\\ItemInterface",
+            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
+            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+            "\\App\\Kit\\Model\\Item\\ItemInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
+            "\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolver",
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Ramsey\\Uuid\\UuidInterface"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerRepositoryInterface",
+            "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
+            "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerModelFactoryInterface",
+            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
+            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerModelFactoryInterface",
+            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
+            "\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolver",
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Ramsey\\Uuid\\UuidInterface"
+        ]
+    },
+    {
+        "name": "\\Shrikeh\\Diving\\Kit\\KitBag",
+        "size": 3000,
+        "relations": [
+            "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
+            "\\Shrikeh\\Diving\\Kit\\Item",
+            "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\Ramsey\\Uuid\\UuidInterface",
+            "\\App\\Kit\\Resolver\\Response"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetail",
+        "size": 3000,
+        "relations": [
+            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+            "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
+            "\\App\\Kit\\Model\\Item\\ItemInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponse",
+            "\\App\\Kit\\Model\\Item\\Item"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturer",
+        "size": 3000,
+        "relations": [
+            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+            "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
+            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponse",
+            "\\App\\Kit\\Model\\Manufacturer\\Manufacturer"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\ControllerMetadata\\ArgumentMetadataFactory",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Config\\Resource\\SelfCheckingResourceChecker",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\Config\\ContainerParametersResourceChecker",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Config\\ResourceCheckerConfigCacheFactory",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\AboutCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\AssetsInstallCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CacheClearCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolClearCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolDeleteCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolListCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolPruneCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CacheWarmupCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerLintCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\DebugAutowiringCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\EventDispatcherDebugCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Command\\ConsumeMessagesCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Command\\DebugCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Command\\SetupTransportsCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Command\\StopWorkersCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\RouterDebugCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\RouterMatchCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsDecryptToLocalCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsEncryptFromLocalCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsGenerateKeysCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsListCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsRemoveCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsSetCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationDebugCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationUpdateCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\XliffLintCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Command\\YamlLintCommand",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Console\\EventListener\\ErrorListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\EnvVarProcessor",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\ServiceValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\SessionValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\VariadicValueResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\DebugHandlersListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\ErrorListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Config\\FileLocator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\IdentityTranslator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\LocaleAwareListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Handler\\HandlersLocator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\TraceableMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnRestartSignalListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\EventListener\\SendFailedMessageForRetryListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\RoutableMessageBus",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Transport\\Sender\\SendersLocator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\RequestContext",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\RouterListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\Loader\\ContainerLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\Loader\\DirectoryLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\Loader\\GlobFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\Loader\\PhpFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\Loader\\XmlFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\Loader\\YamlFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Config\\Loader\\LoaderResolver",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\MetadataBag",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\MockFileSessionStorage",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\SessionListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\EventListener\\TestSessionListener",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\CsvFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\IniFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\JsonFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\MoFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\PhpFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\PoFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\QtFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\IcuResFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\XliffFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Extractor\\ChainExtractor",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Extractor\\PhpExtractor",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\IniFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\MoFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\PoFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\QtFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Reader\\TranslationReader",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\TranslationsCacheWarmer",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Writer\\TranslationWriter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Translation\\Formatter\\MessageFormatter",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\ContainerMwq2KeZ\\App_Kernel_DefaultKernelDevDebugContainer",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Component\\DependencyInjection\\Container",
+            "\\Closure",
+            "\\Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
+            "\\App\\Kit\\Controller\\Item",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
+            "\\Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
+            "\\Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
+            "\\Symfony\\Component\\HttpKernel\\Log\\Logger",
+            "\\Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
+            "\\Symfony\\Component\\Cache\\Adapter\\AbstractAdapter",
+            "\\Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
+            "\\Symfony\\Component\\HttpKernel\\CacheClearer\\ChainCacheClearer",
+            "\\Symfony\\Component\\HttpKernel\\CacheWarmer\\CacheWarmerAggregate",
+            "\\Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
+            "\\Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader",
+            "\\Symfony\\Component\\HttpFoundation\\RequestStack",
+            "\\Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
+            "\\Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ErrorController",
+            "\\Symfony\\Component\\EventDispatcher\\EventDispatcher",
+            "\\Symfony\\Component\\Stopwatch\\Stopwatch",
+            "\\Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\ValidateRequestListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\DisallowRobotsIndexingListener",
+            "\\Symfony\\Bundle\\FrameworkBundle\\EventListener\\SuggestMissingPackageSubscriber",
+            "\\Symfony\\Component\\Messenger\\EventListener\\DispatchPcntlSignalListener",
+            "\\Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnSigtermSignalListener",
+            "\\Symfony\\Component\\Filesystem\\Filesystem",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver",
+            "\\Symfony\\Component\\HttpKernel\\ControllerMetadata\\ArgumentMetadataFactory",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver",
+            "\\Symfony\\Component\\HttpKernel\\HttpKernel",
+            "\\Symfony\\Component\\Messenger\\Middleware\\AddBusNameStampMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\RejectRedeliveredMessageMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\DispatchAfterCurrentBusMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\FailedMessageProcessingMiddleware",
+            "\\Symfony\\Component\\Messenger\\MessageBus",
+            "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBag",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Routing\\Router",
+            "\\Symfony\\Component\\Config\\Loader\\LoaderResolver",
+            "\\Symfony\\Component\\HttpKernel\\Config\\FileLocator",
+            "\\Symfony\\Component\\Routing\\Loader\\XmlFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\YamlFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\PhpFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\GlobFileLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\DirectoryLoader",
+            "\\Symfony\\Component\\Routing\\Loader\\ContainerLoader",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Routing\\DelegatingLoader",
+            "\\Symfony\\Component\\HttpKernel\\DependencyInjection\\ServicesResetter",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\Session",
+            "\\Symfony\\Component\\Translation\\IdentityTranslator",
+            "\\Symfony\\Component\\Translation\\Formatter\\MessageFormatter",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Translation\\Translator",
+            "\\Shrikeh\\Diving\\Kit\\KitBag",
+            "\\App\\Kit\\Transformer\\DefaultItemDetails",
+            "\\App\\Kit\\Handler\\QueryKitItemDetails",
+            "\\Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
+            "\\App\\Api\\JsonDecoder\\SafeJsonDecoder",
+            "\\App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetail",
+            "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
+            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
+            "\\App\\Kit\\Repository\\Item\\ItemApi",
+            "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturer",
+            "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
+            "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
+            "\\App\\Kit\\Handler\\QueryKitItem",
+            "\\App\\Kit\\Query\\Bus\\SymfonyQueryBus",
+            "\\Symfony\\Component\\HttpClient\\CurlHttpClient",
+            "\\Symfony\\Component\\DependencyInjection\\Config\\ContainerParametersResourceChecker",
+            "\\Symfony\\Component\\Config\\Resource\\SelfCheckingResourceChecker",
+            "\\Symfony\\Component\\Config\\ResourceCheckerConfigCacheFactory",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\AboutCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\AssetsInstallCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CacheClearCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolClearCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolDeleteCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolListCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolPruneCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\CacheWarmupCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerLintCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\DebugAutowiringCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\EventDispatcherDebugCommand",
+            "\\Symfony\\Component\\Messenger\\RoutableMessageBus",
+            "\\Symfony\\Component\\Messenger\\Command\\ConsumeMessagesCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\DebugCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\SetupTransportsCommand",
+            "\\Symfony\\Component\\Messenger\\Command\\StopWorkersCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\RouterDebugCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\RouterMatchCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsDecryptToLocalCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsEncryptFromLocalCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsGenerateKeysCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsListCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsRemoveCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsSetCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationDebugCommand",
+            "\\Symfony\\Component\\Translation\\Writer\\TranslationWriter",
+            "\\Symfony\\Component\\Translation\\Dumper\\PhpFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\XliffFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\PoFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\MoFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\QtFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\CsvFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\IniFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\JsonFileDumper",
+            "\\Symfony\\Component\\Translation\\Dumper\\IcuResFileDumper",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationUpdateCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\XliffLintCommand",
+            "\\Symfony\\Bundle\\FrameworkBundle\\Command\\YamlLintCommand",
+            "\\Symfony\\Component\\Console\\EventListener\\ErrorListener",
+            "\\Symfony\\Component\\DependencyInjection\\EnvVarProcessor",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\ServiceValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\SessionValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\VariadicValueResolver",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\DebugHandlersListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\ErrorListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\LocaleAwareListener",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener",
+            "\\Symfony\\Component\\Messenger\\Handler\\HandlersLocator",
+            "\\Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware",
+            "\\Symfony\\Component\\Messenger\\Middleware\\TraceableMiddleware",
+            "\\Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnRestartSignalListener",
+            "\\Symfony\\Component\\Messenger\\Transport\\Sender\\SendersLocator",
+            "\\Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware",
+            "\\Symfony\\Component\\Messenger\\EventListener\\SendFailedMessageForRetryListener",
+            "\\Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer",
+            "\\Symfony\\Component\\Routing\\RequestContext",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\RouterListener",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\MetadataBag",
+            "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\NativeSessionStorage",
+            "\\Symfony\\Component\\HttpKernel\\EventListener\\SessionListener",
+            "\\Symfony\\Component\\Translation\\Extractor\\ChainExtractor",
+            "\\Symfony\\Component\\Translation\\Extractor\\PhpExtractor",
+            "\\Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\IniFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\MoFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\PoFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\QtFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
+            "\\Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
+            "\\Symfony\\Component\\Translation\\Reader\\TranslationReader",
+            "\\Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\TranslationsCacheWarmer",
+            "\\Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException",
+            "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface",
+            "\\Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpClient\\CurlHttpClient",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\Session\\Storage\\NativeSessionStorage",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\DefaultKernel",
+        "size": 3000,
+        "relations": [
+            "\\Symfony\\Component\\HttpKernel\\Kernel",
+            "\\App\\Kernel\\EnvironmentConfigurableKernelInterface",
+            "\\App\\Kernel\\ScubaDivingKernelInterface",
+            "\\Symfony\\Component\\HttpFoundation\\ParameterBag",
+            "\\SplFileInfo",
+            "\\App\\Kernel\\BundleLoader\\FileBundleLoader",
+            "\\Symfony\\Component\\DependencyInjection\\ContainerBuilder",
+            "\\Symfony\\Component\\Config\\Loader\\LoaderInterface",
+            "\\Symfony\\Component\\Config\\Resource\\FileResource",
+            "\\Symfony\\Component\\Routing\\RouteCollectionBuilder"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpKernel\\Kernel",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\EnvironmentConfigurableKernelInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\ScubaDivingKernelInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\HttpFoundation\\ParameterBag",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\SplFileInfo",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\FileBundleLoader",
+        "size": 3000,
+        "relations": [
+            "\\SplFileInfo",
+            "\\App\\Kernel\\BundleLoader\\Exception\\BundleFileNotExists",
+            "\\App\\Kernel\\BundleLoader\\Exception\\BundleFileNotReadable",
+            "\\App\\Kernel\\BundleLoader\\Exception\\BundleRealpathFalse",
+            "\\Shrikeh\\File\\File",
+            "\\App\\Kernel\\BundleLoader\\BundleIterator\\BundleIterator",
+            "\\App\\Kernel\\BundleLoader\\Exception\\BundlesNotLoadable"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Component\\DependencyInjection\\ContainerBuilder",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Config\\Loader\\LoaderInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Config\\Resource\\FileResource",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Routing\\RouteCollectionBuilder",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\Exception\\BundleFileNotExists",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\RuntimeException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\Exception\\BundlesNotLoadable",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\BundleIterator\\Exception\\BundleIteratorExceptionInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\Exception\\BundleRealpathFalse",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\Exception\\BundleFileNotReadable",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\BundleIterator\\Exception\\BundlesNotIterable",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\BundleIterator\\Exception\\BundleEnvironmentsNotIterable",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\InvalidArgumentException",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\BundleIterator\\Exception\\InvalidBundleEnvironment",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\BundleLoader\\BundleIterator\\BundleIterator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Generator",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\bundleClass",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Shrikeh\\File\\File",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kernel\\Traits\\EnvironmentConfigurationTrait",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Query\\Result\\ItemDetail",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Message\\QueryKitItemDetail",
         "size": 3000,
         "relations": []
     },
@@ -295,246 +1738,6 @@
         ]
     },
     {
-        "name": "\\App\\Kit\\Handler\\QueryKitItemDetails",
-        "size": 3000,
-        "relations": [
-            "\\Symfony\\Component\\Messenger\\Handler\\MessageHandlerInterface",
-            "\\Shrikeh\\Diving\\Kit\\KitBag",
-            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\App\\Kit\\Message\\QueryKitItemDetail"
-        ]
-    },
-    {
-        "name": "\\Shrikeh\\Diving\\Kit\\KitBag",
-        "size": 3000,
-        "relations": [
-            "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
-            "\\Shrikeh\\Diving\\Kit\\Item",
-            "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Query\\Result\\ItemDetail",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Message\\QueryKitItemDetail",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerModelFactoryInterface",
-            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
-            "\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolver",
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Ramsey\\Uuid\\UuidInterface"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerModelFactoryInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolver",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
-            "\\Closure",
-            "\\static",
-            "\\App\\Kit\\Model\\ModelInterface",
-            "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\ResolverInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Ramsey\\Uuid\\UuidInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\Manufacturer\\ManufacturerRepositoryInterface",
-            "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
-            "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerModelFactoryInterface",
-            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
-            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug"
-        ]
-    },
-    {
-        "name": "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponse",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\RuntimeException",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Symfony\\Contracts\\HttpClient\\Exception\\ExceptionInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturer",
-        "size": 3000,
-        "relations": [
-            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-            "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
-            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponse",
-            "\\App\\Kit\\Model\\Manufacturer\\Manufacturer"
-        ]
-    },
-    {
-        "name": "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Manufacturer\\Manufacturer",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
-            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-            "\\App\\Kit\\Model\\Item\\ItemInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
-            "\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolver",
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Ramsey\\Uuid\\UuidInterface"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Item\\ItemInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolver",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Model\\Item\\ItemInterface",
-            "\\Closure",
-            "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Item\\ItemApi",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\Item\\ItemRepositoryInterface",
-            "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
-            "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
-            "\\App\\Kit\\Model\\Item\\ItemInterface",
-            "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetail",
-        "size": 3000,
-        "relations": [
-            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-            "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
-            "\\App\\Kit\\Model\\Item\\ItemInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponse",
-            "\\App\\Kit\\Model\\Item\\Item"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Model\\Item\\Item",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Model\\Item\\ItemInterface"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
-            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\Ramsey\\Uuid\\UuidInterface",
-            "\\App\\Kit\\Resolver\\Response"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\Response",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Resolver\\ResolverInterface",
-            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
-            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
-            "\\App\\Kit\\Model\\ModelInterface"
-        ]
-    },
-    {
         "name": "\\App\\Kit\\Repository\\ResolverFactory\\SymfonyCache",
         "size": 3000,
         "relations": [
@@ -550,6 +1753,11 @@
         ]
     },
     {
+        "name": "\\App\\Kit\\Repository\\ResolverFactory\\ResolverFactoryInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
         "name": "\\Symfony\\Contracts\\Cache\\CacheInterface",
         "size": 3000,
         "relations": []
@@ -560,7 +1768,17 @@
         "relations": []
     },
     {
-        "name": "\\Closure",
+        "name": "\\App\\Kit\\Resolver\\ResolverInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Ramsey\\Uuid\\UuidInterface",
         "size": 3000,
         "relations": []
     },
@@ -589,12 +1807,100 @@
         ]
     },
     {
-        "name": "\\App\\Kit\\Transformer\\DefaultItemDetails",
+        "name": "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Resolver\\Response",
         "size": 3000,
         "relations": [
-            "\\App\\Kit\\Transformer\\ItemDetailTransformerInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\Shrikeh\\Diving\\Kit\\Item"
+            "\\App\\Kit\\Resolver\\ResolverInterface",
+            "\\Symfony\\Contracts\\HttpClient\\ResponseInterface",
+            "\\App\\Api\\ResponseParser\\ResponseParserInterface",
+            "\\App\\Kit\\Model\\ModelInterface"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerModelFactoryInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Shrikeh\\Diving\\Kit\\Item\\ItemSlug",
+        "size": 3000,
+        "relations": [
+            "\\Ramsey\\Uuid\\UuidInterface",
+            "\\Ramsey\\Uuid\\Uuid"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Manufacturer\\Decorator\\ClosureResolver",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface",
+            "\\Closure",
+            "\\static",
+            "\\App\\Kit\\Model\\ModelInterface",
+            "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved"
+        ]
+    },
+    {
+        "name": "\\Symfony\\Contracts\\HttpClient\\HttpClientInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Manufacturer\\ResponseParser\\Exception\\ApiResponse",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Contracts\\HttpClient\\Exception\\ExceptionInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Manufacturer\\Manufacturer",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Model\\Manufacturer\\ManufacturerInterface"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Repository\\Item\\ModelFactory\\ItemModelFactoryInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Item\\ItemInterface",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Item\\Decorator\\ClosureResolver",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Model\\Item\\ItemInterface",
+            "\\Closure",
+            "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved"
+        ]
+    },
+    {
+        "name": "\\App\\Kit\\Model\\Item\\Item",
+        "size": 3000,
+        "relations": [
+            "\\App\\Kit\\Model\\Item\\ItemInterface"
         ]
     },
     {
@@ -603,13 +1909,14 @@
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Controller\\Item",
+        "name": "\\App\\Kit\\Query\\Bus\\Exception\\IncorrectResultType",
         "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\App\\Kit\\Message\\QueryKitItemDetail"
-        ]
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\Exception\\RuntimeException",
+        "size": 3000,
+        "relations": []
     },
     {
         "name": "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
@@ -617,7 +1924,12 @@
         "relations": []
     },
     {
-        "name": "\\static",
+        "name": "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Component\\Messenger\\MessageBusInterface",
         "size": 3000,
         "relations": []
     },
@@ -627,12 +1939,24 @@
         "relations": []
     },
     {
-        "name": "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved",
+        "name": "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved",
         "size": 3000,
-        "relations": [
-            "\\InvalidArgumentException",
-            "\\App\\Kit\\Model\\ModelInterface"
-        ]
+        "relations": []
+    },
+    {
+        "name": "\\App\\Kit\\Resolver\\Cache\\Exception\\InvalidCacheArgument",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Throwable",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\Symfony\\Contracts\\Cache\\ItemInterface",
+        "size": 3000,
+        "relations": []
     },
     {
         "name": "\\App\\Kit\\Model\\Exception\\ModelNotResolved",
@@ -640,7 +1964,7 @@
         "relations": []
     },
     {
-        "name": "\\InvalidArgumentException",
+        "name": "\\App\\Kit\\Model\\Exception\\IncorrectModelResolved",
         "size": 3000,
         "relations": []
     },
@@ -654,70 +1978,9 @@
         ]
     },
     {
-        "name": "\\App\\Kit\\Query\\Bus\\SymfonyQueryBus",
-        "size": 3000,
-        "relations": [
-            "\\App\\Kit\\Query\\Bus\\ItemDetailQueryBusInterface",
-            "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
-            "\\Symfony\\Component\\Messenger\\MessageBusInterface",
-            "\\App\\Kit\\Query\\Result\\ItemDetail",
-            "\\App\\Kit\\Message\\QueryKitItemDetail",
-            "\\Shrikeh\\Diving\\Kit\\Item",
-            "\\Shrikeh\\Diving\\Kit\\KitBag\\Message\\KitItemQuery",
-            "\\App\\Kit\\Query\\Bus\\Exception\\IncorrectResultType"
-        ]
-    },
-    {
-        "name": "\\Shrikeh\\Diving\\Kit\\KitBag\\QueryBus\\ItemQueryBus",
+        "name": "\\static",
         "size": 3000,
         "relations": []
-    },
-    {
-        "name": "\\Symfony\\Component\\Messenger\\MessageBusInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Query\\Bus\\Exception\\IncorrectResultType",
-        "size": 3000,
-        "relations": [
-            "\\Symfony\\Component\\Messenger\\Exception\\RuntimeException"
-        ]
-    },
-    {
-        "name": "\\Symfony\\Component\\Messenger\\Exception\\RuntimeException",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Symfony\\Contracts\\Cache\\ItemInterface",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\Exception\\ModelNotResolved",
-        "size": 3000,
-        "relations": [
-            "\\RuntimeException"
-        ]
-    },
-    {
-        "name": "\\App\\Kit\\Resolver\\Cache\\Exception\\InvalidCacheArgument",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\Throwable",
-        "size": 3000,
-        "relations": []
-    },
-    {
-        "name": "\\App\\Api\\JsonDecoder\\SafeJsonDecoder",
-        "size": 3000,
-        "relations": [
-            "\\App\\Api\\JsonDecoder\\JsonDecoderInterface",
-            "\\stdClass"
-        ]
     },
     {
         "name": "\\stdClass",

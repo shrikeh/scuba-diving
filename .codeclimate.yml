@@ -1,10 +1,15 @@
 ---
 version: "2"
 exclude_patterns:
-  - "docs/"
+  - "docs/*"
+  - "build/"
   - "tests/spec/"
   - "tests/integration/"
   - "vendor/"
 plugins:
   phan:
     enabled: true
+    ignore-undeclared: true
+    checks:
+      PhanUndeclaredClassMethod:
+        enabled: false

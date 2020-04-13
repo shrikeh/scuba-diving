@@ -1,5 +1,6 @@
 ---
 namespace: Tests\Integration
+bootstrap: bootstrap.php
 suites:
     integration:
         path: .
@@ -8,11 +9,11 @@ suites:
             enabled:
                 # add more modules here
                 - Asserts
-                - Symfony:
+                - Tests\Codecept\Module\Symfony:
                     app_path: application/app/Kernel
                     kernel_class: App\Kernel\DefaultKernel
                     environment: 'test'
-        step_decorators: ~ 
+        step_decorators: ~
 settings:
     shuffle: true
     lint: true

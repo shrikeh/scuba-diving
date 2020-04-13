@@ -5,12 +5,13 @@ namespace Tests\Integration;
 use App\Kit\Message\QueryKitItemDetail;
 use App\Kit\Query\Bus\ItemDetailQueryBusInterface;
 use App\Kit\Query\Result\ItemDetail;
+use Codeception\Exception\ModuleException;
 use Codeception\Test\Unit;
 use Prophecy\Argument;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
-use Symfony\Component\DependencyInjection\Container;
 use Symfony\Contracts\HttpClient\ResponseInterface;
+use Tests\Codecept\Module\Symfony;
 
 final class MessageBusTest extends Unit
 {
@@ -42,10 +43,10 @@ final class MessageBusTest extends Unit
 
     /**
      * @return ContainerInterface
-     * @throws \Codeception\Exception\ModuleException
+     * @throws ModuleException
      */
     private function getContainer(): ContainerInterface
     {
-        return $this->getModule('Symfony')->_getContainer();
+        return $this->getModule(Symfony::class)->_getContainer();
     }
 }

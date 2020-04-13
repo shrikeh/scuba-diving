@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace App\Kernel\BundleLoader\BundleIterator\Exception;
 
 use RuntimeException;
-use Safe\Exceptions\JsonException;
 use Safe\Exceptions\StringsException;
 
 use function Safe\sprintf;

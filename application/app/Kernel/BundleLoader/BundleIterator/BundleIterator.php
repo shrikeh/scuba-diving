@@ -16,7 +16,6 @@ use App\Kernel\BundleLoader\BundleIterator\Exception\BundleEnvironmentsNotIterab
 use App\Kernel\BundleLoader\BundleIterator\Exception\BundlesNotIterable;
 use App\Kernel\BundleLoader\BundleIterator\Exception\InvalidBundleEnvironment;
 use Generator;
-use Safe\Exceptions\JsonException;
 use Safe\Exceptions\StringsException;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 
