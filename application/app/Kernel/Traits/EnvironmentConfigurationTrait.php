@@ -57,32 +57,6 @@ trait EnvironmentConfigurationTrait
     }
 
     /**
-     * @return string
-     */
-    abstract public function getProjectDir(): string;
-
-    /**
-     * @return string
-     */
-    abstract protected function getDefaultCacheDir(): string;
-
-    /**
-     * @return string
-     */
-    abstract protected function getDefaultLogDir(): string;
-
-    /**
-     * @return string
-     */
-    abstract protected function getDefaultConfigDir(): string;
-
-    /**
-     * @return string
-     * @psalm-suppress TraitMethodSignatureMismatch
-     */
-    abstract protected function getDefaultBundleFile(): string;
-
-    /**
      * @param string $key
      * @return string|null
      */

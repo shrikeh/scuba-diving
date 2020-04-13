@@ -4,9 +4,6 @@
     "directories": [
       "application/app",
       "application/src"
-    ],
-    "excludes": [
-      "Kernel/DefaultKernel"
     ]
   },
   "phpUnit": {
