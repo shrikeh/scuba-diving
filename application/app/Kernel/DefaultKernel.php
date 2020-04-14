@@ -13,18 +13,15 @@ declare(strict_types=1);
 namespace App\Kernel;
 
 use App\Kernel\BundleLoader\FileBundleLoader;
+use App\Kernel\Traits\BaseDirRelativeDirectoriesTrait;
+use App\Kernel\Traits\ContainerConfigurationTrait;
 use App\Kernel\Traits\EnvironmentConfigurationTrait;
-use Exception;
+use App\Kernel\Traits\RouteConfigurationTrait;
 use Safe\Exceptions\StringsException;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
-use Symfony\Component\Config\Exception\LoaderLoadException;
-use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\Config\Resource\FileResource;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\Routing\RouteCollectionBuilder;
 
 use function dirname;
 
@@ -33,22 +30,16 @@ final class DefaultKernel extends Kernel implements
     ScubaDivingKernelInterface
 {
     use MicroKernelTrait;
-
-    /**
-     * Change the visibility on these inherited methods, the only reason they are protected is because a trait cannot
-     * define an abstract private method.
-     */
-    use EnvironmentConfigurationTrait {
-        getDefaultBundleFile as private;
-        getDefaultCacheDir as private;
-        getDefaultConfigDir as private;
-        getDefaultLogDir as private;
-    }
+    use BaseDirRelativeDirectoriesTrait;
+    use ContainerConfigurationTrait;
+    use EnvironmentConfigurationTrait;
+    use RouteConfigurationTrait;
 
     public const DEFAULT_CONFIG_DIR_NAME = 'config';
     public const DEFAULT_BUNDLE_FILE = 'bundles.php';
 
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
+    private const TYPE_GLOB = 'glob';
 
     /**
      * @param array $server
@@ -74,7 +65,6 @@ final class DefaultKernel extends Kernel implements
         parent::__construct($serverBag->get('APP_ENV'), $debug);
     }
 
-
     /**
      * @return iterable
      * @throws StringsException
@@ -88,7 +78,7 @@ final class DefaultKernel extends Kernel implements
     }
 
     /**
-     * @return string
+     * {@inheritDoc}
      */
     public function getProjectDir(): string
     {
@@ -96,61 +86,8 @@ final class DefaultKernel extends Kernel implements
     }
 
     /**
-     * @param ContainerBuilder $container
-     * @param LoaderInterface $loader
-     * @throws Exception
-     * @codeCoverageIgnore
-     */
-    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
-    {
-        $container->addResource(new FileResource($this->getBundleFile()));
-        $container->setParameter('container.dumper.inline_class_loader', \PHP_VERSION_ID < 70400 || $this->debug);
-        $container->setParameter('container.dumper.inline_factories', true);
-
-        $confDir = $this->getConfigDir();
-
-        $loader->load($confDir . '/{packages}/*' . self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir . '/{packages}/' . $this->environment . '/*' . self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir . '/{services}' . self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir . '/{services}_' . $this->environment . self::CONFIG_EXTS, 'glob');
-    }
-
-    /**
      * {@inheritDoc}
-     * @throws LoaderLoadException
-     * @codeCoverageIgnore
-     */
-    protected function configureRoutes(RouteCollectionBuilder $routes): void
-    {
-        $confDir = $this->getConfigDir();
-
-        $routes->import($confDir . '/{routes}/' . $this->environment . '/*' . self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($confDir . '/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($confDir . '/{routes}' . self::CONFIG_EXTS, '/', 'glob');
-    }
-
-    /**
-     * Workaround for traits not using parent::()
-     * {@inheritDoc}
-     */
-    private function getDefaultCacheDir(): string
-    {
-        return parent::getCacheDir();
-    }
-
-    /**
-     * Workaround for traits not using parent::()
-     * {@inheritDoc}
-     * @psalm-suppress TraitMethodSignatureMismatch
-     */
-    private function getDefaultLogDir(): string
-    {
-        return parent::getLogDir();
-    }
-
-    /**
-     * {@inheritDoc}
-     * @psalm-suppress TraitMethodSignatureMismatch
+     * @psalm-suppress OverriddenMethodAccess
      */
     private function getDefaultConfigDir(): string
     {
@@ -159,6 +96,7 @@ final class DefaultKernel extends Kernel implements
 
     /**
      * {@inheritDoc}
+     * @psalm-suppress OverriddenMethodAccess
      */
     private function getDefaultBundleFile(): string
     {

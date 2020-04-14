@@ -9,7 +9,8 @@ exclude_patterns:
 plugins:
   phan:
     enabled: true
-    ignore-undeclared: true
+    config:
+      ignore-undeclared: true
     checks:
       PhanUndeclaredClassMethod:
         enabled: false
