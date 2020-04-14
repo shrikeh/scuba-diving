@@ -12,10 +12,15 @@ declare(strict_types=1);
 
 namespace App\Kernel\Traits;
 
-use function dirname;
+use SplFileInfo;
 
 trait BaseDirRelativeDirectoriesTrait
 {
+    /**
+     * @var SplFileInfo
+     */
+    private SplFileInfo $projectDir;
+
     /**
      * @return string
      */
@@ -26,7 +31,7 @@ trait BaseDirRelativeDirectoriesTrait
      */
     private function getBaseDir(): string
     {
-        return dirname($this->getProjectDir());
+        return $this->getProjectDirSplFileInfo()->getPath();
     }
 
     /**
@@ -51,5 +56,17 @@ trait BaseDirRelativeDirectoriesTrait
     private function getDefaultLogDir(): string
     {
         return $this->getVarDir() . '/logs';
+    }
+
+    /**
+     * @return SplFileInfo
+     */
+    private function getProjectDirSplFileInfo(): SplFileInfo
+    {
+        if (!isset($this->projectDir)) {
+            $this->projectDir = new SplFileInfo($this->getProjectDir());
+        }
+
+        return $this->projectDir;
     }
 }
