@@ -14,19 +14,14 @@ namespace App\Kernel;
 
 use App\Kernel\BundleLoader\FileBundleLoader;
 use App\Kernel\Traits\BaseDirRelativeDirectoriesTrait;
-use App\Kernel\Traits\ConfigureContainerTrait;
+use App\Kernel\Traits\ContainerConfigurationTrait;
 use App\Kernel\Traits\EnvironmentConfigurationTrait;
-use Exception;
+use App\Kernel\Traits\RouteConfigurationTrait;
 use Safe\Exceptions\StringsException;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
-use Symfony\Component\Config\Exception\LoaderLoadException;
-use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\Config\Resource\FileResource;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\Routing\RouteCollectionBuilder;
 
 use function dirname;
 
@@ -36,8 +31,9 @@ final class DefaultKernel extends Kernel implements
 {
     use MicroKernelTrait;
     use BaseDirRelativeDirectoriesTrait;
-    use ConfigureContainerTrait;
+    use ContainerConfigurationTrait;
     use EnvironmentConfigurationTrait;
+    use RouteConfigurationTrait;
 
     public const DEFAULT_CONFIG_DIR_NAME = 'config';
     public const DEFAULT_BUNDLE_FILE = 'bundles.php';
@@ -91,21 +87,6 @@ final class DefaultKernel extends Kernel implements
 
     /**
      * {@inheritDoc}
-     * @throws LoaderLoadException
-     * @codeCoverageIgnore
-     */
-    protected function configureRoutes(RouteCollectionBuilder $routes): void
-    {
-        $this->importRoutes(
-            $routes,
-            '%s/{routes}/' . $this->environment . '/*' . self::CONFIG_EXTS,
-            '%s/{routes}/*' . self::CONFIG_EXTS,
-            '%s/{routes}' . self::CONFIG_EXTS,
-        );
-    }
-
-    /**
-     * {@inheritDoc}
      * @psalm-suppress OverriddenMethodAccess
      */
     private function getDefaultConfigDir(): string
@@ -120,18 +101,5 @@ final class DefaultKernel extends Kernel implements
     private function getDefaultBundleFile(): string
     {
         return sprintf('%s/%s', $this->getConfigDir(), self::DEFAULT_BUNDLE_FILE);
-    }
-
-    /**
-     * @param RouteCollectionBuilder $routes
-     * @param string ...$imports
-     * @throws LoaderLoadException
-     */
-    private function importRoutes(RouteCollectionBuilder $routes, string ...$imports): void
-    {
-        $confDir = $this->getConfigDir();
-        foreach ($imports as $import) {
-            $routes->import(sprintf($import, $confDir), '/', self::TYPE_GLOB);
-        }
     }
 }

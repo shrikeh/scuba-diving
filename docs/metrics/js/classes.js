@@ -1,2774 +1,5 @@
 var classes = [
     {
-        "name": "ContainerCeXHqdY\\App_Kernel_DefaultKernelTestDebugContainer",
-        "interface": false,
-        "abstract": false,
-        "final": false,
-        "methods": [
-            {
-                "name": "__construct",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "compile",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "isCompiled",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRemovedIds",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getItemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRedirectControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTemplateControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_AppService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_AppClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_GlobalClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_SystemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_SystemClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCacheClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCacheWarmerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_CommandLoaderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getContainer_EnvVarProcessorsLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getErrorControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getEventDispatcherService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getFilesystemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getHttpKernelService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_DefaultBusService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRequestStackService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouterService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_LoaderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getServicesResetterService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSessionService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTest_ClientService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTest_PrivateServicesLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTest_ServiceContainerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "get_Messenger_HandlerDescriptor_ZlXqmi_Service",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "get_Messenger_HandlerDescriptor_QopUu1HService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "get_ServiceLocator_I3K77mTService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSafeJsonDecoderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getQueryKitItemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getQueryKitItemDetailsService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSymfonyQueryBusService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getItemApiService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getItemResolverService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getManufacturerApiService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getManufacturerResolverService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultItemDetailsService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getKitBagService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getApp_Kit_Repository_Item_ResolverFactoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getApp_Kit_Repository_Item_ResponseParserService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getApp_Kit_Repository_Manufacturer_ResolverFactoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getApp_Kit_Repository_Manufacturer_ResponseParserService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getArgumentMetadataFactoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_DefaultMarshallerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_Messenger_RestartWorkersSignalService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConfig_Resource_SelfCheckingResourceCheckerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConfigCacheFactoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_AboutService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_AssetsInstallService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CacheClearService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolClearService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolDeleteService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolListService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolPruneService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CacheWarmupService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ConfigDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ConfigDumpReferenceService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ContainerDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ContainerLintService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_DebugAutowiringService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_EventDispatcherDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerConsumeMessagesService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerSetupTransportsService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerStopWorkersService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_RouterDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_RouterMatchService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsDecryptToLocalService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsEncryptFromLocalService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsGenerateKeyService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsListService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsRemoveService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsSetService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_TranslationDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_TranslationUpdateService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_XliffLintService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_YamlLintService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_ErrorListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_SuggestMissingPackageSubscriberService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getContainer_EnvVarProcessorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolverService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_DefaultService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_Default_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_NotTaggedControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_NotTaggedController_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_RequestService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_Request_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_RequestAttributeService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_RequestAttribute_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_ServiceService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_Service_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_SessionService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_Session_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_VariadicService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_Variadic_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ControllerResolverService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ControllerResolver_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_DebugHandlersListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_EventDispatcher_InnerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_FileLinkFormatterService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_StopwatchService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDependencyInjection_Config_ContainerParametersResourceCheckerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDisallowSearchEngineIndexResponseListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getErrorHandler_ErrorRenderer_HtmlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getExceptionListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getFileLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getIdentityTranslatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getLocaleAwareListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getLocaleListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getLoggerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Bus_Default_Messenger_HandlersLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Bus_Default_Middleware_AddBusNameStampMiddlewareService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Bus_Default_Middleware_HandleMessageService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Bus_Default_Middleware_TraceableService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Listener_DispatchPcntlSignalListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Listener_StopWorkerOnRestartSignalListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Listener_StopWorkerOnSigtermSignalListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Middleware_DispatchAfterCurrentBusService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Middleware_FailedMessageProcessingMiddlewareService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Middleware_RejectRedeliveredMessageMiddlewareService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Middleware_SendMessageService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_ReceiverLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Retry_SendFailedMessageForRetryListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_RetryStrategyLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_RoutableMessageBusService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_SendersLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getParameterBagService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getResponseListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouter_CacheWarmerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouter_RequestContextService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouterListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_Loader_ContainerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_Loader_DirectoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_Loader_GlobService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_Loader_PhpService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_Loader_XmlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_Loader_YmlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_ResolverService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSecrets_LocalVaultService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSecrets_VaultService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSession_Storage_MetadataBagService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSession_Storage_MockFileService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSessionListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getStreamedResponseListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTest_Client_CookiejarService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTest_Client_HistoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTest_Session_ListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_CsvService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_IniService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_JsonService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_MoService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_PhpService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_PoService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_QtService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_ResService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_XliffService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_YamlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Dumper_YmlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_ExtractorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Extractor_PhpService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_CsvService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_DatService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_IniService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_JsonService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_MoService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_PhpService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_PoService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_QtService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_ResService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_XliffService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_YmlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_ReaderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_WarmerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_WriterService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslator_Formatter_DefaultService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getValidateRequestListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getParameter",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "hasParameter",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "setParameter",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getParameterBag",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDynamicParameter",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultParameters",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            }
-        ],
-        "nbMethodsIncludingGettersSetters": 188,
-        "nbMethods": 188,
-        "nbMethodsPrivate": 180,
-        "nbMethodsPublic": 8,
-        "nbMethodsGetter": 0,
-        "nbMethodsSetters": 0,
-        "wmc": 463,
-        "ccn": 276,
-        "ccnMethodMax": 35,
-        "externals": [
-            "Symfony\\Component\\DependencyInjection\\Container",
-            "Closure",
-            "Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
-            "App\\Kit\\Controller\\Item",
-            "Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController",
-            "Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
-            "Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
-            "Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Cache\\Adapter\\AbstractAdapter",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\ChainCacheClearer",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\CacheWarmer\\CacheWarmerAggregate",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ErrorController",
-            "Symfony\\Component\\EventDispatcher\\EventDispatcher",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ValidateRequestListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\DisallowRobotsIndexingListener",
-            "Symfony\\Bundle\\FrameworkBundle\\EventListener\\SuggestMissingPackageSubscriber",
-            "Symfony\\Component\\Messenger\\EventListener\\DispatchPcntlSignalListener",
-            "Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnSigtermSignalListener",
-            "Symfony\\Component\\Filesystem\\Filesystem",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\HttpKernel",
-            "Symfony\\Component\\Messenger\\Middleware\\AddBusNameStampMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\RejectRedeliveredMessageMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\DispatchAfterCurrentBusMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\FailedMessageProcessingMiddleware",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\Messenger\\MessageBus",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBag",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Bundle\\FrameworkBundle\\Routing\\Router",
-            "Symfony\\Bundle\\FrameworkBundle\\Routing\\DelegatingLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\DependencyInjection\\ServicesResetter",
-            "Symfony\\Component\\HttpFoundation\\Session\\Session",
-            "Symfony\\Component\\BrowserKit\\History",
-            "Symfony\\Component\\BrowserKit\\CookieJar",
-            "Symfony\\Bundle\\FrameworkBundle\\KernelBrowser",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Bundle\\FrameworkBundle\\Test\\TestContainer",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Bundle\\FrameworkBundle\\Translation\\Translator",
-            "Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
-            "Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "App\\Api\\JsonDecoder\\SafeJsonDecoder",
-            "App\\Kit\\Handler\\QueryKitItem",
-            "App\\Kit\\Transformer\\DefaultItemDetails",
-            "App\\Kit\\Handler\\QueryKitItemDetails",
-            "App\\Kit\\Query\\Bus\\SymfonyQueryBus",
-            "App\\Kit\\Repository\\Item\\ItemApi",
-            "App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
-            "App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
-            "App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
-            "App\\Kit\\Transformer\\DefaultItemDetails",
-            "Shrikeh\\Diving\\Kit\\KitBag",
-            "App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
-            "App\\Api\\JsonDecoder\\SafeJsonDecoder",
-            "App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetail",
-            "App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
-            "App\\Api\\JsonDecoder\\SafeJsonDecoder",
-            "App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturer",
-            "Symfony\\Component\\HttpKernel\\ControllerMetadata\\ArgumentMetadataFactory",
-            "Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
-            "Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
-            "Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Config\\Resource\\SelfCheckingResourceChecker",
-            "Symfony\\Component\\DependencyInjection\\Config\\ContainerParametersResourceChecker",
-            "Symfony\\Component\\Config\\Resource\\SelfCheckingResourceChecker",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\Config\\ResourceCheckerConfigCacheFactory",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\AboutCommand",
-            "Symfony\\Component\\Filesystem\\Filesystem",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\AssetsInstallCommand",
-            "Symfony\\Component\\Filesystem\\Filesystem",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CacheClearCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolClearCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolDeleteCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolListCommand",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolPruneCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CacheWarmupCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerLintCommand",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\DebugAutowiringCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\EventDispatcherDebugCommand",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Messenger\\Command\\ConsumeMessagesCommand",
-            "Symfony\\Component\\Messenger\\Command\\DebugCommand",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Messenger\\Command\\SetupTransportsCommand",
-            "Symfony\\Component\\Messenger\\Command\\StopWorkersCommand",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\RouterDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\RouterMatchCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsDecryptToLocalCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsEncryptFromLocalCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsGenerateKeysCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsListCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsRemoveCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsSetCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationUpdateCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\XliffLintCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\YamlLintCommand",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Console\\EventListener\\ErrorListener",
-            "Symfony\\Bundle\\FrameworkBundle\\EventListener\\SuggestMissingPackageSubscriber",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\DependencyInjection\\EnvVarProcessor",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver",
-            "Symfony\\Component\\HttpKernel\\ControllerMetadata\\ArgumentMetadataFactory",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\ServiceValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\SessionValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\SessionValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\VariadicValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\VariadicValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Component\\HttpKernel\\EventListener\\DebugHandlersListener",
-            "Symfony\\Component\\EventDispatcher\\EventDispatcher",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\DependencyInjection\\Config\\ContainerParametersResourceChecker",
-            "Symfony\\Component\\HttpKernel\\EventListener\\DisallowRobotsIndexingListener",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ErrorListener",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Translation\\IdentityTranslator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\EventListener\\LocaleAwareListener",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\Messenger\\Handler\\HandlersLocator",
-            "Symfony\\Component\\Messenger\\Middleware\\AddBusNameStampMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\Messenger\\Middleware\\TraceableMiddleware",
-            "Symfony\\Component\\Messenger\\EventListener\\DispatchPcntlSignalListener",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnRestartSignalListener",
-            "Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnSigtermSignalListener",
-            "Symfony\\Component\\Messenger\\Middleware\\DispatchAfterCurrentBusMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\FailedMessageProcessingMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\RejectRedeliveredMessageMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Messenger\\EventListener\\SendFailedMessageForRetryListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Messenger\\RoutableMessageBus",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Messenger\\Transport\\Sender\\SendersLocator",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBag",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer",
-            "Symfony\\Component\\Routing\\RequestContext",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\EventListener\\RouterListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Routing\\Loader\\ContainerLoader",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Routing\\Loader\\DirectoryLoader",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Routing\\Loader\\GlobFileLoader",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Routing\\Loader\\PhpFileLoader",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Routing\\Loader\\XmlFileLoader",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Routing\\Loader\\YamlFileLoader",
-            "Symfony\\Component\\Config\\Loader\\LoaderResolver",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Component\\HttpFoundation\\Session\\Storage\\MetadataBag",
-            "Symfony\\Component\\HttpFoundation\\Session\\Storage\\MetadataBag",
-            "Symfony\\Component\\HttpFoundation\\Session\\Storage\\MockFileSessionStorage",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\EventListener\\SessionListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener",
-            "Symfony\\Component\\BrowserKit\\CookieJar",
-            "Symfony\\Component\\BrowserKit\\History",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\EventListener\\TestSessionListener",
-            "Symfony\\Component\\Translation\\Dumper\\CsvFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\IniFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\JsonFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\MoFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\PhpFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\PoFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\QtFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\IcuResFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\XliffFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
-            "Symfony\\Component\\Translation\\Extractor\\ChainExtractor",
-            "Symfony\\Component\\Translation\\Extractor\\PhpExtractor",
-            "Symfony\\Component\\Translation\\Extractor\\PhpExtractor",
-            "Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IniFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\MoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\QtFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
-            "Symfony\\Component\\Translation\\Reader\\TranslationReader",
-            "Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\MoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\QtFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IniFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\TranslationsCacheWarmer",
-            "Symfony\\Component\\Translation\\Writer\\TranslationWriter",
-            "Symfony\\Component\\Translation\\Dumper\\PhpFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\XliffFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\PoFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\MoFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\QtFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\CsvFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\IniFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\JsonFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\IcuResFileDumper",
-            "Symfony\\Component\\Translation\\IdentityTranslator",
-            "Symfony\\Component\\Translation\\Formatter\\MessageFormatter",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ValidateRequestListener",
-            "Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException",
-            "Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag",
-            "Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException"
-        ],
-        "parents": [
-            "Symfony\\Component\\DependencyInjection\\Container"
-        ],
-        "lcom": 6,
-        "length": 6986,
-        "vocabulary": 986,
-        "volume": 69478.87,
-        "difficulty": 25.59,
-        "effort": 1778004.83,
-        "level": 0.04,
-        "bugs": 23.16,
-        "time": 98778,
-        "intelligentContent": 2715.02,
-        "number_operators": 1430,
-        "number_operands": 5556,
-        "number_operators_unique": 9,
-        "number_operands_unique": 977,
-        "cloc": 896,
-        "loc": 2531,
-        "lloc": 1635,
-        "mi": 39.83,
-        "mIwoC": 0,
-        "commentWeight": 39.83,
-        "kanDefect": 1.95,
-        "relativeStructuralComplexity": 7921,
-        "relativeDataComplexity": 2.43,
-        "relativeSystemComplexity": 7923.43,
-        "totalStructuralComplexity": 1489148,
-        "totalDataComplexity": 457.54,
-        "totalSystemComplexity": 1489605.54,
-        "package": "ContainerCeXHqdY\\",
-        "pageRank": 0.01,
-        "afferentCoupling": 0,
-        "efferentCoupling": 169,
-        "instability": 1,
-        "numberOfUnitTests": 0,
-        "violations": {}
-    },
-    {
-        "name": "ContainerMwq2KeZ\\App_Kernel_DefaultKernelDevDebugContainer",
-        "interface": false,
-        "abstract": false,
-        "final": false,
-        "methods": [
-            {
-                "name": "__construct",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "compile",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "isCompiled",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRemovedIds",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getItemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRedirectControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTemplateControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_AppService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_AppClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_GlobalClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_SystemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_SystemClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCacheClearerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCacheWarmerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_CommandLoaderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getContainer_EnvVarProcessorsLocatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getErrorControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getEventDispatcherService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getFilesystemService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getHttpKernelService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_DefaultBusService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRequestStackService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouterService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouting_LoaderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getServicesResetterService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSessionService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslatorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "get_Messenger_HandlerDescriptor_ZlXqmi_Service",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "get_Messenger_HandlerDescriptor_QopUu1HService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSymfonyQueryBusService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getApp_Kit_Repository_Item_ClientService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getApp_Kit_Repository_Manufacturer_ClientService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getCache_Messenger_RestartWorkersSignalService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConfigCacheFactoryService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_AboutService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_AssetsInstallService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CacheClearService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolClearService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolDeleteService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolListService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CachePoolPruneService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_CacheWarmupService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ConfigDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ConfigDumpReferenceService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ContainerDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_ContainerLintService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_DebugAutowiringService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_EventDispatcherDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerConsumeMessagesService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerSetupTransportsService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_MessengerStopWorkersService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_RouterDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_RouterMatchService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsDecryptToLocalService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsEncryptFromLocalService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsGenerateKeyService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsListService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsRemoveService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_SecretsSetService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_TranslationDebugService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_TranslationUpdateService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_XliffLintService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_Command_YamlLintService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getConsole_ErrorListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getContainer_EnvVarProcessorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_DefaultService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_NotTaggedControllerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_RequestService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_RequestAttributeService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_ServiceService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_SessionService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_ArgumentResolver_VariadicService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDebug_DebugHandlersListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getExceptionListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getLocaleAwareListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getLocaleListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Bus_Default_Middleware_HandleMessageService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Bus_Default_Middleware_TraceableService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Listener_StopWorkerOnRestartSignalListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Middleware_SendMessageService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getMessenger_Retry_SendFailedMessageForRetryListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouter_CacheWarmerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouter_RequestContextService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getRouterListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSession_Storage_NativeService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getSessionListenerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_ExtractorService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_CsvService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_DatService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_IniService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_JsonService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_MoService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_PhpService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_PoService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_QtService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_ResService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_XliffService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_Loader_YmlService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_ReaderService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getTranslation_WarmerService",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getParameter",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "hasParameter",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "setParameter",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getParameterBag",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDynamicParameter",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultParameters",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            }
-        ],
-        "nbMethodsIncludingGettersSetters": 107,
-        "nbMethods": 107,
-        "nbMethodsPrivate": 99,
-        "nbMethodsPublic": 8,
-        "nbMethodsGetter": 0,
-        "nbMethodsSetters": 0,
-        "wmc": 317,
-        "ccn": 211,
-        "ccnMethodMax": 32,
-        "externals": [
-            "Symfony\\Component\\DependencyInjection\\Container",
-            "Closure",
-            "Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
-            "App\\Kit\\Controller\\Item",
-            "Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController",
-            "Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController",
-            "Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
-            "Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Cache\\Adapter\\AbstractAdapter",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\Psr6CacheClearer",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\CacheClearer\\ChainCacheClearer",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\CacheWarmer\\CacheWarmerAggregate",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\ErrorHandler\\ErrorRenderer\\HtmlErrorRenderer",
-            "Symfony\\Component\\HttpKernel\\Controller\\ErrorController",
-            "Symfony\\Component\\EventDispatcher\\EventDispatcher",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ValidateRequestListener",
-            "Symfony\\Component\\HttpKernel\\EventListener\\DisallowRobotsIndexingListener",
-            "Symfony\\Bundle\\FrameworkBundle\\EventListener\\SuggestMissingPackageSubscriber",
-            "Symfony\\Component\\Messenger\\EventListener\\DispatchPcntlSignalListener",
-            "Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnSigtermSignalListener",
-            "Symfony\\Component\\Filesystem\\Filesystem",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Bundle\\FrameworkBundle\\Controller\\ControllerResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\ControllerMetadata\\ArgumentMetadataFactory",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver",
-            "Symfony\\Component\\HttpKernel\\HttpKernel",
-            "Symfony\\Component\\Messenger\\Middleware\\AddBusNameStampMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\RejectRedeliveredMessageMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\DispatchAfterCurrentBusMiddleware",
-            "Symfony\\Component\\Messenger\\Middleware\\FailedMessageProcessingMiddleware",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\Messenger\\MessageBus",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\ContainerBag",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Bundle\\FrameworkBundle\\Routing\\Router",
-            "Symfony\\Component\\Config\\Loader\\LoaderResolver",
-            "Symfony\\Component\\HttpKernel\\Config\\FileLocator",
-            "Symfony\\Component\\Routing\\Loader\\XmlFileLoader",
-            "Symfony\\Component\\Routing\\Loader\\YamlFileLoader",
-            "Symfony\\Component\\Routing\\Loader\\PhpFileLoader",
-            "Symfony\\Component\\Routing\\Loader\\GlobFileLoader",
-            "Symfony\\Component\\Routing\\Loader\\DirectoryLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Routing\\Loader\\ContainerLoader",
-            "Symfony\\Bundle\\FrameworkBundle\\Routing\\DelegatingLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpKernel\\DependencyInjection\\ServicesResetter",
-            "Symfony\\Component\\HttpFoundation\\Session\\Session",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Translation\\IdentityTranslator",
-            "Symfony\\Component\\Translation\\Formatter\\MessageFormatter",
-            "Symfony\\Bundle\\FrameworkBundle\\Translation\\Translator",
-            "Shrikeh\\Diving\\Kit\\KitBag",
-            "App\\Kit\\Transformer\\DefaultItemDetails",
-            "App\\Kit\\Handler\\QueryKitItemDetails",
-            "Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
-            "App\\Api\\JsonDecoder\\SafeJsonDecoder",
-            "App\\Kit\\Repository\\Item\\ResponseParser\\ItemDetail",
-            "App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
-            "App\\Kit\\Repository\\Item\\ModelFactory\\ItemResolver",
-            "App\\Kit\\Repository\\Item\\ItemApi",
-            "App\\Kit\\Repository\\Manufacturer\\ResponseParser\\ItemManufacturer",
-            "App\\Kit\\Repository\\ResolverFactory\\SymfonyResponse",
-            "App\\Kit\\Repository\\Manufacturer\\ModelFactory\\ManufacturerResolver",
-            "App\\Kit\\Repository\\Manufacturer\\ManufacturerApi",
-            "App\\Kit\\Handler\\QueryKitItem",
-            "Symfony\\Component\\Messenger\\Handler\\HandlerDescriptor",
-            "App\\Kit\\Query\\Bus\\SymfonyQueryBus",
-            "Symfony\\Component\\HttpClient\\CurlHttpClient",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpClient\\CurlHttpClient",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Cache\\Marshaller\\DefaultMarshaller",
-            "Symfony\\Component\\Cache\\Adapter\\FilesystemAdapter",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\DependencyInjection\\Config\\ContainerParametersResourceChecker",
-            "Symfony\\Component\\Config\\Resource\\SelfCheckingResourceChecker",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\Config\\ResourceCheckerConfigCacheFactory",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\AboutCommand",
-            "Symfony\\Component\\Filesystem\\Filesystem",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\AssetsInstallCommand",
-            "Symfony\\Component\\Filesystem\\Filesystem",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CacheClearCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolClearCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolDeleteCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolListCommand",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CachePoolPruneCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\CacheWarmupCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerLintCommand",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\DebugAutowiringCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\EventDispatcherDebugCommand",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Messenger\\RoutableMessageBus",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Messenger\\Command\\ConsumeMessagesCommand",
-            "Symfony\\Component\\Messenger\\Command\\DebugCommand",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Messenger\\Command\\SetupTransportsCommand",
-            "Symfony\\Component\\Messenger\\Command\\StopWorkersCommand",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\RouterDebugCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\RouterMatchCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsDecryptToLocalCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsEncryptFromLocalCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsGenerateKeysCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsListCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsRemoveCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\DotenvVault",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\SecretsSetCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationDebugCommand",
-            "Symfony\\Component\\Translation\\Writer\\TranslationWriter",
-            "Symfony\\Component\\Translation\\Dumper\\PhpFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\XliffFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\PoFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\MoFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\YamlFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\QtFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\CsvFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\IniFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\JsonFileDumper",
-            "Symfony\\Component\\Translation\\Dumper\\IcuResFileDumper",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\TranslationUpdateCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\XliffLintCommand",
-            "Symfony\\Bundle\\FrameworkBundle\\Command\\YamlLintCommand",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Console\\EventListener\\ErrorListener",
-            "Symfony\\Bundle\\FrameworkBundle\\Secrets\\SodiumVault",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\DependencyInjection\\EnvVarProcessor",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\DefaultValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\ServiceValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\SessionValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\VariadicValueResolver",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\TraceableValueResolver",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\Debug\\FileLinkFormatter",
-            "Symfony\\Component\\HttpKernel\\EventListener\\DebugHandlersListener",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\EventListener\\ErrorListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\EventListener\\LocaleAwareListener",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\EventListener\\LocaleListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\RewindableGenerator",
-            "Symfony\\Component\\Messenger\\Handler\\HandlersLocator",
-            "Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Stopwatch\\Stopwatch",
-            "Symfony\\Component\\Messenger\\Middleware\\TraceableMiddleware",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Messenger\\EventListener\\StopWorkerOnRestartSignalListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\Messenger\\Transport\\Sender\\SendersLocator",
-            "Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\Messenger\\EventListener\\SendFailedMessageForRetryListener",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\RouterCacheWarmer",
-            "Symfony\\Component\\Routing\\RequestContext",
-            "Symfony\\Component\\HttpFoundation\\RequestStack",
-            "Symfony\\Component\\HttpKernel\\Log\\Logger",
-            "Symfony\\Component\\HttpKernel\\EventListener\\RouterListener",
-            "Symfony\\Component\\HttpFoundation\\Session\\Storage\\MetadataBag",
-            "Symfony\\Component\\HttpFoundation\\Session\\Storage\\NativeSessionStorage",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Component\\HttpKernel\\EventListener\\SessionListener",
-            "Symfony\\Component\\Translation\\Extractor\\ChainExtractor",
-            "Symfony\\Component\\Translation\\Extractor\\PhpExtractor",
-            "Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IniFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\MoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\QtFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
-            "Symfony\\Component\\Translation\\Reader\\TranslationReader",
-            "Symfony\\Component\\Translation\\Loader\\YamlFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\XliffFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PhpFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\PoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\MoFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\QtFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\CsvFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuResFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IcuDatFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\IniFileLoader",
-            "Symfony\\Component\\Translation\\Loader\\JsonFileLoader",
-            "Symfony\\Component\\DependencyInjection\\Argument\\ServiceLocator",
-            "Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\TranslationsCacheWarmer",
-            "Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException",
-            "Symfony\\Component\\DependencyInjection\\Exception\\LogicException",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\ParameterBagInterface",
-            "Symfony\\Component\\DependencyInjection\\ParameterBag\\FrozenParameterBag",
-            "Symfony\\Component\\DependencyInjection\\Exception\\InvalidArgumentException"
-        ],
-        "parents": [
-            "Symfony\\Component\\DependencyInjection\\Container"
-        ],
-        "lcom": 4,
-        "length": 4612,
-        "vocabulary": 742,
-        "volume": 43976.69,
-        "difficulty": 21.78,
-        "effort": 957617.92,
-        "level": 0.05,
-        "bugs": 14.66,
-        "time": 53201,
-        "intelligentContent": 2019.54,
-        "number_operators": 1065,
-        "number_operands": 3547,
-        "number_operators_unique": 9,
-        "number_operands_unique": 733,
-        "cloc": 491,
-        "loc": 1691,
-        "lloc": 1200,
-        "mi": 37.06,
-        "mIwoC": 0,
-        "commentWeight": 37.06,
-        "kanDefect": 2.09,
-        "relativeStructuralComplexity": 3600,
-        "relativeDataComplexity": 2.23,
-        "relativeSystemComplexity": 3602.23,
-        "totalStructuralComplexity": 385200,
-        "totalDataComplexity": 238.67,
-        "totalSystemComplexity": 385438.67,
-        "package": "ContainerMwq2KeZ\\",
-        "pageRank": 0.01,
-        "afferentCoupling": 0,
-        "efferentCoupling": 165,
-        "instability": 1,
-        "numberOfUnitTests": 0,
-        "violations": {}
-    },
-    {
         "name": "App\\Kernel\\DefaultKernel",
         "interface": false,
         "abstract": false,
@@ -2803,34 +34,6 @@ var classes = [
                 "_type": "Hal\\Metric\\FunctionMetric"
             },
             {
-                "name": "configureContainer",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "configureRoutes",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultCacheDir",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultLogDir",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
                 "name": "getDefaultConfigDir",
                 "role": null,
                 "public": false,
@@ -2845,14 +48,14 @@ var classes = [
                 "_type": "Hal\\Metric\\FunctionMetric"
             }
         ],
-        "nbMethodsIncludingGettersSetters": 10,
-        "nbMethods": 10,
-        "nbMethodsPrivate": 6,
+        "nbMethodsIncludingGettersSetters": 6,
+        "nbMethods": 6,
+        "nbMethodsPrivate": 2,
         "nbMethodsPublic": 4,
         "nbMethodsGetter": 0,
         "nbMethodsSetters": 0,
-        "wmc": 12,
-        "ccn": 3,
+        "wmc": 7,
+        "ccn": 2,
         "ccnMethodMax": 2,
         "externals": [
             "Symfony\\Component\\HttpKernel\\Kernel",
@@ -2861,46 +64,42 @@ var classes = [
             "Symfony\\Component\\HttpFoundation\\ParameterBag",
             "Symfony\\Component\\HttpFoundation\\ParameterBag",
             "SplFileInfo",
-            "App\\Kernel\\BundleLoader\\FileBundleLoader",
-            "Symfony\\Component\\DependencyInjection\\ContainerBuilder",
-            "Symfony\\Component\\Config\\Loader\\LoaderInterface",
-            "Symfony\\Component\\Config\\Resource\\FileResource",
-            "Symfony\\Component\\Routing\\RouteCollectionBuilder"
+            "App\\Kernel\\BundleLoader\\FileBundleLoader"
         ],
         "parents": [
             "Symfony\\Component\\HttpKernel\\Kernel"
         ],
-        "lcom": 5,
-        "length": 113,
-        "vocabulary": 37,
-        "volume": 588.67,
-        "difficulty": 7.65,
-        "effort": 4500.46,
-        "level": 0.13,
-        "bugs": 0.2,
-        "time": 250,
-        "intelligentContent": 77,
-        "number_operators": 34,
-        "number_operands": 79,
-        "number_operators_unique": 6,
-        "number_operands_unique": 31,
-        "cloc": 56,
-        "loc": 115,
-        "lloc": 61,
-        "mi": 85.38,
-        "mIwoC": 41.26,
-        "commentWeight": 44.12,
+        "lcom": 4,
+        "length": 38,
+        "vocabulary": 18,
+        "volume": 158.46,
+        "difficulty": 2.9,
+        "effort": 459.53,
+        "level": 0.34,
+        "bugs": 0.05,
+        "time": 26,
+        "intelligentContent": 54.64,
+        "number_operators": 9,
+        "number_operands": 29,
+        "number_operators_unique": 3,
+        "number_operands_unique": 15,
+        "cloc": 24,
+        "loc": 65,
+        "lloc": 41,
+        "mi": 89.56,
+        "mIwoC": 49.15,
+        "commentWeight": 40.42,
         "kanDefect": 0.15,
-        "relativeStructuralComplexity": 121,
-        "relativeDataComplexity": 0.55,
-        "relativeSystemComplexity": 121.55,
-        "totalStructuralComplexity": 1210,
-        "totalDataComplexity": 5.5,
-        "totalSystemComplexity": 1215.5,
+        "relativeStructuralComplexity": 49,
+        "relativeDataComplexity": 0.56,
+        "relativeSystemComplexity": 49.56,
+        "totalStructuralComplexity": 294,
+        "totalDataComplexity": 3.38,
+        "totalSystemComplexity": 297.38,
         "package": "App\\Kernel\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
-        "efferentCoupling": 10,
+        "efferentCoupling": 6,
         "instability": 1,
         "numberOfUnitTests": 2,
         "violations": {}
@@ -3565,6 +764,236 @@ var classes = [
         "violations": {}
     },
     {
+        "name": "App\\Kernel\\Traits\\BaseDirRelativeDirectoriesTrait",
+        "interface": false,
+        "abstract": true,
+        "final": false,
+        "methods": [
+            {
+                "name": "getProjectDir",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBaseDir",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getVarDir",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getDefaultCacheDir",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getDefaultLogDir",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 5,
+        "nbMethods": 5,
+        "nbMethodsPrivate": 4,
+        "nbMethodsPublic": 1,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 5,
+        "ccn": 1,
+        "ccnMethodMax": 1,
+        "externals": [],
+        "parents": [],
+        "lcom": 1,
+        "length": 14,
+        "vocabulary": 6,
+        "volume": 36.19,
+        "difficulty": 1.75,
+        "effort": 63.33,
+        "level": 0.57,
+        "bugs": 0.01,
+        "time": 4,
+        "intelligentContent": 20.68,
+        "number_operators": 7,
+        "number_operands": 7,
+        "number_operators_unique": 2,
+        "number_operands_unique": 4,
+        "cloc": 15,
+        "loc": 36,
+        "lloc": 21,
+        "mi": 102.18,
+        "mIwoC": 60.11,
+        "commentWeight": 42.07,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 9,
+        "relativeDataComplexity": 1,
+        "relativeSystemComplexity": 10,
+        "totalStructuralComplexity": 45,
+        "totalDataComplexity": 5,
+        "totalSystemComplexity": 50,
+        "package": "App\\Kernel\\Traits\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 0,
+        "instability": 0,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Kernel\\Traits\\ContainerConfigurationTrait",
+        "interface": false,
+        "abstract": true,
+        "final": false,
+        "methods": [
+            {
+                "name": "configureContainer",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "configureContainerLoader",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 2,
+        "nbMethods": 2,
+        "nbMethodsPrivate": 2,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 4,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Symfony\\Component\\DependencyInjection\\ContainerBuilder",
+            "Symfony\\Component\\Config\\Loader\\LoaderInterface",
+            "Symfony\\Component\\Config\\Resource\\FileResource",
+            "Symfony\\Component\\Config\\Loader\\LoaderInterface"
+        ],
+        "parents": [],
+        "lcom": 1,
+        "length": 41,
+        "vocabulary": 19,
+        "volume": 174.17,
+        "difficulty": 4,
+        "effort": 696.66,
+        "level": 0.25,
+        "bugs": 0.06,
+        "time": 39,
+        "intelligentContent": 43.54,
+        "number_operators": 11,
+        "number_operands": 30,
+        "number_operators_unique": 4,
+        "number_operands_unique": 15,
+        "cloc": 13,
+        "loc": 30,
+        "lloc": 18,
+        "mi": 99.12,
+        "mIwoC": 56.52,
+        "commentWeight": 42.6,
+        "kanDefect": 0.38,
+        "relativeStructuralComplexity": 64,
+        "relativeDataComplexity": 0.22,
+        "relativeSystemComplexity": 64.22,
+        "totalStructuralComplexity": 128,
+        "totalDataComplexity": 0.44,
+        "totalSystemComplexity": 128.44,
+        "package": "App\\Kernel\\Traits\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 3,
+        "instability": 1,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Kernel\\Traits\\RouteConfigurationTrait",
+        "interface": false,
+        "abstract": true,
+        "final": false,
+        "methods": [
+            {
+                "name": "configureRoutes",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "importRoutes",
+                "role": null,
+                "public": false,
+                "private": true,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 2,
+        "nbMethods": 2,
+        "nbMethodsPrivate": 2,
+        "nbMethodsPublic": 0,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 3,
+        "ccn": 2,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Symfony\\Component\\Routing\\RouteCollectionBuilder",
+            "Symfony\\Component\\Routing\\RouteCollectionBuilder"
+        ],
+        "parents": [],
+        "lcom": 1,
+        "length": 24,
+        "vocabulary": 12,
+        "volume": 86.04,
+        "difficulty": 1.8,
+        "effort": 154.87,
+        "level": 0.56,
+        "bugs": 0.03,
+        "time": 9,
+        "intelligentContent": 47.8,
+        "number_operators": 6,
+        "number_operands": 18,
+        "number_operators_unique": 2,
+        "number_operands_unique": 10,
+        "cloc": 12,
+        "loc": 25,
+        "lloc": 14,
+        "mi": 105.12,
+        "mIwoC": 61.18,
+        "commentWeight": 43.94,
+        "kanDefect": 0.38,
+        "relativeStructuralComplexity": 16,
+        "relativeDataComplexity": 0.3,
+        "relativeSystemComplexity": 16.3,
+        "totalStructuralComplexity": 32,
+        "totalDataComplexity": 0.6,
+        "totalSystemComplexity": 32.6,
+        "package": "App\\Kernel\\Traits\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 1,
+        "instability": 1,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
         "name": "App\\Kernel\\Traits\\EnvironmentConfigurationTrait",
         "interface": false,
         "abstract": true,
@@ -3599,41 +1028,6 @@ var classes = [
                 "_type": "Hal\\Metric\\FunctionMetric"
             },
             {
-                "name": "getProjectDir",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultCacheDir",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultLogDir",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultConfigDir",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getDefaultBundleFile",
-                "role": null,
-                "public": false,
-                "private": true,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
                 "name": "getEnvVar",
                 "role": null,
                 "public": false,
@@ -3641,18 +1035,18 @@ var classes = [
                 "_type": "Hal\\Metric\\FunctionMetric"
             }
         ],
-        "nbMethodsIncludingGettersSetters": 10,
-        "nbMethods": 10,
-        "nbMethodsPrivate": 5,
-        "nbMethodsPublic": 5,
+        "nbMethodsIncludingGettersSetters": 5,
+        "nbMethods": 5,
+        "nbMethodsPrivate": 1,
+        "nbMethodsPublic": 4,
         "nbMethodsGetter": 0,
         "nbMethodsSetters": 0,
-        "wmc": 14,
+        "wmc": 9,
         "ccn": 5,
         "ccnMethodMax": 2,
         "externals": [],
         "parents": [],
-        "lcom": 2,
+        "lcom": 1,
         "length": 20,
         "vocabulary": 4,
         "volume": 40,
@@ -3666,19 +1060,19 @@ var classes = [
         "number_operands": 11,
         "number_operators_unique": 2,
         "number_operands_unique": 2,
-        "cloc": 35,
-        "loc": 65,
-        "lloc": 30,
-        "mi": 101.25,
-        "mIwoC": 55.89,
-        "commentWeight": 45.36,
+        "cloc": 19,
+        "loc": 44,
+        "lloc": 25,
+        "mi": 100.17,
+        "mIwoC": 57.62,
+        "commentWeight": 42.55,
         "kanDefect": 0.15,
         "relativeStructuralComplexity": 36,
-        "relativeDataComplexity": 0.73,
-        "relativeSystemComplexity": 36.73,
-        "totalStructuralComplexity": 360,
-        "totalDataComplexity": 7.29,
-        "totalSystemComplexity": 367.29,
+        "relativeDataComplexity": 0.74,
+        "relativeSystemComplexity": 36.74,
+        "totalStructuralComplexity": 180,
+        "totalDataComplexity": 3.71,
+        "totalSystemComplexity": 183.71,
         "package": "App\\Kernel\\Traits\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
@@ -3754,9 +1148,9 @@ var classes = [
         "totalSystemComplexity": 19.25,
         "package": "App\\Kit\\Handler\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 5,
-        "instability": 0.71,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -3828,9 +1222,9 @@ var classes = [
         "totalSystemComplexity": 19.25,
         "package": "App\\Kit\\Handler\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 6,
-        "instability": 0.75,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -3988,9 +1382,9 @@ var classes = [
         "totalSystemComplexity": 5,
         "package": "App\\Kit\\Repository\\ResolverFactory\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 6,
-        "instability": 0.75,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -4070,9 +1464,9 @@ var classes = [
         "totalSystemComplexity": 50.2,
         "package": "App\\Kit\\Repository\\Manufacturer\\ModelFactory\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 8,
-        "instability": 0.8,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -4151,9 +1545,9 @@ var classes = [
         "totalSystemComplexity": 76.67,
         "package": "App\\Kit\\Repository\\Manufacturer\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 5,
-        "instability": 0.71,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -4304,9 +1698,9 @@ var classes = [
         "totalSystemComplexity": 49.8,
         "package": "App\\Kit\\Repository\\Manufacturer\\ResponseParser\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 6,
-        "instability": 0.75,
+        "instability": 1,
         "numberOfUnitTests": 2,
         "violations": {}
     },
@@ -4385,9 +1779,9 @@ var classes = [
         "totalSystemComplexity": 76.67,
         "package": "App\\Kit\\Repository\\Item\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 5,
-        "instability": 0.71,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -4467,9 +1861,9 @@ var classes = [
         "totalSystemComplexity": 50.2,
         "package": "App\\Kit\\Repository\\Item\\ModelFactory\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 8,
-        "instability": 0.8,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -4547,9 +1941,9 @@ var classes = [
         "totalSystemComplexity": 49.8,
         "package": "App\\Kit\\Repository\\Item\\ResponseParser\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 6,
-        "instability": 0.75,
+        "instability": 1,
         "numberOfUnitTests": 2,
         "violations": {}
     },
@@ -4779,9 +2173,9 @@ var classes = [
         "totalSystemComplexity": 83,
         "package": "App\\Kit\\Query\\Bus\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 8,
-        "instability": 0.8,
+        "instability": 1,
         "numberOfUnitTests": 4,
         "violations": {}
     },
@@ -4853,7 +2247,7 @@ var classes = [
         "totalDataComplexity": 15,
         "totalSystemComplexity": 15,
         "package": "App\\Kit\\Query\\Result\\",
-        "pageRank": 0.04,
+        "pageRank": 0.03,
         "afferentCoupling": 6,
         "efferentCoupling": 0,
         "instability": 0,
@@ -5372,9 +2766,9 @@ var classes = [
         "totalSystemComplexity": 4.67,
         "package": "App\\Kit\\Transformer\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 3,
-        "instability": 0.6,
+        "instability": 1,
         "numberOfUnitTests": 0,
         "violations": {}
     },
@@ -5441,9 +2835,9 @@ var classes = [
         "totalSystemComplexity": 4,
         "package": "App\\Kit\\Controller\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 3,
-        "instability": 0.6,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -6062,9 +3456,9 @@ var classes = [
         "totalSystemComplexity": 2,
         "package": "App\\Api\\JsonDecoder\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 0,
         "efferentCoupling": 2,
-        "instability": 0.5,
+        "instability": 1,
         "numberOfUnitTests": 1,
         "violations": {}
     },
@@ -6293,9 +3687,9 @@ var classes = [
         "totalSystemComplexity": 9.33,
         "package": "Shrikeh\\Diving\\Kit\\",
         "pageRank": 0.01,
-        "afferentCoupling": 3,
+        "afferentCoupling": 1,
         "efferentCoupling": 3,
-        "instability": 0.5,
+        "instability": 0.75,
         "numberOfUnitTests": 1,
         "violations": {}
     },

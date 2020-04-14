@@ -17,7 +17,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-trait ConfigureContainerTrait
+trait ContainerConfigurationTrait
 {
     /**
      * @param ContainerBuilder $container
@@ -38,10 +38,10 @@ trait ConfigureContainerTrait
 
         $this->configureContainerLoader(
             $loader,
-            '%s/{packages}/*' . self::CONFIG_EXTS,
-            '%s/{packages}/' . $environment . '/*' . self::CONFIG_EXTS,
-            '%s/{services}' . self::CONFIG_EXTS,
-            '%s/{services}_' . $environment . self::CONFIG_EXTS
+            '%s/{packages}/*' . static::CONFIG_EXTS,
+            '%s/{packages}/' . $environment . '/*' . static::CONFIG_EXTS,
+            '%s/{services}' . static::CONFIG_EXTS,
+            '%s/{services}_' . $environment . static::CONFIG_EXTS
         );
     }
 
@@ -54,17 +54,7 @@ trait ConfigureContainerTrait
     {
         $confDir = $this->getConfigDir();
         foreach ($imports as $import) {
-            $loader->load(sprintf($import, $confDir), self::TYPE_GLOB);
+            $loader->load(sprintf($import, $confDir), static::TYPE_GLOB);
         }
     }
-
-    /**
-     * @return bool
-     */
-    abstract public function isDebug();
-
-    /**
-     * @return string
-     */
-    abstract public function getEnvironment();
 }
