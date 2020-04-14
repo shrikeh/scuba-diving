@@ -76,7 +76,7 @@ phpspec:
 phpmetrics:
 	echo 'Creating phpmetrics...'
 	php -d memory-limit=256M ${ROOT_DIR}/vendor/bin/phpmetrics --quiet --junit="${ROOT_DIR}/build/coverage/phpunit/junit.xml" --report-html="${ROOT_DIR}/docs/metrics" \
-	  --exclude="build", "dist","docs","tests","tools","public","translations","var","vendor" ${ROOT_DIR} &
+	  --exclude="build","dist","docs","tests","tools","public","translations","var","vendor" ${ROOT_DIR} &
 
 browse-metrics:
 	open file:///${ROOT_DIR}/docs/metrics/index.html
