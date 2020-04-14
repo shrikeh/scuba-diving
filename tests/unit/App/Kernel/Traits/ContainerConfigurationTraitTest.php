@@ -42,7 +42,7 @@ final class ContainerConfigurationTraitTest extends TestCase
 
     private function createTraitInstance(): object
     {
-        return new class() {
+        return new class () {
             use ContainerConfigurationTrait {
                 configureContainer as public;
             }
