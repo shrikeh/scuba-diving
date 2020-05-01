@@ -28,7 +28,8 @@
     "react-dom": "^16.12.0",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^25.3.0",
-    "ts-loader": "^6.2.1"
+    "ts-loader": "^6.2.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
@@ -67,7 +68,6 @@
     "resource-hints-webpack-plugin": "0.0.2",
     "sass-loader": "8.0.2",
     "script-ext-html-webpack-plugin": "2.1.4",
-    "snyk": "1.305.1",
     "svg-url-loader": "5.0.0",
     "typescript": "3.8.3",
     "webpack": "4.42.1",
@@ -76,7 +76,9 @@
   },
   "scripts": {
     "test": "snyk test && NODE_ENV=test jest",
-    "build": "webpack --config-register @babel/register --mode production"
+    "build": "webpack --config-register @babel/register --mode production",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -91,5 +93,6 @@
   "bugs": {
     "url": "https://github.com/shrikeh/diving/issues"
   },
-  "homepage": "https://github.com/shrikeh/diving#readme"
+  "homepage": "https://github.com/shrikeh/diving#readme",
+  "snyk": true
 }
