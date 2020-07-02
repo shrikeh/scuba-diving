@@ -19,7 +19,7 @@ final class BaseDirRelativeDirectoriesTraitTest extends TestCase
 {
     public function testItReturnsTheCacheDir(): void
     {
-        $trait = new class () {
+        $trait = new class() {
             use BaseDirRelativeDirectoriesTrait {
                 getDefaultCacheDir as public;
             }
@@ -35,7 +35,7 @@ final class BaseDirRelativeDirectoriesTraitTest extends TestCase
 
     public function testItReturnsTheLogDir(): void
     {
-        $trait = new class () {
+        $trait = new class() {
             use BaseDirRelativeDirectoriesTrait {
                 getDefaultLogDir as public;
             }

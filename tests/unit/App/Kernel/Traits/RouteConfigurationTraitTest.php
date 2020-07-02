@@ -32,7 +32,7 @@ final class RouteConfigurationTraitTest extends TestCase
 
     private function createTraitInstance(): object
     {
-        return new class () {
+        return new class() {
             use RouteConfigurationTrait {
                 configureRoutes as public;
             }
