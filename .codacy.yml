@@ -1,0 +1,11 @@
+---
+exclude_paths:
+  - '.phan/*'
+  - '**.min.js'
+  - 'tests/**'
+  - 'vendor/**'
+  - 'dist/**'
+  - 'docs/**'
+  - 'application/app/Kernel/DefaultKernel.php'
+  - 'application/config/bootstrap.php'
+  - 'application/public/api.php'

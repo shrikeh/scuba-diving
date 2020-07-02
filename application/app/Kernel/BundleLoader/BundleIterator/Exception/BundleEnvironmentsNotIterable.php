@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace App\Kernel\BundleLoader\BundleIterator\Exception;
 
 use InvalidArgumentException;
+use Safe\Exceptions\StringsException;
 
 use function Safe\sprintf;
 
@@ -21,7 +22,8 @@ final class BundleEnvironmentsNotIterable extends InvalidArgumentException imple
     /**
      * @param string $bundle
      * @return static
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function fromBundle(string $bundle): self
     {

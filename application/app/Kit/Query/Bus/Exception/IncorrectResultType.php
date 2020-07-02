@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace App\Kit\Query\Bus\Exception;
 
+use Safe\Exceptions\StringsException;
 use Symfony\Component\Messenger\Exception\RuntimeException;
 
 use function Safe\sprintf;
@@ -22,6 +23,8 @@ final class IncorrectResultType extends RuntimeException
      * @param mixed $result
      * @param string $expected
      * @return IncorrectResultType
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function fromMessage($result, string $expected): self
     {

@@ -1,0 +1,16 @@
+---
+version: "2"
+exclude_patterns:
+  - "docs/*"
+  - "build/"
+  - "tests/spec/"
+  - "tests/integration/"
+  - "vendor/"
+plugins:
+  phan:
+    enabled: true
+    config:
+      ignore-undeclared: true
+    checks:
+      PhanUndeclaredClassMethod:
+        enabled: false

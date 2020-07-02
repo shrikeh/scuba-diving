@@ -52,6 +52,7 @@ final class ItemSlug
      */
     public function toUuid(): UuidInterface
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return Uuid::uuid5(self::OID_ITEM_NAMESPACE, $this->toSlug());
     }
 }

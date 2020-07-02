@@ -18,5 +18,10 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 interface ResolverFactoryInterface
 {
+    /**
+     * @param ResponseInterface $response
+     * @param UuidInterface $uuid
+     * @return ResolverInterface
+     */
     public function createResolver(ResponseInterface $response, UuidInterface $uuid): ResolverInterface;
 }

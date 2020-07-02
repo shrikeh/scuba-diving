@@ -2,14 +2,15 @@
 
 function create_root_key() {
   local ROOT_KEY_PATH="${1}";
-  echo "Generating root key to ${ROOT_KEY_PATH}\n";
+
+  printf  "Generating root key to %s\n" "${ROOT_KEY_PATH}";
   openssl genrsa -out "${ROOT_KEY_PATH}" 4096;
 }
 
 function generate_csr() {
   local ROOT_KEY_PATH="${1}";
   local ROOT_CA_CSR="${2}";
-  echo "Generating root csr from ${ROOT_KEY_PATH} to ${ROOT_CA_CSR}\n";
+  printf "Generating root csr from %s to %s\n" "${ROOT_KEY_PATH}" "${ROOT_CA_CSR}";
 
   openssl req \
     -new -key "${ROOT_KEY_PATH}" \
@@ -32,7 +33,7 @@ function sign_certificate() {
 function generate_site_key() {
   local SITE_KEY_PATH="${1}";
 
-  echo "Generating site key to ${SITE_KEY_PATH}\n";
+  printf "Generating site key to %s\n" "${SITE_KEY_PATH}";
 
   openssl genrsa -out "${SITE_KEY_PATH}" 4096;
 }
@@ -41,7 +42,7 @@ function generate_site_certificate() {
   local SITE_KEY_PATH=${1};
   local SITE_CERT_CSR=${2};
 
-  echo "Generating site certificate from ${SITE_KEY_PATH} to ${SITE_CERT_CSR}\n";
+  printf "Generating site certificate from %s to %s \n" "${SITE_KEY_PATH}" "${SITE_CERT_CSR}";
 
   openssl req -new -key "${SITE_KEY_PATH}" -out "${SITE_CERT_CSR}" -sha256 \
    -subj '/C=UK/L=London/O=Shrikeh.net/CN=localhost';
@@ -53,8 +54,7 @@ function sign_site_certificate() {
   local ROOT_CA_CRT="${3}";
   local ROOT_CA_KEY="${4}";
   local SITE_CONF_PATH="${5}";
-
-  echo "Signing site certificate ${SITE_CERT_PATH} (certificate ${SITE_CERT_CSR}) with ${ROOT_CA_CRT} (key: ${ROOT_CA_KEY})";
+  printf  "Signing site certificate %s (certificate %s) with %s (key: %s)" "${SITE_CERT_PATH}" "${SITE_CERT_CSR}" "${ROOT_CA_CRT}" "${ROOT_CA_KEY}";
 
   openssl x509 -req -days 750 -in "${SITE_CERT_CSR}" -sha256 \
     -CA "${ROOT_CA_CRT}" -CAkey "${ROOT_CA_KEY}"  -CAcreateserial \

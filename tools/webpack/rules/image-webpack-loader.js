@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
 module.exports = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   use: [
-    { loader: 'cache-loader' },
-    { loader: 'url-loader'},
+    { loader: "cache-loader" },
+    { loader: "url-loader"},
     {
-      loader: 'image-webpack-loader',
+      loader: "image-webpack-loader",
       options: {
         mozjpeg: {
           progressive: true,
@@ -17,7 +17,7 @@ module.exports = {
           enabled: false,
         },
         pngquant: {
-          quality: [0.65, 0.90],
+          quality: [0.65, 0.9],
           speed: 4
         },
         gifsicle: {

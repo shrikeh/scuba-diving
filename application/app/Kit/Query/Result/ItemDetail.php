@@ -14,10 +14,13 @@ namespace App\Kit\Query\Result;
 
 final class ItemDetail
 {
+    /** @var string  */
     private string $name;
 
+    /** @var string  */
     private string $description;
 
+    /** @var string  */
     private string $text;
 
     /**

@@ -59,6 +59,7 @@ final class Cache implements ResolverInterface
         try {
             $model = $this->pool->get($this->modelKey->toString(), $this->callback);
         } catch (Throwable $e) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw InvalidCacheArgument::create($this->modelKey, $e);
         }
 
@@ -74,6 +75,7 @@ final class Cache implements ResolverInterface
     private function assertModel($resolved): void
     {
         if (!$resolved instanceof ModelInterface) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw ModelNotResolved::fromResolved($resolved, ModelInterface::class);
         }
     }

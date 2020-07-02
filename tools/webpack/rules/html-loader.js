@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 module.exports = {
   test: /\.html$/,
-    use: [
+  use: [
   // apply multiple loaders and options
-  "htmllint-loader",
-  {
-    loader: "html-loader"
-  }
-]};
+    "htmllint-loader",
+    {
+      loader: "html-loader"
+    }
+  ]};

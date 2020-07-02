@@ -8,12 +8,12 @@
 #
 # To enable this hook, rename this file to "pre-commit".
 
-if git rev-parse --verify HEAD >/php-dev/null 2>&1
+if git rev-parse --verify HEAD > /dev/null 2>&1
 then
 	against=HEAD
 else
 	# Initial commit: diff against an empty tree object
-	against=$(git hash-object -t tree /php-dev/null)
+	against=$(git hash-object -t tree /dev/null)
 fi
 
 # If you want to allow non-ASCII filenames set this variable to true.
@@ -29,8 +29,7 @@ if [ "$allownonascii" != "true" ] &&
 	# Note that the use of brackets around a tr range is ok here, (it's
 	# even required, for portability to Solaris 10's /usr/bin/tr), since
 	# the square bracket bytes happen to fall in the designated range.
-	test $(git diff --cached --name-only --diff-filter=A -z $against |
-	  LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
+	test $(git diff --cached --name-only --diff-filter=A -z "$against" | LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
 then
 	cat <<\EOF
 Error: Attempt to add a non-ASCII file name.
@@ -50,7 +49,7 @@ function test_whitespace() {
   echo 'Checking whitespace errors...';
 
   # If there are whitespace errors, print the offending file names and fail.
-  test $(git diff-index --check --cached $against --)
+  test $(git diff-index --check --cached "$against" --)
 }
 
 function pre_commit_checks() {

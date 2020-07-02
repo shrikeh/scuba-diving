@@ -24,6 +24,7 @@ final class ModelNotResolved extends RuntimeException
      * @param mixed $resolved
      * @return ModelNotResolved
      * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create(callable $resolver, $resolved): self
     {

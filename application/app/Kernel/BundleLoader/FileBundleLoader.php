@@ -16,8 +16,10 @@ use App\Kernel\BundleLoader\BundleIterator\BundleIterator;
 use App\Kernel\BundleLoader\BundleIterator\Exception\BundleIteratorExceptionInterface;
 use App\Kernel\BundleLoader\Exception\BundleFileNotExists;
 use App\Kernel\BundleLoader\Exception\BundleFileNotReadable;
+use App\Kernel\BundleLoader\Exception\BundleRealpathFalse;
 use App\Kernel\BundleLoader\Exception\BundlesNotLoadable;
 use Safe\Exceptions\StringsException;
+use Shrikeh\File\File;
 use SplFileInfo;
 
 final class FileBundleLoader
@@ -33,13 +35,20 @@ final class FileBundleLoader
 
     /**
      * @var BundleIterator
+     * @psalm-suppress PropertyNotSetInConstructor We need $bundles to be lazily set, as we get it on demand.
      */
     private BundleIterator $bundles;
+
+    /**
+     * @var bool
+     */
+    private bool $loaded = false;
 
     /**
      * @param SplFileInfo|string $path
      * @param string $env
      * @return static
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create($path, string $env): self
     {
@@ -74,25 +83,36 @@ final class FileBundleLoader
      * @throws BundleFileNotExists
      * @throws BundleFileNotReadable
      * @throws StringsException
+     * @return string
      */
-    private function assertValidFile(): void
+    private function getBundlePath(): string
     {
         if (!$this->bundlePath->isFile()) {
-            throw BundleFileNotExists::fromPath($this->bundlePath->getPath());
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
+            throw BundleFileNotExists::fromPath($this->bundlePath->getPathname());
         }
 
         if (!$this->bundlePath->isReadable()) {
-            throw BundleFileNotReadable::fromPath($this->bundlePath->getPath());
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
+            throw BundleFileNotReadable::fromPath($this->bundlePath->getPathname());
         }
+
+        if (!$path = $this->bundlePath->getRealPath()) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
+            throw BundleRealpathFalse::create($this->bundlePath);
+        }
+
+        return $path;
     }
 
     /**
      * @return mixed
-     * @psalm-suppress UnresolvableInclude In Fabien we trust
+     * @throws StringsException
      */
     private function requireBundles()
     {
-        return require $this->bundlePath->getRealPath();
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
+        return File::require($this->getBundlePath());
     }
 
     /**
@@ -101,15 +121,16 @@ final class FileBundleLoader
      */
     private function getBundleIterator(): BundleIterator
     {
-        if (!isset($this->bundles)) {
-            $this->assertValidFile();
+        if (!$this->loaded) {
             $bundles = $this->requireBundles();
-
             try {
+                /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                 $this->bundles = BundleIterator::create($bundles);
             } catch (BundleIteratorExceptionInterface $e) {
-                throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getRealPath());
+                /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
+                throw BundlesNotLoadable::fromBundleIteratorException($e, $this->bundlePath->getPath());
             }
+            $this->loaded = true;
         }
 
         return $this->bundles;

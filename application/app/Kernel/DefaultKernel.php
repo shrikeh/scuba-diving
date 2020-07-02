@@ -13,27 +13,61 @@ declare(strict_types=1);
 namespace App\Kernel;
 
 use App\Kernel\BundleLoader\FileBundleLoader;
-use Exception;
-use Generator;
+use App\Kernel\Traits\BaseDirRelativeDirectoriesTrait;
+use App\Kernel\Traits\ContainerConfigurationTrait;
+use App\Kernel\Traits\EnvironmentConfigurationTrait;
+use App\Kernel\Traits\RouteConfigurationTrait;
+use Safe\Exceptions\StringsException;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
-use Symfony\Component\Config\Exception\LoaderLoadException;
-use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\Config\Resource\FileResource;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Kernel as BaseKernel;
-use Symfony\Component\Routing\RouteCollectionBuilder;
+use Symfony\Component\HttpFoundation\ParameterBag;
+use Symfony\Component\HttpKernel\Kernel;
 
 use function dirname;
 
-class DefaultKernel extends BaseKernel
+final class DefaultKernel extends Kernel implements
+    EnvironmentConfigurableKernelInterface,
+    ScubaDivingKernelInterface
 {
     use MicroKernelTrait;
+    use BaseDirRelativeDirectoriesTrait;
+    use ContainerConfigurationTrait;
+    use EnvironmentConfigurationTrait;
+    use RouteConfigurationTrait;
+
+    public const DEFAULT_CONFIG_DIR_NAME = 'config';
+    public const DEFAULT_BUNDLE_FILE = 'bundles.php';
 
     private const CONFIG_EXTS = '.{php,xml,yaml,yml}';
+    private const TYPE_GLOB = 'glob';
 
     /**
-     * @return Generator
+     * @param array $server
+     * @return static
+     */
+    public static function fromArray(array $server): self
+    {
+        return new self(
+            new ParameterBag($server)
+        );
+    }
+
+    /**
+     * DefaultKernel constructor.
+     * @param ParameterBag $serverBag
+     * @param bool|null $debug
+     */
+    public function __construct(ParameterBag $serverBag, bool $debug = null)
+    {
+        $debug = $debug ?? $serverBag->getBoolean('APP_DEBUG');
+        $this->serverBag = $serverBag;
+
+        parent::__construct($serverBag->get('APP_ENV'), $debug);
+    }
+
+    /**
+     * @return iterable
+     * @throws StringsException
      */
     public function registerBundles(): iterable
     {
@@ -44,23 +78,7 @@ class DefaultKernel extends BaseKernel
     }
 
     /**
-     * @return string
-     */
-    public function getBundleFile(): string
-    {
-        return (string) ($_ENV['SYMFONY_BUNDLE_FILE'] ?? $this->getConfigDir() . '/bundles.php');
-    }
-
-    /**
-     * @return string
-     */
-    public function getConfigDir(): string
-    {
-        return (string) ($_ENV['SYMFONY_CONFIG_DIR'] ?? $this->getProjectDir() . '/config');
-    }
-
-    /**
-     * @return string
+     * {@inheritDoc}
      */
     public function getProjectDir(): string
     {
@@ -68,50 +86,20 @@ class DefaultKernel extends BaseKernel
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     * @psalm-suppress OverriddenMethodAccess
      */
-    public function getLogDir(): string
+    private function getDefaultConfigDir(): string
     {
-        return (string) ($_ENV['SYMFONY_LOG_DIR'] ?? parent::getCacheDir());
+        return sprintf('%s/%s', $this->getProjectDir(), self::DEFAULT_CONFIG_DIR_NAME);
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     * @psalm-suppress OverriddenMethodAccess
      */
-    public function getCacheDir(): string
+    private function getDefaultBundleFile(): string
     {
-        return (string) ($_ENV['SYMFONY_CACHE_DIR'] ?? parent::getCacheDir());
-    }
-
-    /**
-     * @param ContainerBuilder $container
-     * @param LoaderInterface $loader
-     * @throws Exception
-     */
-    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader): void
-    {
-        $container->addResource(new FileResource($this->getBundleFile()));
-        $container->setParameter('container.dumper.inline_class_loader', \PHP_VERSION_ID < 70400 || $this->debug);
-        $container->setParameter('container.dumper.inline_factories', true);
-
-        $confDir = $this->getConfigDir();
-
-        $loader->load($confDir . '/{packages}/*' . self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir . '/{packages}/' . $this->environment . '/*' . self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir . '/{services}' . self::CONFIG_EXTS, 'glob');
-        $loader->load($confDir . '/{services}_' . $this->environment . self::CONFIG_EXTS, 'glob');
-    }
-
-    /**
-     * @param RouteCollectionBuilder $routes
-     * @throws LoaderLoadException
-     */
-    protected function configureRoutes(RouteCollectionBuilder $routes): void
-    {
-        $confDir = $this->getProjectDir() . '/config';
-
-        $routes->import($confDir . '/{routes}/' . $this->environment . '/*' . self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($confDir . '/{routes}/*' . self::CONFIG_EXTS, '/', 'glob');
-        $routes->import($confDir . '/{routes}' . self::CONFIG_EXTS, '/', 'glob');
+        return sprintf('%s/%s', $this->getConfigDir(), self::DEFAULT_BUNDLE_FILE);
     }
 }

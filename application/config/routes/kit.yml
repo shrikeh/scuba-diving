@@ -2,4 +2,7 @@
 item:
   path:  /kit/item/{slug}
   defaults: { _controller: App\Kit\Controller\Item }
-  methods: GET
+  methods:
+    - GET
+    - HEAD
+

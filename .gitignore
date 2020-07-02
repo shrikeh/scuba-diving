@@ -3,19 +3,11 @@ application/bin/symfony
 /node_modules
 /dist
 /build
-.*
 *.iml
 *.log
-!.env
-!.git*
-!.editorconfig
-!.phpspec
-!.env.dist
-!.coveralls.yml
-!.phplint.yml
-!.scrutinizer.yml
-!.styleci.yml
-!.travis.yml
+.DS_Store
+.idea
+.vagrant
 
 ###> friends-of-behat/symfony-extension ###
 /behat.yml

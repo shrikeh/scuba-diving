@@ -16,7 +16,6 @@ use App\Kit\Model\Item\Decorator\ClosureResolver;
 use App\Kit\Model\Item\ItemInterface;
 use App\Kit\Repository\ResolverFactory\ResolverFactoryInterface;
 use App\Kit\Resolver\ResolverInterface;
-use Closure;
 use Ramsey\Uuid\UuidInterface;
 use Shrikeh\Diving\Kit\Item\ItemSlug;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -42,6 +41,7 @@ final class ItemResolver implements ItemModelFactoryInterface
      */
     public function createItemFromResponse(ResponseInterface $response, ItemSlug $slug): ItemInterface
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return ClosureResolver::create($this->createResolverClosure($response, $slug->toUuid()));
     }
 

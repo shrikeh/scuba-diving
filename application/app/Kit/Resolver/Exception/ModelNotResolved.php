@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace App\Kit\Resolver\Exception;
 
 use RuntimeException;
+use Safe\Exceptions\StringsException;
 
 use function Safe\sprintf;
 
@@ -22,7 +23,8 @@ final class ModelNotResolved extends RuntimeException
      * @param mixed $resolved
      * @param string $expected
      * @return ModelNotResolved
-     *
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function fromResolved($resolved, string $expected): self
     {

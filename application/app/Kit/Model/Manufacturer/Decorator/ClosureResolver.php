@@ -17,6 +17,7 @@ use App\Kit\Model\Manufacturer\ManufacturerInterface;
 use App\Kit\Model\ModelInterface;
 use App\Kit\Model\ResolverDecorator\Traits\ClosureResolverTrait;
 use Closure;
+use Safe\Exceptions\StringsException;
 
 final class ClosureResolver implements ManufacturerInterface
 {
@@ -25,6 +26,7 @@ final class ClosureResolver implements ManufacturerInterface
     /**
      * @param callable $callable
      * @return self
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create(callable $callable): self
     {
@@ -32,11 +34,12 @@ final class ClosureResolver implements ManufacturerInterface
             $callable = Closure::fromCallable($callable);
         }
 
-        return new self($callable);
+        return new static($callable);
     }
 
     /**
      * {@inheritDoc}
+     * @throws StringsException
      */
     public function jsonSerialize()
     {
@@ -45,6 +48,7 @@ final class ClosureResolver implements ManufacturerInterface
 
     /**
      * @return string
+     * @throws StringsException
      */
     public function getName(): string
     {
@@ -55,6 +59,7 @@ final class ClosureResolver implements ManufacturerInterface
      * @return ManufacturerInterface
      * @psalm-suppress RedundantConditionGivenDocblockType We need this for phpstan
      * @throws IncorrectModelResolved If the resolved model doesn't match the expected type
+     * @throws StringsException
      */
     private function resolve(): ManufacturerInterface
     {

@@ -37,14 +37,16 @@ final class ItemDetail implements ResponseParserInterface
     }
 
     /**
-     * @param ResponseInterface $response
+     * {@inheritDoc}
      * @return ItemInterface
+     * @phan-suppress PhanParamSignatureRealMismatchReturnType Allowable in PHP 7.4
      */
     public function parse(ResponseInterface $response): ItemInterface
     {
         try {
             $content = $response->getContent();
         } catch (ExceptionInterface $e) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw ApiResponse::wrap($e);
         }
 

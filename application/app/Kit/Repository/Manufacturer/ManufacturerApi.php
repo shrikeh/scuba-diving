@@ -53,6 +53,7 @@ final class ManufacturerApi implements ManufacturerRepositoryInterface
      * @return ManufacturerInterface
      * @throws TransportExceptionInterface
      * @throws StringsException
+     * @phan-suppress PhanTypeInvalidThrowsIsInterface
      */
     public function fetchManufacturerByItemSlug(ItemSlug $slug): ManufacturerInterface
     {

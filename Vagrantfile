@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
   }
 
-  config.vm.define :diving, primary: true do |php74|
+  config.vm.define :diving, primary: true do |diving|
 
     diving.vm.hostname = config.user.vm.hostname
     diving.vm.box = config.user.vm.php74_box

@@ -1,7 +1,0 @@
----
-item-detail:
-  path: /kit/item/{slug}
-  controller: App\Kit\Controller\Item
-  methods:
-    - GET
-    - HEAD

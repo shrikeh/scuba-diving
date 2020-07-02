@@ -15,6 +15,7 @@ namespace App\Kit\Query\Bus;
 use App\Kit\Message\QueryKitItemDetail;
 use App\Kit\Query\Bus\Exception\IncorrectResultType;
 use App\Kit\Query\Result\ItemDetail;
+use Safe\Exceptions\StringsException;
 use Shrikeh\Diving\Kit\Item;
 use Shrikeh\Diving\Kit\KitBag\Message\KitItemQuery;
 use Shrikeh\Diving\Kit\KitBag\QueryBus\ItemQueryBus;
@@ -68,17 +69,20 @@ final class SymfonyQueryBus implements ItemDetailQueryBusInterface, ItemQueryBus
     private function assertItemDetail($result): void
     {
         if (!$result instanceof ItemDetail) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw IncorrectResultType::fromMessage($result, ItemDetail::class);
         }
     }
 
     /**
      * @param mixed $result
+     * @throws StringsException
      * @psalm-assert Item $result
      */
     private function assertItem($result): void
     {
         if (!$result instanceof Item) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw IncorrectResultType::fromMessage($result, Item::class);
         }
     }

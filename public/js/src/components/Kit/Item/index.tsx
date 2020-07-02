@@ -1,15 +1,13 @@
-'use strict';
+"use strict";
 
-import * as React from 'react';
+import * as React from "react";
 
-import { Item as ItemInterface } from '@app/types/Kit/Item';
-
-export class Item extends React.Component<ItemInterface> {
+export class Item extends React.Component{
   public render() {
     return (
       <div className="kit-item">
-        Ohai, I am an item
+            Ohai, I am an item
       </div>
-    )
+    );
   }
 }

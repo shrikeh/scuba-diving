@@ -34,9 +34,11 @@ final class ModelCallback
      * @param Closure $resolver
      * @param DateInterval $expiresAfter
      * @return Closure
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function asClosure(Closure $resolver, DateInterval $expiresAfter): Closure
     {
+        /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
         return Closure::fromCallable(new self($resolver, $expiresAfter));
     }
 
@@ -74,6 +76,7 @@ final class ModelCallback
     private function assertModel($model): void
     {
         if (!$model instanceof ModelInterface) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw ModelNotResolved::fromResolved($model, ModelInterface::class);
         }
     }

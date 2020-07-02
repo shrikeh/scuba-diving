@@ -1,18 +1,18 @@
-'use strict';
-const moduleNameModule = require('jest-module-name-mapper');
-const { resolve } = require('path');
-const { defaults } = require('jest-config');
-const jestTestPath = resolve(__dirname, 'tests/jest');
+"use strict";
+const moduleNameModule = require("jest-module-name-mapper");
+const { resolve } = require("path");
+const { defaults } = require("jest-config");
+const jestTestPath = resolve(__dirname, "tests/jest");
 
 module.exports = {
   verbose: true,
   bail: true,
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
-  moduleNameMapper: moduleNameModule('tsconfig.json'),
+  moduleFileExtensions: [...defaults.moduleFileExtensions, "ts', 'tsx"],
+  moduleNameMapper: moduleNameModule("tsconfig.json"),
   rootDir: __dirname,
   roots: [
-    'public/js/src',
-    'tests/jest/src'
+    "public/js/src",
+    "tests/jest/src"
   ],
   testMatch: [
     "**/*.main.scss.[jt]s?(x)"
@@ -21,7 +21,7 @@ module.exports = {
     "^.+\\.tsx?$": "ts-jest"
   },
   setupFiles: [
-    resolve(jestTestPath, 'bootstrap.ts')
+    resolve(jestTestPath, "bootstrap.ts")
   ],
   setupFilesAfterEnv: [
     "@testing-library/jest-dom/extend-expect"

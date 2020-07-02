@@ -16,6 +16,7 @@ use App\Kernel\BundleLoader\BundleIterator\Exception\BundleEnvironmentsNotIterab
 use App\Kernel\BundleLoader\BundleIterator\Exception\BundlesNotIterable;
 use App\Kernel\BundleLoader\BundleIterator\Exception\InvalidBundleEnvironment;
 use Generator;
+use Safe\Exceptions\StringsException;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 
 final class BundleIterator
@@ -25,11 +26,13 @@ final class BundleIterator
     /**
      * @param mixed $bundles
      * @return static
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
+     * @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern
      */
     public static function create($bundles): self
     {
         if (!is_iterable($bundles)) {
+            /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
             throw BundlesNotIterable::create($bundles);
         }
 
@@ -39,7 +42,7 @@ final class BundleIterator
     /**
      * BundleIterator constructor.
      * @param iterable $bundles
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
      */
     private function __construct(iterable $bundles)
     {
@@ -90,16 +93,18 @@ final class BundleIterator
      * @param mixed $bundles
      * @psalm-assert array<string, array<string>> $bundles
      * @psalm-suppress MixedAssignment
-     * @throws \Safe\Exceptions\StringsException
+     * @throws StringsException
      */
     private function assertValidBundles($bundles): void
     {
         foreach ($bundles as $bundle => $envs) {
             if (!is_iterable($envs)) {
+                /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                 throw BundleEnvironmentsNotIterable::fromBundle($bundle);
             }
             foreach ($envs as $env => $use) {
                 if (!(is_string($env) && is_bool($use))) {
+                    /** @SuppressWarnings(PHPMD.StaticAccess) Named constructor pattern */
                     throw InvalidBundleEnvironment::fromBundleEnv($bundle, $envs);
                 }
             }
