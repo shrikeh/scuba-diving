@@ -33,7 +33,7 @@
     "symfony/phpunit-bridge": "5.1.2",
     "symfony/thanks": "1.2.5",
     "thecodingmachine/phpstan-safe-rule": "1.0.0",
-    "vimeo/psalm": "3.10.1"
+    "vimeo/psalm": "3.18.2"
   },
   "require": {
     "php": "^7.4.2",
