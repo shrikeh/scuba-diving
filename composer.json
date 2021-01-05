@@ -16,7 +16,7 @@
     "jetbrains/phpstorm-stubs": "dev-master",
     "microsoft/tolerant-php-parser": "0.0.20",
     "nikic/php-parser": "dev-master",
-    "overtrue/phplint": "1.2.1",
+    "overtrue/phplint": "2.3.5",
     "phan/phan": "dev-master",
     "php-coveralls/php-coveralls": "2.2.0",
     "php-ds/php-ds": "dev-master",
