@@ -18,7 +18,7 @@
     "axios": "^0.19.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
-    "babel-preset-react-app": "^9.0.0",
+    "babel-preset-react-app": "^10.0.1",
     "create-react-app": "^3.3.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest-fetch-mock": "^3.0.1",
