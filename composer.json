@@ -5,7 +5,7 @@
   "require-dev": {
     "ext-xdebug": "*",
     "behat/behat": "3.7.0",
-    "codeception/codeception": "4.1.4",
+    "codeception/codeception": "4.1.22",
     "codeception/module-asserts": "1.1.1",
     "codeception/module-symfony": "dev-master",
     "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
