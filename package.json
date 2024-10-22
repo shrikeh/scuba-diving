@@ -32,11 +32,11 @@
     "snyk": "^1.316.1"
   },
   "devDependencies": {
-    "@babel/core": "7.9.0",
-    "@babel/preset-env": "7.9.5",
-    "@babel/preset-react": "7.9.4",
-    "@babel/preset-typescript": "7.9.0",
-    "@babel/register": "7.9.0",
+    "@babel/core": "7.25.9",
+    "@babel/preset-env": "7.25.9",
+    "@babel/preset-react": "7.25.9",
+    "@babel/preset-typescript": "7.25.9",
+    "@babel/register": "7.25.9",
     "@typescript-eslint/eslint-plugin": "2.28.0",
     "@typescript-eslint/parser": "2.28.0",
     "autoprefixer": "9.8.4",
