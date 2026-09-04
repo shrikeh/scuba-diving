@@ -40,7 +40,7 @@
     "ext-ctype": "*",
     "ext-iconv": "*",
     "ext-json": "*",
-    "guzzlehttp/psr7": "^1.6",
+    "guzzlehttp/psr7": "^2.12.3",
     "nyholm/psr7": "^1.0",
     "psr/http-client": "^1.0",
     "psr/http-factory": "^1.0",
